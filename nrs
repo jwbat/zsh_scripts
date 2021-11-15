@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/15/2021
+# Last Modified: 12/15/2021
+
+# Description
+# Prints to the terminal the values of pi, e, and √2 to the 
+#  provided number of decimal places up to 1000.
+
+# Usage
+# nrs [nr_of_decimals] 
+
+col='\033[0;37m'
+
+echo ""
+echo "${col}     pi: $( pi $1 )"
+echo "${col}      e: $( e $1 )"
+echo "${col}  sqrt2: $( sqrt2 $1 )"
+echo ""
+
+exit 0

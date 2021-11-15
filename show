@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 11/12/21
+# Last Modified: 11/12/21
+
+# Description
+# Prints useful zsh commands to the terminal
+
+# Usage
+# show
+
+echo ""
+echo "\t env"
+echo "\t export \t\t list environment variables and their values"
+echo "\t set    \t\t also list shell variables"
+echo "\t uname -m \t\t processor architecture"
+echo "\t sw_vers \t\t OS version info"
+echo ""
+
+exit 0
