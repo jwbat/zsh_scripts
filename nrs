@@ -5,7 +5,7 @@
 # Last Modified: 12/15/2021
 
 # Description
-# Prints to the terminal the values of pi, e, and √2 to the 
+# Prints to the terminal the values of pi, e, √2, and φ (phi, the golden ratio) to the 
 #  provided number of decimal places up to 1000.
 
 # Usage
@@ -14,9 +14,10 @@
 col='\033[0;37m'
 
 echo ""
-echo "${col}     pi: $( pi $1 )"
+echo "${col}      π: $( pi $1 )"
 echo "${col}      e: $( e $1 )"
-echo "${col}  sqrt2: $( sqrt2 $1 )"
+echo "${col}     √2: $( sqrt2 $1 )"
+echo "${col}      φ: $( phi $1 )"
 echo ""
 
 exit 0

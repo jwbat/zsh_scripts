@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 11/15/2021
+# Last Modified: 11/15/2021
+
+# Description
+# copies provided directory to volume Andromeda
+
+# Usage
+# cpta [dirname]
+
+cp -r $1 /Volumes/Andromeda
+
+exit 0
+
