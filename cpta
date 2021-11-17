@@ -5,12 +5,17 @@
 # Last Modified: 11/15/2021
 
 # Description
-# copies provided directory to volume Andromeda
+# copy directory or file to volume Andromeda
 
 # Usage
-# cpta [dirname]
+# cpta [dirname | filename]
 
-cp -r $1 /Volumes/Andromeda
+path=/Volumes/Andromeda
+
+if [ -d $path ]; then
+    /bin/cp -r $1 $path
+else
+    /bin/cp $1 $path
+fi
 
 exit 0
-

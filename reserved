@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 11/16/2021
+# Last Modified: 11/16/2021
+
+# Description
+# Print all reserved words of zsh.
+
+# Usage
+# reserved 
+
+echo
+echo " do  done  case  esac  if  then  elif  else  fi "
+echo " for  foreach  while  function  repeat  time"
+echo " until  select   coproc  nocorrect  end  !  [[  { }"
+echo
+
+exit 0

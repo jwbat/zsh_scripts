@@ -8,9 +8,14 @@
 # copies a folder from volume Andromeda to .
 
 # Usage
-# cpfa [dirname]
+# cpfa [dirname | filename]
 
-dir=$1
-cp -r "/Volumes/Andromeda/$dir" .
+path=/Volumes/Andromeda/$1
+if [ -d $path ]; then
+    /bin/cp -r $path .
+else
+    /bin/cp $path .
+fi
+ 
 
 exit 0

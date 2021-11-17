@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+#Usage: timer -m 2 -s 30
+
+total_seconds=""
+while getopts "m:s:" opt; do
+    case $opt in
+        m) total_seconds=$(( $total_seconds + $OPTARG * 60 ));;
+        s) total_seconds=$(( $total_seconds + $OPTARG ));;
+        *) ;;
+    esac
+done
+
+echo
+while [ $total_seconds -gt 0 ]; do
+    echo -n "  $total_seconds"
+    total_seconds=$(( $total_seconds - 1))
+    sleep 1s
+
+    if [ $(($total_seconds % 10)) -eq 0 ]; then
+        echo
+    fi
+done
+
+echo
+echo "Time's up."
+echo 
+
+exit 0

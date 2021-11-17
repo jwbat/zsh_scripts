@@ -6,7 +6,7 @@
 
 # Description
 # Prints to the terminal φ, the golden ratio, to the provided number
-#  of decimal places up to 1000.
+#  of decimal places (default=50) up to 1000.
 
 # Usage
 # phi [number_of_decimal_places]
@@ -16,7 +16,7 @@ phi=1.61803398874989484820458683436563811772030917980576286213544862270526046281
 
 purple='\033[0;35m'
 param=$1
-nr_of_digits=${param:-1000}
+nr_of_digits=${param:-50}
 
 echo "${purple} ${phi:0:$((2 + $nr_of_digits))}"
 

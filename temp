@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 11/16/2021
+# Last Modified: 11/16/2021
+
+# Description
+# Convert F to C or C to F
+
+# Usage
+# temp -[f|c] 30
+
+while getopts "f:c:" opt; do
+    case $opt in
+        c) echo "scale=2; ($OPTARG * 9 / 5) + 32" | bc;;
+        f) echo "scale=2; ($OPTARG - 32) * 5 / 9" | bc;;
+        \?);;
+    esac
+done
+
+
+exit 0

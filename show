@@ -10,12 +10,29 @@
 # Usage
 # show
 
-echo ""
-echo "\t env"
+echo
+
+echo "\t cal -A 1"
+echo "\t ls | wc -l \t\t count nr of files in present directory"
+echo "\t env    \t\t environment variables"
 echo "\t export \t\t list environment variables and their values"
 echo "\t set    \t\t also list shell variables"
 echo "\t uname -m \t\t processor architecture"
 echo "\t sw_vers \t\t OS version info"
-echo ""
+
+echo
+echo "\t hand rolled commands:"
+echo "\t reserved    usage: reserved"  
+echo "\t show        usage: show"  
+echo "\t colors      usage: colors"  
+echo "\t add         usage: add 1 2 3 ..."
+echo "\t cpfa        usage: cpfa [dirname]"  
+echo "\t cpta        usage: cpta [dirname]"  
+echo "\t nrs         usage: nrs [opt: nr_of_decimals]"  
+echo "\t pi          usage: pi [opt: nr_of_decimals]"
+echo "\t e           usage: e  [opt: nr_of_decimals]"
+echo "\t sqrt2       usage: sqrt2  [opt: nr_of_decimals]"
+echo "\t phi         usage: phi  [opt: nr_of_decimals]"  
+echo
 
 exit 0
