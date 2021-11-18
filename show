@@ -2,37 +2,28 @@
 
 # Author: James Batman
 # Date Created: 11/12/21
-# Last Modified: 11/12/21
+# Last Modified: 11/17/21
 
 # Description
-# Prints useful zsh commands to the terminal
+# Print useful zsh commands
 
 # Usage
 # show
 
-echo
-
-echo "\t cal -A 1"
-echo "\t ls | wc -l \t\t count nr of files in present directory"
-echo "\t env    \t\t environment variables"
-echo "\t export \t\t list environment variables and their values"
-echo "\t set    \t\t also list shell variables"
-echo "\t uname -m \t\t processor architecture"
-echo "\t sw_vers \t\t OS version info"
 
 echo
-echo "\t hand rolled commands:"
-echo "\t reserved    usage: reserved"  
-echo "\t show        usage: show"  
-echo "\t colors      usage: colors"  
-echo "\t add         usage: add 1 2 3 ..."
-echo "\t cpfa        usage: cpfa [dirname]"  
-echo "\t cpta        usage: cpta [dirname]"  
-echo "\t nrs         usage: nrs [opt: nr_of_decimals]"  
-echo "\t pi          usage: pi [opt: nr_of_decimals]"
-echo "\t e           usage: e  [opt: nr_of_decimals]"
-echo "\t sqrt2       usage: sqrt2  [opt: nr_of_decimals]"
-echo "\t phi         usage: phi  [opt: nr_of_decimals]"  
-echo
+echo "\t cal -A 1           \t calendar"
+echo "\t env                \t environment variables"
+echo "\t export             \t list environment variables and their values"
+echo "\t set                \t also list shell variables"
+echo "\t uname -m           \t processor architecture"
+echo "\t sw_vers            \t OS version info"
+echo "\t ls | wc -l         \t count nr of files in present directory"
+echo "\t text=\$(<file.txt) \t read each line of file.txt into array"
+echo "\t print -l *(.)      \t print all files in directory"
+echo "\t fc -l -10          \t list the last 10 commands in history"
+echo "\t print \${#string}  \t count character in string"
+echo "\t print \${(w)#string}\t count words in string"
+echo 
 
 exit 0
