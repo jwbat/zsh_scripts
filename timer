@@ -23,7 +23,7 @@ while [ $total_seconds -gt 0 ]; do
 done
 
 echo
-echo "Time's up."
+echo "  Finish!"
 echo 
 
 exit 0
