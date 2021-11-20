@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+zmodload zsh/mathfunc
+
+purple='\033[0;35m'
+
+echo
+echo "\t ${purple} $(( sqrt($1) ))"
+echo
+
+
+exit 0

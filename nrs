@@ -19,8 +19,10 @@ digits=${param:-16}
 echo ""
 echo "${col}      π: $( pi $digits )"
 echo "${col}      e: $( e $digits )"
-echo "${col}     √2: $( sqrt2 $digits )"
 echo "${col}      φ: $( phi $digits )"
+echo "${col}     √2: $( sqrt2 $digits )"
+echo "${col}     √3: $( sqrt3 $digits )"
+echo "${col}     √5: $( sqrt5 $digits )"
 echo ""
 
 exit 0
