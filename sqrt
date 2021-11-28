@@ -1,12 +1,10 @@
 #!/bin/zsh
 
-zmodload zsh/mathfunc
-
+x=$1
 purple='\033[0;35m'
+answer=`echo "scale=50; sqrt($x)" | bc`
 
-echo
-echo "\t ${purple} $(( sqrt($1) ))"
-echo
-
+echo "${purple} ${answer}"
+#echo " scale=50; ${purple} sqrt($x)" | bc
 
 exit 0
