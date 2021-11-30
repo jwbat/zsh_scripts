@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 11/29/2021
+# Last Modified: 11/29/2021
+
+# Description
+# generate a .gitignore file in the current folder 
+
+# Usage
+# ignore <filetype>  e.g., ignore cpp
+
+case $1 in
+    cpp) file=~/.vim/.gitignore.cpp;;
+    *) echo "unrecognized filetype.  cannot generate a .gitignore"; exit 1;;
+esac
+
+cp $file .gitignore
+
+exit 0
