@@ -10,12 +10,12 @@
 # Usage
 # gpa
 
-
 d1=~/.dotfiles
 d2=~/code/shell/scripts
 d3=~/code/cpp/utilities
+d4=~/code/cpp/functional_cpp
 
-ds=($d1 $d2 $d3)
+ds=($d1 $d2 $d3 $d4)
 
 for d in $ds; do
     git -C $d add .
