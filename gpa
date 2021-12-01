@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 11/30/2021
+# Last Modified: 11/30/2021
+
+# Description
+# push multiple git repos at once 
+
+# Usage
+# gpa
+
+
+d1=~/.dotfiles
+d2=~/code/shell/scripts
+d3=~/code/cpp/utilities
+
+ds=($d1 $d2 $d3)
+
+for d in $ds; do
+    git -C $d add .
+    git -C $d commit -m "."
+    git -C $d push -u origin main
+done
+
+exit 0
