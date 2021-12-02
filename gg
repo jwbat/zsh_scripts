@@ -8,7 +8,7 @@
 # push multiple git repos at once 
 
 # Usage
-# gpa
+# gg
 
 d1=~/.dotfiles
 d2=~/code/shell/scripts

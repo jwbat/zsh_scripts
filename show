@@ -12,8 +12,9 @@
 
 
 echo
-echo "\t ln -s /path/to/original /path/to/symlink   \t create symlink"
 echo "\t find . -maxdepth 1 -type l -ls             \t list symlinks"
+echo "\t ln -s /path/to/original /path/to/symlink   \t create symlink"
+echo "\t rm /path/to/symlink                        \t remove symlink"
 echo
 echo "\t ls | wc -l         \t count nr of files in present directory"
 echo "\t print -l *(.)      \t print all files in directory"
