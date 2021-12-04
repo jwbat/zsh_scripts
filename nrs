@@ -5,8 +5,8 @@
 # Last Modified: 12/15/2021
 
 # Description
-# Prints to the terminal the values of pi, e, √2, and φ (phi, the golden ratio) to the 
-#  provided number of decimal places (default = 16) up to 1000.
+# Prints to the terminal the values of pi, e, φ (phi, the golden ratio), √2, √3,  and 
+# √5 to the provided number of decimal places (default = 16) up to 1000.
 
 # Usage
 # nrs [nr_of_decimals] 
@@ -16,13 +16,13 @@ col='\033[0;37m'
 param=$1
 digits=${param:-16}
 
-echo ""
+echo
 echo "${col}      π: $( pi $digits )"
 echo "${col}      e: $( e $digits )"
 echo "${col}      φ: $( phi $digits )"
 echo "${col}     √2: $( sqrt2 $digits )"
 echo "${col}     √3: $( sqrt3 $digits )"
 echo "${col}     √5: $( sqrt5 $digits )"
-echo ""
+echo
 
 exit 0

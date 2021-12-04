@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/04/2021
+# Last Modified: 12/04/2021
+
+# Description
+# print n-digit random integer 
+#  **note: depends on c++ binary, 'random2'
+
+# Usage
+# random <n> 
+
+purple='\033[0;33m'
+n=$1
+
+echo ""
+echo "${purple}  $( "/usr/local/bin/random2" $n )"
+echo ""
+
+exit 0
