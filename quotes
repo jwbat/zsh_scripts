@@ -10,20 +10,22 @@
 # Usage
 # quotes 
 
-autoload colors; colors
+#autoload colors; colors
 #$fg[green]text$reset_color
-purple='\033[0;35m'
+c1='\033[0;35m'
+c2='\033[0;35m'
+c3='\033[0;35m'
 
 echo
-echo $fg[white] "  An object is a region of storage that has a type and a value."
+echo "$c1   Files are a means to store data in a storage device."
 echo
-echo $purple "  An object is a region of storage that has a type and a value."
+echo "$c2   An object is a region of storage that has a type and a value."
 echo
-echo $fg[green]"   An expression is referentially transparent if it has no observable
+echo "$c3   An expression is referentially transparent if it has no observable
    side effects, and therefore all functions used in that expression
    are pure." - Ivan Cukic
 echo
-echo $fg[yellow] "  For what shall it profit a man,
+echo "$c1   For what shall it profit a man,
    if he shall gain the whole world but lose his soul?"
 echo
 

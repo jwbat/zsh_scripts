@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/04/2021
+# Last Modified: 12/04/2021
+
+# Description
+# print c++ data types and their sizes 
+
+# Usage
+# cdata 
+
+purple='\033[0;35m'
+
+echo " ${purple}
+                          type        bytes
+                         ------      -------
+                          bool:         1
+                          char:         1
+                         short:         2
+                       wchar_t:         4
+                           int:         4
+                         float:         4
+                        double:         8
+                     long long:         8
+                   long double:        16
+"
+
+exit 0
