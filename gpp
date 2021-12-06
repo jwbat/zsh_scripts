@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 11/30/2021
+# Last Modified: 12/04/2021
+
+# Description
+# push multiple git repos at once 
+
+# Usage
+# gg
+
+d1=~/.dotfiles
+d2=~/code/shell/scripts
+d3=~/code/cpp/utilities
+d4=~/code/cpp/functional_cpp
+d5=~/code/cpp/idioms
+
+ds=($d1 $d2 $d3 $d4 $d5)
+
+for d in $ds; do
+    git -C $d pull
+done
+
+exit 0
