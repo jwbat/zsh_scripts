@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/05/2021
+# Last Modified: 12/05/2021
+
+# Description
+# print the result of arg1 ^ arg2 
+
+# Usage
+# pow <arg1> <arg2> 
+
+echo ""
+echo -e -n '\t\t'
+echo  $1 ^ $2 | bc
+echo ""
+
+exit 0
