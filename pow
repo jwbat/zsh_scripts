@@ -11,7 +11,7 @@
 # pow <arg1> <arg2> 
 
 echo ""
-echo -e -n '\t\t'
+echo -e -n '\t'
 echo  $1 ^ $2 | bc
 echo ""
 
