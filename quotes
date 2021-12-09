@@ -12,9 +12,11 @@
 
 #autoload colors; colors
 #$fg[green]text$reset_color
+c0='\033[0;36m'
 c1='\033[0;35m'
-c2='\033[0;35m'
-c3='\033[0;35m'
+c2='\033[0;34m'
+c3='\033[0;33m'
+c4='\033[0;32m'
 
 echo
 echo "$c1   Files are a means to store data in a storage device."
@@ -25,8 +27,11 @@ echo "$c3   An expression is referentially transparent if it has no observable
    side effects, and therefore all functions used in that expression
    are pure." - Ivan Cukic
 echo
-echo "$c1   For what shall it profit a man,
+echo "$c4   For what shall it profit a man,
    if he shall gain the whole world but lose his soul?"
+echo
+echo "$c0   You can't make somebody understand something if their salary
+   depends upon them not understanding it." - Upton Sinclair
 echo
 
 exit 0
