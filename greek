@@ -1,0 +1,46 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/09/2021
+# Last Modified: 12/09/2021
+
+# Description
+# print greek alphabet
+
+# Usage
+# greek
+
+c0='\033[0;36m'
+c1='\033[0;35m'
+c2='\033[0;34m'
+c3='\033[0;33m'
+c4='\033[0;32m'
+
+echo "$c4  
+         Α	α       alpha       a
+         Β	β       beta        b
+         Γ	γ       gamma       g
+         Δ	δ       delta       d
+         Ε	ε       epsilon     e
+         Ζ	ζ       zêta        z
+         Η	η       êta         ê
+         Θ	θ       thêta       th
+         Ι	ι       iota        i
+         Κ	κ       kappa       k
+         Λ	λ       lambda      l
+         Μ	μ       mu          m
+         Ν	ν       nu          n
+         Ξ	ξ       xi          ks box
+         Ο	ο       omikron     o
+         Π	π       pi          p
+         Ρ	ρ       rho         r
+         Σ	σ       sigma       s
+         Τ	τ       tau         t
+         Υ	υ       upsilon     u  put
+         Φ	φ       phi         f
+         Χ	χ       chi         ch Bach
+         Ψ	ψ       psi         ps
+         Ω	ω       omega       ô  grow
+"
+
+exit 0
