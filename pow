@@ -10,8 +10,10 @@
 # Usage
 # pow <arg1> <arg2> 
 
+c='\033[1;31m' 
+
 echo ""
-echo -e -n '\t'
+echo -en $c  '\t'
 echo  $1 ^ $2 | bc
 echo ""
 
