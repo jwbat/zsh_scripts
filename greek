@@ -10,39 +10,35 @@
 # Usage
 # greek
 
-c0='\033[0;36m'
-c1='\033[0;35m'
-c2='\033[0;34m'
-c3='\033[0;33m'
-c4='\033[1;4;32m'
-#c4='\033[0;32m'
+c='\033[1;4;33m'
+reset='\033[0;32m' 
 
 echo "  
-$c4
-         Α	α       alpha       a
-         Β	β       beta        b
-         Γ	γ       gamma       g
-         Δ	δ       delta       d
-         Ε	ε       epsilon     e
-         Ζ	ζ       zêta        z
-         Η	η       êta         ê
-         Θ	θ       thêta       th
-         Ι	ι       iota        i
-         Κ	κ       kappa       k
-         Λ	λ       lambda      l
-         Μ	μ       mu          m
-         Ν	ν       nu          n
-         Ξ	ξ       xi          ks
-         Ο	ο       omikron     o
-         Π	π       pi          p
-         Ρ	ρ       rho         r
-         Σ	σ       sigma       s
-         Τ	τ       tau         t
-         Υ	υ       upsilon     u
-         Φ	φ       phi         f
-         Χ	χ       chi         ch
-         Ψ	ψ       psi         ps
-         Ω	ω       omega       ô
+         ${c}                             $reset
+         ${c} Α	α       alpha       a $reset
+         ${c} Β	β       beta        b $reset
+         ${c} Γ	γ       gamma       g $reset
+         ${c} Δ	δ       delta       d $reset
+         ${c} Ε	ε       epsilon     e $reset
+         ${c} Ζ	ζ       zêta        z $reset
+         ${c} Η	η       êta         ê $reset
+         ${c} Θ	θ       thêta      th $reset
+         ${c} Ι	ι       iota        i $reset
+         ${c} Κ	κ       kappa       k $reset
+         ${c} Λ	λ       lambda      l $reset
+         ${c} Μ	μ       mu          m $reset
+         ${c} Ν	ν       nu          n $reset
+         ${c} Ξ	ξ       xi         ks $reset
+         ${c} Ο	ο       omikron     o $reset
+         ${c} Π	π       pi          p $reset
+         ${c} Ρ	ρ       rho         r $reset
+         ${c} Σ	σ       sigma       s $reset
+         ${c} Τ	τ       tau         t $reset
+         ${c} Υ	υ       upsilon     u $reset
+         ${c} Φ	φ       phi         f $reset
+         ${c} Χ	χ       chi        ch $reset
+         ${c} Ψ	ψ       psi        ps $reset
+         ${c} Ω	ω       omega       ô $reset
 "
 
 exit 0
