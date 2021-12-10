@@ -14,9 +14,11 @@ c0='\033[0;36m'
 c1='\033[0;35m'
 c2='\033[0;34m'
 c3='\033[0;33m'
-c4='\033[0;32m'
+c4='\033[1;4;32m'
+#c4='\033[0;32m'
 
-echo "$c4  
+echo "  
+$c4
          Α	α       alpha       a
          Β	β       beta        b
          Γ	γ       gamma       g
@@ -30,17 +32,17 @@ echo "$c4
          Λ	λ       lambda      l
          Μ	μ       mu          m
          Ν	ν       nu          n
-         Ξ	ξ       xi          ks box
+         Ξ	ξ       xi          ks
          Ο	ο       omikron     o
          Π	π       pi          p
          Ρ	ρ       rho         r
          Σ	σ       sigma       s
          Τ	τ       tau         t
-         Υ	υ       upsilon     u  put
+         Υ	υ       upsilon     u
          Φ	φ       phi         f
-         Χ	χ       chi         ch Bach
+         Χ	χ       chi         ch
          Ψ	ψ       psi         ps
-         Ω	ω       omega       ô  grow
+         Ω	ω       omega       ô
 "
 
 exit 0
