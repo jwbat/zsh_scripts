@@ -2,10 +2,10 @@
 
 # Author: James Batman
 # Date Created: 12/04/2021
-# Last Modified: 12/05/2021
+# Last Modified: 12/10/2021
 
 # Description
-# print c++ data types and their sizes for current device
+# print c++ data types, their sizes, and their min and max values
 #  -- depends on cdata2, a c++ binary
 
 # Usage
