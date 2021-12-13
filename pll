@@ -2,10 +2,10 @@
 
 # Author: James Batman
 # Date Created: 12/06/2021
-# Last Modified: 12/06/2021
+# Last Modified: 12/13/2021
 
 # Description
-# git pull to the listed directories
+# git pull the listed repos
 
 # Usage
 # pll
@@ -15,9 +15,10 @@ d2=~/code/shell/scripts
 d3=~/code/cpp/utilities
 d4=~/code/cpp/functional_cpp
 d5=~/code/cpp/idioms
-d6=~/code/cpp/courses/course3
+d6=~/code/cpp/experimental
+d7=~/code/cpp/courses/course3
 
-ds=($d1 $d2 $d3 $d4 $d5 $d6)
+ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7)
 
 for d in $ds; do
     git -C $d pull
