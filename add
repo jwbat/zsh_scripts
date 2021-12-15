@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/15/21
+# Last Modified: 12/15/21
+
+# Description
+# add numbers 
+#  - uses c++ binary add2
+
+# Usage
+# add <arg1> <arg2> ... <argN> 
+
+add2 $@
+
+exit 0

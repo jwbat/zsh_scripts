@@ -18,10 +18,15 @@ digits=${param:-16}
 
 echo
 echo "${col}      π: $( pi $digits )"
+echo 
 echo "${col}      e: $( e $digits )"
+echo
 echo "${col}      φ: $( phi $digits )"
+echo
 echo "${col}     √2: $( sqrt2 $digits )"
+echo
 echo "${col}     √3: $( sqrt3 $digits )"
+echo
 echo "${col}     √5: $( sqrt5 $digits )"
 echo
 

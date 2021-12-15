@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/15/21
+# Last Modified: 12/15/21
+
+# Description
+# multiply numbers
+#  - uses c++ binary mult2
+
+# Usage
+# mult <arg1> <arg2> ... <argN> 
+
+mult2 $@
+
+exit 0
