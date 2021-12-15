@@ -16,7 +16,7 @@ d3=~/code/cpp/utilities
 d4=~/code/cpp/functional_cpp
 d5=~/code/cpp/idioms
 d6=~/code/cpp/experimental
-d7=~/code/cpp/courses/course3
+d7=~/code/cpp/courses/numerical
 
 ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7)
 
