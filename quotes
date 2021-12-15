@@ -18,23 +18,30 @@ c2='\033[0;34m'
 c3='\033[0;33m'
 c4='\033[0;32m'
 
-echo
-echo "$c1   Files are a means to store data in a storage device."
-echo
-echo "$c2   An object is a region of storage that has a type and a value."
-echo
-echo "$c3   An expression is referentially transparent if it has no observable
+q1="$c0   Files are a means to store data in a storage device."
+q2="$c1   An object is a region of storage that has a type and a value."
+q3="$c3   An expression is referentially transparent if it has no observable
    side effects, and therefore all functions used in that expression
-   are pure." - Ivan Cukic
-echo
-echo "$c4   For what shall it profit a man,
+   are pure. - Ivan Cukic"
+q4="$c4   For what shall it profit a man,
    if he shall gain the whole world but lose his soul?"
-echo
-echo "$c0   You can't make somebody understand something if their salary
-   depends upon them not understanding it." - Upton Sinclair
-echo
-echo "$c2   Any fool can write code that a computer can understand. 
-   Good programmers write code that humans can understand." - Martin Fowler
-echo
+q5="$c2   You can't make somebody understand something if their salary
+   depends upon them not understanding it. 
+    - Upton Sinclair"
+q6="$c3   Any fool can write code that a computer can understand. 
+   Good programmers write code that humans can understand. 
+    - Martin Fowler"
+q7="$c1   When clients of a complex system are ignorant of how it works,
+   yet happy with what it does, that says a lot about the design of the system. 
+    - Scott Meyers"
 
+
+qs=($q1 $q2 $q3 $q4 $q5 $q6 $q7)
+
+for q in $qs; do
+   echo ""
+   echo $q
+done
+
+echo ""
 exit 0
