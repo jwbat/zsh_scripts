@@ -8,6 +8,7 @@
 # • find and print all the primes between two integers;
 #    takes 0, 1, or 2 arguments; if the 2nd arg is greater
 #    than the 1st, prints descending
+# • reports the count and percentage in that range
 # • uses c++ binary primes2
 
 # Usage
@@ -15,13 +16,16 @@
 # primes <int1>         --returns all primes between    0 & arg1
 # primes <int1> <int2>  --returns all primes between arg1 & arg2
 
+color='\033[1;37m'
+
 if [ $# -eq 2 ]; then
-    primes2 $1 $2
+    echo "$color $(primes2 $1 $2)"
 
 elif [ $# -eq 1 ]; then
-    primes2 $1
+    echo "$color $(primes2 $1)"
 
 else 
+    echo "$color $(primes2)"
     primes2
 fi
 
