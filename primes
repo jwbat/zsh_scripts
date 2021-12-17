@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/17/21
+# Last Modified: 12/17/21
+
+# Description
+# • find and print all the primes between two integers;
+#    takes 0, 1, or 2 arguments; if the 2nd arg is greater
+#    than the 1st, prints descending
+# • uses c++ binary primes2
+
+# Usage
+# primes                --returns all primes between    0 & 100 
+# primes <int1>         --returns all primes between    0 & arg1
+# primes <int1> <int2>  --returns all primes between arg1 & arg2
+
+if [ $# -eq 2 ]; then
+    primes2 $1 $2
+
+elif [ $# -eq 1 ]; then
+    primes2 $1
+
+else 
+    primes2
+fi
+
+
+exit 0
