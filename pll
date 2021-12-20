@@ -13,12 +13,11 @@
 d1=~/.dotfiles
 d2=~/code/shell/scripts
 d3=~/code/cpp/utilities
-d4=~/code/cpp/functional_cpp
+d4=~/code/cpp/functional
 d5=~/code/cpp/idioms
 d6=~/code/cpp/experimental
-d7=~/code/cpp/courses/numerical
 
-ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7)
+ds=($d1 $d2 $d3 $d4 $d5 $d6)
 
 for d in $ds; do
     git -C $d pull
