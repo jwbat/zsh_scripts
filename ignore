@@ -6,6 +6,7 @@
 
 # Description
 # generate a .gitignore file in the current folder 
+# for the specified file or project type
 
 # Usage
 # ignore <filetype>  e.g., ignore cpp
