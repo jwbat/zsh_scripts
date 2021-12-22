@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/22/2021
+# Last Modified: 12/22/2021
+
+# Description
+# calculate fraction with integers and/or floats in
+# numerator and denominator
+# depends on c++ binary div2
+
+# Usage
+# div <arg>  e.g., div 1/1.5 
+
+c='\033[1;32m' 
+echo "${c} $(div2 $1)"  
+echo
+
+exit 0
