@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/23/2021
+# Last Modified: 12/23/2021
+
+# Description
+# print powers of 2
+# depends on a c++ binary, pow2
+
+# Usage
+# pw  
+echo
+for p in {0..10}; do
+    printf "%10s %4s %6s\n" "2 ^ " "$p: "  "$(pow 2 $p)"
+done
+echo
+
+exit 0

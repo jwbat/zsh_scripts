@@ -16,10 +16,8 @@
 
 c='\033[1;32m' 
 
-echo
-echo -en $c  '\t'
+#echo -en $c  '\t'
 echo  $(pow2 $1 $2 )
-echo
 
 
 exit 0
