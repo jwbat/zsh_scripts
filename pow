@@ -7,8 +7,8 @@
 # Description
 # print the result of arg1 ^ arg2;
 #  args may be either a float or a fraction;
-#  e.g., pow 8 1/3  -->  2
-#        pow 9 0.5  -->  3
+#  e.g., pow 8 1/3    -->  2
+#        pow 9.0 0.5  -->  3
 # calls a c++ binary, pow2
 
 # Usage
@@ -16,8 +16,9 @@
 
 c='\033[1;32m' 
 
-#echo -en $c  '\t'
-echo  $(pow2 $1 $2 )
+echo
+echo "$c      $(pow2 $1 $2)"
+echo
 
 
 exit 0

@@ -13,9 +13,9 @@
 
 color='\033[0;32m'
 
-echo
+echo $color
 for p in {0..20}; do
-    printf  "$color %10s %4s %8s\n" "2 ^ " "$p: "  "$(pow 2 $p)"
+    printf "%10s %4s %8s \n" "2 ^ " "$p: "  "$(pow2 2 $p)"
 done
 echo
 
