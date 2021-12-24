@@ -9,10 +9,13 @@
 # depends on a c++ binary, pow2
 
 # Usage
-# pw  
+# p2  
+
+color='\033[0;32m'
+
 echo
-for p in {0..10}; do
-    printf "%10s %4s %6s\n" "2 ^ " "$p: "  "$(pow 2 $p)"
+for p in {0..20}; do
+    printf  "$color %10s %4s %8s\n" "2 ^ " "$p: "  "$(pow 2 $p)"
 done
 echo
 
