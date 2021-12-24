@@ -11,10 +11,8 @@
 # Usage
 # random <n> 
 
-color='\033[1;32m'
-
-echo ""
-echo "${color}$( random2 $1 )"
-echo ""
+echo
+random2 $1
+echo
 
 exit 0
