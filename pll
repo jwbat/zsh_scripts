@@ -20,7 +20,7 @@ d6=~/code/cpp/experimental
 ds=($d1 $d2 $d3 $d4 $d5 $d6)
 
 for d in $ds; do
-    git -C $d pull
+    git -C $d pull --rebase
 done
 
 exit 0

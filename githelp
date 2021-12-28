@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/28/21
+# Last Modified: 12/28/21
+
+# Description
+# print useful git commands 
+
+# Usage
+# githelp
+
+echo "git pull --rebase"
+echo "git config pull.rebase false"
+
+exit 0
