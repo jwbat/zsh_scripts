@@ -16,9 +16,7 @@
 
 c='\033[1;32m' 
 
-echo
 echo "$c    $(pow2 $1 $2)"
 echo
-
 
 exit 0
