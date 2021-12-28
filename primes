@@ -13,8 +13,8 @@
 
 # Usage
 # primes                --returns all primes between    0 & 100 
-# primes <int1>         --returns all primes between    0 & arg1
-# primes <int1> <int2>  --returns all primes between arg1 & arg2
+# primes <arg1>         --returns all primes between    0 & arg1
+# primes <arg1> <arg1>  --returns all primes between arg1 & arg2
 
 color='\033[1;37m'
 
@@ -26,7 +26,6 @@ elif [ $# -eq 1 ]; then
 
 else 
     echo "$color $(primes2)"
-    primes2
 fi
 
 
