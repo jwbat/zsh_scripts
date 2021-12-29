@@ -10,14 +10,16 @@
 # Usage
 # githelp
 
-echo "git pull --rebase"
+c='\033[1;32m' 
+echo ${c}
+echo "\t git pull --rebase"
 echo
-echo "git stash"
-echo "git pull"
-echo "git stash apply"
+echo "\t git stash"
+echo "\t git pull"
+echo "\t git stash apply"
 echo
-echo "git checkout -b <branch-name> main"
-echo "git config pull.rebase false"
+echo "\t git checkout -b <branch-name> main"
+echo "\t git config pull.rebase false"
 echo
 
 exit 0
