@@ -1,0 +1,48 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/29/2021
+# Last Modified: 12/29/2021
+
+# Description
+# print the Gang of Four design patterns
+
+# Usage
+# dp
+
+echo "
+\t\t\t\t Creational
+\t\t\t\t ==========
+\t\t\t\t Builder
+\t\t\t\t Factory Method
+\t\t\t\t Abstract Factory
+\t\t\t\t Prototype
+\t\t\t\t Singleton
+        
+
+\t\t\t\t Structural
+\t\t\t\t ==========
+\t\t\t\t Adapter
+\t\t\t\t Bridge
+\t\t\t\t Composite
+\t\t\t\t Decorator
+\t\t\t\t Facade
+\t\t\t\t Flyweight
+\t\t\t\t Proxy
+         
+
+\t\t\t\t Behavioral
+\t\t\t\t ==========
+\t\t\t\t Chain of Responsibility
+\t\t\t\t Command
+\t\t\t\t Interpreter
+\t\t\t\t Mediator
+\t\t\t\t Memento
+\t\t\t\t Observer
+\t\t\t\t State
+\t\t\t\t Strategy
+\t\t\t\t Template Method
+\t\t\t\t Visitor
+"
+
+exit 0
