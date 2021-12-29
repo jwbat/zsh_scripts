@@ -12,7 +12,7 @@
 # sqrt2 [number_of_decimal_places]
 
 
-sqrt=$(<stuff/sqrt2.txt)
+sqrt=$(<~/code/shell/scripts/stuff/sqrt2.txt)
 
 purple='\033[0;35m'
 param=$1

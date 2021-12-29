@@ -11,7 +11,7 @@
 # Usage
 # phi [number_of_decimal_places]
 
-phi=$(<stuff/phi.txt)
+phi=$(<~/code/shell/scripts/stuff/phi.txt)
 
 purple='\033[0;35m'
 param=$1

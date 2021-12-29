@@ -11,7 +11,7 @@
 # Usage
 # e [number of decimal places]
 
-e=$(<stuff/e.txt)
+e=$(<~/code/shell/scripts/stuff/e.txt)
 
 param=$1
 nr_of_digits=${param:-50}
