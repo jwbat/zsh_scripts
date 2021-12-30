@@ -11,6 +11,10 @@
 # dp
 
 echo "
+\t\t\t\t -----------------
+\t\t\t\t Design Principles
+\t\t\t\t -----------------
+
 \t\t\t\t Creational
 \t\t\t\t ==========
 \t\t\t\t Builder
