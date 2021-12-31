@@ -2,7 +2,7 @@
 
 # Author: James Batman
 # Date Created: 12/23/2021
-# Last Modified: 12/23/2021
+# Last Modified: 12/31/2021
 
 # Description
 # print powers of 2
@@ -11,12 +11,10 @@
 # Usage
 # p2  
 
-color='\033[0;32m'
+c='\033[0;32m'
 
-echo $color
-for p in {0..20}; do
-    printf "%10s %4s %8s \n" "2 ^" "$p: "  "$(pow2 2 $p)"
-done
+echo $c
+echo "$(powers2)"
 echo
 
 exit 0
