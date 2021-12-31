@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 12/31/2021
+# Last Modified: 12/31/2021
+
+# Description
+# convert an integer to a bitset
+
+# Usage
+# bits <int> 
+
+c='\033[0;32m'
+
+echo $c
+echo "\t $(bits2 $1)"
+echo
+
+exit 0
