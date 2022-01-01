@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 01/01/2022
+# Last Modified: 01/01/2022
+
+# Description
+# see 256 colors
+
+# Usage
+# see 
+
+for c in {0..255}; do 
+    if [ $(($c % 10)) -eq 0 ]; then
+        echo
+    fi
+    tput setaf $c; printf "%6s"  $c;
+done
+
+echo "
+"
+
+exit 0

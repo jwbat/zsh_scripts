@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 01/01/2022
+# Last Modified: 01/01/2022
+
+# Description
+# print the current nr of lines & columns of the terminal
+
+# Usage
+# dims 
+
+c='\033[0;31m'
+
+echo $c
+echo "\t lines: $(tput lines), columns: $(tput cols)"
+echo
+
+exit 0
