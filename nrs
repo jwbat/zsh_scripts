@@ -11,23 +11,25 @@
 # Usage
 # nrs [nr_of_decimals] 
 
-col='\033[0;37m'
+c1="$(tput setaf 214)"
+c2="$(tput setaf 83)"
+
 
 param=$1
 digits=${param:-16}
 
 echo
-echo "${col}      π: $( pi $digits )"
+echo "$c1      π:  $( pi $digits )"
 echo 
-echo "${col}      e: $( e $digits )"
+echo "$c1      e:  $( e $digits )"
 echo
-echo "${col}      φ: $( phi $digits )"
+echo "$c1      φ:  $( phi $digits )"
 echo
-echo "${col}     √2: $( sqrt2 $digits )"
+echo "$c1     √2:  $( sqrt2 $digits )"
 echo
-echo "${col}     √3: $( sqrt3 $digits )"
+echo "$c1     √3:  $( sqrt3 $digits )"
 echo
-echo "${col}     √5: $( sqrt5 $digits )"
+echo "$c1     √5:  $( sqrt5 $digits )"
 echo
 
 exit 0

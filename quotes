@@ -2,7 +2,7 @@
 
 # Author: James Batman
 # Date Created: 12/01/2021
-# Last Modified: 12/01/2021
+# Last Modified: 01/02/2022
 
 # Description
 # Quotes of Beauty 
@@ -12,11 +12,11 @@
 
 #autoload colors; colors
 #$fg[green]text$reset_color
-c0='\033[0;36m'
-c1='\033[0;35m'
-c2='\033[0;34m'
-c3='\033[0;33m'
-c4='\033[0;32m'
+c0="$(tput setaf 184)"
+c1="$(tput setaf 183)"
+c2="$(tput setaf 86)"
+c3="$(tput setaf 45)"
+c4="$(tput setaf 164)"
 
 q1="$c0   Files are a means to store data in a storage device."
 q2="$c1   An object is a region of storage that has a type and a value."

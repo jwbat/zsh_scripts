@@ -14,10 +14,10 @@
 
 pi=$(<~/code/shell/scripts/stuff/pi.txt)
 
-purple='\033[0;35m'
+c="$(tput setaf 83)"
 param=$1
 nr_of_digits=${param:-50}
 
-echo "${purple} ${pi:0:$((2 + $nr_of_digits))}"
+echo "$c ${pi:0:$((2 + $nr_of_digits))}"
 
 exit 0

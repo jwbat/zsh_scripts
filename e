@@ -15,7 +15,8 @@ e=$(<~/code/shell/scripts/stuff/e.txt)
 
 param=$1
 nr_of_digits=${param:-50}
-purple='\033[0;35m'
-echo "${purple} ${e:0:$((2 + $nr_of_digits))}"
+
+c="$(tput setaf 83)"
+echo "$c ${e:0:$((2 + $nr_of_digits))}"
 
 exit 0
