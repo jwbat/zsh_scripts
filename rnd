@@ -12,7 +12,7 @@
 # random <n> 
 
 echo
-random2 $1
+echo "   $(random2 $1)"
 echo
 
 exit 0
