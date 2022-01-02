@@ -2,18 +2,18 @@
 
 # Author: James Batman
 # Date Created: 12/15/2021
-# Last Modified: 12/15/2021
+# Last Modified: 01/02/2022
 
 # Description
-# Prints to the terminal the values of pi, e, φ (phi, the golden ratio), √2, √3,  and 
-# √5 to the provided number of decimal places (default = 16) up to 1000.
+
+# print the value of pi, e, φ (phi, the golden ratio), and √2 to n decimal 
+#  places up to 1000 (default=16).
 
 # Usage
-# nrs [nr_of_decimals] 
+# nrs <nr_of_decimals> 
 
 c1="$(tput setaf 214)"
 c2="$(tput setaf 83)"
-
 
 param=$1
 digits=${param:-16}
@@ -27,9 +27,4 @@ echo "$c1      φ:  $( phi $digits )"
 echo
 echo "$c1     √2:  $( sqrt2 $digits )"
 echo
-echo "$c1     √3:  $( sqrt3 $digits )"
-echo
-echo "$c1     √5:  $( sqrt5 $digits )"
-echo
-
 exit 0
