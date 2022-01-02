@@ -2,16 +2,17 @@
 
 # Author: James Batman
 # Date Created: 11/12/21
-# Last Modified: 11/17/21
+# Last Modified: 01/02/21
 
 # Description
-# Print useful zsh commands
+# print useful commands
 
 # Usage
 # show
 
 
 echo
+echo "\t grep -rn --exclude-dir=.git "chrono" .     \t -r recursive"
 echo "\t find . -maxdepth 1 -type l -ls             \t list symlinks"
 echo "\t ln -s /path/to/original /path/to/symlink   \t create symlink"
 echo "\t rm /path/to/symlink                        \t remove symlink"
