@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 01/03/2022
+# Last Modified: 01/03/2022
+
+# Description
+# print date and time 
+#  uses c++ binary day2
+
+# Usage
+# day 
+
+columns=$(tput cols)
+start=$((($columns - 40) / 2))
+
+color="$(tput setaf 226)"
+
+tput clear
+tput cup 4 $start
+echo  $color  $(day2)
+echo 
+
+exit 0
