@@ -12,12 +12,12 @@
 # day 
 
 columns=$(tput cols)
-start=$((($columns - 40) / 2))
+col=$((($columns - 40) / 2))
 
 color="$(tput setaf 226)"
 
 tput clear
-tput cup 4 $start
+tput cup 4 $col
 echo  $color  $(day2)
 echo 
 
