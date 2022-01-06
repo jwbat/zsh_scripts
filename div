@@ -12,8 +12,9 @@
 # Usage
 # div <arg>  e.g., div 1/1.5 
 
-c='\033[1;32m' 
-echo "${c} $(div2 $1)"  
+c="$(tput setaf 214)"
+
+echo "$c $(div2 $1)"  
 echo
 
 exit 0
