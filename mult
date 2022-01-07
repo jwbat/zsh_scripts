@@ -11,6 +11,9 @@
 # Usage
 # mult <arg1> <arg2> ... <argN> 
 
-mult2 $@
+c=$(tput setaf 214)
+
+echo "\t\t\t" $c $(mult2 $@)
+
 
 exit 0

@@ -10,8 +10,9 @@
 # Usage
 # show
 
+c="$(tput setaf 83)"
 
-echo
+echo $c
 echo "\t grep -rn --exclude-dir=.git "chrono" .     \t -r recursive"
 echo "\t find . -maxdepth 1 -type l -ls             \t list symlinks"
 echo "\t ln -s /path/to/original /path/to/symlink   \t create symlink"
