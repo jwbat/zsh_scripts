@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 
+# Last Modified: 
+
+# Description
+# view cpp info sheets 
+
+# Usage
+# cimg -v    see vector 
+# options:  v=vector, a=algorithms
+
+while getopts "vas" opt; do
+    case $opt in
+        v) open ~/code/shell/scripts/stuff/cpp.vector.jpeg;;
+        a) open ~/code/shell/scripts/stuff/cpp.algorithms.png;;
+        s) open ~/code/shell/scripts/stuff/cpp.string_view.png;;
+    esac
+done
+
+exit 0
