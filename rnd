@@ -6,13 +6,15 @@
 
 # Description
 # print n-digit random integer 
-#  **note: depends on c++ binary, random2
+#  depends on c++ binary, random2
 
 # Usage
 # random <n> 
 
+c="$(tput setaf 83)"
+
 echo
-echo "   $(random2 $1)"
+echo "$c $(random2 $1)"
 echo
 
 exit 0
