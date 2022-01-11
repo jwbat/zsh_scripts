@@ -6,17 +6,17 @@
 
 # Description
 
-# print the value of pi, e, φ (phi, the golden ratio), and √2 to n decimal 
-#  places up to 1000 (default=16).
+#  print the values of pi, e, φ (phi, the golden ratio), 
+#    and √2 to n-decimal places.
 
 # Usage
-# nrs <nr_of_decimals> 
+# nrs <nr_of_decimal_places>  (default=80, max=1000) 
 
 c1="$(tput setaf 214)"
 c2="$(tput setaf 83)"
 
 param=$1
-digits=${param:-16}
+digits=${param:-80}
 
 echo
 echo "$c1      π:  $( pi $digits )"

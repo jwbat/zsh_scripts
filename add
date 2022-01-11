@@ -11,6 +11,7 @@
 # Usage
 # add <arg1> <arg2> ... <argN> 
 
-add2 $@
+c=$(tput setaf 214)
+echo "\t\t\t" $c $(add2 $@)  
 
 exit 0
