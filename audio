@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+# Usage
+# audio 
+
+echo "
+\t  Mac:  CoreAudio
+\t  Cross-platform:
+\t      general purpose: SDL, portaudio, RtAudio, libsoundio
+\t      pro: Juce, many others...
+"
+
+exit 0
