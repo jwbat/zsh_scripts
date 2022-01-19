@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+# Usage
+# cplheaders 
+
+c="$(tput setaf 83)"
+
+echo $c
+printf "   %-20s %-20s %-20s %-20s\n" "<algorithm>" "<array>"  "<atomic>"  "<bitset>";
+printf "   %-20s %-20s %-20s %-20s\n" "<cassert>" "<ccomplex>"  "<cctype>" "<cerrno>";
+printf "   %-20s %-20s %-20s %-20s\n"  "<cfenv>"  "<cfloat>" "<chrono>" "<cinttypes>";
+printf "   %-20s %-20s %-20s %-20s\n" "<ciso646>" "<climits>" "<clocale>" "<cmath>";
+printf "   %-20s %-20s %-20s %-20s\n" "<codecvt>"  "<condition_variable>"  "<complex>" "<csignal>";
+printf "   %-20s %-20s %-20s %-20s\n" "<csetjmp>" "<cstdalign>"  "<cstdarg>" "<cstdbool>";
+printf "   %-20s %-20s %-20s %-20s\n" "<cstddef>" "<cstdint>"  "<cstdio>" "<ctime>";
+printf "   %-20s %-20s %-20s %-20s\n" "<ctgmath>"  "<cwchar>" "<cwctype>" "<cuchar>";
+printf "   %-20s %-20s %-20s %-20s\n" "<exception>" "<forward_list>"  "<fstream>" "<functional>";
+printf "   %-20s %-20s %-20s %-20s\n" "<future>"  "<initializer_list>"  "<iomanip>" "<ios>";
+printf "   %-20s %-20s %-20s %-20s\n" "<iosfwd>" "<iostream>" "<iterator>" "<locale>";
+printf "   %-20s %-20s %-20s %-20s\n" "<limits>" "<list>" "<map>" "<memory>";
+printf "   %-20s %-20s %-20s %-20s\n" "<mutex>"  "<new>" "<numeric>" "<queue>";
+printf "   %-20s %-20s %-20s %-20s\n" "<random>"  "<ratio>"  "<regex>"  "<scoped_allocator>";
+printf "   %-20s %-20s %-20s %-20s\n" "<set>" "<shared_mutex>"  "<sstream>" "<stack>";
+printf "   %-20s %-20s %-20s %-20s\n" "<stdexcept>" "<streambuf>" "<string>" "<strstream>";
+printf "   %-20s %-20s %-20s %-20s\n" "<system_error>" "<thread>"  "<tuple>"  "<typeindex>";
+printf "   %-20s %-20s %-20s %-20s\n" "<type_traits>"  "<unordered_map>"  "<unordered_set>"  "<utility>";
+printf "   %-20s %-20s %-20s %-20s\n" "<type_traits>"  "<unordered_map>"  "<unordered_set>"  "<utility>";
+printf "   %-20s %-20s\n\n" "<valarray>" "<vector>";
+
+exit 0
