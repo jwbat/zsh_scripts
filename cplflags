@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# Usage
+# cplflags  
+
+c="$(tput setaf 83)"
+
+echo "$c
+      g++ -E main.cpp                        -- view preprocessor output
+      g++ -fdump-tree-all-graph -g main.cpp  -- view syntax tree
+      g++ -S main.cpp                        -- output assembly file, main.s
+      g++ -c main.cpp                        -- compile to object file, main.o
+      g++ main.o source.o -o pgm             -- link object files to executable, pgm
+      objdump [options] source.o             -- llvm object file dumper
+      otool -L pgm                           -- list library linking
+"
+
+exit 0
