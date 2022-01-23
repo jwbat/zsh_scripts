@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+
+# Usage
+# cmk 
+
+c="$(tput setaf 83)"
+
+echo "$c
+\t  cmake --version
+\t  cmake --help
+\t  cmake 
+
+\t  touch CMakeLists.txt
+
+\t  cmake [options] <path-to-source>
+\t  cmake [options] <path-to-existing-build>
+\t  cmake [options] -S <path-to-source> -B <path-to-build>
+
+\t  mkdir build
+\t  cmake -S . -B build/
+"
+
+
+exit 0
