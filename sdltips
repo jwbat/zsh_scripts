@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# Usage
+# sdltips 
+
+c="$(tput setaf 83)"
+
+echo "$c 
+\t 1) clear;  2) render;  3) render_present;  4) wait;  5) repeat.
+"
+
+exit 0
