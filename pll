@@ -17,8 +17,9 @@ d4=~/code/cpp/functional
 d5=~/code/cpp/idioms
 d6=~/code/cpp/experimental
 d7=~/code/cpp/courses/design_patterns
+d8=~/code/cpp/sdl
 
-ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7)
+ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7 $d8)
 
 for d in $ds; do
     git -C $d pull --rebase
