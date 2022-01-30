@@ -7,8 +7,10 @@
 c="$(tput setaf 83)"
 
 echo " $c
-\t non-profit organizations
+\t free experience:
+\t ==========================
 \t opensource projects
+\t non-profit organizations
 \t internships
 \t schools
 "

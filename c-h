@@ -16,7 +16,8 @@ lines="#ifndef ${(U)classname}_H
 #define ${(U)classname}_H
 
 
-class ${(C)classname} {
+class ${(C)classname}
+{
     public: 
         ${(C)classname}();
     private:
