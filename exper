@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+
+# Usage
+# exper 
+
+c="$(tput setaf 83)"
+
+echo " $c
+\t non-profit organizations
+\t opensource projects
+\t internships
+\t schools
+"
+
+
+exit 0
