@@ -18,13 +18,15 @@ d5=~/code/cpp/idioms
 d6=~/code/cpp/experimental
 d7=~/code/cpp/courses/design_patterns
 d8=~/code/cpp/sdl
+d9=~/code/cpp/linalg
 
-ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7 $d8)
+ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7 $d8 $d9)
 
 for d in $ds; do
     git -C $d add .
     git -C $d commit -m "."
     git -C $d push -u origin main
 done
+
 
 exit 0

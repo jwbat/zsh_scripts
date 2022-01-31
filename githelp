@@ -11,15 +11,18 @@
 # githelp
 
 c='\033[1;32m' 
-echo ${c}
-echo "\t git pull --rebase"
-echo
-echo "\t git stash"
-echo "\t git pull"
-echo "\t git stash apply"
-echo
-echo "\t git checkout -b <branch-name> main"
-echo "\t git config pull.rebase false"
-echo
+
+echo "${c}
+\t git remote show origin
+\t git remote add origin
+\t git remote --verbose
+\t ==================================
+\t git pull --rebase
+\t git stash
+\t git pull
+\t git stash apply
+\t ==================================
+\t git checkout -b <branch-name> main
+\t git config pull.rebase false
 
 exit 0
