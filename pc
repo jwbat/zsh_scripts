@@ -1,0 +1,34 @@
+#!/bin/zsh
+
+
+# Description
+# Python frameworks, commands
+
+# Usage
+# pc 
+
+c="$(tput setaf 200)"
+
+echo "$c
+\t --- fastapi-----------------------------------------------
+\t uvicorn main:app --reload       (run server; alias: uv) 
+\t ==========================================================
+
+\t --- venv ---------------------------------------
+\t p -m venv <name>            (name: venv)
+\t source <name>/bin/activate  (alias: activate) 
+\t pip freeze > requirements.txt
+\t deactivate
+\t pip install -r requirements.txt
+\t p -m venv venv --system-site-packages    (rare)
+\t ================================================
+
+\t --- pip ----------------------------------------
+\t p -m pip install --upgrade pip
+\t pip3 list
+\t p -m pip install fastapi
+\t ================================================
+"
+
+
+exit 0

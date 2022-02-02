@@ -9,10 +9,11 @@
 # for the specified file or project type
 
 # Usage
-# ignore <filetype>  e.g., ignore cpp
+# ignore <filetype> (ex:  ignore cpp) 
 
 case $1 in
     cpp) file=~/.vim/.gitignore.cpp;;
+    py) file=~/.vim/.gitignore.py;;
     *) echo "unrecognized filetype.  cannot generate a .gitignore"; exit 1;;
 esac
 
