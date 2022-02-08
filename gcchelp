@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+
+# Description
+# print gcc commands and other helpful info 
+
+# Usage
+# gcchelp 
+
+c="$(tput setaf 83)"
+echo "$c
+\t g++ --version
+\t g++ main.cpp         -- compile, assemble, and link to create an executable file a.out 
+\t g++ -S main.cpp      -- generate a main.s assembly source file (w/out assembling or linking)
+\t g++ -c main.cpp      -- generate main.o (compile and assemble, w/out linking)
+\t g++ -o run main.cpp  -- generate executable, run; ./run
+\t gcc -v 2>&1 | grep \"Thread model\"
+"
+
+exit 0
