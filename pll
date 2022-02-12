@@ -19,9 +19,9 @@ d6=~/code/cpp/experimental
 d7=~/code/cpp/courses/design_patterns
 d8=~/code/cpp/sdl
 d9=~/code/cpp/linalg
-d10=~/code/python/fastapi/01-bit
+#d10=~/code/python/fastapi/01-bit
 
-ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7 $d8 $d9 $d10)
+ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7 $d8 $d9)
 
 for d in $ds; do
     git -C $d pull --rebase
