@@ -10,7 +10,8 @@
 # Usage
 # dp
 
-echo "
+c="$(tput setaf 209)"
+echo "$c
 \t\t\t\t-----------------
 \t\t\t\t Design Patterns
 \t\t\t\t-----------------
