@@ -4,11 +4,9 @@
 # Usage
 # exper 
 
-c="$(tput setaf 83)"
+c="$(tput setaf 80)"
 
 echo " $c
-\t free experience:
-\t ==========================
 \t opensource projects
 \t non-profit organizations
 \t internships

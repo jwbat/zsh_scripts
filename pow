@@ -14,9 +14,9 @@
 # Usage
 # pow <arg1> <arg2>   
 
-c=$(tput setaf 214)
+c=$(tput setaf 80)
 
-echo "\t\t\t $c $(pow2 $1 $2)"
+echo "\n $c $(pow2 $1 $2)"
 echo
 
 exit 0

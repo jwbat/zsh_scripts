@@ -24,7 +24,6 @@ printf "   %-20s %-20s %-20s %-20s\n" "<set>" "<shared_mutex>"  "<sstream>" "<st
 printf "   %-20s %-20s %-20s %-20s\n" "<stdexcept>" "<streambuf>" "<string>" "<strstream>";
 printf "   %-20s %-20s %-20s %-20s\n" "<system_error>" "<thread>"  "<tuple>"  "<typeindex>";
 printf "   %-20s %-20s %-20s %-20s\n" "<type_traits>"  "<unordered_map>"  "<unordered_set>"  "<utility>";
-printf "   %-20s %-20s %-20s %-20s\n" "<type_traits>"  "<unordered_map>"  "<unordered_set>"  "<utility>";
 printf "   %-20s %-20s\n\n" "<valarray>" "<vector>";
 
 exit 0

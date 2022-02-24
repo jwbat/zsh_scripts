@@ -11,10 +11,8 @@
 # Usage
 # p2  
 
-c='\033[0;32m'
+c=$(tput setaf 50)
 
-echo $c
-echo "$(powers2)"
-echo
+echo "$c\n$(powers2) \n"
 
 exit 0
