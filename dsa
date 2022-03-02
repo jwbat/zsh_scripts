@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+# Author: James Batman
+
+# Description
+#  
+
+# Usage
+# dsa 
+
+c="$(tput setaf 184)"
+echo $c
+cat ~/code/shell/scripts/stuff/datastructures.txt 
+
+exit 0

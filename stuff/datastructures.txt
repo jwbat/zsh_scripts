@@ -1,0 +1,203 @@
+    Data Structures for a Coding Interview and associated questions
+
+    1. Array/List
+
+  List contains a sequence of values in an ordered fashion which is placed adjacently in memory.
+  The list is identified by the address of its first element. Since the order of placement 
+  of the elements of a list in the memory follows the same order in which they are defined;
+  each element in the list can be accessed by incrementing the address of the first element 
+  by the right index amount. Hence accessing any element in the list takes constant time 
+  irrespective of their position in the list.
+
+
+  Time complexity:
+  
+  Access — O(1): Accessing an element in the list requires addressing it with the index.
+  
+  Search — O(n): Searching if an element exists in a list requires (in the worst case)
+  to traverse each index on by one
+  
+  Insert/Delete — O(n): Inserting(Deleting) an element from a list first requires to 
+  be found which is O(n)
+  
+    Common Questions:
+      Reverse a linked list
+      Find the middle element of a linked list
+      Find if the linked list is circular
+
+===============================================================================================
+
+    2. Linked List
+
+  Linked List as opposed to Lists/Arrays does not have their order defined by their 
+  physical placement in the memory. Contiguous elements of the linked list are not placed adjacent 
+  to each other in the memory. Instead, each linked list element contains both the 
+  values and the address (pointer) to the next linked list element. Hence the 
+  linked list can only be traversed sequentially going through each element at a time. This 
+  also means that the length of the linked list can only be known after completely traversing 
+  it element by element. The last element of the linked list has None/Null 
+  as its pointer. The linked list is defined by a pointer pointing to the first element.
+
+
+  Time complexity:
+  
+  Access — O(n): Accessing an element in the linked list requires (in the worst case) 
+  to traverse each element one by one.
+  
+  Search — O(n): Searching if an element exists in a linked list requires (in the worst case) 
+  to traverse each element on by one
+  
+  Insert/Delete — O(1): Inserting(Deleting) an element given the pointer where it 
+  needs to be inserted(deleted) only requires to re-arrange the pointers.
+  Inserting(Deleting) an element at the end however would require traversing the entire 
+  linked list and hence would be O(n)
+  
+    Common Questions:
+      Reverse a linked list
+      Find the middle element of a linked list
+      Find if the linked list is circular
+
+===============================================================================================
+
+    3. Hash Tables
+
+  Hash tables can be considered as a general form of lists. In lists, we 
+  map indices to values that can then be accessed in constant time. Hash tables try 
+  to map a data type (integer, float, string, etc.) to another 
+  data type creating paired assignments (key mapped to values) so the pairs can be 
+  accessed in constant time.
+
+
+  For each (key, value) pair, the key is passed through a hash 
+  function in an attempt to create a unique physical address for the value to be stored 
+  in the memory. Most of the time, the hash function can create unique physical 
+  addresses across key values. Sometimes, the hash function can end up generating the same 
+  physical address for different keys (say key_1, key_2). This is called a collision
+  . Hash tables deal with collisions by creating a linked list strong both the keys and 
+  values. The linked list is then traversed for matching <key> returning the <value> pair.
+  
+  Hash tables can be useful when to have to carry out multiple search operations 
+  within your code algorithm.
+  
+  Time complexity:
+  
+  Search — O(1): Searching if a key exists in a hash table requires (on average) a constant amount of time.
+  
+  Insert/Delete — O(1): Inserting(Deleting) a <key, value> pair from the hash table 
+  requires a constant amount of time irrespective of the size of the dictionary
+  
+    Common Questions:
+      Find if two elements in the list sum to a target value
+      Group Anagrams
+      Longest substring without repeating characters
+
+===============================================================================================
+
+    4. Queue
+
+  A queue is a sequential data structure that maintains the order of elements as they were 
+  inserted into the Queue. It maintains a First In First Out (FIFO) order,
+  which means that the elements can only be accessed in the same order as they 
+  were inserted into the queue. The element to be inserted first, will the first 
+  one to get removed from the queue.
+
+  Time complexity (Average):
+  
+  Access — O(n): Accessing an element in the queue requires (in the 
+  worst case) to Dequeue() each element one by one.
+  
+  Search — O(n): Searching if an element exists in a queue requires (
+  in the worst case) to Dequeue() each element and comparing it with the target.
+  
+  Insert/Delete — O(1): Inserting (Deleting) an element from the 
+  queue, adds (removes) the element to (from) the end (front
+  ) of the queue. This can always be done in a constant amount of time.
+  
+    Common Questions:
+      Binary Tree Right Side View
+      Task Scheduler
+      Shortest Subarray with Sum at least K
+
+===============================================================================================
+
+    5. Stack
+
+  Stack is also a sequential data structure (like Queue) which maintains the order of 
+  elements as they were inserted in. However, unlike Queue, a Stack maintains a 
+  Last In First Out (LIFO) order, which means that the elements can only 
+  be accessed in the reverse order as they were inserted into the stack. The element 
+  to be inserted last, will the first one to get removed from the stack.
+
+  The two most common operations performed on a stack are push() and pop(). Push
+  () (similar to Enqueue()) adds an element into the stack, while pop() 
+  (just like Dequeue()) removes an element from it. At a given stage, 
+  the element removed by pop() depends on either the initial state of the stack or the last push() operation
+
+
+  Time complexity (Average):
+  
+  Access — O(n): Accessing an element in the stack requires (in the worst case) to pop() 
+  each element one by one.
+  
+  Search — O(n): Searching if an element exists in a stack requires (
+  in the worst case) to pop() each element and comparing it with the target.
+  
+  Insert/Delete — O(1): Inserting (Deleting) an element to the 
+  stack, adds (removes) the element at the top of the stack. This 
+  can always be done in a constant amount of time.
+  
+    Common Questions:
+      Valid Parentheses
+      Trapping Rain Water
+      Exclusive Time of Functions
+
+===============================================================================================
+
+    6. Trees (Binary)
+
+  A tree is a data structure that maintains a hierarchical relation between its elements. Each 
+  element has a predecessor and multiple successors, called parent and children respectively. In this 
+  section, we will consider a binary tree. In a binary tree, each node 
+  can have at most two children (left child, right child). Following are some 
+  basic definitions associated with a binary tree
+
+  Root Node − The node at the top of the tree is called root. The 
+      tree is defined by the pointer pointing to its root node.
+  Parent Node − Any 
+      node that has at least one child is known as the parent node.
+  Child Node − The successor of a parent node is known as a child node. 
+      A node can be both a parent and a child node. The root is never a child node.
+  Leaf Node− The node which does not have any child node is called the leaf node.
+  Subtree − A valid subset of the original tree.
+  Path − The sequence of nodes along the edges of the tree is known as a path.
+  Traversing − Passing through the nodes in a certain order, e.g. BFT, DFT
+
+  Based on the conditional hierarchy, we can have multiple types of trees.
+  One of the most commonly used is a binary search tree. A Binary Search Tree (BST)
+  is an ordered or sorted binary tree where the left children have values less than 
+  the parent node’s value, and right children have values greater than the parent node.
+
+
+    Common Questions:
+      Validate Binary Search Tree
+      Binary Tree Level Order Traversal
+      Lowest Common Ancestor of a Binary Tree
+
+===============================================================================================
+
+    7. Graphs
+
+  A graph consists of nodes or vertices and edges which connect a pair of nodes. 
+  Formally speaking, a graph G is a pair of sets (V, E), 
+  where V is the set of all the vertices and E is the set of all 
+  the edges. A neighbor of a node or vertex is set if all vertices are 
+  connected with that node through an edge. As opposed to trees, a graph can 
+  be cyclic, which means starting from a node and following the edges, you can end up on the same node.
+
+
+    Common Questions:
+      Clone Graph
+      Is Graph Bipartite?
+      Alien Dictionary
+
+    Resources: LeetCode.com, BigOCheatSheet

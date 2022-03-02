@@ -14,6 +14,6 @@
 
 c="$(tput setaf 214)"
 
-echo "\t\t\t" $c $(div2 $1)
+echo "\n\t\t" $c $(div2 $1) "\n"
 
 exit 0

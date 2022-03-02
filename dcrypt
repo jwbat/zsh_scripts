@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# depends on c++ executable, dcrypt2
+
+# Usage
+# dcrypt  
+
+
+c="$(tput setaf 83)"
+echo $c
+dcrypt2
+exit 0
