@@ -1,0 +1,50 @@
+#!/bin/zsh
+
+# Usage
+# leet 
+
+
+c="$(tput setaf 154)"
+echo "$c
+    if input array is sorted then
+        - Binary search
+        - Two pointers
+
+    if asked for all permutations/subsets then
+        - Backtracking
+
+    if given a tree then
+        - DFS
+        - BFS
+
+    if given a graph then
+        - DFS
+        - BFS
+
+    if given a linked list then
+        - Two pointers
+
+    if recursion is banned then
+        - Stack
+
+    if must solve in-place then
+        - Swap corresponding values
+        - Store one or more different values in the same pointer
+
+    if asked for maximum/minimum subarray/subset/options then
+        - Dynamic programming
+
+    if asked for top/least K items then
+        - Heap
+
+    if asked for common strings then
+        - Map
+        - Trie
+
+    else
+        - Map/Set for O(1) time & O(n) space
+        - Sort input for O(nlogn) time and O(1) space
+"
+
+
+exit 0
