@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+# Description
+# algorithm techniques 
+
+# Usage
+# grok 
+
+c="$(tput setaf 196)"
+
+echo "$c
+    sliding window  •  two pointers  •  fast & slow pointers  •  merge intervals
+    cyclic sort  •  inplace reversal of a LL  •  tree BFS  • tree DFS   •  subsets
+    modified binary search  •  bitwise XOR  •  top K elements  •  K-way merge
+    0/1 knapsack  •  unbounded knapsack  •  fibonacci numbers
+    palindromic sequence  •  longest common substring
+    topological sort  •  trie reversal  •  number of island  •  trial & error
+    union find  •  unique paths
+"
+
+exit 0

@@ -10,6 +10,26 @@
 
 c="$(tput setaf 184)"
 echo $c
+echo "
+    It’s better to solve one question a week by self than to do 50
+     by taking a look at the solutions.
+
+    Develop your intuition first.For that , read about basic DS 
+    (lists, trees, stack, queue, map and heap).
+    Once you are able to balance a tree or do a 
+    tree inversion, move to graphs. BFS and/or DFS is the Hello World of graphs.
+
+    Once you understand these , congratulations. You can solve any problem 
+    in the world through brute force. Most problems can be modelled 
+    as a graph search and running BFS will give you the answer.
+
+    Then comes the step to learn optimisation. Think about specific algorithms.
+    Learn to identify when you can use simple recursion, back 
+    tracking and dynamic programming. Once you start seeing patterns for each 
+    case, you would be able to solve most medium level problems on leetcode efficiently.
+
+    The final step will be to learn specific algorithms like KMP, Manacher, etc.
+"
 cat ~/code/shell/scripts/stuff/datastructures.txt 
 
 exit 0

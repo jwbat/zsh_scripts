@@ -1,30 +1,25 @@
     Data Structures for a Coding Interview and associated questions
 
-    1. Array/List
+    1. Array
 
-  List contains a sequence of values in an ordered fashion which is placed adjacently in memory.
-  The list is identified by the address of its first element. Since the order of placement 
-  of the elements of a list in the memory follows the same order in which they are defined;
-  each element in the list can be accessed by incrementing the address of the first element 
-  by the right index amount. Hence accessing any element in the list takes constant time 
-  irrespective of their position in the list.
+  Array contains a sequence of values in an ordered fashion which is placed adjacently in memory.
+  The array is identified by the address of its first element. Since the order of placement 
+  of the elements of a array in the memory follows the same order in which they are defined;
+  each element in the array can be accessed by incrementing the address of the first element 
+  by the right index amount. Hence accessing any element in the array takes constant time 
+  irrespective of their position in the array.
 
 
   Time complexity:
   
-  Access — O(1): Accessing an element in the list requires addressing it with the index.
+  Access — O(1): Accessing an element in the array requires addressing it with the index.
   
-  Search — O(n): Searching if an element exists in a list requires (in the worst case)
+  Search — O(n): Searching if an element exists in a array requires (in the worst case)
   to traverse each index on by one
   
-  Insert/Delete — O(n): Inserting(Deleting) an element from a list first requires to 
+  Insert/Delete — O(n): Inserting(Deleting) an element from a array first requires to 
   be found which is O(n)
   
-    Common Questions:
-      Reverse a linked list
-      Find the middle element of a linked list
-      Find if the linked list is circular
-
 ===============================================================================================
 
     2. Linked List
