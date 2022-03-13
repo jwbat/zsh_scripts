@@ -10,96 +10,96 @@
 # Usage
 # githelp
 
-c='\033[1;32m' 
+c="$(tput setaf 128)"
 
 echo "${c}
-Initializing a repository
--------------------------------------------------------------
-git init
-
- 
-Staging files
--------------------------------------------------------------
-git add file1.js                        # stages a single file
-git add file1.js file2.js git add *.js  # stages multiple files 
-git add .                               # stages the current directory and all its content
-
-
-Viewing the status   
--------------------------------------------------------------
-git status                              # full status 
-git status -s                           # short status
-
- 
-Committing the staged files
--------------------------------------------------------------
-git commit -m “Message”                 # git commit
-git commit                              # opens the default editor to type a long message
-git commit -am “Message”                # skips the staging area   
+  Initializing a repository
+  -------------------------------------------------------------
+  git init
+  
+   
+  Staging files
+  -------------------------------------------------------------
+  git add file1.js                        # stages a single file
+  git add file1.js file2.js git add *.js  # stages multiple files 
+  git add .                               # stages the current directory and all its content
 
 
-Removing files 
--------------------------------------------------------------
-git rm file1.js                         # removes from working directory and staging area
-git rm --cached file1.js                # removes from staging area only
-git mv file1.js file1.txt               # renames or moves file   
-
-
-Viewing the staged/unstaged changes  
--------------------------------------------------------------
-git diff                                # Shows unstaged changes  
-git diff --staged                       # Shows staged changes
-git diff --cached                       # same as above
-
-
-Viewing the history  git log
--------------------------------------------------------------
-git log                                  # Full history
-git log --oneline                        # Summary 
-git log --reverse                        # Lists the commits from the oldest to the newest
-
-
-Viewing a commit   
--------------------------------------------------------------
-git show 921a2ff                         # Shows the given commit
-git show HEAD                            # Shows the last commit
-git show HEAD~2                          # Two steps before the last commit
-git show HEAD:file.js                    # Shows the version of file.js stored in the last commit
-
-
-Unstaging files (undoing git add) 
--------------------------------------------------------------
-git restore --staged file.js             # Copies the last version of file.js from repo to index
-
-
-Discarding local changes   
--------------------------------------------------------------
-git restore file.js                       # Copies file.js from index to working directory
-git restore file1.js file2.js             # Restores multiple files in working directory
-git restore .                             # Discards all local changes (except untracked files) 
-git clean -fd                             # Removes all untracked files
-
-
-Restoring an earlier version of a file  
--------------------------------------------------------------
-git restore --source=HEAD~2 file.js
-
-
-Viewing the history
--------------------------------------------------------------
-git log --stat                            # Shows the list of modified files
-git log --patch                           # Shows the actual changes (patches)
-
-
-Filtering the history
--------------------------------------------------------------
-git log -3                                # show last 3 entries 
-git log --author='james'
-git log --before='2020-08-17' git log --after='one week ago'
-git log --grep=“GUI”                      # Commits with “GUI” in their message
-git log -S'GUI'                           # Commits with “GUI” in their patches
-git log hash1..hash2                      # Range of commits
-git log file.txt                          # Commits that touched file.txt
+  Viewing the status   
+  -------------------------------------------------------------
+  git status                              # full status 
+  git status -s                           # short status
+  
+   
+  Committing the staged files
+  -------------------------------------------------------------
+  git commit -m “Message”                 # git commit
+  git commit                              # opens the default editor to type a long message
+  git commit -am “Message”                # skips the staging area   
+  
+  
+  Removing files 
+  -------------------------------------------------------------
+  git rm file1.js                         # removes from working directory and staging area
+  git rm --cached file1.js                # removes from staging area only
+  git mv file1.js file1.txt               # renames or moves file   
+  
+  
+  Viewing the staged/unstaged changes  
+  -------------------------------------------------------------
+  git diff                                # Shows unstaged changes  
+  git diff --staged                       # Shows staged changes
+  git diff --cached                       # same as above
+  
+  
+  Viewing the history  git log
+  -------------------------------------------------------------
+  git log                                  # Full history
+  git log --oneline                        # Summary 
+  git log --reverse                        # Lists the commits from the oldest to the newest
+  
+  
+  Viewing a commit   
+  -------------------------------------------------------------
+  git show 921a2ff                         # Shows the given commit
+  git show HEAD                            # Shows the last commit
+  git show HEAD~2                          # Two steps before the last commit
+  git show HEAD:file.js                    # Shows the version of file.js stored in the last commit
+  
+  
+  Unstaging files (undoing git add) 
+  -------------------------------------------------------------
+  git restore --staged file.js             # Copies the last version of file.js from repo to index
+  
+  
+  Discarding local changes   
+  -------------------------------------------------------------
+  git restore file.js                       # Copies file.js from index to working directory
+  git restore file1.js file2.js             # Restores multiple files in working directory
+  git restore .                             # Discards all local changes (except untracked files) 
+  git clean -fd                             # Removes all untracked files
+  
+  
+  Restoring an earlier version of a file  
+  -------------------------------------------------------------
+  git restore --source=HEAD~2 file.js
+  
+  
+  Viewing the history
+  -------------------------------------------------------------
+  git log --stat                            # Shows the list of modified files
+  git log --patch                           # Shows the actual changes (patches)
+  
+  
+  Filtering the history
+  -------------------------------------------------------------
+  git log -3                                # show last 3 entries 
+  git log --author='james'
+  git log --before='2020-08-17' git log --after='one week ago'
+  git log --grep=“GUI”                      # Commits with “GUI” in their message
+  git log -S'GUI'                           # Commits with “GUI” in their patches
+  git log hash1..hash2                      # Range of commits
+  git log file.txt                          # Commits that touched file.txt
 
 
 \t git remote show origin
@@ -113,6 +113,8 @@ git log file.txt                          # Commits that touched file.txt
 \t ==================================
 \t git checkout -b <branch-name> main
 \t git config pull.rebase false
+\t ==================================
+\t git config --global credential.helper 'cache --timeout=2592000'
 "
 
 exit 0

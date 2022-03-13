@@ -16,7 +16,7 @@
 # primes <arg1>         --returns all primes between    0 & arg1
 # primes <arg1> <arg1>  --returns all primes between arg1 & arg2
 
-color='\033[1;37m'
+color="$(tput setaf 196)"
 
 if [ $# -eq 2 ]; then
     echo "$color $(primes2 $1 $2)"
