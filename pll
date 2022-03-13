@@ -1,11 +1,7 @@
 #!/bin/zsh
 
-# Author: James Batman
-# Date Created: 12/06/2021
-# Last Modified: 12/13/2021
-
 # Description
-# git pull the listed repos
+# git pull listed repos
 
 # Usage
 # pll
@@ -19,9 +15,9 @@ d6=~/code/cpp/experimental
 d7=~/code/cpp/courses/design_patterns
 d8=~/code/cpp/sdl
 d09=~/code/python/scipy
-#d10=~/code/python/fastapi/01-bit
+d10=~/code/samples
 
-ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7 $d8 $d09)
+ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7 $d8 $d09 $d10)
 
 for d in $ds; do
     git -C $d pull --rebase
