@@ -19,7 +19,6 @@ d10=~/code/samples
 
 ds=($d1 $d2 $d3 $d4 $d5 $d6 $d7 $d8 $d09 $d10)
 
-
 c1="$(tput setaf 120)"
 c2="$(tput setaf 12)"
 
