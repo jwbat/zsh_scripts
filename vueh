@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+# Description
+# vue help 
+
+# Usage
+# vueh 
+c="$(tput setaf 87)"
+echo "$c
+  npm install -g @vue/cli
+  vue --version
+  npm update -g @vue/cli
+
+  // create build-tool enabled project
+  npm init vue@latest
+  npm install
+  npm run dev
+
+  // or:
+  vue create projectname
+  vue create --help
+"
+
+
+exit 0
