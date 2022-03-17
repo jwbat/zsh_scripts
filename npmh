@@ -12,6 +12,9 @@ echo "$c
   ni -g typescript
   npm --version
   ni -g live-server
+
+  ni webpack
+  npm uninstall <package>
 "
 
 exit 0

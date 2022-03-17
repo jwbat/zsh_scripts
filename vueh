@@ -6,18 +6,24 @@
 # Usage
 # vueh 
 c="$(tput setaf 87)"
+
 echo "$c
   npm install -g @vue/cli
-  vue --version
   npm update -g @vue/cli
+  vue --version
+
+  npm install -g create-vue@latest
 
   // create build-tool enabled project
-  npm init vue@latest
+  npm init vue@latest      (alias = niv) 
   npm install
+  vue add vuetify
   npm run dev
 
-  // or:
+  // or
   vue create projectname
+  npm install vue-router@4
+  npm install pinia@next
   vue create --help
 "
 
