@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+# Description
+# Ventacity notes
+
+# Usage
+# venh 
+
+
+c="$(tput setaf 118)"
+echo "$c
+    backend:   Pat (lead), Parker, William
+    frontend:  Jason Ives(lead), Joel
+
+    Qs: 
+        requirements: 
+            VirtualBox, Ubuntu 20.?, Vue2.x, Vuetify, TypeScript
+"
+
+exit 0
