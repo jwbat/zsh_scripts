@@ -9,12 +9,21 @@
 
 c="$(tput setaf 118)"
 echo "$c
-    backend:   Pat (lead), Parker, William
-    frontend:  Jason Ives(lead), Joel
+    teams:
+        backend:   Pat (lead), Parker, William
+        frontend:  Jason Ives(lead), Joel
 
     Qs: 
-        requirements: 
-            VirtualBox, Ubuntu 20.?, Vue2.x, Vuetify, TypeScript
+        • requirements: 
+            UTM , Ubuntu 20.04 (?), Vue2.x, Vuetify, TypeScript, zsh (ok?)
+
+        • UTM -- mac.getutm.app
+
+              install + setup: 
+              https://www.youtube.com/watch?v=hnwK-nkXolc
+
+
+        • start ~ April 4
 "
 
 exit 0

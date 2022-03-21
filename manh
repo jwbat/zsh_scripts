@@ -1,0 +1,46 @@
+#!/bin/zsh
+
+# Description
+# manual pages structure 
+
+# Usage
+# manh
+
+c="$(tput setaf 123)"
+
+echo "${c}
+        Manual Structure
+
+        1  User Commands  
+           --------------
+            Commands that can be run from the shell by a normal user 
+            (typically no administrative privileges are needed)
+
+        2 System Calls
+          -----------
+            Programming functions used to make calls to the Linux kernel
+
+        3 C Library Functions
+          -------------------
+            Programming functions that provide interfaces to specific programming libraries.
+
+        4 Devices & special files
+          -----------------------
+            File system nodes that represent hardware devices or software devices.
+
+        5 File Formats & Conventions
+          -------------------------
+            The structure and format of file types or specific configuration files.
+
+        6 Games
+
+        7 Misc
+          ----
+            Overviews of miscellaneous topics such as protocols, filesystems and so on.
+
+        8 System administration tools and Daemons
+          --------------------------------------
+            Commands that require root or other administrative privileges to use
+"
+
+exit 0
