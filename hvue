@@ -15,7 +15,6 @@ echo "$c
   npm install -g create-vue@latest
 
   // create build-tool enabled project
-<<<<<<< HEAD
   npm init vue@latest      (alias = niv) 
   npm install
   vue add vuetify
@@ -34,7 +33,6 @@ echo "$c
   vue create projectname
   cd projectname
   vue add vuetify
->>>>>>> 41aa596 (.)
   vue create --help
 "
 

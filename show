@@ -5,7 +5,7 @@
 # Last Modified: 01/02/21
 
 # Description
-# print useful commands
+# show useful shell commands
 
 # Usage
 # show
@@ -13,25 +13,25 @@
 c="$(tput setaf 83)"
 
 echo $c
-echo "\t grep -rn --exclude-dir=.git "chrono" .     \t -r recursive"
-echo "\t find . -maxdepth 1 -type l -ls             \t list symlinks"
-echo "\t ln -s /path/to/original /path/to/symlink   \t create symlink"
-echo "\t rm /path/to/symlink                        \t remove symlink"
-echo "\t man zshmisc                                \t prompt sequences"
+echo "\t grep -rn --exclude-dir=.git "chrono" .     \t (-r recursive)"
+echo "\t find . -maxdepth 1 -type l -ls             \t (list symlinks)"
+echo "\t ln -s /path/to/original /path/to/symlink   \t (create symlink)"
+echo "\t rm /path/to/symlink                        \t (remove symlink)"
+echo "\t man zshmisc                                \t (prompt sequences)"
 echo
-echo "\t ls | wc -l         \t count nr of files in present directory"
-echo "\t print -l *(.)      \t print all files in directory"
-echo "\t text=\$(<file.txt) \t read each line of file.txt into array"
-echo "\t cal -A 1           \t calendar"
-echo "\t \$TERM             \t terminal colors"
-echo "\t env                \t environment variables"
-echo "\t export             \t list environment variables and their values"
-echo "\t set                \t also list shell variables"
-echo "\t uname -m           \t processor architecture"
-echo "\t sw_vers            \t OS version info"
-echo "\t fc -l -10          \t list the last 10 commands in history"
-echo "\t print \${#string}  \t count character in string"
-echo "\t print \${(w)#string}\t count words in string"
+echo "\t ls | wc -l         \t (count nr of files in present directory)"
+echo "\t print -l *(.)      \t (print all files in directory)"
+echo "\t text=\$(<file.txt) \t (read each line of file.txt into array)"
+echo "\t cal -A 1           \t (calendar)"
+echo "\t \$TERM             \t (terminal colors)"
+echo "\t env                \t (environment variables)"
+echo "\t export             \t (list environment variables and their values)"
+echo "\t set                \t (also list shell variables)"
+echo "\t uname -m           \t (processor architecture)"
+echo "\t sw_vers            \t (OS version info)"
+echo "\t fc -l -10          \t (list the last 10 commands in history)"
+echo "\t print \${#string}  \t (count character in string)"
+echo "\t print \${(w)#string}\t (count words in string)"
 echo 
 
 exit 0

@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+
+# Description
+# print todo list 
+
+# Usage
+# todo 
+
+c="$(tput setaf 84)"
+
+echo "$c
+    •  run data outage ideas by Jonah.
+    •  study pdf -> svg     -- problem definition.
+    •  Jason:
+      - VM / Ubuntu -- most recent version good?
+      - favorite linux terminal emulator?
+
+    ==============================================
+       VM
+    •  setup UTM / Ubuntu
+    •  install terminal emulator
+    •  install nvim
+    ==============================================
+
+    •  learn more about arm64 architecture.
+"
+
+exit 0

@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+# Description
+# pyenv & python help 
+
+# Usage
+# pyh 
+
+c="$(tput setaf 220)"
+echo "${c}
+\t brew install pyenv       (edit .zprofile, .zshrc; see: towardsdatascience)
+\t pyenv install -l         (see available versions)
+\t pyenv install 3.10.3
+\t pyenv global 3.10.3      (make version available everywhere)
+\t pyenv local 3.10.3       (make only current directory use this version)
+\t python pgm.py            (use the enabled version of python)
+"
+
+
+exit 0

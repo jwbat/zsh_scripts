@@ -11,7 +11,7 @@ c="$(tput setaf 118)"
 echo "$c
     teams:
         backend:   Pat (lead), Parker, William
-        frontend:  Jason Ives(lead), Joel
+        frontend:  Jason Ives(lead), John Mehta, Joel
 
     Qs: 
         • requirements: 
