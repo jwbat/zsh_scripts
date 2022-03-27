@@ -7,21 +7,26 @@
 # Usage
 # todo 
 
-c="$(tput setaf 84)"
+c="$(tput setaf 157)"
 
 echo "$c
-    •  run data outage ideas by Jonah.
-    •  study pdf -> svg     -- problem definition.
-    •  Jason:
-      - VM / Ubuntu -- most recent version good?
-      - favorite linux terminal emulator?
+    •  pdf [-> bmp] -> svg
+
+    •  print, sign, scan Agreement
+    •  print floorplan pdf's, trace, scan, bmp -> svg
+
+    •  highcharts, TypeScript, Vuetify
 
     ==============================================
-       VM
+       VM & Linux
     •  setup UTM / Ubuntu
     •  install terminal emulator
     •  install nvim
     ==============================================
+
+    •  Jason:
+      - Ubuntu -- most recent version good?
+      - have or recommend a favorite linux terminal emulator?
 
     •  learn more about arm64 architecture.
 "

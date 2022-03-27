@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Description
+# copy a file to desktop
+
+# Usage
+# cptd 
+
+cp $1 ~/Desktop
+
+exit 0
