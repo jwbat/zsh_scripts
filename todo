@@ -10,25 +10,21 @@
 c="$(tput setaf 157)"
 
 echo "$c
-    •  pdf [-> bmp] -> svg
-
-    •  print, sign, scan Agreement
-    •  print floorplan pdf's, trace, scan, bmp -> svg
-
-    •  highcharts, TypeScript, Vuetify
-
+    •  HighCharts heatmap, Vue wrapper
+    •  GraphQL queries
     ==============================================
-       VM & Linux
+    •  Jason:
+      - Ubuntu -- most recent version?
+      - have / recommend a favorite linux terminal emulator?
+    ==============================================
+    •  TypeScript, Vuetify
+    ==============================================
+       -- VM & Linux --
     •  setup UTM / Ubuntu
     •  install terminal emulator
     •  install nvim
     ==============================================
-
-    •  Jason:
-      - Ubuntu -- most recent version good?
-      - have or recommend a favorite linux terminal emulator?
-
-    •  learn more about arm64 architecture.
+    •  learn about arm64 architecture.
 "
 
 exit 0
