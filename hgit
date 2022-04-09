@@ -10,7 +10,7 @@
 # Usage
 # githelp
 
-c="$(tput setaf 128)"
+c="$(tput setaf 82)"
 
 echo "${c}
   Initializing a repository
@@ -113,6 +113,15 @@ echo "${c}
 \t ==================================
 \t git checkout -b <branch-name> main
 \t git config pull.rebase false
+
+\t git branch -a                           # list all branches, local & remote 
+\t git branch -r                           # list remote branches
+\t git branch br-tst1                      # create branch br-tst1
+\t git push origin br-tst1                 # create remote branch br-tst1
+\t ==================================
+\t git fetch
+\t git branch -v -a                        # see all branches available for checkout
+\t git switch -c test origin/test          # create new local branch to work on
 \t ==================================
 \t git config --global credential.helper 'cache --timeout=2592000'
 "

@@ -1,8 +1,7 @@
 #!/bin/zsh
 
-
 # Description
-# print todo list 
+# todo list 
 
 # Usage
 # todo 
@@ -12,6 +11,7 @@ c="$(tput setaf 157)"
 echo "$c
     •  HighCharts heatmap, Vue wrapper
     •  GraphQL queries
+    •  Hours reporting
     ==============================================
     •  Jason:
       - Ubuntu -- most recent version?

@@ -35,5 +35,7 @@ echo "\t fc -l -10          \t (list the last 10 commands in history)"
 echo "\t print \${#string}  \t (count character in string)"
 echo "\t print \${(w)#string}\t (count words in string)"
 echo 
+echo "\t rsync -av --dry-run --exclude 'liu' ventacity/ /Volumes/mu/ven/"
+echo 
 
 exit 0

@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+# Description
+# nvm help 
+
+# Usage
+# hnvm
+
+c="$(tput setaf 160)"
+echo "$c
+    nvm ls
+    nvm ls-remote
+    
+    nvm install <version> --latest-npm   // ** best **
+    e.g., nvm install 16.14.2 --latest-npm
+    
+    nvm install-latest-npm
+    node -v               
+    nvm alias default 15.3.0
+    nvm which <version>
+    
+    nvm install <version>   // if not already installed
+                            // nvm will install compatible npm along side node v in:
+                            //  ~/.nvm/versions/node/<version>/lib/node_modules
+    nvm use <version> 
+    sudo rm -R ~/.npm ~/.nvm  // remove before re-install 
+
+    nvm cache clear
+"
+exit 0

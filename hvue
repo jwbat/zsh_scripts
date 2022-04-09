@@ -34,6 +34,9 @@ echo "$c
   cd projectname
   vue add vuetify
   vue create --help
+=======
+  npm install highcharts
+  npm install highcharts-vue
 "
 
 
