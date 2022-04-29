@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+# Description
+# ssh help 
+
+# Usage
+# hssh 
+
+c1="$(tput setaf 123)"
+c2="$(tput setaf 250)"
+
+echo "$c1
+    ~ ssh -L 8801:127.0.0.1:8000 parallels@10.211.55.4  $c2 //port forwarding 8801 <--> 8000 $c1
+
+    ~ ssh u                                             $c2 // ssh into ubuntu (parallels) $c1
+    ~ ssh u2                                            $c2 // ssh into ubuntu (UTM) $c1
+                                                        $c2 // see:  ~/.ssh/config $c1
+
+    ~ sudo service ssh status
+    ~ sudo service ssh restart
+    ~ sudo netstat -ltnp | grep sshd    $c2  //check which port the OpenSSH server is listening to $c1
+    ~ sudo lshw -C network
+"
+
+
+exit 0

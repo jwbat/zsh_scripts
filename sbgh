@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# Description
+#  
+
+# Usage
+# sbgh
+c="$(tput setaf 230)"
+
+echo "$c
+    site-health-report
+    git checkout site-health-report
+    git branch -r
+     
+    npm run lint --fix
+    cd vue-ui/src/
+
+    http://localhost:8801/
+    http://localhost:8090/new/vs/device/e117654c-f89f-46b4-a32a-8bd1d24c2d7b
+    http://localhost:8090/new/site/asdf/reports/site-health
+"
+exit 0

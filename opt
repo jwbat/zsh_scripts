@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+# Usage
+# opt [-p] 
+
+while getopts "p:l" opt; do
+    case $opt in
+        p) echo "pie";;
+        l) echo "lie";;
+        \?) echo "fie";;
+    esac
+    exit 0
+done
+
+echo $1
+
+exit 0

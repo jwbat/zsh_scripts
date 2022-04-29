@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+# Description
+# IP, VM, linux help
+
+# Usage
+# hip 
+
+c="$(tput setaf 226)"
+
+echo "$c
+    ~ sudo apt install tasksel
+    ~ sudo tasksel install ubuntu-desktop
+    ~ sudo apt install spice-vdagent spice-webdavd
+
+    ~ ipconfig getifaddr en0                            # ip address wi-fi or ethernet
+    ~ ipconfig getifaddr en1                            # ip address wireless
+    ~ scp -r <dirname> james@192.168.64.2:/home/james
+"
+
+exit 0

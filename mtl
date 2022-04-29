@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# Description
+# mac to linux dir transfer 
+
+# Usage
+# mtl <dirname> 
+
+#rsync -rv $1 "james@192.168.64.2:/home/james"
+rsync -rv $1 "parallels@10.211.55.4:/home/parallels"
+
+exit 0

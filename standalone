@@ -1,0 +1,39 @@
+#!/bin/zsh
+
+# Description
+# fixes to standalone-dev-env & setup.sh for
+# UTM VM running Ubuntu 20.04 with ARM64 on Mac M1
+
+# Usage
+# standalone
+
+c1=$(tput setaf 223)
+c2=$(tput setaf 123)
+
+echo "
+
+    $c1
+    1) install cryptography manually with a new version of pip3: $c2
+    ~ sudo apt install python3-pip
+    ~ pip3 install cryptography
+
+    $c1
+    2) remove cryptography from requirements.txt
+
+    $c1
+    3) install additional libs for wxpython: $c2
+    ~ sudo apt-get install libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev 
+    libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk 
+    libharfbuzz-dev libfribidi-dev libxcb1-dev
+
+    $c1
+    4) install snowflake-connector-python dependencies for specific python version;
+       see instructions at: $c2
+    https://docs.snowflake.com/en/user-guide/python-connector-install.html#openssl-and-ffi-linux-only
+
+    $c1
+    5) run setup.sh: $c2
+    ~ ./setup.sh
+"
+
+exit 0

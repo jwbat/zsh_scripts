@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+
+# Description
+# port forwarding 
+
+# Usage
+# port1
+
+c=$(tput setaf 86)
+c2=$(tput setaf 220)
+
+echo "$c \n forwarding :8801 to :8000 \n $c2"
+ssh -L 8801:127.0.0.1:8000 parallels@10.211.55.4
+
+exit 0
+
+# API       config.vm.network "forwarded_port", guest: 1234, host: 1234
+# Postgres  config.vm.network "forwarded_port", guest: 5432, host: 54320
+# GraphQL   config.vm.network "forwarded_port", guest: 8000, host: 8801

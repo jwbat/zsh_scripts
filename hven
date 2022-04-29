@@ -9,21 +9,10 @@
 
 c="$(tput setaf 118)"
 echo "$c
-    teams:
-        backend:   Pat (lead), Parker, William
-        frontend:  Jason Ives(lead), John Mehta, Joel
+    ~ pbcopy < ~/.ssh/id_ed25519.pub
 
-    Qs: 
-        • requirements: 
-            UTM , Ubuntu 20.04 (?), Vue2.x, Vuetify, TypeScript, zsh (ok?)
-
-        • UTM -- mac.getutm.app
-
-              install + setup: 
-              https://www.youtube.com/watch?v=hnwK-nkXolc
-
-
-        • start ~ April 4
+    ~ cd sbg-webapp
+    ~ git checkout vspro-1-0
 "
 
 exit 0
