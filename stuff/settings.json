@@ -1,0 +1,92 @@
+{
+    "window.zoomLevel": 0,
+    // Controls the font size in pixels.
+    "editor.fontSize": 15,
+    // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+    "editor.tabSize": 2,
+    // Controls if editors showing a file should close automatically when the file is deleted or renamed by some other process. Disabling this will keep the editor open as dirty on such an event. Note that deleting from within the application will always close the editor and that dirty files will never close to preserve your data.
+    "workbench.editor.closeOnFileDelete": false,
+    // Controls whether unsaved files are remembered between sessions, allowing the save prompt when exiting the editor to be skipped.
+    "files.hotExit": "onExitAndWindowClose",
+    "workbench.activityBar.visible": true,
+    "editor.scrollBeyondLastLine": false,
+    "emmet.includeLanguages": {
+        "html.erb": "html"
+    },
+    "sync.gist": "7c8b9fa5ed1fe498e2b798dde050cc78",
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastUpload": "2018-08-08T02:06:36.430Z",
+    "sync.lastDownload": "2018-08-08T00:57:23.379Z",
+    "sync.forceDownload": false,
+    "emmet.includeLanguages": {"erb": "html"},
+    "[plaintext]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "other": false,
+            "comments": false,
+            "strings": false
+        }
+    },
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.reduceFlicker": true,
+    "gitlens.hovers.annotations.enabled": false,
+    "editor.cursorSurroundingLines": 1,
+    "editor.dragAndDrop": false,
+    "trailing-spaces.highlightCurrentLine": false,
+    "trailing-spaces.backgroundColor": "rgba(255,55,55,0.3)",
+    "trailing-spaces.trimOnSave": true,
+    "gitlens.hovers.currentLine.changes": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.details": false,
+    "gitlens.currentLine.enabled": false,
+    "calva.paredit.defaultKeyMap": "original",
+    "workbench.colorCustomizations": {},
+    "editor.occurrencesHighlight": false,
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "other": false,
+            "comments": false,
+            "strings": false
+        }
+    },
+    "workbench.colorTheme": "GitHub Dark",
+    "search.searchEditor.defaultNumberOfContextLines": 2,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "editor.minimap.enabled": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "editor.accessibilitySupport": "off",
+    "editor.formatOnSave": true,
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vetur.experimental.templateInterpolationService": true,
+    "breadcrumbs.enabled": false,
+    "vetur.format.defaultFormatter.sass": "none"
+}

@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Description
+# settings.json in vscode 
+#  (Jason's json) 
+
+# Usage
+# vscode 
+
+c="$(tput setaf 227)"
+
+echo "$c 
+ $(cat ~/code/shell/scripts/stuff/settings.json)
+"
+
+exit 0
