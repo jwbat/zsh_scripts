@@ -16,7 +16,8 @@
 # primes <arg1>         --returns all primes between    0 & arg1
 # primes <arg1> <arg1>  --returns all primes between arg1 & arg2
 
-color="$(tput setaf 196)"
+#color="$(tput setaf 196)"
+color="$(tput setaf 190)"
 
 if [ $# -eq 2 ]; then
     echo "$color $(primes2 $1 $2)"
@@ -28,5 +29,5 @@ else
     echo "$color $(primes2)"
 fi
 
-
+echo 
 exit 0

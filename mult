@@ -6,7 +6,7 @@
 
 # Description
 # multiply numbers
-#  - uses c++ binary mult2
+#  - uses c++ binary mult2 in /usr/local/bin
 
 # Usage
 # mult <arg1> <arg2> ... <argN> 

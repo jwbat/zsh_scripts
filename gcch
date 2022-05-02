@@ -8,12 +8,19 @@
 # gcchelp 
 
 c="$(tput setaf 83)"
+c2="$(tput setaf 142)"
 echo "$c
+\t brew install gcc
+\t which gcc-11
+\t cd /opt/homebrew/bin
+\t ln -s gcc-11 gcc
+\t ln -s g++-11 g++
+
 \t g++ --version
-\t g++ main.cpp         -- compile, assemble, and link to create an executable file a.out 
-\t g++ -S main.cpp      -- generate a main.s assembly source file (w/out assembling or linking)
-\t g++ -c main.cpp      -- generate main.o (compile and assemble, w/out linking)
-\t g++ -o run main.cpp  -- generate executable, run; ./run
+\t g++ main.cpp         $c2 -- compile, assemble, and link to create an executable file a.out $c
+\t g++ -S main.cpp      $c2 -- generate a main.s assembly source file (w/out assembling or linking)$c
+\t g++ -c main.cpp      $c2 -- generate main.o (compile and assemble, w/out linking)$c
+\t g++ -o run main.cpp  $c2 -- generate executable, run; ./run$c
 \t gcc -v 2>&1 | grep \"Thread model\"
 "
 

@@ -6,11 +6,13 @@
 
 # Description
 # convert an integer to a bitset
+#  depends on bits2 in /usr/local/bin
 
 # Usage
 # bits <int> 
 
-c='\033[0;32m'
+#c='\033[0;32m'
+c="$(tput setaf 195)"
 
 echo $c
 echo "\t $(bits2 $1)"

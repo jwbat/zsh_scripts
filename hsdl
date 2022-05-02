@@ -4,8 +4,11 @@
 # sdltips 
 
 c="$(tput setaf 83)"
+c1="$(tput setaf 249)"
 
 echo "$c 
+\t ~ sdl2-config --cflags --libs            $c1 // prints header include path & library path SDL for makefile $c
+
 \t while (!done)
 \t   1) RenderClear;  2) RenderDraw;  3) RenderPresent;  4) wait;  5) repeat.
 "

@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Description
+# cp binary file, 'm' to /usr/local/bin 
+
+# Usage
+# tubl <file name> 
+
+sudo cp 'm' '/usr/local/bin/'${1}
+
+exit 0
