@@ -1,0 +1,54 @@
+{
+    "editor.fontSize": 18,
+    "editor.tabSize": 2, 
+    "workbench.colorTheme": "Monokai Dimmed",
+    "terminal.integrated.fontSize": 18,
+    "files.hotExit": "onExitAndWindowClose",
+    "workbench.activityBar.visible": true,
+    "editor.scrollBeyondLastLine": false, 
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": true,
+    "editor.wordWrap": "on",
+    "workbench.editor.enablePreview": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.format.enable": true,
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[plaintext]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "other": false,
+            "comments": false,
+            "strings": false
+        }
+    }, 
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "other": false,
+            "comments": false,
+            "strings": false
+        }
+    },
+    "vetur.experimental.templateInterpolationService": true,
+    "breadcrumbs.enabled": false,
+    "vetur.format.defaultFormatter.sass": "none"
+}
