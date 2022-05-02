@@ -5,7 +5,7 @@
 
 # Usage
 # sbgh
-c="$(tput setaf 230)"
+c="$(tput setaf 196)"
 
 echo "$c
     site-health-report

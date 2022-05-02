@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# Description
+# todo list 
+
+# Usage
+# todo 
+
+c="$(tput setaf 196)"
+
+echo "$c
+    ==============================================
+    vscode: settings.json
+    site-health-report
+    ==============================================
+"
+
+exit 0

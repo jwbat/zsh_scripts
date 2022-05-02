@@ -7,7 +7,7 @@
 # Usage
 # standalone
 
-c1=$(tput setaf 223)
+c1=$(tput setaf 196)
 c2=$(tput setaf 123)
 
 echo "
