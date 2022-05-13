@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+c="$(tput setaf 202)"
+
+echo "$c
+\t ~ mosquitto -h
+\t start script is: ~ mos
+
+\t To restart mosquitto after an upgrade:
+\t   ~ brew services restart mosquitto
+
+\t  You can make changes to the configuration by editing:
+\t      /opt/homebrew/etc/mosquitto/mosquitto.conf
+"
+
+exit 0

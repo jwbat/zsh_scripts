@@ -19,6 +19,8 @@ echo "\t find . -maxdepth 1 -type l -ls             \t $c2 list symlinks"  $c1
 echo "\t ln -s /path/to/original /path/to/symlink   \t $c2 create symlink"  $c1
 echo "\t rm /path/to/symlink                        \t $c2 remove symlink"  $c1
 echo "\t man zshmisc                                \t $c2 prompt sequences"  $c1
+echo "\t tar -czf LotsOfFiles.tgz LotsOfFiles       \t $c2 -z = compress"  $c1
+echo "\t tar -xvf LotsOfFiles.tgz                   \t $c2 -x = un-compress"  $c1
 echo "\t sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist   generate locate db"  $c1
 echo
 echo "\t ls | wc -l         \t $c2 count nr of files in present directory"  $c1
@@ -35,7 +37,6 @@ echo "\t sw_vers            \t $c2 OS version info"  $c1
 echo "\t fc -l -10          \t $c2 list the last 10 commands in history"  $c1
 echo "\t print \${#string}  \t $c2 count character in string"  $c1
 echo "\t print \${(w)#string}\t $c2 count words in string"  $c1
-echo 
 echo "\t rsync -av --dry-run --exclude 'liu' ventacity/ /Volumes/mu/ven/"  $c1
 echo "\t grep -rl --exclude-dir=node_modules '\$t' ."  $c1
 echo 

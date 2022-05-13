@@ -8,12 +8,13 @@
 c="$(tput setaf 196)"
 
 echo "$c
+    ~ npm install node-sass@npm:sass
+
     site-health-report
-    git checkout site-health-report
-    git branch -r
+    ~ git checkout site-health-report
+    ~ git branch -r
      
-    npm run lint --fix
-    cd vue-ui/src/
+    ~ npm run lint --fix
 
     http://localhost:8801/
     http://localhost:8090/new/vs/device/e117654c-f89f-46b4-a32a-8bd1d24c2d7b

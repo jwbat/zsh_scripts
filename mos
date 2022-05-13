@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Description
+# run mosquitto broker 
+
+# Usage
+# mos
+
+/opt/homebrew/sbin/mosquitto -c /opt/homebrew/etc/mosquitto/mosquitto.conf
+
+exit 0

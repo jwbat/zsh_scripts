@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+# Description
+# notes on zmq 
+
+# Usage
+# zmq
+c="$(tput setaf 190)"
+echo "$c
+\t socket types:  REQ, REP, PUSH, PULL, DEALER, ROUTER
+"
+
+
+exit 0

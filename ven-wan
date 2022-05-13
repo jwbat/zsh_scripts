@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# Usage
+# ven-wan
+
+c="$(tput setaf 190)"
+
+echo "$c
+\t end node  <-->  gateway  <-->  network server (LNS)  <-->  application server
+"
+
+exit 0
