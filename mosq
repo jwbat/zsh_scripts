@@ -6,11 +6,17 @@ echo "$c
 \t ~ mosquitto -h
 \t start script is: ~ mos
 
-\t To restart mosquitto after an upgrade:
+\t  restart mosquitto after an upgrade:
 \t   ~ brew services restart mosquitto
 
-\t  You can make changes to the configuration by editing:
+\t  make changes to the configuration by editing:
 \t      /opt/homebrew/etc/mosquitto/mosquitto.conf
+
+\t mosquitto_pub -h 127.0.0.1 -m \"test message\" -t \"sensor/motion\" -d
+\t   h = broker address
+\t   m = message
+\t   t = topic
+\t   d = debug
 "
 
 exit 0
