@@ -8,10 +8,4 @@
 
 /opt/homebrew/sbin/mosquitto -c /opt/homebrew/etc/mosquitto/mosquitto.conf
 
-# mosquitto_pub -h 127.0.0.1 -m "test message" -t "sensor/motion" -d
-# h = broker address
-# m = message
-# t = topic
-# d = debug
-#
 exit 0

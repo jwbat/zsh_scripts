@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-c="$(tput setaf 202)"
+c="$(tput setaf 228)"
 
 echo "$c
 \t ~ mosquitto -h
@@ -12,11 +12,18 @@ echo "$c
 \t  make changes to the configuration by editing:
 \t      /opt/homebrew/etc/mosquitto/mosquitto.conf
 
-\t mosquitto_pub -h 127.0.0.1 -m \"test message\" -t \"sensor/motion\" -d
+\t mosquitto_pub -h 127.0.0.1 -p 1883 -m \"test message\" -t \"sensor/motion\" -d -r 
 \t   h = broker address
+\t   p = port
 \t   m = message
 \t   t = topic
 \t   d = debug
-"
+\t   r = retain
 
+\t mosquitto_sub -h 127.0.0.1  -t \"sensor/motion\" -C 3 -v -d
+\t   C = disconnect after 3 msgs
+\t   v = display topic
+\t   d = debug
+
+"
 exit 0
