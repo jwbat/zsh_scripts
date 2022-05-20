@@ -10,6 +10,8 @@ c="$(tput setaf 196)"
 echo "$c
     ~ npm install node-sass@npm:sass
 
+    sbg-webapp/modules/vue-ui/src/vs/views/DeviceView.vue
+
     site-health-report
     ~ git checkout site-health-report
     ~ git branch -r

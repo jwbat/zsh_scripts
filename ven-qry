@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+echo "
+query MyQuery {
+  siteHealthOverTime(startDate: \"2022-04-01T00:00:00\",
+                     endDate: \"2022-04-30T00:00:00\",
+                     siteUuid: \"5974610d-ee02-477b-bc6b-059b8a2aa081\") {
+    sensors {
+      normalTimePct
+      sensor
+    }
+    zone {
+      id
+      name
+      floor {
+        id
+        level
+        name
+      }
+    }
+  }
+}
+"
+
+exit 0

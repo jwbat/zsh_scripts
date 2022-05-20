@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+# Description
+#  install instructions for multitech conduit ("mtc")
+
+# Usage
+# mtc
+
+c="$(tput setaf 229)"
+c1="$(tput setaf 250)"
+
+echo "$c1
+Installation:
+    ssh into the Conduit and type the following commands to install pip.
+    Make sure your Conduit is connected to the internet. $c
+
+\t ~ opkg update
+\t ~ opkg install python-pip
+\t ~ pip install paho-mqtt
+
+$c1 scp the mqtt-client.py to your Conduit $c
+
+\t ~ chmod +x mqtt-client.py
+
+$c1    run: $c
+\t ~ python mqtt-client.py
+"
+
+
+exit 0
