@@ -1,0 +1,11 @@
+#! /bin/sh
+
+# Description
+# stop python process, subscribe.py 
+
+# Usage
+# pstop 
+
+kill -15 $(pgrep python)
+
+exit 0

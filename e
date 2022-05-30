@@ -16,7 +16,7 @@ e=$(<~/code/shell/scripts/stuff/e.txt)
 param=$1
 nr_of_digits=${param:-50}
 
-c="$(tput setaf 83)"
+c="$(tput setaf 228)"
 echo "$c ${e:0:$((2 + $nr_of_digits))}"
 
 exit 0

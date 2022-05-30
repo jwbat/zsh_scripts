@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+echo "
+
+  https://github.com/ventacity/sbg-webapp/pull/74
+
+Commit Summary
+c701e5b Placeholder page for Site Health Report
+b4c28b3 gql integration of site health report heatmap
+File Changes (7 files)
+M modules/vue-ui/package-lock.json (824)
+M modules/vue-ui/package.json (2)
+M modules/vue-ui/src/main.ts (6)
+A modules/vue-ui/src/reports/SiteHealthReport.vue (127)
+A modules/vue-ui/src/reports/chart-helper.ts (136)
+A modules/vue-ui/src/reports/querydata.js (155)
+M modules/vue-ui/src/router/index.ts (6)
+Patch Links:
+https://github.com/ventacity/sbg-webapp/pull/74.patch
+https://github.com/ventacity/sbg-webapp/pull/74.diff
+"
+
+exit 0

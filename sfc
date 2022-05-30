@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+# Description
+# copy file or dir from /opt/lora on conduit
+
+# Usage
+# scp-from-cdt <file or dir in /opt/lora>
+
+kp;
+
+scp -r admin@192.168.0.55:/opt/lora/$1 .
+
+exit 0

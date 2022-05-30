@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+# Description
+# 
+
+# Usage
+# 
+
+kp;
+
+scp -r admin@192.168.0.55:/opt/lora/test.csv .
+
+exit 0

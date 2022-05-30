@@ -15,7 +15,7 @@
 sqrt=$(<~/code/shell/scripts/stuff/sqrt2.txt)
 
 
-c="$(tput setaf 83)"
+c="$(tput setaf 228)"
 param=$1
 nr_of_digits=${param:-50}
 echo "$c ${sqrt:0:$((2 + nr_of_digits))}"

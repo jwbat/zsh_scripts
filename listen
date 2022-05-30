@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 
+# Last Modified: 
+
+# Description
+# 
+
+# Usage
+
+c="$(tput setaf 220)"
+
+echo "$c
+$(sudo lsof -i -n -P)
+"
+exit 0

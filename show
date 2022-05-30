@@ -21,6 +21,8 @@ echo "\t rm /path/to/symlink                        \t $c2 remove symlink"  $c1
 echo "\t man zshmisc                                \t $c2 prompt sequences"  $c1
 echo "\t tar -czf LotsOfFiles.tgz LotsOfFiles       \t $c2 -z = compress"  $c1
 echo "\t tar -xvf LotsOfFiles.tgz                   \t $c2 -x = un-compress"  $c1
+echo "\t ps -ax                                     \t $c2 running process"  $c1
+echo "\t ps -ax | grep terminal                     \t $c2                "  $c1
 echo "\t sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist   generate locate db"  $c1
 echo
 echo "\t ls | wc -l         \t $c2 count nr of files in present directory"  $c1

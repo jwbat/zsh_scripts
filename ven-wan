@@ -3,10 +3,13 @@
 # Usage
 # ven-wan
 
-c="$(tput setaf 190)"
+c="$(tput setaf 87)"
 
 echo "$c
-\t end node  <-->  gateway  <-->  network server (LNS)  <-->  application server
+\t Multitech Conduit model: MTCAP-915-001A Firmware 5.3.5
+\t 192:168.0.55
+\t u/n admin
+\t p/w admin#Shizzle
 "
 
 exit 0

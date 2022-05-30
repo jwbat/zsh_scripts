@@ -12,19 +12,19 @@
 # Usage
 # nrs <nr_of_decimal_places>  (default=80, max=1000) 
 
-c1="$(tput setaf 214)"
-c2="$(tput setaf 83)"
+c1="$(tput setaf 228)"
 
 param=$1
 digits=${param:-80}
 
-echo
-echo "$c1      π:  $( pi $digits )"
-echo 
-echo "$c1      e:  $( e $digits )"
-echo
-echo "$c1      φ:  $( phi $digits )"
-echo
-echo "$c1     √2:  $( sqrt2 $digits )"
-echo
+echo " $c1      
+\t  π:  $( pi $digits )
+
+\t  e:  $( e $digits )
+
+\t  φ:  $( phi $digits )
+
+\t √2:  $( sqrt2 $digits )
+"
+
 exit 0

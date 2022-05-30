@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# Description
+# port forwarding from Ubuntu          #   GraphQL    guest: 8000, host: 8801
+                                       #   API        guest: 1234, host: 1234
+# Usage                                #   Postgres   guest: 5432, host: 54320 
+# port [1 - 3]  
+
+c1=$(tput setaf 204)
+c2=$(tput setaf 109)
+
+l;
+
+echo "$c1
+     ==========================     
+     forwarding :8801  to :8000     
+     forwarding :1234  to :1234     
+     forwarding :54320 to :5432     
+     ==========================   $c2"
+ssh -L 8801:127.0.0.1:8000 -L 1234:127.0.0.1:1234 -L 54320:127.0.0.1:5432 parallels@10.211.55.4
+
+exit 0

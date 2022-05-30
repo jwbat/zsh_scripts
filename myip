@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# Usage
+# myip
+
+c="$(tput setaf 224)"
+
+echo "$c
+\t $(ipconfig getifaddr en0)
+"
+
+exit 0

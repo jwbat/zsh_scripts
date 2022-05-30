@@ -1,0 +1,17 @@
+#! /bin/sh
+
+# Description
+# return true if subscribe.py is running, false otherwise
+
+
+# Usage
+# running
+
+if [ $(ps -ax | grep subscribe | wc -l) -eq 2 ]; then
+    echo "true"
+    exit 0
+fi
+
+echo "false"
+
+exit 0

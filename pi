@@ -14,7 +14,7 @@
 
 pi=$(<~/code/shell/scripts/stuff/pi.txt)
 
-c="$(tput setaf 83)"
+c="$(tput setaf 228)"
 param=$1
 nr_of_digits=${param:-50}
 

@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Description
+# conduit help 
+
+# Usage
+# cdth
+
+c="$(tput setaf 220)"
+
+echo "$c
+\t ~ ps -ax | grep python
+\t ~ kill -15 \$(pgrep python)
+"
+
+exit 0

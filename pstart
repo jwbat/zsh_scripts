@@ -1,0 +1,11 @@
+#! /bin/sh
+
+# Description
+# start subscribe.py 
+
+# Usage
+# pstart 
+
+python /opt/lora/subscribe.py
+
+exit 0
