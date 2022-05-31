@@ -10,6 +10,13 @@
 # Usage
 # c-h <classname> 
 
+if [ "$#" -ne 1 ]; then
+    echo "
+ for generating a .h file in a cpp project; requires 1 argument: <classname>
+    "
+    exit 0
+fi
+
 classname=$1
 
 lines="#ifndef ${(U)classname}_H
