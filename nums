@@ -13,12 +13,13 @@
 # nrs <nr_of_decimal_places>  (default=80, max=1000) 
 
 c1="$(tput setaf 228)"
+c2="$(tput setaf 196)"
 
 param=$1
 digits=${param:-80}
 
 echo " $c1      
-\t  π:  $( pi $digits )
+\t  π: $( pi $digits )
 
 \t  e:  $( e $digits )
 
