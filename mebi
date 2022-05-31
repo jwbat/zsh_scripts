@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+c="$(tput setaf 220)"
+
+echo "$c
+\t kibibyte    KiB   2^10
+\t mebibyte    MiB   2^20
+\t gibibyte    GiB   2^30
+\t tebibyte    TiB   2^40
+\t pebibyte    PiB   2^50
+\t exbibyte    EiB   2^60
+\t zebibyte    ZiB   2^70
+\t yobibyte    YiB   2^80
+"
+
+exit 0
