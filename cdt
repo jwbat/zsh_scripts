@@ -5,8 +5,7 @@
 
 kp;
 
-ssh -L 7000:localhost:22 admin@192.168.0.55
-
-#ssh -R 7000:localhost:22 admin@192.168.0.55
+ssh -t admin@192.168.0.55 "cd /opt/lora; exec \$SHELL -l"
+#ssh -L 7000:localhost:22 admin@192.168.0.55
 
 exit 0

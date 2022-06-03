@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+# Description
+# reboot conduit from host 
+
+# Usage
+# cdt-reboot 
+
+kp;             # copy p/w to clipboard
+
+ssh -t admin@192.168.0.55 'sudo reboot'
+
+exit 0
