@@ -23,7 +23,8 @@ echo "\t tar -czf LotsOfFiles.tgz LotsOfFiles       \t $c2 -z = compress"  $c1
 echo "\t tar -xvf LotsOfFiles.tgz                   \t $c2 -x = un-compress"  $c1
 echo "\t ps -ax                                     \t $c2 running process"  $c1
 echo "\t ps -ax | grep terminal                     \t $c2                "  $c1
-echo "\t sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist   generate locate db"  $c1
+echo "\t sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist   $c2 generate locate db"  $c1
+echo "\t curl https://www.google.com/ &> /dev/null | wc -l"  $c1
 echo
 echo "\t ls | wc -l         \t $c2 count nr of files in present directory"  $c1
 echo "\t print -l *(.)      \t $c2 print all files in directory"  $c1

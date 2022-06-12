@@ -9,15 +9,6 @@
 c="$(tput setaf 157)"
 
 echo "$c
-    •  HighCharts heatmap, Vue wrapper
-    •  GraphQL queries
-    •  Hours reporting
-    ==============================================
-    •  Jason:
-      - Ubuntu -- most recent version?
-      - have / recommend a favorite linux terminal emulator?
-    ==============================================
-    •  TypeScript, Vuetify
     ==============================================
        -- VM & Linux --
     •  setup UTM / Ubuntu

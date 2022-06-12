@@ -1,0 +1,49 @@
+#!/bin/zsh
+
+# Description
+# 
+
+# Usage
+# crdb 
+
+c="$(tput setaf 220)"
+c2="$(tput setaf 250)"
+#cat ~/code/ghpat/crdb.txt
+
+echo "
+$c2# start a node that will join other nodes $c
+cockroach start --insecure --listen-addr=localhost:26257 \
+  --join=localhost:26257,localhost:26258,localhost:26259 \
+  --http-addr=localhost:8080 --store=cockroach-data-1 --background
+
+$c2# this will error out $c
+cockroach start --insecure --listen-addr=localhost:26257 \
+  --join=localhost:26257,localhost:26258,localhost:26259 \
+  --http-addr=localhost:8081 --store=cockroach-data-2 --background
+
+cockroach start --insecure --listen-addr=localhost:26258 \
+  --join=localhost:26257,localhost:26258,localhost:26259 \
+  --http-addr=localhost:8081 --store=cockroach-data-2 --background
+
+cockroach start --insecure --listen-addr=localhost:26259 \
+  --join=localhost:26257,localhost:26258,localhost:26259 \
+  --http-addr=localhost:8082 --store=cockroach-data-3 --background
+
+$c2# initialize multi-node cluster $c
+cockroach init --host localhost:26258 --insecure
+
+$c2# open UI $c
+open http://localhost:8082
+
+$c2# add 2 more nodes $c
+cockroach start --insecure --listen-addr=localhost:26260 \
+  --join=localhost:26257,localhost:26258,localhost:26259,localhost:26260,localhost:26261 \
+  --http-addr=localhost:8083 --store=cockroach-data-4 --background
+
+cockroach start --insecure --listen-addr=localhost:26261 \
+  --join=localhost:26257,localhost:26258,localhost:26259,localhost:26260,localhost:26261 \
+  --http-addr=localhost:8084 --store=cockroach-data-5 --background
+
+"
+
+exit 0

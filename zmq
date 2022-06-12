@@ -5,7 +5,9 @@
 
 # Usage
 # zmq
+
 c="$(tput setaf 190)"
+
 echo "$c
 \t socket types:  REQ, REP, PUSH, PULL, DEALER, ROUTER
 "

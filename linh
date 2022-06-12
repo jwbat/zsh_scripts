@@ -13,18 +13,32 @@ echo "$c
     ~ sudo apt install tasksel
     ~ sudo tasksel install ubuntu-desktop
     ~ sudo apt install spice-vdagent spice-webdavd
+    ~ sudo !!                                           $c2# run last cmnd prefaced with sudo $c
 
-    ~ ipconfig getifaddr en0                            $c2# ip address wi-fi or ethernet$c
-    ~ ipconfig getifaddr en1                            $c2# ip address wireless$c
+    ~ ipconfig getifaddr en0                            $c2# ip address wi-fi or ethernet $c
+    ~ ipconfig getifaddr en1                            $c2# ip address wireless $c
     ~ scp -r <dirname> james@192.168.64.2:/home/james
 
-    ~ id -u                                             $c2# UID$c
-    ~ sudo adduser <username>                           $c2# creates a new home dir$c
+    ~ id -u                                             $c2# UID $c
+    ~ sudo adduser <username>                           $c2# creates a new home dir $c
     ~ cat [/etc/group, /etc/passwd]
     ~ which update-rc.d
-    ~ crontab -e                                        $c2# edit crontab$c
-    ~ crontab -l                                        $c2# list jobs$c
+    ~ crontab -e                                        $c2# edit crontab $c
+    ~ crontab -l                                        $c2# list jobs $c
 
+    ~ cat /proc/version                                 $c2# Linux version $c
+    ~ cat /proc/cpuinfo | grep model                    $c2# cpu info $c
+    ~ cat /proc/\$\$/status | head -n 10                  $c2# process status $c
+    ~ lscpu                                             $c2# cpu architecture + $c
+    ~ uname -m                                          $c2# cpu architecture $c
+
+    ~ infocmp                                           $c2# terminal configurations $c
+    ~ htop                                              $c2# monitor system resources $c
+
+    ~ tail -f <file>                                    $c2# watch end of file as it updates $c
+    ~ truncate -s 0 <file>                              $c2# make file size exactly 0 $c
+    ~ > <file>                                          $c2#   \"    \"    \"      \"   \" $c
+    ~ mount | column -t                                 $c2# organize output of first cmnd into columns $c
 "
 
 exit 0

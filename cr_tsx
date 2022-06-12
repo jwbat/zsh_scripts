@@ -1,0 +1,82 @@
+#!/bin/zsh
+
+# Description
+# 
+
+# Usage
+# crdb 
+
+c="$(tput setaf 220)"
+c2="$(tput setaf 250)"
+#cat ~/code/ghpat/crdb.txt
+
+echo "$c
+cockroach start-single-node --insecure --listen-addr localhost            $c2# with defaults $c
+cockroach start-single-node --insecure --listen-addr=localhost:26257 --http-addr=localhost:8080
+
+cockroach workload init movr                    $c2# load data (movr in this ex) $c
+
+cockroach sql --insecure                        $c2# open sql shell $c
+
+$c2 root@:26257/defaultdb> $c  SHOW databases;
+$c2 root@:26257/defaultdb> $c  SHOW TABLES FROM movr;
+$c2 root@:26257/defaultdb> $c  SELECT * FROM movr.users LIMIT 10;
+
+$c2 root@:26257/defaultdb> $c  CREATE DATABASE james;
+$c2 root@:26257/defaultdb> $c  SET DATABASE = james;
+$c2 root@:26257/james> $c      CREATE TABLE books (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), title STRING);
+$c2 root@:26257/james> $c      SHOW CREATE books; $c2# see table schema $c
+$c2 root@:26257/james> $c      CREATE TABLE courses 
+                            (sys_id UUID DEFAULT gen_random_uuid(),
+                            course_id INT,
+                            name STRING,
+                            PRIMARY KEY (sys_id, course_id)); $c2# create table with composite PK $c
+$c2 root@:26257/james> $c      ALTER TABLE courses ADD COLUMN schedule STRING;
+$c2 root@:26257/james> $c      DROP TABLE courses;
+
+$c2#===================================================================================================== $c
+$c2## Secondary indexes $c
+cockroach sql --insecure < demo.sql             $c2# run sql script to create table $c
+cockroach sql --insecure
+$c2 root@:26257/defaultdb> $c   SHOW INDEXES FROM users;
+$c2 root@:26257/defaultdb> $c   SELECT * FROM users WHERE id = 1;
+$c2 root@:26257/defaultdb> $c   EXPLAIN SELECT * FROM users WHERE id = 1;
+$c2 root@:26257/defaultdb> $c   EXPLAIN SELECT * FROM users WHERE last_name = 'Cross' AND first_name = 'William';
+$c2 root@:26257/defaultdb> $c   CREATE INDEX my_index ON users (last_name, first_name);
+$c2 root@:26257/defaultdb> $c   SHOW INDEXES FROM users;
+$c2 root@:26257/defaultdb> $c   EXPLAIN SELECT * FROM users WHERE last_name = 'Cross' AND first_name = 'William';
+
+
+$c2#===================================================================================================== $c
+$c2## Transactions $c
+cockroach start --insecure --store=node1 --listen-addr=localhost:26257 --http-addr=localhost:8080
+cockroach init --insecure --host=localhost:26257
+cockroach sql --insecure --host=localhost:26257 < tsx_demo.sql          $c2# run sql script to create table $c
+
+$c2 First SQL shell $c
+cockroach sql --insecure --host=localhost:26257
+$c2 root@:26257/defaultdb> $c   
+$c2 root@:26257/defaultdb> $c   SHOW TABLES FROM bank;
+$c2 root@:26257/defaultdb> $c   SELECT * FROM bank.customers;
+$c2 root@:26257/defaultdb> $c   SELECT * FROM bank.accounts;
+$c2 root@:26257/defaultdb> $c   SELECT balance >= 50 FROM bank.accounts WHERE type = 'checking' AND customer_id = 2;
+$c2 root@:26257/defaultdb> $c   UPDATE bank.accounts SET balance = balance - 50 WHERE type = 'checking' AND customer_id = 2;
+$c2 root@:26257/defaultdb> $c   SELECT * FROM bank.accounts WHERE type = 'checking' AND customer_id = 2;
+$c2 root@:26257/defaultdb> $c   BEGIN;
+$c2 root@:26257/defaultdb> $c   SELECT balance >= 200 FROM bank.accounts WHERE type = 'checking' AND customer_id = 2;
+$c2 root@:26257/defaultdb> $c   UPDATE bank.accounts SET balance = balance - 200 WHERE type = 'checking' AND customer_id = 2;
+$c2 root@:26257/defaultdb> $c   COMMIT;
+
+$c2 Second SQL shell $c
+cockroach sql --insecure --host=localhost:26257
+ $c2 # statments will all be committed together upon COMMIT; $c
+ $c2 # begin a multi-statement transaction $c
+$c2 > $c BEGIN;
+$c2 OPEN> $c SELECT balance >= 200 FROM bank.accounts WHERE type = 'checking' AND customer_id = 2;  
+$c2 OPEN> $c UPDATE bank.accounts SET balance = balance - 200 WHERE type = 'checking' AND customer_id = 2;
+$c2 OPEN> $c ROLLBACK;
+$c2 OPEN> $c SELECT * FROM bank.accounts WHERE type = 'checking' AND customer_id=2;
+
+"
+
+exit 0

@@ -1,5 +1,3 @@
-hi 
-apple 
-fish 
-dog 
-brain
+abc
+def
+ghi

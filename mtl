@@ -7,6 +7,9 @@
 # mtl <dirname> 
 
 #rsync -rv $1 "james@192.168.64.2:/home/james"
+
+l;
+
 rsync -rv $1 "parallels@10.211.55.4:/home/parallels"
 
 exit 0
