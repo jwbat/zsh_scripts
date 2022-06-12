@@ -13,35 +13,38 @@
 c1="$(tput setaf 83)"
 c2="$(tput setaf 251)"
 
-echo $c1
-echo "\t grep -rn --exclude-dir=.git "chrono" .     \t $c2 -r recursive"  $c1
-echo "\t find . -maxdepth 1 -type l -ls             \t $c2 list symlinks"  $c1
-echo "\t ln -s /path/to/original /path/to/symlink   \t $c2 create symlink"  $c1
-echo "\t rm /path/to/symlink                        \t $c2 remove symlink"  $c1
-echo "\t man zshmisc                                \t $c2 prompt sequences"  $c1
-echo "\t tar -czf LotsOfFiles.tgz LotsOfFiles       \t $c2 -z = compress"  $c1
-echo "\t tar -xvf LotsOfFiles.tgz                   \t $c2 -x = un-compress"  $c1
-echo "\t ps -ax                                     \t $c2 running process"  $c1
-echo "\t ps -ax | grep terminal                     \t $c2                "  $c1
-echo "\t sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist   $c2 generate locate db"  $c1
-echo "\t curl https://www.google.com/ &> /dev/null | wc -l"  $c1
-echo
-echo "\t ls | wc -l         \t $c2 count nr of files in present directory"  $c1
-echo "\t print -l *(.)      \t $c2 print all files in directory"  $c1
-echo "\t text=\$(<file.txt) \t $c2 read each line of file.txt into array"  $c1
-echo "\t cal -A 1           \t $c2 calendar"  $c1
-echo "\t \$TERM             \t $c2 terminal colors"  $c1
-echo "\t env                \t $c2 environment variables"  $c1
-echo "\t export             \t $c2 list environment variables and their values"  $c1
-echo "\t set                \t $c2 also list shell variables"  $c1
-echo "\t uname -m           \t $c2 processor architecture"  $c1
-echo "\t uname -o           \t $c2 name of operating system"  $c1
-echo "\t sw_vers            \t $c2 OS version info"  $c1
-echo "\t fc -l -10          \t $c2 list the last 10 commands in history"  $c1
-echo "\t print \${#string}  \t $c2 count character in string"  $c1
-echo "\t print \${(w)#string}\t $c2 count words in string"  $c1
-echo "\t rsync -av --dry-run --exclude 'liu' ventacity/ /Volumes/mu/ven/"  $c1
-echo "\t grep -rl --exclude-dir=node_modules '\$t' ."  $c1
-echo 
+echo "$c1
+\t grep -rn --exclude-dir=.git \"chrono\" .     \t $c2 -r recursive  $c1
+\t find . -maxdepth 1 -type l -ls             \t $c2 list symlinks  $c1
+\t ln -s /path/to/original /path/to/symlink   \t $c2 create symlink  $c1
+\t rm /path/to/symlink                        \t $c2 remove symlink  $c1
+\t man zshmisc                                \t $c2 prompt sequences  $c1
+\t tar -czf LotsOfFiles.tgz LotsOfFiles       \t $c2 -z = compress  $c1
+\t tar -xvf LotsOfFiles.tgz                   \t $c2 -x = un-compress  $c1
+\t ps -ax                                     \t $c2 running process  $c1
+\t env                                        \t $c2 environment variables $c1
+\t ps -ax | grep terminal                     \t $c2                  $c1
+\t sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist   $c2 generate the locate db  $c1
+\t curl https://www.google.com/ &> /dev/null | wc -l  $c1
+
+\t ls | wc -l         \t $c2 count nr of files in present directory  $c1
+\t print -l *(.)      \t $c2 print all files in directory  $c1
+\t text=\$(<file.txt) \t $c2 read each line of file.txt into array  $c1
+\t cal -A 1           \t $c2 calendar  $c1
+\t \$TERM             \t $c2 terminal colors  $c1
+\t env                \t $c2 environment variables  $c1
+\t export             \t $c2 list environment variables and their values  $c1
+\t set                \t $c2 also list shell variables  $c1
+\t uname -m           \t $c2 processor architecture  $c1
+\t uname -o           \t $c2 name of operating system  $c1
+\t sw_vers            \t $c2 OS version info  $c1
+\t fc -l -10          \t $c2 list the last 10 commands in history  $c1
+\t print \${#string}  \t $c2 count character in string  $c1
+\t print \${(w)#string}\t $c2 count words in string  $c1
+\t rsync -av --dry-run --exclude 'liu' ventacity/ /Volumes/mu/ven/  $c1
+\t grep -rl --exclude-dir=node_modules '\$t' .  $c1
+\t echo \$PATH | tr : \\\n \t $c2 split PATH on delimitter ':' and add newline $c1
+"
+
 
 exit 0
