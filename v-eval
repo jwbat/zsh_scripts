@@ -1,0 +1,81 @@
+#!/bin/zsh
+
+
+c="$(tput setaf 83)"
+c2="$(tput setaf 190)"
+
+echo "
+$c2 Overall Scaling Needs $c
+  1. OLTP DB
+  2. Static assets (CDN)
+  3. GQL queries & mutations
+  4. GQL subscriptions
+  5. Edge Scaling
+        a. Connection mgmt (ZMQ)
+        b. Data ingestion (anything along the path from Edge to OLTP/OLAP DB)
+  6. OLAP DB 
+
+$c2 Managed OLTP DB $c
+    • Ease of Development
+        Psql compatible (the more compatible, the better)
+        Transaction capable (we use nested transactions in code)
+        Triggers/CDC capabilities (for live data and GraphQL subscriptions)
+        Stored procedure capabilities (might want to stop using these?)
+        Private developer sandbox capability (does not have to run locally)
+        Debugging capabilities
+        Query performance metrics for optimization/debug
+        Time series data mgmt (nice to have, might not need)
+        Geographic queries (lat/lon) (nice to have, probably don’t need)
+    • Ease of Administration (e.g. Psql clusters involve a lot of tuning)
+        Scalability (handling high utilization)
+           Automatically handles arbitrary number of clients/queries for Reads 
+             and preferably also Writes (auto-scales compute)
+           Abstracts data capacity (auto-scales storage)
+        Availability (handling infrastructure failure)
+        Geographic scaling (reducing latency due to distance)
+            Data replication at various DCs
+            Partitioning of data (customer Account data to be sited wholly in a DC near them)
+        Backup (snapshot frequency, rollback/restore)
+        Programmatically create DB environments (dev, staging, prod, etc)
+        Manage security and access policies
+
+
+$c2 Evaluation (First Pass) $c
+    What does “managed DB” mean to the vendor based on above criteria? 
+
+    What aspects of the above requirements require manual work?
+
+    What decisions need to be made up front (table types, indexes, data partitions/shards),
+     or can these things be changed easily later on?
+
+    What does their Postgres migration guide look like? 
+      (Are there few or many issues to navigate during a migration?)
+
+    How easy is it to stand up a development & production environment for a basic web app? (Development)
+
+    What are the ongoing maintenance obligations of any DB Admin? (Admin)
+
+    How does the service handle thousands of DB clients/queries, and is any developer or administrator
+      effort required? (Scalability)
+
+    How easy is backup & restore? (Is it automated? Frequent snapshots available? 
+      Are restores trivially easy?) (Backup)
+
+    What does infrastructure failure (failover) look like and 
+      is it completely managed or is manual intervention required? (Availability)
+
+    What will it look like for us to geographically scale? 
+      (partition data geographically by Account holder location,
+       such that Account data is located near the customer).
+
+    We don’t need this immediately, but want to know if there is a low-effort path,
+      should we need to quickly do so (and maybe we even need it today to handle 
+      US-wide customers with buildings on East & West coasts).
+
+"
+
+
+
+
+
+exit 0

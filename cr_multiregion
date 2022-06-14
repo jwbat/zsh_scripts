@@ -1,0 +1,37 @@
+#!/bin/zsh
+
+# Usage
+# cr_multiregion
+
+c="$(tput setaf 220)"
+c2="$(tput setaf 253)"
+
+echo "$c
+ cockroach demo movr --nodes 9
+ 
+ SHOW REGIONS FROM CLUSTER;
+ 
+ ALTER DATABASE movr PRIMARY REGION \"us-east1\";
+ SHOW REGIONS FROM DATABASE movr;
+ 
+ ALTER DATABASE movr ADD REGION \"us-west1\";
+ ALTER DATABASE movr ADD REGION \"europe-west1\";
+ SHOW REGIONS FROM DATABASE movr;
+ SHOW TABLES;
+ 
+ $c2 optionally update survival goals $c
+ SHOW SURVIVAL GOAL FROM DATABASE movr;
+ ALTER DATABASE movr SURVIVE REGION FAILURE;
+ SHOW SURVIVAL GOAL FROM DATABASE movr;
+ 
+ $c2 optionally upgrade a table to GLOBAL $c
+ SHOW CREATE TABLE promo_codes;
+ ALTER TABLE promo_codes SET LOCALITY GLOBAL;
+ SHOW CREATE TABLE promo_codes; 
+ 
+ SHOW CREATE TABLE rides;
+ ALTER TABLE rides SET LOCALITY REGIONAL BY ROW;
+ SHOW TABLES;
+"
+
+exit 0

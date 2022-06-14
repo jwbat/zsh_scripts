@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+# Description
+# 
+
+# Usage
+# cr_topics 
+c="$(tput setaf 122)"
+
+echo "$c
+\t • security
+
+\t • deployment topologies
+
+\t • multi-cloud
+
+\t • datacenter failure scenarios
+
+\t • paralleling workloads
+
+\t • load test production servers
+
+\t • indexes and performance tuning
+
+\t • schema design
+
+\t • CRDB's rich datatypes to query non-tabular data
+
+\t • production checklist ***
+"
+
+exit 0

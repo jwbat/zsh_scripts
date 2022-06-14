@@ -5,39 +5,32 @@
 # Last Modified: 06/10/22
 
 # Description
-# run cockroachDB commands 
+# run cockroachDB commands or print info
 #  n.b.: start server before entering the sql shell
 
 # Usage
-# cr [ -sqcktmrlp ] 
+# cr [ -cshqktmrlinCXMPLRTE ]  
+# UPPER CASE print info, lower case do something such as start a node
+# use cr -h for cockroach help
 
-x="sqcktmrlp"
+x="cshqktmrlinCXMPLRTE" 
+
+color() { tput setaf 86 } # blue
 
 if [ $# -eq 0 ]; then
     echo "available options are: $x"
 fi
 
-while getopts $x opt; do # "sqcktmrlp" 
+while getopts $x opt; do
     case $opt in
+
+        # connect to serverless DB hollow-gerbil
+        c) cockroach sql --url 'postgresql://james:05aYx2o2sYMX9PIL2a0mFQ@free-tier4.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Dhollow-gerbil-3118';;
+
         # start local server with single node & defaults
         s) cockroach start-single-node --insecure --listen-addr localhost;;     
 
-        # enter sql shell
-        q) cockroach sql --insecure;;                                           
-
-        # show some of the most used commands
-        c) cr_cmnds;;
-
-        # stop cluster
-        k) pkill -9 cockroach;;
-
-        # show tsx commands (& more) 
-        t) cr_tsx;;
-
-        # show multi-node cluster commands
-        m) cr_mnc;;
-
-        # show running
+        # show whether server is running
         r)
             if [[ $(ps -ax | grep cockroach | wc -l) -ge 2 ]]; then
                 echo "true"
@@ -49,8 +42,37 @@ while getopts $x opt; do # "sqcktmrlp"
         # start 3-node cluster
         l) cr_cluster;;
 
+        # initialize a cluster (not needed with a single-node cluster)
+        i) cockroach init --insecure --host=localhost:26257;;
+
+        #  List node IDs [, show their status, decommission nodes for removal, or recommission nodes.]
+        n) cockroach node ls --insecure;;
+
+        h) color; cockroach help;;
+
+        # enter sql shell
+        q) cockroach sql --insecure;;                                           
+
+        # stop cluster
+        k) pkill -9 cockroach;;
+
         # pw
-        p) cat $HOME/code/ghpat/crdb.txt;;
+        P) cat $HOME/code/ghpat/crdb.txt;;
+        # show some of the most used commands
+        C) cr_cmnds;;
+        # show tsx commands (& more) 
+        X) cr_tsx;;
+        # show multi-node cluster commands
+        M) cr_mnc;;
+        # show commands with locality flags
+        L) cr_locality;;
+        # show commands with locality flags
+        R) cr_multiregion;;
+        # show additional topics
+        T) cr_topics;;
+        # show evaluation criteria
+        E) v-eval;;
+
 
         *) echo "available options are: [ $x ]";;
     esac
