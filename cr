@@ -25,7 +25,7 @@ while getopts $x opt; do
     case $opt in
 
         # connect to serverless DB hollow-gerbil
-        c) cockroach sql --url 'postgresql://james:05aYx2o2sYMX9PIL2a0mFQ@free-tier4.aws-us-west-2.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Dhollow-gerbil-3118';;
+        c) cockroach sql --url ;;
 
         # start local server with single node & defaults
         s) cockroach start-single-node --insecure --listen-addr localhost;;     
