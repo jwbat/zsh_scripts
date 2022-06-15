@@ -13,7 +13,7 @@
 # UPPER CASE print info, lower case do something such as start a node
 # use cr -h for cockroach help
 
-x="cshqktmrlinCXMPLRTE" 
+x="c:shqktmrlinCXMPLRTE" 
 
 color() { tput setaf 86 } # blue
 
@@ -24,8 +24,17 @@ fi
 while getopts $x opt; do
     case $opt in
 
-        # connect to serverless DB hollow-gerbil
-        c) cockroach sql --url ;;
+        # use "-c 1" to connect to the 'hollow-gerbil' cluster in us-w, or
+        # use "-c 2" to connect to the 'university-cluster' in eu-w
+        c) 
+        if [ $2 -eq 1 ]; then
+            cockroach sql --url $gerbil
+        elif [ $2 -eq 2 ]; then
+            cockroach sql --url $uni
+        else
+            echo "-c takes 1 or 2 at this time"
+        fi
+        ;;
 
         # start local server with single node & defaults
         s) cockroach start-single-node --insecure --listen-addr localhost;;     

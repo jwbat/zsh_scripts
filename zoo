@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+
+echo $GERBIL
+
+
+
+exit 0
