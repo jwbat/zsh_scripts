@@ -26,13 +26,16 @@ while getopts $x opt; do
 
         # use "-c 1" to connect to the 'hollow-gerbil' cluster in us-w, or
         # use "-c 2" to connect to the 'university-cluster' in eu-w
+        # use "-c 3" to connect to 'hollow-gerbil' movr database
         c) 
         if [ $2 -eq 1 ]; then
             cockroach sql --url $gerbil
         elif [ $2 -eq 2 ]; then
             cockroach sql --url $uni
+        elif [ $2 -eq 3 ]; then
+            cockroach sql --url $movr
         else
-            echo "-c takes 1 or 2 at this time"
+            echo "not a valid arg"
         fi
         ;;
 
