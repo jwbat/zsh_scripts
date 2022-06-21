@@ -1,5 +1,0 @@
-#!/bin/zsh
-
-cat ~/code/ghpat/cr_xstring.txt | pbcopy
-
-exit 0

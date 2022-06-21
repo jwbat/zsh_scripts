@@ -28,16 +28,16 @@ while getopts $x opt; do
         # use "-c 2" to connect to the 'university-cluster' in eu-w
         # use "-c 3" to connect to 'hollow-gerbil' movr database
         c) 
-        if [ $2 -eq 1 ]; then
-            cockroach sql --url $gerbil
-        elif [ $2 -eq 2 ]; then
-            cockroach sql --url $uni
-        elif [ $2 -eq 3 ]; then
-            cockroach sql --url $movr
-        else
-            echo "not a valid arg"
-        fi
-        ;;
+            if [ $2 -eq 1 ]; then
+                cockroach sql --url $gerbil
+            elif [ $2 -eq 2 ]; then
+                cockroach sql --url $uni
+            elif [ $2 -eq 3 ]; then
+                cockroach sql --url $movr
+            else
+                echo "not a valid arg"
+            fi
+            ;;
 
         # start local server with single node & defaults
         s) cockroach start-single-node --insecure --listen-addr localhost;;     

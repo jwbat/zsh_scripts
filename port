@@ -9,7 +9,7 @@
 c1=$(tput setaf 204)
 c2=$(tput setaf 109)
 
-l;
+echo $A | pbcopy
 
 echo "$c1
      ==========================     
