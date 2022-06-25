@@ -6,12 +6,14 @@
 # Usage
 # todo 
 
-c="$(tput setaf 196)"
+c1="$(tput setaf 196)"
+c2="$(tput setaf 241)"
 
-echo "$c
+echo "$c1
     ==============================================
-    vscode: settings.json
-    site-health-report
+$c2    1) is CRDB a fork of postgres ?  compatability ?  (done)
+$c1    2) architecture for a multi-region table of bldg. names
+$c2    3) metrics, etc. on serverless ?
     ==============================================
 "
 

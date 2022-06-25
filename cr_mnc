@@ -4,7 +4,7 @@
 # 
 
 # Usage
-# crdb 
+# crdb_mnc
 
 c="$(tput setaf 220)"
 c2="$(tput setaf 250)"

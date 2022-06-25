@@ -18,7 +18,7 @@ x="c:shqktmrlinCXMPLRTE"
 color() { tput setaf 86 } # blue
 
 if [ $# -eq 0 ]; then
-    echo "available options are: $x"
+    echo "options are -[ $x ]"
 fi
 
 while getopts $x opt; do
@@ -84,7 +84,6 @@ while getopts $x opt; do
         T) cr_topics;;
         # show evaluation criteria
         E) v-eval;;
-
 
         *) echo "available options are: [ $x ]";;
     esac
