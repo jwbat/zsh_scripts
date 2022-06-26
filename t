@@ -6,7 +6,7 @@
 # Usage
 # t -[option]
 
-x="dbcvgmnps"  # options
+x="abcvgmnps"  # options
 #x="dbv"  # options
 color="$(tput setaf 226)"
 #path="~/code/shell/scripts/stuff"
@@ -34,9 +34,25 @@ if [ $# -eq 0 ]; then
     exit 0
 fi
 
+# Transform long options to short ones
+for arg in "$@"; do
+  shift
+  case "$arg" in
+    '--bash')   set -- "$@" '-b'   ;;
+    '--vim')    set -- "$@" '-v'   ;;
+    '--sql')    set -- "$@" '-s'   ;;
+    '--all')    set -- "$@" '-a'   ;;
+    '--git')    set -- "$@" '-g'   ;;
+    '--mat')    set -- "$@" '-m'   ;;
+    '--pan')    set -- "$@" '-p'   ;;
+    *)          set -- "$@" "$arg" ;;
+  esac
+done
+
+
 while getopts $x opt; do
     case $opt in
-        d) $open 'https://devhints.io';; # all
+        a) $open 'https://devhints.io';; # all
         b) $open 'https://devhints.io/bash';;
         v) $open 'https://devhints.io/vimscript';;
         c) $open ~/code/shell/scripts/stuff/cockroachdb_pdfs/*;;

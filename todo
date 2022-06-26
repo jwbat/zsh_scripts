@@ -9,11 +9,9 @@
 c="$(tput setaf 157)"
 
 echo "$c
+    •  bash: --verbose-arg
     ==============================================
-       -- VM & Linux --
-    •  setup UTM / Ubuntu
-    •  install terminal emulator
-    •  install nvim
+    •  install terminal emulator in Linux
     ==============================================
     •  learn about arm64 architecture.
 "
