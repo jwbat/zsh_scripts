@@ -34,18 +34,18 @@ if [ $# -eq 0 ]; then
     exit 0
 fi
 
-# Transform long options to short ones
 for arg in "$@"; do
   shift
   case "$arg" in
-    '--bash')   set -- "$@" '-b'   ;;
-    '--vim')    set -- "$@" '-v'   ;;
-    '--sql')    set -- "$@" '-s'   ;;
-    '--all')    set -- "$@" '-a'   ;;
-    '--git')    set -- "$@" '-g'   ;;
-    '--mat')    set -- "$@" '-m'   ;;
-    '--pan')    set -- "$@" '-p'   ;;
-    *)          set -- "$@" "$arg" ;;
+     '--all')    set -- "$@" '-a'   ;;
+    '--bash')    set -- "$@" '-b'   ;;
+    '--crdb')    set -- "$@" '-c'   ;;
+     '--git')    set -- "$@" '-g'   ;;
+     '--mat')    set -- "$@" '-m'   ;;
+     '--pan')    set -- "$@" '-p'   ;;
+     '--sql')    set -- "$@" '-s'   ;;
+     '--vim')    set -- "$@" '-v'   ;;
+           *)    set -- "$@" "$arg" ;;
   esac
 done
 
