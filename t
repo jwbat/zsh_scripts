@@ -6,7 +6,7 @@
 # Usage
 # t -[option]
 
-x="abcvgmnps"  # options
+x="bcdgkmnpsv"  # options
 #x="dbv"  # options
 color="$(tput setaf 226)"
 #path="~/code/shell/scripts/stuff"
@@ -14,19 +14,20 @@ open="/usr/bin/open"
 
 show_options() {
    echo "$color
- conveniently open one of several cheatsheets.
+ conveniently open one of several cheatsheets or tools.
 
- options are -[ $x ]:
-     devhints.io,
-     bash,
-     cockroachdb,
-     vimscript,
-     git,
-     matplotlib,
-     numpy,
-     pandas,
-     sql
-     "
+ options are:
+     -b, --bash
+     -c, --crdb
+     -d, --dev
+     -g, --git
+     -k, --shellcheck
+     -m, --matplotlib
+     -n, --numpy
+     -p, --pandas
+     -s, --sql
+     -v, --vim
+"
 }
 
 if [ $# -eq 0 ]; then
@@ -37,15 +38,17 @@ fi
 for arg in "$@"; do
   shift
   case "$arg" in
-     '--all')    set -- "$@" '-a'   ;;
-    '--bash')    set -- "$@" '-b'   ;;
-    '--crdb')    set -- "$@" '-c'   ;;
-     '--git')    set -- "$@" '-g'   ;;
-     '--mat')    set -- "$@" '-m'   ;;
-     '--pan')    set -- "$@" '-p'   ;;
-     '--sql')    set -- "$@" '-s'   ;;
-     '--vim')    set -- "$@" '-v'   ;;
-           *)    set -- "$@" "$arg" ;;
+           '--bash')    set -- "$@" '-b'   ;;
+           '--crdb')    set -- "$@" '-c'   ;;
+            '--dev')    set -- "$@" '-d'   ;;
+            '--git')    set -- "$@" '-g'   ;;
+     '--matplotlib')    set -- "$@" '-m'   ;;
+          '--numpy')    set -- "$@" '-n'   ;;
+         '--pandas')    set -- "$@" '-p'   ;;
+            '--sql')    set -- "$@" '-s'   ;;
+            '--vim')    set -- "$@" '-v'   ;;
+     '--shellcheck')    set -- "$@" '-k'   ;;
+                  *)    set -- "$@" "$arg" ;;
   esac
 done
 
@@ -55,6 +58,7 @@ while getopts $x opt; do
         a) $open 'https://devhints.io';; # all
         b) $open 'https://devhints.io/bash';;
         v) $open 'https://devhints.io/vimscript';;
+        k) $open 'https://www.shellcheck.net';;
         c) $open ~/code/shell/scripts/stuff/cockroachdb_pdfs/*;;
         g) $open ~/code/shell/scripts/stuff/cheatsheets/git.pdf;;
         m) $open ~/code/shell/scripts/stuff/cheatsheets/matplotlib.pdf;;

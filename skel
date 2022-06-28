@@ -6,10 +6,12 @@ set -o pipefail     # consider any part of a pipe failing as an error
 
 c="$(tput setaf 226)"
 first_arg="${1:-defaultvalue}"
-echo "$c \t $first_arg"
+echo "$c
+\t $first_arg
+\t==="
 
 for arg in "$@"; do
-  echo "\t $1"
+  echo "\t $arg"
   shift
 done
 
