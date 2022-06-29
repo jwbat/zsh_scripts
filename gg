@@ -12,6 +12,7 @@ ds=($d1 $d2)
 c1="$(tput setaf 120)"
 c2="$(tput setaf 12)"
 
+# encrypt zprofile
 enc ~/.zprofile ~/.dotfiles/.zprofile_encrypted
 
 for d in $ds; do
@@ -21,6 +22,8 @@ for d in $ds; do
     git -C $d push -u origin main
 done
 
-dcr ~/.dotfiles/.zprofile_encrypted ~/zzz
+# decrypt zprofile
+dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile
+#cp ~/.zprofile ~/code/zzz
 
 exit 0
