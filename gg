@@ -8,20 +8,11 @@
 
 d1=~/.dotfiles
 d2=~/code/shell/scripts
-#d3=~/code/cpp/utilities
-#d4=~/code/cpp/functional
-#d5=~/code/cpp/idioms
-#d6=~/code/cpp/experimental
-#d7=~/code/cpp/courses/design_patterns
-#d8=~/code/cpp/sdl
-#d09=~/code/python/scipy
-#d10=~/code/samples
-
 ds=($d1 $d2) 
-# $d3 $d4 $d5 $d6 $d7 $d8 $d09 $d10
-
 c1="$(tput setaf 120)"
 c2="$(tput setaf 12)"
+
+enc ~/.zprofile ~/.zprofile_encrypted
 
 for d in $ds; do
     echo "$c1 $d $c2"
@@ -30,5 +21,6 @@ for d in $ds; do
     git -C $d push -u origin main
 done
 
+dcr ~/.zprofile_encrypted ~/zzz
 
 exit 0

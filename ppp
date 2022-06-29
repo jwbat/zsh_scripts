@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+x="hilufr"
+
+if [ $# -eq 0 ]; then
+    echo "options: -[ $x ]"
+    exit 0
+fi
+
+while getopts $x opt; do
+    case $opt in
+        h) pip3 -h
+        i) pip3 install
+        l) pip3 list
+        u) p -m pip3 install --upgrade pip
+        f) pip3 freeze > requirements.txt
+        r) pip3 install -r requirements.txt
+    esac
+done
+
+#alias pip='pip3.10'                             # pip
+#alias pipi='pip install'                        # pip install
+#alias pypi='p -m pip install'                   # python -m pip install
+#alias pipl='pip list'                           # pip list
+#alias pipu='p -m pip install --upgrade pip'     # ugrade pip
+#alias pipf='pip freeze > requirements.txt'      # pip freeze
+#alias pipr='pip install -r requirements.txt'    # pip install requirements
+
+exit 0

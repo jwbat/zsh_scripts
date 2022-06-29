@@ -1,0 +1,30 @@
+#!python3
+
+import os
+import sys
+from cryptography.fernet import Fernet
+
+if len(sys.argv) != 3:
+    print("usage: enc <name_of_file_to_decrypt> <name_of_decrypted_file>")
+    exit()
+
+file1 = sys.argv[1]   # file to decrypt
+file2 = sys.argv[2]   # decrypted file
+
+keypath = os.path.expanduser('~/code/key.key')
+
+def load_key():
+    f = open(keypath, 'rb')
+    key = f.read()
+    f.close()
+    return key
+
+with open(file1, 'rb') as f:
+    encrypted_data = f.read()
+
+key = load_key()
+fr = Fernet(key)         # initialize Fernet
+
+decrypted_data = fr.decrypt(encrypted_data)
+with open(file2, 'wb') as f:
+    f.write(decrypted_data)

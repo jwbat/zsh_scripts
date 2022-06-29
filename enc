@@ -1,0 +1,37 @@
+#!python3
+
+import os
+import sys
+from cryptography.fernet import Fernet
+
+if len(sys.argv) != 3:
+    print("usage: enc <name_of_file_to_encrypt> <name_of_encrypted_file>")
+    exit()
+
+
+file1 = sys.argv[1]     # file to encrypt
+file2 = sys.argv[2]     # encrypted file
+keypath = os.path.expanduser('~/code/key.key')
+
+def write_key():
+    key = Fernet.generate_key()
+    with open(keypath, 'wb') as key_file:
+        key_file.write(key)
+
+def load_key():
+    f = open(keypath, 'rb')
+    key = f.read()
+    f.close()
+    return key
+
+#write_key()
+
+with open(file1, 'rb') as f:
+    data = f.read()
+
+key = load_key()
+fr = Fernet(key)         # initialize Fernet
+
+encrypted = fr.encrypt(data)
+with open(file2, 'wb') as f:
+    f.write(encrypted)
