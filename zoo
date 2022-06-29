@@ -1,5 +1,0 @@
-#!/bin/zsh
-
-echo $gerbil
-
-exit 0

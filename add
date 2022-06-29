@@ -1,17 +1,10 @@
-#!/bin/zsh
+#!python3
 
-# Author: James Batman
-# Date Created: 12/15/21
-# Last Modified: 12/15/21
+import sys
 
-# Description
-# add numbers 
-#  - uses c++ binary add2
+try:
+    args = [int(x) for x in sys.argv[1:]]
+    print(sum(args))
 
-# Usage
-# add <arg1> <arg2> ... <argN> 
-
-c=$(tput setaf 214)
-echo "\t\t\t" $c $(add2 $@)  
-
-exit 0
+except:
+    print('usage: add <number1> <number2> ...')
