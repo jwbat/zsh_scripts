@@ -1,22 +1,24 @@
-#!/bin/zsh
-
-# Author: James Batman
-# Date Created: 12/05/2021
-# Last Modified: 12/16/2021
-
-# Description
-#   print the result of arg1 ^ arg2;
-#    args may take the form of a float or a fraction:
-#             pow 8 1/3    -->  2
-#             pow 9 0.5    -->  3
-#   calls the c++ binary, pow2
+#!python3
 
 # Usage
 # pow <arg1> <arg2>   
+import sys
 
-c=$(tput setaf 80)
+RED   = '\033[1;31m'
+BLUE  = "\033[1;34m"
+CYAN  = "\033[1;36m"
+GREEN = "\033[0;32m"
 
-echo "\n $c $(pow2 $1 $2)"
-echo
+sys.stdout.write(CYAN)
 
-exit 0
+if len(sys.argv) != 3:
+    print('usage: pow <number1> <number2>')
+    exit()
+
+try:
+    x = float(eval(sys.argv[1]))
+    y = float(eval(sys.argv[2]))
+    print('\n\t', pow(x, y), '\n')
+
+except:
+    print('usage: pow <number1> <number2>')

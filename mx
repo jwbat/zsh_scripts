@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+# Description
+# tmux commands
+
+
+if [ $# -eq 0 ]; then
+    tmux new
+    exit 0
+fi
+
+x="n:s:t:dlL"
+
+while getopts $x opt; do
+    case $opt in
+        d) tmux detach;;
+        l) tmux ls;;
+        L) tmux list-sessions;;
+        n) tmux new -s $OPTARG;;
+        s) tmux switch -t $OPTARG;;
+        t) tmux attach -t $OPTARG;;
+        *) echo "some other option";;
+    esac
+done
+
+
+
+
+
+exit 0

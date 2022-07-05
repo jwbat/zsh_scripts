@@ -1,10 +1,14 @@
 #!python3
 
 import sys
+from math import prod
+from colored import fg
+
+color = fg(214)
 
 try:
-    args = [int(x) for x in sys.argv[1:]]
-    print(sum(args))
+    ans = sum([float(x) for x in sys.argv[1:]])
+    print('\t\t\t' + color + str(ans))
 
 except:
     print('usage: add <number1> <number2> ...')

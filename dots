@@ -1,0 +1,14 @@
+#!python3
+
+from time import sleep
+from random import randint
+from colored import fg, bg, attr
+
+res = attr('reset')
+
+
+for _ in range(10000):
+    n = randint(1, 255)
+    color = fg(n) + bg(256 - n)
+    print(color + '••' + res, end='', flush=True)
+    sleep(0.005)
