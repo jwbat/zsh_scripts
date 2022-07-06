@@ -12,7 +12,7 @@ color = fg(214)
 
 try:
     ans = prod([float(x) for x in sys.argv[1:]])
-    print('\t\t\t' + color + str(ans))
+    print(color + str(ans).rjust(30))
 
 except:
     print('usage: mult <number1> <number2> ...')

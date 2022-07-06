@@ -1,19 +1,17 @@
-#!/bin/zsh
-
-# Author: James Batman
-# Date Created: 12/22/2021
-# Last Modified: 12/22/2021
-
-# Description
-# calculate fraction with integers and/or floats in
-# numerator and denominator
-# depends on c++ binary div2
+#! python3
 
 # Usage
-# div <arg>  e.g., div 1/1.5 
+# div <arg1> <arg2>
 
-c="$(tput setaf 214)"
+import sys
+from colored import fg
 
-echo "\n\t\t" $c $(div2 $1) "\n"
 
-exit 0
+color = fg(214)
+
+try:
+    ans = float(eval(sys.argv[1])) / float(eval(sys.argv[2]))
+    print(color + str(ans).rjust(30))
+
+except:
+    print('usage: div <number1> <number2>')

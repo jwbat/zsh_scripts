@@ -1,0 +1,29 @@
+#! python3
+
+import os
+import csv
+from colored import fg
+
+color1 = fg(220)
+color2 = fg(196)
+file = os.path.expanduser('~/code/shell/scripts/stuff/invoices.csv')
+fields = []
+rows = []
+
+
+with open(file, 'r') as csvfile:
+    reader = csv.reader(csvfile)
+    fields = next(reader)
+
+    print()
+    for field in fields:
+        print(color2 + field.rjust(20), end='')
+    print()
+ 
+    for row in reader:
+        for item in row:
+            print(color1 + item.rjust(20), end='')
+        print()
+
+    print() 
+

@@ -3,13 +3,9 @@
 # Usage
 # pow <arg1> <arg2>   
 import sys
+from colored import fg
 
-RED   = '\033[1;31m'
-BLUE  = "\033[1;34m"
-CYAN  = "\033[1;36m"
-GREEN = "\033[0;32m"
-
-sys.stdout.write(CYAN)
+color = fg(214)
 
 if len(sys.argv) != 3:
     print('usage: pow <number1> <number2>')
@@ -18,7 +14,8 @@ if len(sys.argv) != 3:
 try:
     x = float(eval(sys.argv[1]))
     y = float(eval(sys.argv[2]))
-    print('\n\t', pow(x, y), '\n')
+    ans = str(pow(x, y))
+    print(color + ans.rjust(30))
 
 except:
     print('usage: pow <number1> <number2>')
