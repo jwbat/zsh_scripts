@@ -26,4 +26,3 @@ with open(file, 'r') as csvfile:
         print()
 
     print() 
-
