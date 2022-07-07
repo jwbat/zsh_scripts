@@ -1,16 +1,43 @@
-#!/bin/zsh
+#! python3
 
-function get_date() {
-    date +"%Y-%m-%d" -d "1 day ago"
-}
+import os
+import sys
+import json
+import datetime as dt
+#from datetime import date
+from newsapi import NewsApiClient
+from colored import fg
 
 
-curl https://newsapi.org/v2/everything -G \
-    -d q=UFO \
-    -d from=$(get_date) \
-    -d language='en' \
-    -d sortBy=popularity \
-    -d apiKey=$newsapikey \
-    | jq  '.articles | .[] | { author, title, url }'
+key = os.environ['newsapikey']
+newsapi = NewsApiClient(api_key=key)
 
-exit 0
+topics = ['UFO', 'UAP']
+blue = fg(122)
+orange = fg(220)
+grey = fg(250)
+x = 15
+
+
+if len(sys.argv) == 2:
+    try:
+        delta = int(sys.argv[1])
+        from_date = (dt.datetime.now() - dt.timedelta(days = delta)).strftime('%Y-%m-%d')
+    except:
+        print('argument must be an integer')
+        exit()
+else:
+    from_date = (dt.datetime.now()).strftime('%Y-%m-%d')
+
+data = newsapi.get_everything(q = 'UFO',
+                              from_param = from_date,
+                              language = 'en',
+                              sort_by = 'relevancy')
+
+#articles = data['articles']
+for article in data['articles']:
+    if any(t in article['title'] for t in topics):
+        print(blue + 'title: '.rjust(x), orange + article['title'])
+        print(blue + 'url: '.rjust(x), grey + article['url'])
+        print(blue + 'description: '.rjust(x), grey + article['description'][:100] + '...')
+        print()

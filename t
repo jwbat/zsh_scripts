@@ -14,7 +14,7 @@ open="/usr/bin/open"
 
 show_options() {
    echo "$color
- conveniently open one of several cheatsheets or tools.
+ open one of several cheatsheets or tools.
 
  options are:
      -b, --bash

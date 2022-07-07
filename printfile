@@ -1,7 +1,11 @@
 #! python3
+
 import sys
 import subprocess as sp
+from colored import fg
 
+color = fg(190)
+print(color)
 
 try:
     file = sys.argv[1]
@@ -9,4 +13,3 @@ try:
     print(p1.stdout)
 except:
     print('usage:  p.py <filename>')
-

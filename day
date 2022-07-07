@@ -1,0 +1,15 @@
+#! python3
+
+import datetime as dt
+from colored import fg
+
+
+blue = fg(122)
+orange = fg(220)
+yellow = fg(190)
+
+
+day = dt.datetime.now().strftime('%A')
+date = dt.datetime.now().strftime('%B %d, %Y')
+
+print('\n\t\t' + orange + day + '\t' + blue + date + '\n')
