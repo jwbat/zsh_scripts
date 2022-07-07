@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+function get_date() {
+    date +"%Y-%m-%d" -d "1 day ago"
+}
+
+
+curl https://newsapi.org/v2/everything -G \
+    -d q=UFO \
+    -d from=$(get_date) \
+    -d language='en' \
+    -d sortBy=popularity \
+    -d apiKey=$newsapikey \
+    | jq '.articles | .[] | { author, title, url }'
+
+exit 0
