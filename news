@@ -11,6 +11,6 @@ curl https://newsapi.org/v2/everything -G \
     -d language='en' \
     -d sortBy=popularity \
     -d apiKey=$newsapikey \
-    | jq '.articles | .[] | { author, title, url }'
+    | jq  '.articles | .[] | { author, title, url }'
 
 exit 0
