@@ -1,5 +1,4 @@
 #! python3
-
 import datetime as dt
 from colored import fg
 
@@ -7,9 +6,21 @@ from colored import fg
 blue = fg(122)
 orange = fg(220)
 yellow = fg(190)
+purple = fg(200)
+red = fg(196)
+grey = fg(252)
 
 
-day = dt.datetime.now().strftime('%A')
-date = dt.datetime.now().strftime('%B %d, %Y')
+day_of_week = dt.datetime.now().strftime('%A')
+month = dt.datetime.now().strftime('%B ')
+date = dt.datetime.now().strftime('%d')
+year = dt.datetime.now().strftime('%Y')
 
-print('\n\t\t' + orange + day + '\t' + blue + date + '\n')
+print('\n\t\t' 
+        + orange + day_of_week 
+        + '\t'
+        + purple + month
+        + blue + date 
+        + grey + ', ' 
+        + red + year
+        + '\n')
