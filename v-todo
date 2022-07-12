@@ -11,9 +11,8 @@ c2="$(tput setaf 241)"
 
 echo "$c1
     ==============================================
-$c2    1)  is CRDB a fork of postgres ?  compatability ?         (done)
-$c2    2)  architecture for a multi-region table of bldg. names  (done)
-$c2    3)  metrics, etc. on serverless ?                         (done) $c1
+$c2      architecture for a multi-region table of bldg. names  (done)
+$c2      metrics, etc. on serverless ?                         (done) $c1
     ==============================================
 "
 

@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+x="b"
+
+while getopts $x opt; do
+    case $opt in
+        b) echo "
+        git checkout -b <branch-name> main
+        git config pull.rebase false
+
+        git branch -a                            $c2 # list all branches, local & remote  $c1
+        git branch -r                            $c2 # list remote branches $c1
+        git branch test1                         $c2 # create branch tst1 $c1
+        git push origin test1                    $c2 # create remote branch tst1 $c1
+
+        git branch -r                            $c2 # list remote branches $c1
+        git fetch                                $c2 # retrieve latest meta-data $c1
+        git branch -v -a                         $c2 # see all branch available for checkout $c1
+        git switch test1                         $c2 # switch to test1; same as git checkout test1 $c1
+            ";;
+        *) echo "other...";;
+    esac
+done
+
+
+exit 0

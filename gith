@@ -119,6 +119,10 @@ echo "${c1}
 \t git branch -r                           $c2 # list remote branches $c1
 \t git branch tst1                         $c2 # create branch tst1 $c1
 \t git push origin tst1                    $c2 # create remote branch tst1 $c1
+
+\t git branch -r                           $c2 # list remote branches $c1
+\t git fetch                               $c2 # retrieve latest meta-data $c1
+\t git branch -r                           $c2 # list remote branches $c1
 \t ==================================
 \t git fetch
 \t git branch -v -a                        $c2 # see all branches available for checkout $c1

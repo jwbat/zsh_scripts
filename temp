@@ -11,7 +11,7 @@
 # temp -[f|c] 30
 
 if [ -z $1 ] || [ -z $2 ]; then
-    echo " usage: temp -f 65 (converts 65 F to C)"
+    echo " usage: temp -f 65 (convert 65 F to C)"
 fi
 
 while getopts "f:c:" opt; do
