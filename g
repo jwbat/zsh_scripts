@@ -6,7 +6,7 @@
 # Usage
 # g -[option]
 
-x="acp"   # options
+x="acps"   # options
 
 color="$(tput setaf 226)"
 
@@ -17,8 +17,9 @@ show_options() {
 
  options are:
      -a : git add .
-     -c : git commit -m "$1"
+     -c : git commit -m <msg>
      -p : git push
+     -s : git status
 "
 }
 
@@ -30,6 +31,7 @@ fi
 while getopts $x opt; do
     case $opt in
         a) git add . ;;
+        s) git status ;;
         c) git commit -m "$1" ;;
         p) git push ;;
         *) show_options ;;
