@@ -1,6 +1,8 @@
 #!/bin/zsh
 
 echo "
+/Users/james/code/ventacity/sbg-webapp/modules/webapp-vue-ui/src/components/common/graphs
+ ('development' branch)
 
   https://github.com/ventacity/sbg-webapp/pull/74
 

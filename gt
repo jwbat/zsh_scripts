@@ -1,10 +1,28 @@
 #!/bin/zsh
 
-x="b"
+x="bi"  # options
+
+c1="$(tput setaf 205)"
+c2="$(tput setaf 253)"
+
+
+show_options() {
+   echo "$c2
+   options are:
+     -b  :  working with branches
+     -i  :  initializing a repo workflow
+"
+}
+
+if [ $# -eq 0 ]; then
+    show_options
+    exit 0
+fi
 
 while getopts $x opt; do
     case $opt in
         b) echo "
+        $c2# working with branches $c1
         git checkout -b <branch-name> main
         git config pull.rebase false
 
@@ -15,10 +33,20 @@ while getopts $x opt; do
 
         git branch -r                            $c2 # list remote branches $c1
         git fetch                                $c2 # retrieve latest meta-data $c1
-        git branch -v -a                         $c2 # see all branch available for checkout $c1
+        git branch -v -a                         $c2 # see all branches available for checkout $c1
         git switch test1                         $c2 # switch to test1; same as git checkout test1 $c1
-            ";;
-        *) echo "other...";;
+        ";;
+
+        i) echo "
+        $c2# initializing a repository $c1
+        git init
+        git add .
+        git commit -m 'initial commit'
+        git remote add origin <url>
+        git branch -M main
+        git push -u origin main
+        ";;
+        *) show_options;;
     esac
 done
 
