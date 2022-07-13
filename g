@@ -18,7 +18,7 @@ show_options() {
  options are:
      -a : git add .
      -c : git commit -m <msg>
-     -p : git push
+     -p : git push <args>
      -s : git status
 "
 }
@@ -31,9 +31,9 @@ fi
 while getopts $x opt; do
     case $opt in
         a) git add . ;;
-        s) git status ;;
         c) git commit -m "$1" ;;
-        p) git push ;;
+        p) git push $@;;
+        s) git status ;;
         *) show_options ;;
     esac
 done

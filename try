@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+# Description
+# test bash scripts
+
+echo "all arguments: $@"
+
+
+exit 0
