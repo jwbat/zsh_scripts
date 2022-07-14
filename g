@@ -6,10 +6,9 @@
 # Usage
 # g -[option]
 
-x="acps"   # options
-
 color="$(tput setaf 226)"
 
+x="ac:psP"   # options
 
 show_options() {
    echo "$color
@@ -20,6 +19,7 @@ show_options() {
      -c : git commit -m <msg>
      -p : git push <args>
      -s : git status
+     -P : git add . && git commit -m '.' && git push
 "
 }
 
@@ -30,10 +30,11 @@ fi
 
 while getopts $x opt; do
     case $opt in
-        a) git add . ;;
-        c) git commit -m "$1" ;;
-        p) git push $@;;
-        s) git status ;;
+        a) $(git add --all) ;;
+        c) $(git commit -m $1) ;;
+        p) $(git push) ;;
+        s) $(git status) ;;
+        P) $(git add --all && git commit -m '.' && git push);;
         *) show_options ;;
     esac
 done
