@@ -22,8 +22,7 @@ for d in $ds; do
     git -C $d push -u origin main
 done
 
-# decrypt zprofile
-dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile
+dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile     # decrypt zprofile
 #cp ~/.zprofile ~/code/zzz
 
 exit 0
