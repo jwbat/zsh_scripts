@@ -30,7 +30,7 @@ fi
 
 while getopts $x opt; do
     case $opt in
-        a) $(git add --all) ;;
+        a) $(git add --all *) ;;
         c) $(git commit -m $1) ;;
         p) $(git push) ;;
         s) $(git status) ;;
