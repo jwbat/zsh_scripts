@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 
+# Last Modified: 
+
+# Description
+# 
+
+# Usage
+# 
+echo "
+cd /standalone-dev-env/gql-repos/sbp-mono/strawberry-gql
+"
+
+exit 0
