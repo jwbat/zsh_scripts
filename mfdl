@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Description
+# mv <file or folder> from Downloads to pwd
+
+# Usage
+# mfd <file>
+
+mv ~/Downloads/$1 .
+
+exit 0

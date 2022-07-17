@@ -1,0 +1,18 @@
+#! python3
+
+# Usage
+# p2  
+
+from colored import fg
+
+blue = fg(123)
+yellow = fg(226)
+red = fg(196)
+print(blue + "\n\t powers of 2 \n")
+
+for n in range(31):
+    ans = 2 ** n
+    print(red + str(n).rjust(10) + yellow + str(ans).rjust(16))
+
+
+print()

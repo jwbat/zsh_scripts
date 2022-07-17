@@ -16,7 +16,7 @@ topics = ['UFO', 'UAP']
 blue = fg(122)
 orange = fg(220)
 grey = fg(250)
-x = 15
+justify = 15
 
 
 if len(sys.argv) == 2:
@@ -34,10 +34,9 @@ data = newsapi.get_everything(q = 'UFO',
                               language = 'en',
                               sort_by = 'relevancy')
 
-#articles = data['articles']
 for article in data['articles']:
     if any(t in article['title'] for t in topics):
-        print(blue + 'title: '.rjust(x), orange + article['title'])
-        print(blue + 'url: '.rjust(x), grey + article['url'])
-        print(blue + 'description: '.rjust(x), grey + article['description'][:100] + '...')
+        print(blue + 'title: '.rjust(justify), orange + article['title'][:100])
+        print(blue + 'url: '.rjust(justify), grey + article['url'])
+        print(blue + 'description: '.rjust(justify), grey + article['description'][:100] + '...')
         print()
