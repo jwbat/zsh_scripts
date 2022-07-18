@@ -14,6 +14,11 @@
 #c='\033[0;32m'
 c="$(tput setaf 195)"
 
+if [ $# -eq 0 ]; then
+    echo "$c takes a number for an arg"
+    exit 0
+fi
+
 echo $c
 echo "\t $(bits2 $1)"
 echo

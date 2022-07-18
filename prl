@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+red="$(tput setaf 196)"
+blue="$(tput setaf 158)"
+
+
+echo "$red
+\t shared clipboard not working?   $blue Actions > Reinstall Parallels Toos
+"
+
+exit 0

@@ -23,6 +23,6 @@ for d in $ds; do
 done
 
 dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile     # decrypt zprofile
-#cp ~/.zprofile ~/code/zzz
+cp ~/.zprofile ~/code/zzz
 
 exit 0
