@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-# Author: James Batman
-# Date Created: 06/10/22
-# Last Modified: 06/10/22
-
 # Description
 # run cockroachDB commands or print info
 #  n.b.: start server before entering the sql shell
@@ -68,7 +64,7 @@ while getopts $x opt; do
         # stop cluster
         k) pkill -9 cockroach;;
 
-        # pw
+        ####### print info commands #######
         P) cat $HOME/code/ghpat/crdb.txt;;
         # show some of the most used commands
         C) cr_cmnds;;

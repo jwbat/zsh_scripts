@@ -8,7 +8,7 @@ $c2# start local server with defaults $c
 cockroach start-single-node --insecure 
                             --listen-addr localhost            
                             --store=my-data-folder-name $c2 # name data folders on starting a new node $c
-                            --background                $c2 # do everything in the same terminal $c
+                            --background                $c2 # run node in background $c
 
 $c2# permanently stop a CockroachDB Cluster from the terminal $c
 $c2# which will stop any active local CockroachDB nodes and release any http addresses in use by the nodes. $c
