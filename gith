@@ -131,6 +131,13 @@ echo "${c1}
 \t git config --global credential.helper 'cache --timeout=2592000'
 \t ==================================
 \t git stash -- git apply
+\t ==================================
+\t ==================================
+\t git branch -c tmp                       $c2 # create new branch 'tmp' $c1
+\t git checkout tmp
+\t git add .
+\t git commit -m ''
+\t git push -u origin tmp                  $c2 # push to new remote branch $c1
 "
 
 exit 0
