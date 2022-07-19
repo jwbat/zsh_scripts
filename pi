@@ -11,7 +11,6 @@
 # Usage
 # pi [optional: number_of_decimals_places]
 
-
 pi=$(<~/code/shell/scripts/stuff/pi.txt)
 
 c="$(tput setaf 228)"
