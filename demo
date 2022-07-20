@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+c="$(tput setaf 87)"
+
+echo "$c
+\t cockroach demo startrek --nodes=6
+\t \\demo ls
+\t \\demo shutdown 6
+\t \\demo restart 6
+\t \\demo add region=us-central1,zone=a
+
+\t SELECT * FROM startrek.episodes WHERE stardate > 5500;
+\t SHOW REGIONS FROM CLUSTER;
+\t SELECT current_user();
+\t SELECT current_time();
+\t SELECT current_schema();
+\t SELECT gen_random_uuid() FROM generate_series(1, 5);
+\t SHOW ranges FROM TABLE episodes;
+
+\t cockroach node status -h
+\t cockroach node status [<node id>] [flags]
+\t cockroach node status 2 --url 'postgresql://demo:demo81945@127.0.0.1:26261/startrek?sslmode=require'
+\t cockroach node status --all --url 'postgresql://demo:demo81945@127.0.0.1:26261/startrek?sslmode=require'
+"
+
+exit 0
