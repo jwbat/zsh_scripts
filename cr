@@ -11,10 +11,36 @@
 
 x="c:shqktmrlinCXMPLRTE" 
 
-color() { tput setaf 86 } # blue
+blue="$(tput setaf 86)"
+grey="$(tput setaf 245)"
 
 if [ $# -eq 0 ]; then
-    echo "options are -[ $x ]"
+    echo "$blue
+    options are -[ $x ]
+
+      -c 1 : cockroach sql --url $gerbil
+
+      -c 2 : cockroach sql --url $uni
+
+      -c 3 : cockroach sql --url $movr
+
+      -s  : cockroach start-single-node --insecure --listen-addr localhost
+      -r  : server running (?)
+      -i  : cockroach init --insecure --host=localhost:26257
+      -n  : cockroach node ls --insecure
+      -q  : cockroach sql --insecure
+      -k  : pkill -9 cockroach
+
+      $grey# print info $blue
+      -P  : cat $HOME/code/ghpat/crdb.txt
+      -C  : cr_cmnds
+      -X  : cr_tsx
+      -M  : cr_mnc              $grey # start a node that will join a multi-node cluster $blue 
+      -L  : cr_locality         $grey # start nodes with locality flags that will join MNC $blue 
+      -R  : cr_multiregion      $grey # add regions to DB via SQL statements $blue 
+      -T  : cr_topics           $grey # topics for further study $blue 
+
+    "
 fi
 
 while getopts $x opt; do
@@ -77,9 +103,7 @@ while getopts $x opt; do
         # show commands with locality flags
         R) cr_multiregion;;
         # show additional topics
-        T) cr_topics;;
-        # show evaluation criteria
-        E) v-eval;;
+        T)  cr_topics;;
 
         *) echo "available options are: [ $x ]";;
     esac

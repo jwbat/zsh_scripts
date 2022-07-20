@@ -5,9 +5,10 @@
 
 # Usage
 # cr_topics 
-c="$(tput setaf 122)"
+blueish="$(tput setaf 122)"
+whiteish="$(tput setaf 152)"
 
-echo "$c
+echo "$whiteish
 \t • security
 
 \t • deployment topologies
