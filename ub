@@ -1,0 +1,41 @@
+#!/bin/zsh
+
+echo "$(ts 87)
+CTRL + ALT + T                  new terminal
+CTRL + ALT + TAB                focus top bar
+ALT + TAB                       switch windows
+CTRL + Q                        close application
+CTRL + ALT                      release cursor
+CTRL + F1                       show shortcuts
+
+SUPER + D                       hide windows / show desktop
+SUPER + H                       hide app
+SUPER + D or CTRL + ALT +D	    show desktop
+
+
+SUPER Key                       (Windows Button)	Opens Activities Search
+SUPER + L or CTRL + ALT + L	    Lock Screen
+SUPER +A	                    Show Application Menu
+SUPER + TAB	                    Switch Between Running Applications
+SUPER + ARROW KEYS	            Snap Windows To Given Direction
+SUPER + M	                    Toggle Tray Notification
+SUPER + SPACEBAR	            Change Input Keyboard (Multiple Languages)
+ALT + F2	                    Quick Command Console for Power Users
+CTRL + ALT + ARROW Key	        Move Through Workspaces
+CTRL + ALT + DEL	            Log Out
+ALT + ESC	                    Quick Switch Between Two Applications
+SUPER + V	                    Notification list
+CTRL + A	                    Select All
+CTRL + X	                    Cut
+CTRL + C	                    Copy
+CTRL + V	                    Paste
+CTRL + Z	                    Undo Last
+PRNT SCRN	                    Screenshot
+ALT + PRNT SCRN	                Screenshot Active Window
+SHIFT + PRNT SCRN	            Screenshot Screen Area (Drag-and-Drop)
+CTRL + ALT + SHIFT + R	        Start and Stop Screencast Recording
+
+dpkg -l <pkg>                   check to see if have pkg
+"
+
+exit 0

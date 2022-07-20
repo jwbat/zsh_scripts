@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-echo "
+echo "$(ts 87)
 query MyQuery {
   siteHealthOverTime(startDate: \"2022-04-01T00:00:00\",
                      endDate: \"2022-04-30T00:00:00\",

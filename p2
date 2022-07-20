@@ -6,13 +6,23 @@
 from colored import fg
 
 blue = fg(123)
+cornsilk = fg(230)
 yellow = fg(226)
 red = fg(196)
-print(blue + "\n\t powers of 2 \n")
 
-for n in range(31):
-    ans = 2 ** n
-    print(red + str(n).rjust(10) + yellow + str(ans).rjust(16))
+powers = list(range(11)) + [20, 30, 40, 50, 60]
+named_powers = [n * 10 for n in range(1, 7)]
+symbols = { 10: 'Ki', 20: 'Mi', 30: 'Gi', 40: 'Ti', 50: 'Pi', 60: 'Ei' }
+names = { 10: 'kibi', 20: 'mebi', 30: 'gibi', 40: 'tebi', 50: 'pebi', 60: 'exbi' }
+
+print(blue + "\n\t N \t\t\t 2^N \t     symbol     name \n")
+
+for power in powers:
+    ans = 2 ** power
+    if power in named_powers:
+        print(red + str(power).rjust(10) + yellow + str(ans).rjust(25) + '\t\t' + cornsilk + symbols[power] + '\t' + names[power])
+    else:
+        print(red + str(power).rjust(10) + yellow + str(ans).rjust(25))
 
 
 print()
