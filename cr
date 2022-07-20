@@ -5,13 +5,13 @@
 #  n.b.: start server before entering the sql shell
 
 # Usage
-# cr [ -cshqktmrlinCXMPLRTE ]  
+# cr [ -csqktmrlinCXMLRT ]  
 # UPPER CASE print info, lower case do something such as start a node
 # use cr -h for cockroach help
 
-x="c:shqktmrlinCXMPLRTE" 
+x="c:sqktmrlinCXMLRT" 
 
-blue="$(tput setaf 86)"
+blue="$(tput setaf 117)"
 grey="$(tput setaf 245)"
 
 if [ $# -eq 0 ]; then
@@ -32,7 +32,6 @@ if [ $# -eq 0 ]; then
       -k  : pkill -9 cockroach
 
       $grey# print info $blue
-      -P  : cat $HOME/code/ghpat/crdb.txt
       -C  : cr_cmnds
       -X  : cr_tsx
       -M  : cr_mnc              $grey # start a node that will join a multi-node cluster $blue 
@@ -82,8 +81,6 @@ while getopts $x opt; do
         #  List node IDs [, show their status, decommission nodes for removal, or recommission nodes.]
         n) cockroach node ls --insecure;;
 
-        h) color; cockroach help;;
-
         # enter sql shell
         q) cockroach sql --insecure;;                                           
 
@@ -91,8 +88,6 @@ while getopts $x opt; do
         k) pkill -9 cockroach;;
 
         ####### print info commands #######
-        P) cat $HOME/code/ghpat/crdb.txt;;
-        # show some of the most used commands
         C) cr_cmnds;;
         # show tsx commands (& more) 
         X) cr_tsx;;

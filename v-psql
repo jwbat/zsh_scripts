@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+lighblue="$(tput setaf 189)"
+
+echo "$lighblue
+\t ~ psql ventacity ventacity
+\t ~ ventacity=# \d
+\t ~ ventacity=# \d site_equipment_inventory
+\t ~ ventacity=# \d <table name>
+"
+
+exit 0
