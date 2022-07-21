@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+echo "$(ts 189)
+\t NTP server (?)
+\t webhook (instead of kafka)
+\t serverless - changefeeds
+\t get notified on latency issues ?
+\t load balancing when too many cnxs to 1 node
+\t migration from serverless to dedicated
+\t Timescale scalability
+"
+
+
+
+
+exit 0

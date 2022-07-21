@@ -9,7 +9,7 @@
 # UPPER CASE print info, lower case do something such as start a node
 # use cr -h for cockroach help
 
-x="c:sqktmrlinCXMLRT" 
+x="c:sqktmrlinSCXMLRT" 
 
 blue="$(tput setaf 117)"
 grey="$(tput setaf 245)"
@@ -88,6 +88,9 @@ while getopts $x opt; do
         k) pkill -9 cockroach;;
 
         ####### print info commands #######
+        # connection string
+        S) ts 255; echo "cockroach sql --url $gerbil";;
+
         C) cr_cmnds && cr_changefeed;;
         # show tsx commands (& more) 
         X) cr_tsx;;
