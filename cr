@@ -88,7 +88,7 @@ while getopts $x opt; do
         k) pkill -9 cockroach;;
 
         ####### print info commands #######
-        C) cr_cmnds;;
+        C) cr_cmnds && cr_changefeed;;
         # show tsx commands (& more) 
         X) cr_tsx;;
         # show multi-node cluster commands

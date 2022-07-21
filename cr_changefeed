@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+echo "$(ts 187)
+CREATE CHANGEFEED FOR TABLE name, name2, name3
+  INTO 'kafka://host:port'
+  WITH updated, resolved;
+"
+
+exit 0
