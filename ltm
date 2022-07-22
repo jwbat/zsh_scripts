@@ -20,6 +20,6 @@
 
 echo $A | pbcopy
 
-rsync -rv "parallels@10.211.55.4:/home/parallels/${1}" .
+rsync -rv "parallels@10.211.55.4:/home/parallels/$@" .
 
 exit 0

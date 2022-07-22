@@ -8,10 +8,15 @@ from colored import fg
 
 blue = fg(87)
 red = fg(196)
-yellow = fg(225)
+yellow = fg(192)
+indianred = fg(202)
+khaki = fg(185)
+colors = [ indianred, khaki ]
+
 file = os.path.expanduser('~/code/shell/scripts/stuff/invoices.csv')
 fields = []
 rows = []
+
 
 p1 = sp.run('date', capture_output=True, text=True)
 date = p1.stdout;
@@ -28,9 +33,21 @@ with open(file, 'r') as csvfile:
         print(red + field.rjust(15), end='')
     print()
  
+    colors_idx = 0
+    color = colors[0]
+    rcvd = ''
     for row in reader:
+        if row[4] != rcvd:
+            colors_idx += 1
+            color = colors[(colors_idx) % 2]
+        rcvd = row[4]
+        idx = 0
         for item in row:
-            print(blue + item.rjust(15), end='')
+            if item == row[4] and idx == 4:
+                print(color + item.rjust(15), end='')
+            else:
+                print(blue + item.rjust(15), end='')
+            idx += 1
         print()
 
     print() 
