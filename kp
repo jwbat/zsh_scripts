@@ -1,5 +1,0 @@
-#!/bin/zsh
-
-cat ~/code/cdt.txt | pbcopy
-
-exit 0

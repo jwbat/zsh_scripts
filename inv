@@ -25,12 +25,12 @@ with open(file, 'r') as csvfile:
 
     print()
     for field in fields:
-        print(red + field.rjust(20), end='')
+        print(red + field.rjust(15), end='')
     print()
  
     for row in reader:
         for item in row:
-            print(blue + item.rjust(20), end='')
+            print(blue + item.rjust(15), end='')
         print()
 
     print() 
