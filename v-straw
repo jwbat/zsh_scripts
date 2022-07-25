@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+echo "$sea
+\t cd strawberry-demo
+\t python -m venv virtualenv
+\t source virtualenv/bin/activate
+\t pip install 'strawberry-graphql[debug-server]'
+"
+
+
+exit 0
