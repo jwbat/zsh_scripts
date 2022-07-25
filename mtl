@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Description
-# mac to linux dir transfer 
+# mac to linux dir transfer "mtl"
 
 # Usage
 # mtl <dirname> 

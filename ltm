@@ -1,25 +1,14 @@
 #!/bin/zsh
 
 # Description
-# rsync dir from linux guest to pwd on mac host
+# rsync dir from linux to mac
 # ltm: "linux to mac"
 
 # Usage
 # ltm <dirname> [-p]
 
-#rsync -rv "james@192.168.64.2:/home/james/${1}" .
-
-#file="${1}"
-
-#while getopts "p" opt; do
-#    case $opt in
-#        p) rsync -rv "parallels@10.211.55.4:/home/parallels/Pictures/${1}" "~/Desktop" ;;
-#    esac
-#    exit 0
-#done
-
 echo $A | pbcopy
-
 rsync -rv "parallels@10.211.55.4:/home/parallels/$@" .
+
 
 exit 0

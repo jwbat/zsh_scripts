@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+echo $@ > ~/clipboard.txt
+echo $A | pbcopy
+
+rsync -rv --quiet ~/clipboard.txt "parallels@10.211.55.4:/home/parallels/clipboard.txt"
+
+exit 0

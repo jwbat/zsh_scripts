@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# Description
+# paste / cat ~/clipboard.txt 
+
+# Usage
+# pst
+
+# scp clipboard from linux to mac (ltm)
+
+echo $A | pbcopy
+
+rsync -rv --quiet "parallels@10.211.55.4:/home/parallels/clipboard.txt" ~/clipboard.txt
+
+cat ~/clipboard.txt
+
+
+exit 0

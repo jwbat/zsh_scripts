@@ -5,7 +5,7 @@ blue="$(tput setaf 158)"
 
 
 echo "$red
-\t shared clipboard not working?   $blue Actions > Reinstall Parallels Toos
+\t shared clipboard not working?   $blue Actions > Reinstall Parallels Tools
 "
 
 exit 0

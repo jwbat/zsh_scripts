@@ -1,13 +1,8 @@
 #!/bin/zsh
 
-# Author: James Batman
-# Date Created: 
-# Last Modified: 
-
-# Description
-# 
-
-# Usage
-# 
+echo "$(ts 230)
+\t the accumulated current needs to be multiplied by the voltage to get apparent energy,
+\t which can be separated into days by getting the difference of the accumulations
+"
 
 exit 0
