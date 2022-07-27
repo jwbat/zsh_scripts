@@ -4,7 +4,7 @@
 # ssh into parallels 
 
 # Usage
-# sp 
+# shprl
 
 echo $A | pbcopy
 ssh u

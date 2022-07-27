@@ -1,0 +1,14 @@
+#! python3
+
+# Description
+# print the current UTC date time string
+
+# Usage
+# utc 
+
+from datetime import datetime
+
+
+
+
+exit 0
