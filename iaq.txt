@@ -1,0 +1,16 @@
+SITEUUID:                           <fake>,
+DEVICEUUID:                         <fake>,
+STAMP:                              <Timestamp UTC>, (from DATA)
+DEVICE_TYPE:                        'VU-HOTDROP' ,  
+DEVICE_ID:                          (1, 2, or 3),
+DATA: {
+ 'RSSI':                          -54,  
+ 'Accumulated  NanoAmpere  Hour':  14166378032 ,  
+ 'Minimum  MilliAmpere':           0,  
+ 'Average  MilliAmpere':           0,  
+ 'Maximum  MilliAmpere':           0,  
+ 'Supply  Voltage':                5,  
+ 'Temperature  Celsius':          24 
+},
+DATECREATED:    '2000-01-01T20:00:00.0000000Z',
+SERVER_SOURCE:  'deviaqpro'

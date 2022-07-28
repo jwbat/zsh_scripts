@@ -1,0 +1,35 @@
+#!/bin/zsh
+
+# iaq.csv format for import into Snowflake DB
+
+echo "$(ts 220) iaq.csv format for import into Snowflake DB"
+
+grey=$(ts 252)
+lightblue=$(ts 153)
+gold=$(ts 220)
+pale=$(ts 242)
+
+echo "
+$grey csv header:
+$lightblue SITEUUID, DEVICEUUID, STAMP, DEVICE_TYPE, DEVICE_ID, DATA, DATECREATED, SERVER_SOURCE
+
+$grey csv row:
+$lightblue
+d9422e62-b8e4-4c3c-a69b-748884cc8941, $pale  (SITEUUID)    $lightblue
+ae6cb148-0055-4ab5-934f-999b26247172, $pale  (DEVICEUUID)  $lightblue
+2022-06-20T20:00:00.0000000Z,         $pale  (STAMP)       $lightblue
+VU-HOTDROP,                           $pale  (DEVICE_TYPE) $lightblue
+3,                                    $pale  (DEVICE_ID)   $lightblue
+
+$(json "{'RSSI':  -56.0 ,
+'Accumulated  NanoAmpere  Hour':  4479736053 ,
+'Minimum  MilliAmpere':  614.57355 ,
+'Average  MilliAmpere':  693.998734333333 ,
+'Maximum  MilliAmpere':  792.51855 ,
+'Supply  Voltage':  5 ,
+'Temperature  Celsius':  23}"),       $pale\t\t\t\t(DATA)  $lightblue
+
+2000-01-01T20:00:00.0000000Z,         $pale (DATECREATED)    $lightblue
+deviaqpro                             $pale (SERVER_SOURCE)  $lightblue
+"
+exit 0

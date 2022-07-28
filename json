@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Description
+# pipe dictionary to jq to prettify 
+
+# Usage
+# json "dictionary"
+
+echo "$(dblquote $1)" | jq
+
+exit 0

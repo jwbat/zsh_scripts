@@ -1,0 +1,6 @@
+#! python3
+
+import json
+from sys import argv
+
+print(str(argv[1]).replace("'", '"'))
