@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+# Description
+# move a file or folder to the Desktop 
+
+# Usage
+# mtd <file> 
+
+mv $1 ~/Desktop
+exit 0

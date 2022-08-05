@@ -2,6 +2,8 @@
 
 echo "$(ts 87)
 CTRL + ALT + T                  new terminal
+CTRL + SHIFT + T                new terminal tab
+CTRL + SHIFT + =                increase font
 CTRL + ALT + TAB                focus top bar
 ALT + TAB                       switch windows
 CTRL + Q                        close application

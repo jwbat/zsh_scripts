@@ -1,7 +1,8 @@
 #!/bin/zsh
 
 # Description
-# pipe dictionary to jq to prettify 
+# pipe (python) dictionary to jq to prettify,
+#  first converting single quotes to dbl quotes
 
 # Usage
 # json "dictionary"

@@ -36,6 +36,7 @@ with open(file, 'r') as csvfile:
     colors_idx = 0
     color = colors[0]
     rcvd = ''
+
     for row in reader:
         if row[4] != rcvd:
             colors_idx += 1
@@ -43,7 +44,7 @@ with open(file, 'r') as csvfile:
         rcvd = row[4]
         idx = 0
         for item in row:
-            if item == row[4] and idx == 4:
+            if item in (row[4], row[5]) and idx in (4, 5):
                 print(color + item.rjust(15), end='')
             else:
                 print(blue + item.rjust(15), end='')
