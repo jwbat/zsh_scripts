@@ -32,6 +32,36 @@ $grey
 \t order by DEVICEUUID, date(STAMP);
 
 $salmon ---------------------------------------------------------------------------------------------------------------
+
+9f02171a-32a0-4695-a7f2-aad43528af58,
+a2204077-054e-49f3-ba0c-17a34cd01800,
+2022-07-01T20:00:00.0000000Z,
+VU-HOTDROP,
+1,
+\"{
+    \"\"rssi\"\": -54.0,
+    \"\"accumulated_nanoampere_hour\"\": 14166378032,
+    \"\"minimum_milliampere\"\": 0,
+    \"\"average_milliampere\"\": 0,
+    \"\"maximum_milliampere\"\": 0,
+    \"\"supply_voltage\"\": 5,
+    \"\"temperature_celsius\"\": 24
+  }\",
+2000-01-01T20:00:00.0000000Z,deviaqpro
+
+$gold ---------------------------------------------------------------------------------------------------------------
+{ 
+    accumulated_nanoampere_hour: 14166378032,
+    average_milliampere: 0,
+    maximum_milliampere: 0,
+    minimum_milliampere: 0,
+    rssi: -54,
+    supply_voltage: 5,
+    temperature_celsius: 24 
+}
+
+kWh = (Ah * V) / 1000
 "
+
 
 exit 0

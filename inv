@@ -20,7 +20,7 @@ rows = []
 
 p1 = sp.run('date', capture_output=True, text=True)
 date = p1.stdout;
-words = date.split(' ')[0 : 3]
+words = date.split(' ')[0 : 4]
 print(yellow + '\n\t\t\t Today is ' + ' '.join(words))
 
 
