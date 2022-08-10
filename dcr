@@ -3,6 +3,10 @@
 import os
 import sys
 from cryptography.fernet import Fernet
+from colored import fg
+
+c1 = fg(189)
+c2 = fg(202)
 
 if len(sys.argv) != 3:
     print("usage: enc <name_of_file_to_decrypt> <name_of_decrypted_file>")
@@ -20,6 +24,7 @@ def load_key():
     return key
 
 with open(file1, 'rb') as f:
+    print(f'\t {c2} reading {c1 + file1}..')
     encrypted_data = f.read()
 
 key = load_key()
@@ -28,3 +33,5 @@ fr = Fernet(key)         # initialize Fernet
 decrypted_data = fr.decrypt(encrypted_data)
 with open(file2, 'wb') as f:
     f.write(decrypted_data)
+
+print(f'\t {c2} decrypted {c1 + file1} {c2}as {c1 + file2}')
