@@ -28,7 +28,7 @@ def load_key():
 #write_key()
 
 with open(file1, 'rb') as f:
-    print(fg(202) + f'reading {file1}..')
+    print(fg(189) + f'\t reading {file1}..')
     data = f.read()
 
 key = load_key()
@@ -39,4 +39,4 @@ encrypted = fr.encrypt(data)
 with open(file2, 'wb') as f:
     f.write(encrypted)
 
-print(fg(196) + f'encrypted {file1} as {file2}')
+print(fg(196) + f'\t encrypted {file1} as {file2}')
