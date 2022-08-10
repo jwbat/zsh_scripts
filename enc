@@ -42,4 +42,4 @@ encrypted = fr.encrypt(data)
 with open(file2, 'wb') as f:
     f.write(encrypted)
 
-print(f'\t {color2} encrypted {color1}{file1} {color1}as {color2}{file2}')
+print(f'\t {color2} encrypted {color1}{file1} {color2}as {color2}{file2}')
