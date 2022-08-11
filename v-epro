@@ -20,16 +20,6 @@ $grey
 $salmon ---------------------------------------------------------------------------------------------------------------
 
 \t SQL
-$grey 
-\t table columns: $lightblue 
-\t SITEUUID, DEVICEUUID, STAMP, DEVICE_TYPE, DEVICE_ID, DATA, DATECREATED, SERVER_SOURCE
-
-$grey 
-\t query: $lightblue
-\t select date(STAMP), count(*), SITEUUID, DEVICEUUID, DEVICE_TYPE from \"SBG\".\"SBG_STATE_TRANSFER\"
-\t where DEVICE_TYPE = 'VU-HOTDROP' and SITEUUID = '9f02171a-32a0-4695-a7f2-aad43528af58'
-\t group by date(STAMP), DEVICEUUID, DEVICE_TYPE, SITEUUID
-\t order by DEVICEUUID, date(STAMP);
 
 $salmon ---------------------------------------------------------------------------------------------------------------
 
@@ -50,17 +40,18 @@ VU-HOTDROP,
 2000-01-01T20:00:00.0000000Z,deviaqpro
 
 $gold ---------------------------------------------------------------------------------------------------------------
-{ 
-    accumulated_nanoampere_hour: 14166378032,
-    average_milliampere: 0,
-    maximum_milliampere: 0,
-    minimum_milliampere: 0,
-    rssi: -54,
-    supply_voltage: 5,
-    temperature_celsius: 24 
-}
 
 kWh = (Ah * V) / 1000
+
+$salmon
+select STAMP, data:\"accumulated_nanoampere_hour\" as NA, data:\"supply_voltage\" from \"SBG\".\"SBG_STATE_TRANSFER\" 
+where DEVICEUUID='7b794dd5-e29c-4851-a533-100c57dc4cff'
+  and SITEUUID='9f02171a-32a0-4695-a7f2-aad43528af58'      
+  and data:\"accumulated_nanoampere_hour\" in (
+    select max(data:\"accumulated_nanoampere_hour\") from \"SBG\".\"SBG_STATE_TRANSFER\" 
+    group by DEVICEUUID, date(STAMP)
+  ) 
+order by STAMP asc;
 "
 
 
