@@ -5,6 +5,8 @@ lightblue=$(ts 153)
 gold=$(ts 220)
 pale=$(ts 242)
 salmon=$(ts 216)
+honeydew=$(ts 194)
+
 
 echo "
 $salmon ---------------------------------------------------------------------------------------------------------------
@@ -12,38 +14,15 @@ $salmon ------------------------------------------------------------------------
 $grey 
 \t # UUID's created via PSQL's gen_random_uuid() $lightblue
 
-\t site_uuid     = '9f02171a-32a0-4695-a7f2-aad43528af58'
-\t device_A_uuid = 'a2204077-054e-49f3-ba0c-17a34cd01800'  $grey# Phase-A-DA9D $lightblue
-\t device_B_uuid = '7b794dd5-e29c-4851-a533-100c57dc4cff'  $grey# Phase-B-0673 $lightblue
-\t device_C_uuid = 'ef66fc2c-3c42-458c-abc7-cbfe9aca52ac'  $grey# Phase-C-8DFB $lightblue
+   site_uuid     = '9f02171a-32a0-4695-a7f2-aad43528af58'
+   device_A_uuid = 'a2204077-054e-49f3-ba0c-17a34cd01800'  $grey# Phase-A-DA9D $lightblue
+   device_B_uuid = '7b794dd5-e29c-4851-a533-100c57dc4cff'  $grey# Phase-B-0673 $lightblue
+   device_C_uuid = 'ef66fc2c-3c42-458c-abc7-cbfe9aca52ac'  $grey# Phase-C-8DFB $lightblue
+$yellow
+   kWh = (Ah * V) / 1000
 
-$salmon ---------------------------------------------------------------------------------------------------------------
-
-\t SQL
-
-$salmon ---------------------------------------------------------------------------------------------------------------
-
-9f02171a-32a0-4695-a7f2-aad43528af58,
-a2204077-054e-49f3-ba0c-17a34cd01800,
-2022-07-01T20:00:00.0000000Z,
-VU-HOTDROP,
-1,
-\"{
-    \"\"rssi\"\": -54.0,
-    \"\"accumulated_nanoampere_hour\"\": 14166378032,
-    \"\"minimum_milliampere\"\": 0,
-    \"\"average_milliampere\"\": 0,
-    \"\"maximum_milliampere\"\": 0,
-    \"\"supply_voltage\"\": 5,
-    \"\"temperature_celsius\"\": 24
-  }\",
-2000-01-01T20:00:00.0000000Z,deviaqpro
-
-$gold ---------------------------------------------------------------------------------------------------------------
-
-kWh = (Ah * V) / 1000
-
-$salmon
+$honeydew======================================================================================================================
+$grey # SQL  $gold
 select STAMP, data:\"accumulated_nanoampere_hour\" as NA, data:\"supply_voltage\" from \"SBG\".\"SBG_STATE_TRANSFER\" 
 where DEVICEUUID='7b794dd5-e29c-4851-a533-100c57dc4cff'
   and SITEUUID='9f02171a-32a0-4695-a7f2-aad43528af58'      
@@ -52,6 +31,44 @@ where DEVICEUUID='7b794dd5-e29c-4851-a533-100c57dc4cff'
     group by DEVICEUUID, date(STAMP)
   ) 
 order by STAMP asc;
+
+$honeydew======================================================================================================================
+$grey # request  $gold
+query Energy {
+  energyConsumptionByTime(
+    siteUuid: \"9f02171a-32a0-4695-a7f2-aad43528af58\",
+    deviceUuid: \"7b794dd5-e29c-4851-a533-100c57dc4cff\",
+    startDate: \"2022-06-21\",
+    endDate: \"2022-07-01\") {
+    points {
+      time
+      kWh
+    }
+  }
+}
+
+$grey # response $lightblue
+{
+  \"data\": {
+    \"energyConsumptionByTime\": {
+      \"points\": [
+        {
+          \"time\": \"2022-06-21\",
+          \"kWh\": 1.982159603307
+        },
+        {
+          \"time\": \"2022-06-22\",
+          \"kWh\": 2.088167924115
+        },
+        {
+          \"time\": \"2022-06-23\",
+          \"kWh\": 1.040813534475
+        },
+        {
+          \"time\": \"2022-06-24\",
+          \"kWh\": 1.1886646297499999
+        },
+        ...
 "
 
 
