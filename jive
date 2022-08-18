@@ -1,25 +1,40 @@
-#!/bin/zsh
+#! python3
 
-echo "
-/Users/james/code/ventacity/sbg-webapp/modules/webapp-vue-ui/src/components/common/graphs
- ('development' branch)
+from colored import fg
 
-  https://github.com/ventacity/sbg-webapp/pull/74
+yellowish = fg(184)
+pink = fg(183)
+palegreen = fg(86)
+blue = fg(45)
+grey = fg(253)
 
-Commit Summary
-c701e5b Placeholder page for Site Health Report
-b4c28b3 gql integration of site health report heatmap
-File Changes (7 files)
-M modules/vue-ui/package-lock.json (824)
-M modules/vue-ui/package.json (2)
-M modules/vue-ui/src/main.ts (6)
-A modules/vue-ui/src/reports/SiteHealthReport.vue (127)
-A modules/vue-ui/src/reports/chart-helper.ts (136)
-A modules/vue-ui/src/reports/querydata.js (155)
-M modules/vue-ui/src/router/index.ts (6)
-Patch Links:
-https://github.com/ventacity/sbg-webapp/pull/74.patch
-https://github.com/ventacity/sbg-webapp/pull/74.diff
-"
+s1 = grey + '''
+    /Users/james/code/ventacity/sbg-webapp/modules/webapp-vue-ui/src/components/common/graphs 
+     ('development' branch) 
+ 
+      https://github.com/ventacity/sbg-webapp/pull/74 
+ 
+    Patch Links: 
+    https://github.com/ventacity/sbg-webapp/pull/74.patch 
+    https://github.com/ventacity/sbg-webapp/pull/74.diff 
+-------------------------------------------------------------------------------------------
+'''
+ 
+s2 = yellowish + '''
+    For now, you can branch off of the latest develop. 
+    From there I’d put a new component in modules/vue-ui/src/reports 
+     (alongside the other report you created)
 
-exit 0
+    I may need to help you link to the report since that involves delving into the old Vue app.
+    Let me know when you get to that point!
+
+    new route in: modules/vue-ui/src/router/index.ts
+      {
+        path: "/building/:buildingId/reports/energy",
+        name: "buildingEnergyReport",
+        component: BuildingEnergyReport
+      },
+
+    The other report is at …/reports/iaq, so it seems like …/reports/energy makes sense.
+'''
+print(s1, s2)

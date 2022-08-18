@@ -138,6 +138,8 @@ echo "${c1}
 \t git add .
 \t git commit -m ''
 \t git push -u origin tmp                  $c2 # push to new remote branch $c1
+\t ==================================
+\t ==================================
 "
 
 exit 0
