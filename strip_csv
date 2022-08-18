@@ -1,0 +1,29 @@
+#! python3
+import sys
+import json
+import csv
+import uuid
+
+
+try:
+    f1 = open(sys.argv[1], 'r')
+    f2 = open(sys.argv[2], 'w')
+except:
+    print('\t provide 2 arguments: <csv_to_read> <csv_to_write>')
+    exit()
+
+csv_reader = csv.reader(f1)
+csv_writer = csv.writer(f2, doublequote=True)
+
+# get headers of csv
+csv_headers = [h.strip() for h in next(csv_reader)]
+
+# write headers for output.csv
+csv_writer.writerow(csv_headers)
+
+for row in csv_reader:
+    r = [s.strip() for s in row]
+    csv_writer.writerow(r)
+
+f1.close()
+f2.close()

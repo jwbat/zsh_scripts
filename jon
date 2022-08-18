@@ -1,0 +1,23 @@
+#!/bin/zsh
+echo "$yellow
+  1. Quick Fixes
+      T->R
+      Fix Sat/Sun gray bars
+      Round tooltip values to 2 sig digits: ##.##
+
+  2. Post screenshot and status update on #energypro
+
+  3. Tune efficiency of SQL query (esp inner query).  (check in with Jonah when ready)
+
+  4. Post on api a description of your proposed method to handle gaps in energy
+      data (use Python to detect missing days and fill them in with “ghost data”)
+
+  5. Convert to Vue 2
+
+  6. Design Review meeting: how to best merge this code with existing code base.
+
+  7. Future Team Discussion:
+      Bucketing of energy data on smaller than 24hr intervals (and the ramifications on Timezone translation)
+      Should we modify metricSeries (now propertyTrend) API to support energy data?  Or make a new API for that?
+"
+exit 0
