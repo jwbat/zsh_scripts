@@ -1,12 +1,12 @@
 #!/bin/zsh
 
 # Description
-# copy file or dir to /opt/lora on conduit
+# scp file or dir to /opt/lora on conduit
 
 # Usage
-# scp-to-cdt <path of file/dir to copy> <path on conduit to copy to>
+# scp-to-cdt <path of file/dir to copy>
 
-kp;
+conduit;
 
 scp -r $1 admin@192.168.0.55:/opt/lora
 
