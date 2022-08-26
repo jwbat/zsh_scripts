@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+red=$(ts 160)
 grey=$(ts 252)
 lightblue=$(ts 153)
 gold=$(ts 220)
@@ -33,13 +34,15 @@ where DEVICEUUID='7b794dd5-e29c-4851-a533-100c57dc4cff'
 order by STAMP asc;
 
 $honeydew======================================================================================================================
-$grey # request  $gold
+
+$grey# deviceUuid: "ef66fc2c-3c42-458c-abc7-cbfe9aca52ac"
+$grey# deviceUuid: "7b794dd5-e29c-4851-a533-100c57dc4cff" $gold
 query Energy {
   energyConsumptionByTime(
-    siteUuid: \"9f02171a-32a0-4695-a7f2-aad43528af58\",
-    deviceUuid: \"7b794dd5-e29c-4851-a533-100c57dc4cff\",
-    startDate: \"2022-06-21\",
-    endDate: \"2022-07-01\") {
+    siteUuid: "9f02171a-32a0-4695-a7f2-aad43528af58",
+    deviceUuid: "7b794dd5-e29c-4851-a533-100c57dc4cff",
+    startDate: "2022-07-19",
+    endDate: "2022-08-18") {
     points {
       time
       kWh
@@ -47,28 +50,39 @@ query Energy {
   }
 }
 
-$grey # response $lightblue
+$grey # response $red
 {
-  \"data\": {
-    \"energyConsumptionByTime\": {
-      \"points\": [
+  "data": {
+    "energyConsumptionByTime": {
+      "points": [
         {
-          \"time\": \"2022-06-21\",
-          \"kWh\": 1.982159603307
+          "time": "2022-07-20",
+          "kWh": 2.4594677204760003
         },
         {
-          \"time\": \"2022-06-22\",
-          \"kWh\": 2.088167924115
+          "time": "2022-07-21",
+          "kWh": 2.4985617582510002
         },
         {
-          \"time\": \"2022-06-23\",
-          \"kWh\": 1.040813534475
+          "time": "2022-07-22",
+          "kWh": 2.567383510419
         },
         {
-          \"time\": \"2022-06-24\",
-          \"kWh\": 1.1886646297499999
+          "time": "2022-07-23",
+          "kWh": 3.7647126114389997
         },
-        ...
+        {
+          "time": "2022-07-24",
+          "kWh": 3.7771321657679997
+        },
+        {
+          "time": "2022-07-25",
+          "kWh": 3.801284203275
+        },
+        {
+          "time": "2022-07-26",
+          "kWh": 3.8259886463369996
+        },
 "
 
 

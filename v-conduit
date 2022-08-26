@@ -6,10 +6,10 @@
 c="$(tput setaf 87)"
 
 echo "$c
-\t Multitech Conduit model: MTCAP-915-001A Firmware 5.3.5
+\t Multitech Conduit model: MTCAP-915-001A Firmware 6.0
 \t 192.168.0.55
 \t u/n admin
-\t p/w admin#Shizzle
+\t p/w $CDT
 
 \t deveui 44-91-60-00-00-f7-c2-73
 "
