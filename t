@@ -6,7 +6,7 @@
 # Usage
 # t -[option]
 
-x="bcdgkmnpstv"  # options
+x="bcdgkmnprstv"  # options
 #x="dbv"  # options
 color="$(tput setaf 226)"
 #path="~/code/shell/scripts/stuff"
@@ -25,6 +25,7 @@ show_options() {
      -m, --matplotlib
      -n, --numpy
      -p, --pandas
+     -r, --rust
      -s, --sql
      -t, --tmux
      -v, --vim
@@ -46,6 +47,7 @@ for arg in "$@"; do
      '--matplotlib')    set -- "$@" '-m'   ;;
           '--numpy')    set -- "$@" '-n'   ;;
          '--pandas')    set -- "$@" '-p'   ;;
+           '--rust')    set -- "$@" '-r'   ;;
             '--sql')    set -- "$@" '-s'   ;;
            '--tmux')    set -- "$@" '-t'   ;;
             '--vim')    set -- "$@" '-v'   ;;
@@ -66,6 +68,7 @@ while getopts $x opt; do
         m) $open ~/code/shell/scripts/stuff/cheatsheets/matplotlib.pdf;;
         n) $open ~/code/shell/scripts/stuff/cheatsheets/numpy.pdf;;
         p) $open ~/code/shell/scripts/stuff/cheatsheets/pandas.pdf;;
+        r) $open ~/code/shell/scripts/stuff/cheatsheets/rust.pdf;;
         s) $open ~/code/shell/scripts/stuff/cheatsheets/sql.pdf;;
         t) $open ~/code/shell/scripts/stuff/cheatsheets/tmux.pdf;;
         *) show_options;;
