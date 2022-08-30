@@ -3,7 +3,10 @@
 # Usage
 # ven-wan
 
-c="$(tput setaf 87)"
+c1="$(tput setaf 87)"
+
+c2="$(tput setaf 229)"
+c3="$(tput setaf 250)"
 
 echo "$c
 \t Multitech Conduit model: MTCAP-915-001A Firmware 6.0
@@ -12,6 +15,25 @@ echo "$c
 \t p/w $CDT
 
 \t deveui 44-91-60-00-00-f7-c2-73
+
+$c3 Installation:
+    ssh into the Conduit and type the following commands to install pip.
+    Make sure your Conduit is connected to the internet.
+$c2 \t ~ opkg update
+\t ~ opkg install python-pip
+\t ~ pip install paho-mqtt
+
+$c3 scp the mqtt-client.py to your Conduit $c2
+\t ~ chmod +x mqtt-client.py
+$c3    run: $c2
+\t ~ python mqtt-client.py
+
+\t sudo opkg update
+\t opkg install python3-pip
+\t sudo opkg install python3-pip
+\t which pip3
+
+\t opkg install python3-requests
 "
 
 exit 0

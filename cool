@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+ds=('ooo' 'oop' 'ook')
+
+echo "${ds[@]}"
+
+exit 0

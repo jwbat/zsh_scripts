@@ -1,30 +1,14 @@
 #!/bin/zsh
 
 # Description
-#  install instructions for multitech conduit ("mtc")
+#  "mtc = mac to conduit"
+#  copy dir / file from mac to MultiTech Conduit
 
 # Usage
 # mtc
 
-c="$(tput setaf 229)"
-c1="$(tput setaf 250)"
+conduit;  # copy pw to clipboard
 
-echo "$c1
-Installation:
-    ssh into the Conduit and type the following commands to install pip.
-    Make sure your Conduit is connected to the internet. $c
-
-\t ~ opkg update
-\t ~ opkg install python-pip
-\t ~ pip install paho-mqtt
-
-$c1 scp the mqtt-client.py to your Conduit $c
-
-\t ~ chmod +x mqtt-client.py
-
-$c1    run: $c
-\t ~ python mqtt-client.py
-"
-
+scp -r $1 admin@192.168.0.55:/opt/lora
 
 exit 0
