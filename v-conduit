@@ -28,7 +28,9 @@ $c3 scp the mqtt-client.py to your Conduit $c2
 $c3    run: $c2
 \t ~ python mqtt-client.py
 
+$c3 opkg commands $c2
 \t sudo opkg update
+\t sudo opkg list
 \t opkg install python3-pip
 \t sudo opkg install python3-pip
 \t which pip3
