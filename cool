@@ -4,4 +4,14 @@ ds=('ooo' 'oop' 'ook')
 
 echo "${ds[@]}"
 
+files=("file1.py"
+       "file2.py"
+          "file3.py"
+               )
+
+for file in "${files[@]}"; do
+    echo $file
+done
+
+
 exit 0
