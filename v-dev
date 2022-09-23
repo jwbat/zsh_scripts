@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+# Description
+# dev server 
+
+# Usage
+# v-dev 
+
+echo "$sea
+    For any server you want to deploy to with Capistrano deployment,
+    you need $yellow /home/ventacity/.ssh/authorized_keys $sea on that server
+    to contain your public key. 
+    (/home/ventacity/.. is the directory on deviaqpro.ventacity.net or other server deploying to)
+
+ to test on the dev server:
+  1. Add your key
+  2. Change to the sbg-webapp repository 
+  3.  $red ~ git pull && git switch capistrano
+      $red ~ cap development deploy BRANCH=capistrano
+"
+
+
+exit 0

@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Description
+# scp <file or dir> to MU 
+
+# Usage
+# scpmu <path> 
+
+scp -r $1 /Volumes/MU
+
+exit 0

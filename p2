@@ -20,9 +20,12 @@ print(blue + "\n\t N \t\t\t 2^N \t     symbol     name \n")
 for power in powers:
     ans = 2 ** power
     if power in named_powers:
-        print(red + str(power).rjust(10) + yellow + str(ans).rjust(25) + '\t\t' + cornsilk + symbols[power] + '\t' + names[power])
+        print(red + str(power).rjust(10) + 
+              yellow + str(ans).rjust(25) + '\t\t' + 
+              cornsilk + symbols[power] + '\t' + names[power])
     else:
-        print(red + str(power).rjust(10) + yellow + str(ans).rjust(25))
+        print(red + str(power).rjust(10) + 
+           yellow + str(ans).rjust(25))
 
 
 print()

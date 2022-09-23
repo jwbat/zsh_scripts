@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+echo "$sea
+  git log
+  git log --graph
+  git log --first-parent
+
+  git reflog
+  git merge-base --fork-point <branch>
+"
+
+exit 0

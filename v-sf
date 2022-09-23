@@ -1,8 +1,47 @@
 #!/bin/zsh
 
-echo "$(ts 230)
-\t the accumulated current needs to be multiplied by the voltage to get apparent energy,
-\t which can be separated into days by getting the difference of the accumulations
-"
+echo "$aqua
+    VU device uuid's:
+$grey
+    SELECT DISTINCT deviceuuid from \"SBG\".\"SBG_STATE_TRANSFER\"
+    WHERE siteuuid = '9f02171a-32a0-4695-a7f2-aad43528af58'
+    LIMIT 5;
+$sea
+    DEVICEUUID
+    7b794dd5-e29c-4851-a533-100c57dc4cff
+    ef66fc2c-3c42-458c-abc7-cbfe9aca52ac
 
+
+$grey{
+  \"accumulated_nanoampere_hour\": 1319402540347,
+  \"average_milliampere\": 1384.42643805556,
+  \"maximum_milliampere\": 1539.6,
+  \"minimum_milliampere\": 1228.9895,
+  \"rssi\": -58,
+  \"supply_voltage\": 4,
+  \"temperature_celsius\": 22
+}
+
+$grey VU -- MIN-MAX-AVG for latest tmstp
+$aqua
+  SELECT stamp, 
+    data:\"average_milliampere\" AS avg_ma, 
+    data:\"minimum_milliampere\" AS min_ma, 
+    data:\"maximum_milliampere\" AS max_ma, 
+    data:\"supply_voltage\" AS voltage
+  FROM \"SBG\".\"SBG_STATE_TRANSFER\" t1
+  WHERE deviceuuid='7b794dd5-e29c-4851-a533-100c57dc4cff'
+   AND stamp = (SELECT MAX(stamp) FROM \"SBG\".\"SBG_STATE_TRANSFER\" t2 WHERE t1.deviceuuid = t2.deviceuuid);
+
+$aqua SELECT stamp, 
+    data:\"average_milliampere\" AS avg_ma,
+    data:\"minimum_milliampere\" AS min_ma,
+    data:\"maximum_milliampere\" AS max_ma 
+    FROM  \"SBG\".\"SBG_STATE_TRANSFER\"
+    WHERE deviceuuid='7b794dd5-e29c-4851-a533-100c57dc4cff'
+    ORDER BY stamp DESC
+    LIMIT 1;
+
+$green \t\t kW = V * A / 1000   $grey // Voltage = 117
+"
 exit 0

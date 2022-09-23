@@ -1,0 +1,36 @@
+#!/bin/zsh
+
+# Description
+# Show VSCode shortcuts 
+
+# Usage
+# vsc 
+
+echo "$sea
+\t  $sea Open command palette       $yellow cmnd + shift + P 
+\t  $sea Open a file                $yellow cmnd + P 
+\t  $sea Open settings              $yellow cmnd + , 
+\t  $sea Toggle sidebar             $yellow cmnd + B 
+\t  $sea Tab                        $yellow ctrl + shift + TAB 
+\t  $sea Tab groups                 $yellow cmnd + 1 or 2 or 3 
+\t  $sea Open terminal              $yellow cmnd + J 
+\t  $sea Select line                $yellow cmnd + L 
+\t  $sea Select all occurences      $yellow cmnd + shift + L 
+\t  $sea Current word               $yellow cmnd + fn + F2 
+\t  $sea Go to line                 $yellow ctrl + G 
+\t  $sea Matching bracket           $yellow cmnd + shift + \\ 
+\t  $sea Fold block                 $yellow cmnd + option + [ or ] 
+\t  $sea Fold block & subblocks     $yellow cmnd + K + [ or ] 
+\t  $sea Move line or block         $yellow option + up or down 
+\t  $sea Toggle line comment        $yellow cmnd + / 
+\t  $sea Toggle block comment       $yellow shift + option + A 
+\t  $sea Format file                $yellow option + shift + F 
+\t  $sea Format selection           $yellow cmnd + K  then cmnd + F 
+\t  $sea Apply quick fix            $yellow cmnd + . 
+\t  $sea Trim white spaces          $yellow cmnd + K + X 
+\t  $sea Toggle suggestions         $yellow cmnd + I 
+\t  $sea See fcn signature          $yellow cmnd + shift + spacebar 
+\t  $sea Zen mode                   $yellow cmnd + K, then Z 
+"
+
+exit 0

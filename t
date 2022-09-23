@@ -6,7 +6,7 @@
 # Usage
 # t -[option]
 
-x="bcdgkmnprstv"  # options
+x="bcdgkmnoprstv"  # options
 #x="dbv"  # options
 color="$(tput setaf 226)"
 #path="~/code/shell/scripts/stuff"
@@ -24,6 +24,7 @@ show_options() {
      -k, --shellcheck
      -m, --matplotlib
      -n, --numpy
+     -o, --vscode
      -p, --pandas
      -r, --rust
      -s, --sql
@@ -46,6 +47,7 @@ for arg in "$@"; do
             '--git')    set -- "$@" '-g'   ;;
      '--matplotlib')    set -- "$@" '-m'   ;;
           '--numpy')    set -- "$@" '-n'   ;;
+         '--vscode')    set -- "$@" '-o'   ;;
          '--pandas')    set -- "$@" '-p'   ;;
            '--rust')    set -- "$@" '-r'   ;;
             '--sql')    set -- "$@" '-s'   ;;
@@ -67,6 +69,7 @@ while getopts $x opt; do
         g) $open ~/code/shell/scripts/stuff/cheatsheets/git.pdf;;
         m) $open ~/code/shell/scripts/stuff/cheatsheets/matplotlib.pdf;;
         n) $open ~/code/shell/scripts/stuff/cheatsheets/numpy.pdf;;
+        o) $ope  ~/code/shell/scripts/stuff/cheatsheets/vscode.pdf;;
         p) $open ~/code/shell/scripts/stuff/cheatsheets/pandas.pdf;;
         r) $open ~/code/shell/scripts/stuff/cheatsheets/rust.pdf;;
         s) $open ~/code/shell/scripts/stuff/cheatsheets/sql.pdf;;
