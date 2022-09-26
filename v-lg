@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+echo "$sea
+\t startDate: DateTime = null
+\t endDate: DateTime = null
+\t granularity: Int = null
+\t metric: MetricType = null
+
+ query lineGraph {
+   metricSeriesEnergy(
+     deviceUuid: \"7b794dd5-e29c-4851-a533-100c57dc4cff\",
+     filter: {
+       metric: \"AVG\",
+       startDate: \"2022-07-20\",
+     	endDate: \"2022-08-18\",
+       sensor: \"average_milliampere\",
+       granularity: 30
+     }) {
+   }
+ }
+"
+bat sqls/metricSeriesEnergy.sql
+
+exit 0
