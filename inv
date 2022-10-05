@@ -45,7 +45,7 @@ with open(file, 'r') as csvfile:
         idx = 0
         for item in row:
             if item in (row[4], row[5]) and idx in (4, 5):
-                print(color + item.rjust(15), end='')
+                print(khaki + item.rjust(15), end='')
             else:
                 print(blue + item.rjust(15), end='')
             idx += 1
