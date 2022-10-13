@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-echo "$(ts 87)
+echo "$sea
 query MyQuery {
   siteHealthOverTime(startDate: \"2022-04-01T00:00:00\",
                      endDate: \"2022-04-30T00:00:00\",
@@ -20,6 +20,39 @@ query MyQuery {
     }
   }
 }
+
+query l {
+  latestEnergy(deviceUuid: \"7b794dd5-e29c-4851-a533-100c57dc4cff\") {
+      time
+      minA
+      maxA
+      avgA
+      kW
+  }
+}
+
+query Energy {
+  energyConsumptionByTime(
+    deviceUuid: \"7b794dd5-e29c-4851-a533-100c57dc4cff\",
+    startDate: \"2022-07-19\",
+    endDate: \"2022-08-18\") {
+    points {
+      time
+      kWh
+    }
+  }
+}
+
+query lineGraph {
+  metricSeriesEnergy(deviceUuid: \"7b794dd5-e29c-4851-a533-100c57dc4cff\", 
+    filter: {
+      metric: AVERAGE,
+      startDate: \"2022-07-19\", 
+      endDate: \"2022-07-30\", 
+      sensor: MA,
+      granularity: 10})
+}
+
 "
 
 exit 0
