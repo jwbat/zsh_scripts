@@ -5,11 +5,13 @@
 #  copy dir / file from mac to MultiTech Conduit
 
 # Usage
-# mtc
+# mtc [file | dir]
+
 
 conduit;  # copy pw to clipboard
 
-scp -r $@ admin@192.168.0.55:/opt/lora/mt-app
+scp -r $@ admin@192.168.0.55:/opt/lora/mt-iot
+#scp -r $@ admin@192.168.0.55:/opt/lora
 #scp -r $@ admin@192.168.0.55:/opt/lora/mt-app
 
 
