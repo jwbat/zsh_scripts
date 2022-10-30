@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+echo "
+$sea IAM Roles for Services    $red
+    -- assign permissions to services with IAM Roles
+    -- common roles: EC2 Instance Roles, Lambda Function Roles
+
+$sea IAM Security Tools     $red
+    -- IAM Credentials Report (acct-level)
+        a report that includes all of acct's users with their creds
+    -- IAM Access Advisor (user-level)
+        shows the service permissions granted to a user & when those services were last accessed
+
+"
+
+exit 0

@@ -1,0 +1,52 @@
+#!/bin/zsh
+
+echo "
+$sea S3 $red
+    -- store 'objects' (files) in 'buckets' (directories); no concept of directories though UI 
+        leads one to think otherwise
+    -- buckets must have a globally unique name (across all regions & accts)
+    -- buckets are defined at the region level (they're created in a region)
+    -- buckets naming:  no uppercase, no underscore, 3 - 36 chars long, not an IP, start with lc letter or nr;
+        (use letters, numbers, and hyphens) 
+
+    Objects (files) have a key, the full path to the file, e.g.
+      $gold s3://my-bucket/my-file.txt $red or
+      $red s3://my-bucket/${yellow}folder1/folder2/${pink}my-file.txt $red
+      the key is composed of $yellow prefix $red + $pink object name $red
+
+    $sea Keys $red are just long names that contain slashes, '/'s, in them
+    $sea Object $red values are the content of the body; max size is $gold 5TB $red
+
+    -- if uploading a file greater than 5GB, must use 'multi-part' upload
+    -- meta data: list of text key value pairs (set by system or user)
+    -- tags: unicode key value pairs, up to 10 -useful for security / lifecycle
+    -- version ID (if enabled)
+
+    $sea Security $red
+    -- User-based:      $pink IAM Policies $red    : which API calls should be allowed for a user
+    -- Resource-based:  
+        $pink Bucket Policies $red : rules from the S3 console (allows access across accts) (most common)
+        $pink Object Access Control List (ACL) $red : finer grained control (can be disabled)
+        $pink Bucket Access Control List (ACL) $red : less common (can be disabled)
+        $pink Encryption $red : encrypt objects in S3 using encryption keys
+
+    $aqua S3 Bucket Policies $red
+        $pink JSON based $red 
+            - Resources: buckets & objects 
+            - Effect: Allow or Deny
+            - Action 
+            - Principal: acct or user to apply the policy to
+
+    $aqua IAM Role $red
+        to grant IoT Core access to S3
+{
+    \"Version\": \"2012-10-17\",
+    \"Statement\": {
+        \"Effect\": \"Allow\",
+        \"Action\": \"s3:PutObject\",
+        \"Resource\": \"arn:aws:s3:::mt-iot-s3/*\"
+    }
+}
+"
+
+exit 0
