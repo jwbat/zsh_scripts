@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+echo " $sea
+$grey intro to data loading $sea
+    COPY
+    INTO sbg_state_transfer         $grey table to copy into $sea
+    FROM @csvfiles                  $grey loc of staged files $sea
+    PATTERN = '.*xyz.csv.gz'        $grey spec files to load $sea
+    ON_ERROR 'skip_file';
+
+$grey Snowpipe steps (worksheet) $sea
+$grey  1. run DDL statements in SF, e.g.   $sea
+    CREATE or REPLACE stage snowpipe.public.snowstage
+    url='s3://mt-iot-s3'
+    credentials = (AWS_KEY_ID = '....' AWS_SECRET_KEY = '....')
+$grey  2. create target table for json data  $sea
+
+show pipes;
+show stages; $grey  # notification channel: arn:aws:s3:::  $sea
+"
+
+exit 0
