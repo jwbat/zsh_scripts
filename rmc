@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+# Description
+# remove all instances of char from string
+
+# Usage
+# rmk <char_to_remove> <string> 
+
+import sys
+
+
+char = sys.argv[1]
+s    = sys.argv[2]
+
+
+ans = ''.join([c if c != char  else '' for c in s])
+print(ans)
