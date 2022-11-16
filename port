@@ -1,5 +1,4 @@
 #!/bin/zsh
-
 # Description
 # port forwarding from Ubuntu          #   GraphQL    guest: 8000, host: 8801
                                        #   API        guest: 1234, host: 1234
@@ -17,6 +16,7 @@ echo "$c1
      forwarding :1234  to :1234     
      forwarding :54320 to :5432     
      ==========================   $c2"
+
 ssh -L 8801:127.0.0.1:8000 -L 1234:127.0.0.1:1234 -L 54320:127.0.0.1:5432 parallels@10.211.55.4
 
 exit 0
