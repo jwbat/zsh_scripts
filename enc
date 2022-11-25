@@ -1,4 +1,5 @@
 #!python3
+# usage: enc <path_of_unencrypted_file> <path_of_encrypted_file>
 
 import os
 import sys
