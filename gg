@@ -12,8 +12,9 @@ ds=($d1 $d2)
 c1="$(tput setaf 120)"
 c2="$(tput setaf 12)"
 
-# encrypt zprofile
-enc ~/.zprofile ~/.dotfiles/.zprofile_encrypted
+
+enc ~/.zprofile ~/.dotfiles/.zprofile_encrypted                       # encrypt zprofile
+enc ~/.snowsql/config ~/.dotfiles/.snowsql_config_encrypted           # encrypt snowsql config
 
 for d in $ds; do
     echo "$c1 $d $c2"
@@ -22,9 +23,10 @@ for d in $ds; do
     git -C $d push -u origin main
 done
 
-dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile     # decrypt zprofile
+dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile                       # decrypt zprofile
+dcr  ~/.dotfiles/.snowsql_config_encrypted ~/.snowsql/config          # decrypt snowsql config
+
 cp ~/.zprofile ~/code/zzz
 
-echo "$(ls ~/encrypted_files)"
 
 exit 0
