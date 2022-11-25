@@ -25,4 +25,6 @@ done
 dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile     # decrypt zprofile
 cp ~/.zprofile ~/code/zzz
 
+echo "$(hello 'xyz')"
+
 exit 0

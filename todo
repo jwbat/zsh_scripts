@@ -6,14 +6,15 @@
 # Usage
 # todo 
 
-c="$(tput setaf 157)"
-
-echo "$c
-    •  bash: --verbose-arg
-    ==============================================
-    •  install terminal emulator in Linux
-    ==============================================
-    •  learn about arm64 architecture.
+echo "
+$red    ==============================================
+$yellow    1. $grey todo script                         (done)
+$yellow    2. $grey download Sal's data from Vutility   (done)
+$yellow    3. $grey make new repo for Hotdrop           (done) 
+$yellow    4. $sea transform data
+$yellow    5. $sea snowsql CLI install & config
+$yellow    6. $sea upload data to SF
+$red    ==============================================
 "
 
 exit 0
