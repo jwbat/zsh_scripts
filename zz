@@ -1,6 +1,0 @@
-#!/bin/zsh
-
-cp ~/.zprofile ~/code/zzz
-
-
-exit 0

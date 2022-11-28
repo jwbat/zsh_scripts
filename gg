@@ -26,7 +26,7 @@ done
 dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile                       # decrypt zprofile
 dcr  ~/.dotfiles/.snowsql_config_encrypted ~/.snowsql/config          # decrypt snowsql config
 
-cp ~/.zprofile ~/code/zzz
+cp ~/.zprofile ~/code/zprofile
 
 
 exit 0
