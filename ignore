@@ -9,7 +9,7 @@
 # for the specified file or project type
 
 # Usage
-# ignore <filetype> (ex:  ignore cpp) 
+# ignore <filetype> (ex:  ignore cpp, ignore py) 
 
 case $1 in
     cpp) file=~/.vim/.gitignore.cpp;;
