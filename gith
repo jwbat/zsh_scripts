@@ -132,9 +132,14 @@ echo "${c1}
 \t ==================================
 \t git stash -- git apply
 \t ==================================
+\t git fetch                               $c2 # get latest changes from remote repo $c1
+\t git branch -v -a                        $c2 # see branches available for checkout $c1
+\t git switch <branch name>                $c2 # create local branch from remote to work on it $c1
+\t                                         $c2 #  (can leave off remotes/origin/) $c1
 \t ==================================
 \t git branch -c tmp                       $c2 # create new branch 'tmp' $c1
 \t git checkout tmp
+\t git checkout -b tmp                     $c2 # short cut both to create & checkout new branch 'tmp' $c1 
 \t git add .
 \t git commit -m ''
 \t git push -u origin tmp                  $c2 # push to new remote branch $c1
