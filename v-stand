@@ -3,17 +3,14 @@
 # Usage
 # v-stand
 
-red=$(ts 196)
-blue=$(ts 123)
-grey=$(ts 245)
 
 echo "
     $red prior to running setup.sh :
-    $blue ~ sudo apt install build-essential libssl-dev libffi-dev python-dev
-    $blue ~ sudo apt install libjpeg-dev zlib1g-dev
+    $aqua ~ sudo apt install build-essential libssl-dev libffi-dev python-dev
+    $aqua ~ sudo apt install libjpeg-dev zlib1g-dev
     $grey because the Cryptography library will not build using PIP
 
-    $blue sudo apt install net-tools $grey installs ifconfig
+    $aqua sudo apt install net-tools $grey installs ifconfig
 
 "
 exit 0

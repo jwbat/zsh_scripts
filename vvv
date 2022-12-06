@@ -1,0 +1,17 @@
+#! python3
+from colored import fg
+
+
+blue, red, yellow       = fg(87),  fg(196), fg(192)
+indianred, khaki, grey  = fg(202), fg(185), fg(248)
+
+def line():
+    return grey  + '  ' + '-' * 90 + '\n'
+
+print(
+    ' 12/05/22 \n' + khaki +
+    ' re-clone standalone-dev-env, run ./setup.sh, branch off py3-develop, add energypro queries, \n '
+    're-factor for new directory structure since 1st writing the queries, test.\n' +
+    ' Milesight docs \n' +
+    line()
+)

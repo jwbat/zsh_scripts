@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+# milesight order
+
+echo "$green
+  (if it has a Qty listed, or if it says “SmartBuilding Kit” that means it’s in the order)
+"
+exit 0

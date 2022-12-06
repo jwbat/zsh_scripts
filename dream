@@ -1,0 +1,19 @@
+#! python3
+from colored import fg
+
+blue, red, yellow       = fg(87),  fg(196), fg(192)
+indianred, khaki, grey  = fg(202), fg(185), fg(248)
+
+def line():
+    return grey  + '\t\t' + '-' * 80 + '\n'
+
+def quote(s):
+    return khaki + '\t\t' + s + '\n'
+
+print(
+    line() + ' 12 / 1 / 22' +
+    quote('It is your life, but it is my body.') +
+    line() + ' 12 / 4 / 22' +
+    quote('Semper fidelis (always faithful)') +
+    line()
+)
