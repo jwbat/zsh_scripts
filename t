@@ -5,6 +5,7 @@
 
 # Usage
 # t -[option]
+# example: t -c     crdb sheet
 
 x="bcdgkmnoprstv"  # options
 #x="dbv"  # options

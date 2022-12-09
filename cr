@@ -9,12 +9,12 @@
 # UPPER CASE print info, lower case do something such as start a node
 # use cr -h for cockroach help
 
-x="c:sqktmrlinSCXMLRT" 
+x="c:hsqktmrlinSCXMLRT" 
 
 blue="$(tput setaf 117)"
 grey="$(tput setaf 245)"
 
-if [ $# -eq 0 ]; then
+function show_options {
     echo "$blue
     options are -[ $x ]
 
@@ -26,6 +26,7 @@ if [ $# -eq 0 ]; then
 
       -s  : cockroach start-single-node --insecure --listen-addr localhost
       -r  : server running (?)
+      -h  : help
       -i  : cockroach init --insecure --host=localhost:26257
       -n  : cockroach node ls --insecure
       -q  : cockroach sql --insecure
@@ -40,6 +41,11 @@ if [ $# -eq 0 ]; then
       -T  : cr_topics           $grey # topics for further study $blue 
 
     "
+}
+
+if [ $# -eq 0 ]; then
+    echo $gold
+    cockroach sql --url $gerbil
 fi
 
 while getopts $x opt; do
@@ -74,6 +80,8 @@ while getopts $x opt; do
 
         # start 3-node cluster
         l) cr_cluster;;
+
+        h) show_options;;
 
         # initialize a cluster (not needed with a single-node cluster)
         i) cockroach init --insecure --host=localhost:26257;;
