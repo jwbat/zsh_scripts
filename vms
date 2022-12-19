@@ -2,7 +2,15 @@
 
 # milesight order
 
-echo "$green
-  if it has a Qty listed, or if it says “SmartBuilding Kit” that means it’s in the order
+echo "$pink
+    Milesight IoT Sensors: $green
+        AM107 (DONE)
+        AM104
+        AM103
+        EM320 (DONE)
+        EM300
+        EM500
+        VS121
+        VS132
 "
 exit 0

@@ -47,6 +47,17 @@ $sea S3 $red
         \"Resource\": \"arn:aws:s3:::mt-iot-s3/*\"
     }
 }
+    $aqua S3 Storage Classes
+     $grey can choose class on object creation, can modify class manually, or by using 
+      Lifecycle configurations $red
+        Standard - General Purpose
+        Standard - Infrequent Access (IA)
+        One Zone - Infrequent Access
+        Glacier Instant Retrieval
+        Glacier Flexible Retrieval
+        Glacier Deep Archive
+        Intelligent Tiering
+
 "
 
 exit 0
