@@ -13,7 +13,7 @@ indianred = fg(202)
 khaki = fg(185)
 colors = [ indianred, khaki ]
 
-file = os.path.expanduser('~/code/shell/scripts/stuff/balances.csv')
+file = os.path.expanduser('~/code/shell/scripts/stuff/balance.csv')
 fields = []
 rows = []
 
