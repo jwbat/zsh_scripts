@@ -1,3 +1,11 @@
+01/04/23
+    AWS SDK
+
+01/03/23
+    Review & merge PR for sbp-mono energyrpo; configure AWS CLI & test usage; test AWS SDK
+
+-------------------------------------------------------------------------------------------------------------------------
+
 12/07/22
     CRDB refresh; stored procedures?; new release notes
 
