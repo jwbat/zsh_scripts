@@ -10,6 +10,9 @@ c2=$(tput setaf 109)
 
 echo $A | pbcopy
 
+h;
+clear;
+
 echo "$c1
      ==========================     
      forwarding :8801  to :8000     
