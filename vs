@@ -1,3 +1,17 @@
+
+01/10/23
+    create
+    pick up Milesight sensors in Mosier and Hood River, connect to lorawan, provision them on AWS IoT
+
+01/09/23
+    bring fronten energy pro report up to date with new branch on port-pages, energy-report-v2;
+    test with up-to-date sbp-mono branch.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+01/05/23
+    work with new branch sbp-mono for energypro, update, test
+
 01/04/23
     AWS SDK
 
