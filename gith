@@ -120,6 +120,10 @@ echo "${c1}
 \t git branch tst1                         $c2 # create branch tst1 $c1
 \t git push origin tst1                    $c2 # create remote branch tst1 $c1
 
+\t git reset --merge                       $c2 # cancel the merg $c1
+\t git reset --hard HEAD                   $c2 # reset all the changes back to the last commit
+\t                                         $c2 #  -- this cannot be reverted $c1
+
 \t git branch -r                           $c2 # list remote branches $c1
 \t git fetch                               $c2 # retrieve latest meta-data $c1
 \t git branch -r                           $c2 # list remote branches $c1
@@ -144,6 +148,11 @@ echo "${c1}
 \t git commit -m ''
 \t git push -u origin tmp                  $c2 # push to new remote branch $c1
 \t ==================================
+\t $c2 if the current branch, \"branch-name\", has no upstream branch
+\t     push the current branch and set the remote as upstream: $c1
+\t git push --set-upstream origin branch-name,
+\t $c2  to have this happen automatically for branches without a tracking
+\t      upstream, see 'push.autoSetupRemote' in 'git help config' $c1
 \t ==================================
 "
 

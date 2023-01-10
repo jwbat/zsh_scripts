@@ -35,14 +35,14 @@ $honeydew=======================================================================
 
 $honeydew======================================================================================================================
 
-    $grey# deviceUuid: "ef66fc2c-3c42-458c-abc7-cbfe9aca52ac"
-    $grey# deviceUuid: "7b794dd5-e29c-4851-a533-100c57dc4cff" $gold
+    $grey# deviceUuid: \"ef66fc2c-3c42-458c-abc7-cbfe9aca52ac\"
+    $grey# deviceUuid: \"7b794dd5-e29c-4851-a533-100c57dc4cff\" $gold
     query Energy {
       energyConsumptionByTime(
-        siteUuid: "9f02171a-32a0-4695-a7f2-aad43528af58",
-        deviceUuid: "7b794dd5-e29c-4851-a533-100c57dc4cff",
-        startDate: "2022-07-19",
-        endDate: "2022-08-18") {
+        siteUuid: \"9f02171a-32a0-4695-a7f2-aad43528af58\",
+        deviceUuid: \"7b794dd5-e29c-4851-a533-100c57dc4cff\",
+        startDate: \"2022-07-19\",
+        endDate: \"2022-08-18\") {
         points {
           time
           kWh
@@ -52,16 +52,16 @@ $honeydew=======================================================================
     
     $grey # response $red
     {
-      "data": {
-        "energyConsumptionByTime": {
-          "points": [
+      \"data\": {
+        \"energyConsumptionByTime\": {
+          \"points\": [
             {
-              "time": "2022-07-20",
-              "kWh": 2.4594677204760003
+              \"time\": \"2022-07-20\",
+              \"kWh\": 2.4594677204760003
             },
             {
-              "time": "2022-07-21",
-              "kWh": 2.4985617582510002
+              \"time\": \"2022-07-21\",
+              \"kWh\": 2.4985617582510002
             },
             ...
     
@@ -71,7 +71,7 @@ $honeydew=======================================================================
     $sea
     query l {
       latestEnergy(deviceUuid: 
-        "7b794dd5-e29c-4851-a533-100c57dc4cff") {
+        \"7b794dd5-e29c-4851-a533-100c57dc4cff\") {
           time
           minA
           maxA
@@ -79,48 +79,10 @@ $honeydew=======================================================================
           kW
       }
     }
-    $grey
-    Here are the near term goals for a PoC that we could show to prospective customers soon:
-    Arthur is preparing LoRaWAN gateways that can be deployed at any PoC site and paired with HotDrop energy 
-    sensors from Vutility.
-    @James
-     wrote the gateway SW which uploads the data to Vutility and we’re about to make 
-     it device-agnostic so no config is needed beyond Arthur’s authorization of the sensor
-    For now, we’ll do a manual download of Vuility cloud data, run it through 
-    a script James wrote that converts it to our Lakehouse data format for manual upload. We’
-    ll do this on a periodic/as-needed basis for PoC Sites.  This part requires 
-    some unique UUID being generated for each Hotdrop that will be hardcoded into this script to map a 
-    device’s ID (“DevEUI”) to our Snowflake deviceUUID
-    The Report should be design to take a deviceUUID as a URL parameter so that we can bookmark 
-    “hidden” links to the report for each device, and load them as needed for R&D or customer demos.
-    So these are some some next steps to get there and we should discuss the right time for 
-    fitting this in between your other work 
-    @Jason Ives : James needs to do his first PR to have his code for above work 
-    (Energy component, dashboard) reviewed and eventually merged. He’ll need some guidance on doing that.
-    The next graph I’d like to add to the Energy dashboard is a time series graph 
-    of the current (A) for the HotDrop over the same period of time that is shown 
-    on the bar chart.  I suggested to James that we should try to broaden the utility of 
-    the metricSeries API to support this use case (or maybe it’s already ready?).  We 
-    were going to rename that to propertyTrend at some point too (https://ventacity.slack.
-    com/archives/C033SQRNSP3/p1655409201591829).  I’m not sure who is best to involve in this effort and could use your advice 
-    @Jason Ives
-     .  Parker is about done with his IAQPro work and just documenting. Perhaps he and James 
-     could team up on this for the API side?  And then you and/or James 
-     could adapt the Vue component for use with other properties like Current?  Other than units, 
-     I think this should behave identically to how we graph all the IAQPro properties (except we 
-     don’t have a need for any energy Thresholds at this time).
-    Lastly, I’d like a component that will show the most recent Current & Power (
-    James wrote the GQL API already).  This is a lot like the component we use to display 
-    Properties on say a VSPro page. However there is one new feature which is that Vutility shows 
-    3 values for each Property: avg, min, max.  It might be nice to combine 
-    those into one new component some day (as per in the attached very draft EnergyPro dashboard mockup 
-    I’ll attach next.  For now, it would be fine to just re-use 
-    our existing Property component and use 3 of them in a row: Current (avg), Current(min), Current(max)
-    $sea
-    We use the term Properties generically to cover all things like IAQ, Energy, etc…. so CO2, 
-    Temp, Amps, Power, etc are all Properties. It feels like we should create a general purpose 
-    Property query that allows you to select any one of (or all 3 of): Latest avg, max,
-    min for any given Property. And we should not combine more than one Property into a query.
+";
+
+echo "
+$red energy-report-v2 $grey was created on $red port-pages $grey branch 
 "
 
 exit 0

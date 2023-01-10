@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+cp -r ~/Desktop/$1 .
+
+exit 0
