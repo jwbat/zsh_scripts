@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+echo "$gold
+    Crystalline  audio sw
+"
+
+exit 0

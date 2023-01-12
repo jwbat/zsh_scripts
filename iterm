@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+echo "$gold
+\t shift + CMND + ]        $red next tab $gold
+"
+
+exit 0

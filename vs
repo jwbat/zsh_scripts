@@ -1,6 +1,10 @@
+01/11/23
+    UBX demo meeting
+    thingify Mac at saas-devel
+    IoT meeting with Pat
+    Milesight device + NFC app for device initialization
 
 01/10/23
-    create
     pick up Milesight sensors in Mosier and Hood River, connect to lorawan, provision them on AWS IoT
 
 01/09/23
