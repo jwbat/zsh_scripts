@@ -17,8 +17,9 @@ enc ~/.zprofile ~/.dotfiles/.zprofile_encrypted                       # encrypt 
 enc ~/.snowsql/config ~/.dotfiles/.snowsql_config_encrypted           # encrypt snowsql config
 
 for f in ~/macbook_certs/*; do
-    enc $f ~/.dotfiles/mb_certs_encrypted/$f 
+    enc $f ~/.dotfiles/mb_certs_encrypted/$(basename $f)
 done
+
 
 for d in $ds; do
     echo "$c1 $d $c2"
@@ -29,6 +30,10 @@ done
 
 dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile                       # decrypt zprofile
 dcr  ~/.dotfiles/.snowsql_config_encrypted ~/.snowsql/config          # decrypt snowsql config
+
+for f in ~/.dotfiles/mb_certs_encrypted/*; do
+    dcr $f ~/macbook_certs/$(basename $f)
+done
 
 cp ~/.zprofile ~/code/zprofile
 
