@@ -16,7 +16,7 @@ c2="$(tput setaf 12)"
 enc ~/.zprofile ~/.dotfiles/.zprofile_encrypted                       # encrypt zprofile
 enc ~/.snowsql/config ~/.dotfiles/.snowsql_config_encrypted           # encrypt snowsql config
 
-for f in $(ls ~/macbook_certs); do
+for f in ~/macbook_certs/*; do
     enc $f ~/.dotfiles/mb_certs_encrypted/$f 
 done
 
