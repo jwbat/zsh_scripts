@@ -2,6 +2,7 @@
 
 # Description
 # git push listed repos
+# vsd = ventacity-saas-devel
 
 # Usage
 # gg
@@ -16,7 +17,7 @@ c2="$(tput setaf 12)"
 enc ~/.zprofile ~/.dotfiles/.zprofile_encrypted                       # encrypt zprofile
 enc ~/.snowsql/config ~/.dotfiles/.snowsql_config_encrypted           # encrypt snowsql config
 
-for f in ~/macbook_certs/*; do
+for f in ~/macbook_certs/*; do                                        # encrypt vsd certs
     enc $f ~/.dotfiles/mb_certs_encrypted/$(basename $f)
 done
 
@@ -31,7 +32,7 @@ done
 dcr ~/.dotfiles/.zprofile_encrypted ~/.zprofile                       # decrypt zprofile
 dcr  ~/.dotfiles/.snowsql_config_encrypted ~/.snowsql/config          # decrypt snowsql config
 
-for f in ~/.dotfiles/mb_certs_encrypted/*; do
+for f in ~/.dotfiles/mb_certs_encrypted/*; do                         # decrypt vsd certs
     dcr $f ~/macbook_certs/$(basename $f)
 done
 
