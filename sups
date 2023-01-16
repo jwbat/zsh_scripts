@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+clear;
+
 echo "$gold
 \t ashwagandha, berberine, NMN, D3, stinging nettles, willow bark, C500 tabs
 \t resveratrol, prostapollen, kyolic immune support, reishi caps, AOR prostate,

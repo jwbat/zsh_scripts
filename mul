@@ -1,7 +1,7 @@
 #! python3
 
 # Usage
-# mult <arg1> <arg2> ... <argN> 
+# mul <arg1> <arg2> ... <argN> 
 
 import sys
 from math import prod
@@ -11,8 +11,8 @@ from colored import fg
 color = fg(214)
 
 try:
-    ans = prod([float(x) for x in sys.argv[1:]])
+    ans = prod([eval(x) for x in sys.argv[1:]])
     print(color + str(ans).rjust(30))
 
 except:
-    print('usage: mult <number1> <number2> ...')
+    print(' usage: mul <number1> <number2> ...')
