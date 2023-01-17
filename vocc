@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Description
+# occupancy sensors 
+
+echo "$aqua
+\t VS121-915M
+\t VS132-915M
+"
+
+exit 0
