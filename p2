@@ -1,9 +1,14 @@
-#! /Users/james/.pyenv/shims/python3
+#! python3
 
 # Usage
 # p2  
 
 from colored import fg
+import subprocess
+
+
+subprocess.run('clear')
+
 
 blue = fg(123)
 cornsilk = fg(230)

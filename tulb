@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Description
-# cp binary file, 'm' to /usr/local/bin 
+# cp binary file, 'm' to /usr/local/bin  ("ulb")
 
 # Usage
 # tubl <file name> 
