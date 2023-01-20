@@ -1,0 +1,26 @@
+#! python3
+import sys
+from colored import fg
+
+# convert mm to feet
+
+color = fg(214)
+
+def mm_to_ft(mm):
+    return mm / 304.8
+ 
+def print_usage():
+    print(' usage: mm-ft <number>')
+
+
+if len(sys.argv) != 2:
+    print_usage()
+
+
+try:
+    mm = eval(sys.argv[1])
+    ft = mm_to_ft(mm)
+    print('\n' + color + str(ft).rjust(30) + '\n')
+
+except:
+    print_usage()

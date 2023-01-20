@@ -10,33 +10,32 @@
 # Usage
 # greek
 
-c="$(tput setaf 200)"
+clear;
 
-
-echo "$c
-              Α	α       alpha       a
-              Β	β       beta        b
-              Γ	γ       gamma       g
-              Δ	δ       delta       d
-              Ε	ε       epsilon     e
-              Ζ	ζ       zêta        z
-              Η	η       êta         ê
-              Θ	θ       thêta      th
-              Ι	ι       iota        i
-              Κ	κ       kappa       k
-              Λ	λ       lambda      l
-              Μ	μ       mu          m
-              Ν	ν       nu          n
-              Ξ	ξ       xi         ks
-              Ο	ο       omikron     o
-              Π	π       pi          p
-              Ρ	ρ       rho         r
-              Σ	σ       sigma       s
-              Τ	τ       tau         t
-              Υ	υ       upsilon     u
-              Φ	φ       phi         f
-              Χ	χ       chi        ch
-              Ψ	ψ       psi        ps
-              Ω	ω       omega       ô
+echo "
+$gold              Α	α $pink       alpha      $red a
+$gold              Β	β $pink       beta       $red b
+$gold              Γ	γ $pink       gamma      $red g
+$gold              Δ	δ $pink       delta      $red d
+$gold              Ε	ε $pink       epsilon    $red e
+$gold              Ζ	ζ $pink       zêta       $red z
+$gold              Η	η $pink       êta        $red ê
+$gold              Θ	θ $pink       thêta      $red th
+$gold              Ι	ι $pink       iota       $red i
+$gold              Κ	κ $pink       kappa      $red k
+$gold              Λ	λ $pink       lambda     $red l
+$gold              Μ	μ $pink       mu         $red m
+$gold              Ν	ν $pink       nu         $red n
+$gold              Ξ	ξ $pink       xi         $red ks
+$gold              Ο	ο $pink       omikron    $red o
+$gold              Π	π $pink       pi         $red p
+$gold              Ρ	ρ $pink       rho        $red r
+$gold              Σ	σ $pink       sigma      $red s
+$gold              Τ	τ $pink       tau        $red t
+$gold              Υ	υ $pink       upsilon    $red u
+$gold              Φ	φ $pink       phi        $red f
+$gold              Χ	χ $pink       chi        $red ch
+$gold              Ψ	ψ $pink       psi        $red ps
+$gold              Ω	ω $pink       omega      $red ô
 "
 exit 0

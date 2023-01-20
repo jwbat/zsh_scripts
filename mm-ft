@@ -1,8 +1,0 @@
-#! python3
-import sys
-
-# convert mm to feet
-
-print(float(eval(sys.argv[1])) / 304.8)
- 
-
