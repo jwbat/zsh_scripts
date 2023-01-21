@@ -1,0 +1,15 @@
+#! python3
+
+# Description
+# 
+
+# Usage
+# 
+
+import subprocess
+
+
+#ans = subprocess.run(['pow', '3', '4'], text = True, stdout=subprocess.Pipe, check=True)
+x = subprocess.run(['pow', '3', '4'], text = True, stdout=subprocess.Pipe, check=True)
+print(x)
+

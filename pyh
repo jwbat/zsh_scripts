@@ -6,14 +6,13 @@
 # Usage
 # pyh 
 
-c="$(tput setaf 220)"
-echo "${c}
-\t brew install pyenv       (edit .zprofile, .zshrc; see: towardsdatascience)
-\t pyenv install -l         (see available versions)
-\t pyenv install 3.10.3
-\t pyenv global 3.10.3      (make version available everywhere)
-\t pyenv local 3.10.3       (make only current directory use this version)
-\t python pgm.py            (use the enabled version of python)
+echo "
+\t $gold brew install pyenv     $sea  (edit .zprofile, .zshrc; see: towardsdatascience)
+\t $gold pyenv install -l       $sea  (see available versions)
+\t $gold pyenv install 3.10.3
+\t $gold pyenv global 3.10.3    $sea  (make version available everywhere)
+\t $gold pyenv local 3.10.3     $sea  (make only current directory use this version)
+\t $gold python pgm.py          $sea  (use the enabled version of python)
 "
 
 

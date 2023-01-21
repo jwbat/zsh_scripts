@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Usage
-# opt [-p] 
+# opt [-p | -l | ?] 
 
 while getopts "p:l" opt; do
     case $opt in

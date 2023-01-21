@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+# Usage
+# createscript <name_of_script> 
+
+name=$1
+
+echo "#! python3
+
+# Description
+# 
+
+# Usage
+# 
+
+" >> $name
+
+/bin/chmod 744 $name
+
+
+exit 0
