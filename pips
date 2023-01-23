@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# Description
+# pips = "pip save"
+# save current pip list to stuff/piplist.txt 
+
+# Usage
+# pips
+
+pip list > ~/code/shell/scripts/stuff/piplist.txt;
+
+exit 0
