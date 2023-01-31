@@ -1,3 +1,6 @@
+01/30/23
+    PTO - driving to pdx.  SW team meeting.  Look into CA certificate expiration for CRDB Serverless.
+
 01/26/23
     work with Pat on Lambda env, use his x86 - compiled pscyopg2 library; finish env & test
 
