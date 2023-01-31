@@ -19,8 +19,13 @@ echo "$c1
 \t ln -s /path/to/original /path/to/symlink   \t $c2 create symlink  $c1
 \t rm /path/to/symlink                        \t $c2 remove symlink  $c1
 \t man zshmisc                                \t $c2 prompt sequences  $c1
+
+\t gunzip file.tar.gz
+\t tar -xvf file.tar
+
 \t tar -czf LotsOfFiles.tgz LotsOfFiles       \t $c2 -z = compress  $c1
 \t tar -xvf LotsOfFiles.tgz                   \t $c2 -x = un-compress  $c1
+
 \t ps -ax                                     \t $c2 running process  $c1
 \t env                                        \t $c2 environment variables $c1
 \t ps -ax | grep terminal                     \t $c2                  $c1

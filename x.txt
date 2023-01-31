@@ -1,0 +1,15 @@
+How do I make a statically linked psycopg2 module with ssl support ?
+
+To make a statically linked psycopg2 module with SSL support,
+you will need to first install the dependencies for psycopg2 and OpenSSL.
+You can install these dependencies using a package manager such as pip or apt.
+Next, you will need to download the source code for psycopg2 from the official website or using pip.
+Once you have the source code, you will need to edit the 
+setup.cfg file to include the path to your OpenSSL libraries.
+Then, you will need to use the pip command to build and install the module with the static linking flag, such as:
+
+pip install --no-binary :all: psycopg2 
+
+It is important to specify the flag --no-binary :all: as it will ensure that only 
+pure python modules are installed and not any precompiled C modules.
+This will statically link the psycopg2 module with SSL support. Keep in mind that this process may vary depending on the specific system and version of the dependencies.

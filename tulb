@@ -6,6 +6,6 @@
 # Usage
 # tubl <file name> 
 
-sudo cp 'm' '/usr/local/bin/'${1}
+sudo cp $1 '/usr/local/bin/'${1}
 
 exit 0

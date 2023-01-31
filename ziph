@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+echo "$gold
+\t gunzip file.tar.gz
+\t tar -xvf file.tar
+
+\t tar -czf LotsOfFiles.tgz LotsOfFiles       \t $c2 -z = compress  $c1
+\t tar -xvf LotsOfFiles.tgz                   \t $c2 -x = un-compress  $c1
+
+"
+
+exit 0

@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Description
+# convert a foo.tar.gz file to a package.zip file 
+
+# Usage
+# ttz <foo.tar.gz> 
+
+tar -xzf $1 && zip package.zip $(tar tf $1)
+
+exit 0

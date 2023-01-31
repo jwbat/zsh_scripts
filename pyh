@@ -9,10 +9,20 @@
 echo "
 \t $gold brew install pyenv     $sea  (edit .zprofile, .zshrc; see: towardsdatascience)
 \t $gold pyenv install -l       $sea  (see available versions)
+\t $gold pyenv versions         $sea  (see versions installed on your system)
 \t $gold pyenv install 3.10.3
 \t $gold pyenv global 3.10.3    $sea  (make version available everywhere)
 \t $gold pyenv local 3.10.3     $sea  (make only current directory use this version)
 \t $gold python pgm.py          $sea  (use the enabled version of python)
+
+    - go to your ubuntu VM
+    - create a Python 3.8 virtual environment
+    - activate it
+    - pip install psycopg2
+
+    - find the path of that module
+    - copy it to your project root
+    - use the x86 architecture
 "
 
 
