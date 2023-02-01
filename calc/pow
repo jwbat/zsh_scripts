@@ -12,8 +12,8 @@ if len(sys.argv) != 3:
     exit()
 
 try:
-    x = float(eval(sys.argv[1]))
-    y = float(eval(sys.argv[2]))
+    x = eval(sys.argv[1])
+    y = eval(sys.argv[2])
     ans = str(pow(x, y))
     print(color + ans.rjust(30))
 
