@@ -1,3 +1,8 @@
+02/06/23
+    SW Team mtg.  Help Pat.  aggregate building energy consumption by time GQL query
+
+-------------------------------------------------------------------------------------------------------------------------
+
 01/30/23
     PTO - driving to pdx.  SW team meeting.  Look into CA certificate expiration for CRDB Serverless.
 
