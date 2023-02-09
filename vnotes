@@ -12,8 +12,10 @@
 echo "$red
 
 \t  what would you like to monitor with a sensor?
-
 \t  https://js.masterpassword.app
+
+\t  
+
 
 "
 
