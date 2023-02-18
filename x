@@ -1,19 +1,12 @@
 #! python3
-
 import os
 import sys
 import subprocess as sp
-from colored import fg
 
-color = fg(153)
-#ui = os.getenv('UI')
-path = os.path.expanduser('~/code')
-print(color)
 
-#sp.run(['cd', path])
+v     = os.path.expanduser('~/nvim-osx64/bin/nvim')
+path  = os.path.expanduser('~/code/ventacity/sbg-webapp/modules/vue-ui/src')
+ui    = os.getenv('UI')  # files to open
 
-try:
-    p1 = sp.run(['cd', path], capture_output=True, text=True)
-    print(p1.stdout)
-except:
-    print('oops')
+os.chdir(path)
+sp.run(v + ui, shell=True)
