@@ -1,20 +1,14 @@
 #!/bin/zsh
 
-# Author: James Batman
-# Date Created: 
-# Last Modified: 
-
-# Description
-# 
-
-# Usage
-# 
 echo "$red
 
-\t  what would you like to monitor with a sensor?
-\t  https://js.masterpassword.app
+\t what would you like to monitor with a sensor?
+\t https://js.masterpassword.app
+$grey
+\t March 14 - 17 Jonah @ lorawan conference 
 
-\t  
+\t CRDB: ubx-dev
+\t IAQ Conditions -- Dashboard for IAQ Pro100 IAQ1 
 
 
 "

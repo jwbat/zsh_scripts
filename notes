@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+echo "$red
+\t Phoebe Bridgers (singer)
+"
+
+exit 0

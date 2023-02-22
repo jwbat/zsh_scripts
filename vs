@@ -1,5 +1,39 @@
+02/21/23
+    Git study.  Discuss next projects.  Apryse / PDFTron pdf linearization.
+
+02/20/23
+    VS Holiday: Presidents Day
+
+-------------------------------------------------------------------------------------------------------------------------
+
+02/16/23
+    consult with Jonah on features & style of aggregate enery chart; finish chart; Git study
+
+02/15/23
+    (same as 14th)
+
+02/14/23
+    Highcharts stacked column chart Vue component for building aggregate energy
+
+02/13/23
+    SW Team mtg.
+    update GQL in aggregate energy query with a simpler, better SQL statement, other refactoring;
+    look at luxon library docs & try out their datetime object methods
+
+02/09/23
+    discussion on Adam's updated Building Energy Report & comments
+    update aggregate energy query to be able return a total energy consumed from start date to end date.
+    Look into the API for stacked bar charts in Highcharts
+
+02/08/23
+    minor refactoring in building aggregate energy query
+    make a flow diagram for energy query;  meeting with Jonah: energy pro
+
+02/07/23
+    aggregate building energy consumption query 
+
 02/06/23
-    SW Team mtg.  Help Pat.  aggregate building energy consumption by time GQL query
+    SW Team mtg.  Assist Pat in AWS IoT.  aggregate building energy consumption GQL query
 
 -------------------------------------------------------------------------------------------------------------------------
 
