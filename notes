@@ -1,6 +1,8 @@
 #!/bin/zsh
 
-echo "$red
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+
+echo "$pg
 \t Phoebe Bridgers (singer)
 "
 

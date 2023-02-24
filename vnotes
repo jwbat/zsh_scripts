@@ -1,14 +1,18 @@
 #!/bin/zsh
 
-echo "$red
+r=$red; g=$gold; y=$grey
 
+echo "$r 
 \t what would you like to monitor with a sensor?
 \t https://js.masterpassword.app
-$grey
+$y 
 \t March 14 - 17 Jonah @ lorawan conference 
-
+$y 
 \t CRDB: ubx-dev
+$y 
 \t IAQ Conditions -- Dashboard for IAQ Pro100 IAQ1 
+$y 
+\t current: $g git, Fargate, Docker, WebViewer Server
 
 
 "
