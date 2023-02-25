@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+
+echo "$x 
+\t resolve merge conflicts: $a
+\t  1. Open file(s) with merge conflicts
+\t  2. Edit to remove conflicts
+\t  3. Remove conflict markers
+\t  4. Add changes, make a commit
+"
+
+exit 0
