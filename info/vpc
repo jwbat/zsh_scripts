@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+
+
+echo "$k
+\t In the context of Amazon Web Services (AWS), VPC stands for Virtual Private Cloud. A VPC is a logically isolated 
+\t virtual network within the AWS cloud, allowing customers to launch resources such as EC2 instances, RDS 
+\t databases, and Elastic Load Balancers in a virtual network that they define.
+
+\t VPCs give customers control over the virtual networking environment,
+\t including IP address ranges, subnet creation, and routing tables. Customers can also create public
+\t and private subnets to isolate resources, control network access with security groups and network access control lists 
+\t (NACLs), and connect to on-premises networks or other VPCs using VPN or AWS Direct Connect.
+
+\t A VPC can span multiple availability zones within a region, allowing for high availability and fault tolerance.
+\t AWS provides a default VPC for each region, but customers can also create custom VPCs with the desired configuration. 
+\t VPCs are a fundamental building block of AWS infrastructure, and they provide a secure and scalable way to run
+\t resources in the cloud.
+"
+
+
+exit 0

@@ -1,0 +1,36 @@
+#!/bin/zsh
+
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+
+
+echo "$r
+    AWS$g Fargate$k is a highly scalable compute engine for running containerized applications in the cloud.
+    Some common use cases for Fargate include:
+    $x
+    1. $c Microservices$x: Fargate provides a highly scalable and cost-effective way to deploy microservices-based architectures.
+        With Fargate, developers can package individual microservices as container images and deploy them quickly and easily.
+
+    2. $c Batch Processing$x: Fargate can be used to run batch processing workloads,
+        such as data processing or image and video rendering, at scale. By leveraging Fargate,
+        users can quickly spin up the necessary resources to complete these tasks,
+        and then scale back down when the processing is complete.
+
+    3. $c DevOps$x: Fargate can be used in DevOps workflows to create a highly scalable and flexible infrastructure for 
+        continuous integration and continuous delivery (CI/CD) pipelines. By using Fargate, developers can quickly deploy 
+        new builds and test their applications without having to worry about underlying infrastructure management.
+
+    4. $c Machine Learning$x: Fargate can be used to run machine learning workloads, such as training and inference,
+        at scale. With Fargate, users can quickly spin up the resources needed for these tasks,
+        and then scale back down when the processing is complete.
+
+    5. $c Web Applications$x: Fargate can be used to deploy web applications and APIs in a highly scalable 
+        and cost-effective manner.  By leveraging Fargate, users can quickly deploy and scale web applications 
+        and APIs without having to manage the underlying infrastructure. $k
+
+    Overall, AWS Fargate is a highly flexible and scalable compute engine that can be used for a wide range 
+    of use cases that require running containerized applications in the cloud.
+"
+
+
+exit 0

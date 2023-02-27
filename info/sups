@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+clear;
+
+echo "$gold
+\t ashwagandha, berberine, NMN, D3, stinging nettles, willow bark, C500 tabs
+\t resveratrol, prostapollen, kyolic immune support, reishi caps, AOR prostate,
+\t methyl-B12, Ultra-Mag, C1000, taurine powder, vit C powder, whole earth & sea multi,
+\t Wiley's Wild Alaskan fish oil, Super Primrose, lemon greens, MycoForce, MagMind
+" 
+
+exit 0

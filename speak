@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+
+
+speak() {
+  echo $p
+  cat<<EOM
+                 hello, my name is Elena.
+
+EOM
+}
+
+speak
+
+echo $y
+cat<<EOM 
+    this, too
+
+EOM
+
+exit 0

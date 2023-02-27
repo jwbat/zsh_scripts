@@ -1,0 +1,46 @@
+#!/bin/zsh
+
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+
+
+echo "
+\t$g Nginx $k
+\t (pronounced 'engine-x') is a popular open-source web
+\t server software that is used for serving static and dynamic content on the web.
+\t It is known for its high performance, stability, and scalability, and is
+\t often used to serve web applications, reverse proxy, load balancing, and caching.
+\t
+\t Nginx was first released in 2004 and has since become a popular alternative to traditional
+\t web servers like Apache. It is designed to be lightweight and fast, and
+\t can handle a large number of concurrent connections with low resource utilization.
+
+\t Nginx supports a wide range of protocols including HTTP, HTTPS, SMTP, POP3, and IMAP,
+\t and can be used as a reverse proxy to distribute traffic among multiple servers.
+\t It also has built-in load balancing and caching features that help to optimize
+\t performance and improve server efficiency.
+
+\t Nginx is widely used by many high-traffic
+\t websites including Airbnb, Netflix, GitHub, and WordPress.com. It runs
+\t on most operating systems including Linux, BSD, macOS, and Windows.
+
+\t Nginx itself is written in the C programming language, but it also has modules
+\t that can be written in other programming languages to extend its functionality.
+
+\t One of the most common programming languages used with Nginx is Lua. Nginx has a built
+\t -in Lua module that allows developers to write Lua scripts that can be executed within
+\t the server configuration. This can be useful for things like dynamic content generation,
+\t authentication, and access control.
+
+\t Nginx can also be extended using modules written in
+\t other languages such as Perl, Python, and Ruby. These modules can be
+\t used for a wide range of purposes such as adding support for new protocols,
+\t handling dynamic requests, and interacting with databases.
+
+\t Additionally, Nginx can be used as a reverse proxy for backend servers running any
+\t programming language that can serve HTTP or FastCGI, such as PHP, Node.js, and Java. This
+\t allows Nginx to act as a front-end load balancer and caching layer for
+\t web applications written in a variety of programming languages.
+"
+
+exit 0

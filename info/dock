@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+
+
+echo "
+ $x Clone $k
+    docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+    docker cp repo:/git/getting-started/ .
+    cd getting-started  
+
+ $x Build $k
+    docker build -t docker101tutorial .
+
+ $x Run $k
+    docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+"
+
+
+exit 0
