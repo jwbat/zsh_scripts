@@ -6,12 +6,15 @@
 # Usage
 # hnvm
 
-c="$(tput setaf 160)"
-echo "$c
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+
+clear;
+
+echo "$g
     nvm ls
     nvm ls-remote
     
-    nvm install <version> --latest-npm   // ** best **
+    nvm install <version> --latest-npm   $x // ** best ** $g
     e.g., nvm install 16.14.2 --latest-npm
     
     nvm install-latest-npm
@@ -19,11 +22,11 @@ echo "$c
     nvm alias default 15.3.0
     nvm which <version>
     
-    nvm install <version>   // if not already installed
-                            // nvm will install compatible npm along side node v in:
-                            //  ~/.nvm/versions/node/<version>/lib/node_modules
+    nvm install <version>               $x // if not already installed $g
+                                        $x // nvm will install compatible npm along side node v in: $g
+                                        $x //  ~/.nvm/versions/node/<version>/lib/node_modules $g
     nvm use <version> 
-    sudo rm -R ~/.npm ~/.nvm  // remove before re-install 
+    sudo rm -R ~                        $x /.npm ~/.nvm  // remove before re-install  $g
 
     nvm cache clear
 "

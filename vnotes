@@ -1,18 +1,20 @@
 #!/bin/zsh
 
-r=$red; g=$gold; y=$grey
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
 
 echo "$r 
 \t what would you like to monitor with a sensor?
 \t https://js.masterpassword.app
-$y 
+$k 
 \t March 14 - 17 Jonah @ lorawan conference 
-$y 
+$k 
 \t CRDB: ubx-dev
-$y 
+$k 
 \t IAQ Conditions -- Dashboard for IAQ Pro100 IAQ1 
-$y 
+$k 
 \t current: $g git, Fargate, Docker, WebViewer Server
+
+\t 
 
 
 "

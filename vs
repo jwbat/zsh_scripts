@@ -1,14 +1,29 @@
 #! /bin/zsh
 
+clear;
+
 echo "
-$aqua 02/22/23 $green
+ $aqua 02/28/23 $green
+    Monthly all-company mtg.  Discussion on naming conventions in GQl.  WVS eval.
+
+ $aqua 02/27/23 $green
+    SW Team mtg. pdf linearizations & PDFTron speedtests.  Docker + WebViewer Server evaluation
+-------------------------------------------------------------------------------------------------------------------------
+
+ $aqua 02/23/23 $green
+    ...
+
+ $aqua 02/22/23 $green
     apryse docs.  Linearization of PDFs using the Apryse SDK.
 
-$aqua 02/21/23 $green
+ $aqua 02/21/23 $green
     Git study.  Discuss next projects: Apryse / PDFTron pdf linearization.
 
-$aqua 02/20/23 $green
+ $aqua 02/20/23 $green
     VS Holiday: Presidents Day
+
+"
+exit 0
 
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -108,6 +123,7 @@ $aqua 01/03/23 $green
     Review & merge PR for sbp-mono energyrpo; configure AWS CLI & test usage; test AWS SDK
 
 -------------------------------------------------------------------------------------------------------------------------
+
 $aqua 12/21/22 $green
     incorporate newly provisioned Milesight devices' fields for decoding in Lambda.  watch Cloudwatch logs.  query Lakehouse.
 
@@ -130,4 +146,6 @@ $aqua 12/05/22 $green
     re-clone standalone-dev-env, run ./setup.sh, branch off py3-develop, add energypro queries,  
     re-factor for new directory structure since 1st writing the queries, test. 
     Milesight docs  
+
 "
+exit 0
