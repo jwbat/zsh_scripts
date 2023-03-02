@@ -1,0 +1,27 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+
+clear;
+
+echo "$r
+  Fargate $x
+    How does it know when it needs to spin up more containers?
+        Is it based on CPU/RAM/network utilization? Something else?
+        Is is something we can define/control if we want to?
+           prefer completely autonomous
+           can it work for all planned use cases? $g  
+
+   - each task has a unique private IP      $x thru an elastic network interface (ENI) $g
+   - only define a single container port    $x host port is not applicable
+                                             each ENI gets the same container port $p
+   - IAM Roles $g are assigned per task definition   $x to allow for S3 access, e.g. 
+                 (the role is defined at the task definition level) $g
+   - task definitions can have environment variables $x e.g.: $s
+        hard-coded URLs
+        SSM Parameter Store or Secrets Manager(API keys, shared configs) - reference w/in task def $x
+            (fetched & resolved at runtime) $s
+"
+
+
+exit 0

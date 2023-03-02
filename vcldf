@@ -1,0 +1,39 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+clear;
+
+echo "$h
+   AWS CloudFormation (infrastructure as code) $s
+    specify $x e.g.: $pg
+     security group 
+     ECS
+     S3 bucket $k
+     - no resources are manually created
+     - the code can be version controlled
+     - able to destroy & re-create an infrastructure as often as you want
+     - create many stacks for many apps
+
+    Templates are uploaded in S3 $x & then referenced in CloudFormation $k
+    Stack are identified by a name
+    Deleting a stack deletes all its resources!
+$h
+  Deploying a CloudFormation template: $a
+    manually:$k     edit templates in CloudFormation Designer, or
+                  use the console to input parameters $a
+
+    automated:$k    edit templates in a$y YAML$k file, and
+                  use the AWS CLI to deploy the template(s)
+$h
+  Template components: $a
+    1. AWS resources    $x are declared $a
+    2. Parameters       $x dynamic inputs can ask for in template $a
+    3. Mappings         $x static variables $a
+    4. Outputs          $x references to what has been created for other use by other templates, e.g. $a
+    5. Conditionals     $x list of conditions to perform resource creation $a
+    6. Metadata
+"
+
+exit 0
