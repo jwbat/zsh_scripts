@@ -1,0 +1,36 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo " $k
+    I think this could be a very powerful way for us to perform CRDB administrative tasks,
+    when we don’t yet have a UI built for it.  e.g. We presently have an “invitation” process
+    to invite an email address to be allowed to login.
+    But that is performed right now with a Python CLI program that William made.
+    It would be cool if we could very easily build new WebUIs to do tasks like that.
+
+    Since you are a CRDB pro, you could try setting up Retool to work with your CRDB Serverless cluster 
+    and see if you can prove out an example of modifying a table using this tool.
+
+     I want to empower non-technical people in the company to do things like invite a user to UBX.
+     It would be cool if we can use Retool to make mini-web-apps that we can provide to our internal
+     Ops teams to do stuff like this.  The email invite is one small example, but I could see other
+     future examples like a Web App that enables a support person to analyze every one of our 
+     LoRaWAN Gateways and End-Devices, to find ones that have been offline for too long,
+     so they can reach out and try to contact someone on-site to investigate it.
+     Again that’s just a hypothetical use case for Retool, but one that could be pretty handy.
+     And it would be a lot of work to build that from scratch with Vue/GQL
+
+    So Retool would skip over the layer of having to write an API in GQL or REST and get access just to pure SQL.
+    Then any of us could work quickly to build new internal apps to do stuff to any data in CRDB.
+    We probably want to restrict this almost purely to read-only operations. Or create a CRDB u
+    ser that only has access to the invitations table, for example.
+    Otherwise it’s kinda dangerous to give Retool blanked access to ALL CRDB data.
+
+    Bonus goal: See if Retool could generate an email to the inviteee that welcomes them to UBX
+    and gives them a link to the website and invites them to login
+"
+
+
+exit 0
