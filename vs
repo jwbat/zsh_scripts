@@ -3,15 +3,22 @@
 clear;
 
 echo "
+
+ $aqua 03/06/23 $green
+    weekly SW team meeting.  update GQL with building_uuid.  Building Energy Report components
+
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+
  $aqua 03/02/23 $green
-    AWS CloudFormation for WVS deployment. due to issue of the Apryse CF template only geared for deployment
-    to EC2, we're pausing this part of the project for now.  Pivoting to Retool.
+    AWS CloudFormation for WebViewer Server deployment. due to issue of the Apryse CF template only geared for deployment
+    to EC2, we're pausing this part of the project for now.  Discuss Retool project.
 
  $aqua 03/01/23 $green
     WebViewer Server.  Energy pro discussion with Terra & Jonah
 
  $aqua 02/28/23 $green
-    Monthly all-company mtg.  Discussion on naming conventions in GQl.  WVS eval.
+    Monthly all-company mtg.  Discussion on naming conventions in GQl.  WebViewer Server eval.
 
  $aqua 02/27/23 $green
     SW Team mtg. pdf linearizations & PDFTron speedtests.  Docker + WebViewer Server evaluation
@@ -19,16 +26,16 @@ echo "
 -------------------------------------------------------------------------------------------------------------------------
 
  $aqua 02/23/23 $green
-    ...
+    PDF linearization, speed-testing, troubleshooting.  WebViewer Server, Docker, Fargate study
 
  $aqua 02/22/23 $green
-    apryse docs.  Linearization of PDFs using the Apryse SDK.
+    Apryse docs.  Linearization of PDFs using the Apryse SDK.  python script with pikepdf lib
 
  $aqua 02/21/23 $green
     Git study.  Discuss next projects: Apryse / PDFTron pdf linearization.
 
  $aqua 02/20/23 $green
-    VS Holiday: Presidents Day
+    Presidents Day
 
 "
 exit 0
