@@ -5,8 +5,13 @@ clear;
 echo "
 
  $aqua 03/06/23 $green
-    weekly SW team meeting.  update GQL with building_uuid.  Building Energy Report components
+    Consult with Pat on snowpipe creation.  Bugfix in aggEnergyByTime query to handle insufficient data.
 
+ $aqua 03/06/23 $green
+    weekly SW team meeting.  setup s-d-e with AuthO.  Building Energy Report components
+
+"
+exit 0
 -------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -37,8 +42,6 @@ echo "
  $aqua 02/20/23 $green
     Presidents Day
 
-"
-exit 0
 
 #-------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------

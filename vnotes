@@ -1,6 +1,8 @@
 #!/bin/zsh
 
-r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink;
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
 
 echo "$r 
 \t what would you like to monitor with a sensor?
@@ -12,11 +14,9 @@ $k
 $k 
 \t IAQ Conditions -- Dashboard for IAQ Pro100 IAQ1 
 $k 
-\t current: $g git, Fargate, Docker, WebViewer Server
+\t git, Fargate, Docker, WebViewer Server
 
 \t 
-
-
 "
 
 exit 0
