@@ -8,13 +8,12 @@ echo "
     to the ventacity.ubx.UBX_DEVICE_DATA table.
 
  $aqua 03/08/23 $green
-    Query fixes & updates for energy pro.  UI components for energy pro
+    Query updates for energy pro.  UI components for energy pro
 
  $aqua 03/07/23 $green
     Consult with Pat on snowpipe creation.
-    Bugfix in aggEnergyByTime query to handle insufficient data.
-    Troubleshoot login issue.  Update queries in energy pro to enable better
-    handling of fetches of \"no data\" in the UI.
+    Bugfix in aggEnergyByTime query. Troubleshoot login issue.
+    Update queries in energy pro to enable better handling of fetches of \"no data\" in the UI.
 
  $aqua 03/06/23 $green
     weekly SW team meeting.  setup s-d-e with AuthO.  Building Energy Report components
