@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+clear;
+
+echo "
+ $gr SELECT * FROM ubx_device WHERE dev_eui='<your_dev_eui>'; $k
+
+ In the ubx_device_registry table, the serial_number column is the dev_eui.
+ In the ubx_device table, it's dev_eui. column. In the ubx_device table, it's dev_eui.
+
+ $y the gql queries should take assetUuid and use it to look up the regsitryUuid $k
+
+  The extant api code which looks up property trends should show how to do this
+  since those relations don't change, there is a cache in
+  info.context['device_registry'] that can be used to retrieve that stuff
+
+    Starting from$g registry_uuid$k, use$g ubx_registry.serial_number$k to match$g ubx_device.dev_eui$k,
+                                     then$g ubx_device.asset_uuid$k to match$g ubx_asset.asset_uuid$k.
+    Then$g ubx_asset.building_uuid$k is what you need.
+"
+
+exit 0
