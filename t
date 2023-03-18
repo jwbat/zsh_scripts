@@ -1,83 +1,54 @@
-#!/bin/zsh
+#! python3
 
 # Description
-# open a cheatsheet 
+# call the OpenWeatherMap API to get current weather conditions 
 
 # Usage
-# t -[option]
-# example: t -c     crdb sheet
+# t
 
-x="bcdgkmnoprstv"  # options
-#x="dbv"  # options
-color="$(tput setaf 226)"
-#path="~/code/shell/scripts/stuff"
-open="/usr/bin/open"
+import json
+import requests
+from pprint import PrettyPrinter
+from colored import fg
 
-show_options() {
-   echo "$color
- open one of several cheatsheets or tools.
-
- options are:
-     -b, --bash
-     -c, --crdb
-     -d, --dev
-     -g, --git
-     -k, --shellcheck
-     -m, --matplotlib
-     -n, --numpy
-     -o, --vscode
-     -p, --pandas
-     -r, --rust
-     -s, --sql
-     -t, --tmux
-     -v, --vim
-"
-}
-
-if [ $# -eq 0 ]; then
-    show_options
-    exit 0
-fi
-
-for arg in "$@"; do
-  shift
-  case "$arg" in
-           '--bash')    set -- "$@" '-b'   ;;
-           '--crdb')    set -- "$@" '-c'   ;;
-            '--dev')    set -- "$@" '-d'   ;;
-            '--git')    set -- "$@" '-g'   ;;
-     '--matplotlib')    set -- "$@" '-m'   ;;
-          '--numpy')    set -- "$@" '-n'   ;;
-         '--vscode')    set -- "$@" '-o'   ;;
-         '--pandas')    set -- "$@" '-p'   ;;
-           '--rust')    set -- "$@" '-r'   ;;
-            '--sql')    set -- "$@" '-s'   ;;
-           '--tmux')    set -- "$@" '-t'   ;;
-            '--vim')    set -- "$@" '-v'   ;;
-     '--shellcheck')    set -- "$@" '-k'   ;;
-                  *)    set -- "$@" "$arg" ;;
-  esac
-done
+def celc_to_fahr(c):
+    return round(c * 9 / 5 + 32)
 
 
-while getopts $x opt; do
-    case $opt in
-        a) $open 'https://devhints.io';; # all
-        b) $open 'https://devhints.io/bash';;
-        v) $open 'https://devhints.io/vimscript';;
-        k) $open 'https://www.shellcheck.net';;
-        c) $open ~/code/shell/scripts/stuff/cockroachdb_pdfs/*;;
-        g) $open ~/code/shell/scripts/stuff/cheatsheets/git.pdf;;
-        m) $open ~/code/shell/scripts/stuff/cheatsheets/matplotlib.pdf;;
-        n) $open ~/code/shell/scripts/stuff/cheatsheets/numpy.pdf;;
-        o) $ope  ~/code/shell/scripts/stuff/cheatsheets/vscode.pdf;;
-        p) $open ~/code/shell/scripts/stuff/cheatsheets/pandas.pdf;;
-        r) $open ~/code/shell/scripts/stuff/cheatsheets/rust.pdf;;
-        s) $open ~/code/shell/scripts/stuff/cheatsheets/sql.pdf;;
-        t) $open ~/code/shell/scripts/stuff/cheatsheets/tmux.pdf;;
-        *) show_options;;
-    esac
-done
+blue = fg(87)
+red = fg(196)
+light_red = fg(9)
+yellow = fg(192)
+indianred = fg(202)
+khaki = fg(185)
+honeydew = fg(194)
+
+API_KEY = '38fcc06a02e1f1ae47be8cfa445bfe6c'
+CITY = 'White Salmon'
+STATE = 'WA'
+
+response = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={ CITY }&appid={API_KEY}&units=imperial')
+
+#pp = PrettyPrinter(indent=4)
+#pp.pprint(response.json())
+
+temperature = response.json()['main']['temp']
+high        = response.json()['main']['temp_max']
+low         = response.json()['main']['temp_min']
+humidity    = response.json()['main']['humidity']
+description = response.json()['weather'][0]['description']
+wind_speed  = response.json()['wind']['speed']
+
+#temperature, high, low = celc_to_fahr(temperature), celc_to_fahr(high), celc_to_fahr(low)
+temperature, high, low = round(temperature), round(high), round(low)
 
 
-exit 0
+print()
+print(khaki + CITY.rjust(30))
+print(red + 'temperature:'.rjust(25), (honeydew + str(temperature) + '° F').rjust(25))
+print(red + 'high:'.rjust(25), (honeydew + str(high) + '° F').rjust(25))
+print(red + 'low:'.rjust(25), (honeydew + str(low) + '° F').rjust(25))
+print(red + 'humidity:'.rjust(25), (honeydew + str(humidity)).rjust(25))
+print(red + 'description:'.rjust(25), (honeydew + str(description)).rjust(25))
+print(red + 'wind speed:'.rjust(25), (honeydew + str(wind_speed) + ' mph').rjust(25))
+print()
