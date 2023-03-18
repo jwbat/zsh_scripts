@@ -8,7 +8,7 @@
 # Convert F to C or C to F
 
 # Usage
-# temp -[f|c] 30
+# temp -[f | c] 30
 
 if [ -z $1 ] || [ -z $2 ]; then
     echo " usage: temp -f 65 (convert 65 F to C)"

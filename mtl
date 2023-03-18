@@ -1,12 +1,11 @@
 #!/bin/zsh
 
 # Description
-# mac to linux (copy a file or a folder)
+# "mtl" = mac to linux (rsync to Ubuntu $HOME)
 
 # Usage
-# mtl <dirname> 
+# mtl <path> 
 
-#rsync -rv $1 "james@192.168.64.2:/home/james"
 
 echo $A | pbcopy
 
