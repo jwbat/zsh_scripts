@@ -6,13 +6,14 @@
 # Usage
 # t
 
+import os
 import json
 import requests
 from pprint import PrettyPrinter
 from colored import fg
 
-def celc_to_fahr(c):
-    return round(c * 9 / 5 + 32)
+
+os.system('clear')
 
 
 blue = fg(87)
@@ -23,11 +24,13 @@ indianred = fg(202)
 khaki = fg(185)
 honeydew = fg(194)
 
-API_KEY = '38fcc06a02e1f1ae47be8cfa445bfe6c'
+API_KEY = os.getenv('OpenWeatherAPIKey')
 CITY = 'White Salmon'
 STATE = 'WA'
 
 response = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={ CITY }&appid={API_KEY}&units=imperial')
+print(response)
+exit()
 
 #pp = PrettyPrinter(indent=4)
 #pp.pprint(response.json())
@@ -44,11 +47,11 @@ temperature, high, low = round(temperature), round(high), round(low)
 
 
 print()
-print(khaki + CITY.rjust(30))
-print(red + 'temperature:'.rjust(25), (honeydew + str(temperature) + '° F').rjust(25))
-print(red + 'high:'.rjust(25), (honeydew + str(high) + '° F').rjust(25))
-print(red + 'low:'.rjust(25), (honeydew + str(low) + '° F').rjust(25))
-print(red + 'humidity:'.rjust(25), (honeydew + str(humidity)).rjust(25))
-print(red + 'description:'.rjust(25), (honeydew + str(description)).rjust(25))
-print(red + 'wind speed:'.rjust(25), (honeydew + str(wind_speed) + ' mph').rjust(25))
+print(khaki + CITY.rjust(40))
+print(red + 'temperature:'.rjust(25), (honeydew + str(temperature) + '° F').rjust(35))
+print(red + 'high:'.rjust(25), (honeydew + str(high) + '° F').rjust(35))
+print(red + 'low:'.rjust(25), (honeydew + str(low) + '° F').rjust(35))
+print(red + 'humidity:'.rjust(25), (honeydew + str(humidity)).rjust(35))
+print(red + 'description:'.rjust(25), (honeydew + str(description)).rjust(35))
+print(red + 'wind speed:'.rjust(25), (honeydew + str(wind_speed) + ' mph').rjust(35))
 print()
