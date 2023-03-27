@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "$x
+    When do our individual CRDB test clusters get updated / re-populated?
+    Is it just on ./setup or on every ./start ?
+    Is there  a script that can be run on its own to do that ?
+$k
+    just on setup via rebuild_ubx_tables.sh and setup_ubx_tables.sh .
+    The former at this point is just a wrapper for sbp-mono/strawberry-gql/ubx_pave.sql ,
+    and the latter calls sbp-mono/strawberry-gql/dev-migration/populate_test_data.sh ,
+    which executes various python scripts from the same directory to populate the database.$x
+ -------------------------------------------------------------------------------------------
+"
+
+exit 0

@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+
+outfile="$HOME/Desktop/hd.csv"
+statement="
+SELECT a.name, a.building_uuid, d.dev_eui, r.registry_uuid
+FROM ubx_device d 
+JOIN ubx_asset a ON d.asset_uuid=a.asset_uuid 
+JOIN ubx_device_registry r ON r.serial_number=d.dev_eui
+WHERE a.name LIKE '%HotDrop%';
+"
+
+cockroach sql --database="defaultdb" --execute=$statement --url=$gerbil > $outfile;
+
+if [ "$?" -eq 0 ]; then
+  echo "CRDB local dumped successfully to $outfile"
+else
+  echo "Error: Database dump failed"
+fi
+
+bat $outfile;
+
+
+
+exit 0

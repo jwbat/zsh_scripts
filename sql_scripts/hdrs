@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "$r
+ 75190fee-d1b2-461f-8684-5fdcca93f1af 
+ f53357dc-8766-473e-a67a-02cb5765d22d 
+ c0ab9f33-cdfc-4be6-9b97-4eb5f2b91bd7 
+ f9e2ce41-1d1d-497f-bbc3-15e176e1ec58
+"
+
+#statement="
+#SELECT DISTINCT registry_uuid
+#FROM ubx_device_data
+#WHERE GET(DATA, 'average_milliampere') IS NOT NULL;
+#"
+
+#outfile=$HOME/Desktop/outfile.csv:csv
+#snowsql -q $statement -o "$outfile";
+#bat $outfile;
+
+exit 0

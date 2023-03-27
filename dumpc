@@ -1,5 +1,0 @@
-#!/bin/zsh
-
-cockroach dump defaultdb --dump-mode=schema-only --url=$UBX_GLOBAL > $HOME/Desktop/dump.sql
-
-exit 0

@@ -29,8 +29,8 @@ CITY = 'White Salmon'
 STATE = 'WA'
 
 response = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={ CITY }&appid={API_KEY}&units=imperial')
-print(response.json())
-exit()
+#print(response.json())
+#exit()
 
 #pp = PrettyPrinter(indent=4)
 #pp.pprint(response.json())

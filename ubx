@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "
+        $a dev_eui $k
+        8b4ef86c2671da9d 
+        2780edba388cc55a           $x may soon start seeing some real data as well $k
+"
+
+exit 0
