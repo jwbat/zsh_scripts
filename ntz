@@ -1,0 +1,28 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+clear;
+
+echo "$x
+    TIMESTAMP_NTZ format: $a 'YYYY-MM-DD HH:MI:SS.FFF' $k
+
+    YYYY represents the four-digit year.
+    MM represents the two-digit month (01-12).
+    DD represents the two-digit day of the month (01-31).
+    HH represents the two-digit hour (00-23).
+    MI represents the two-digit minute (00-59).
+    SS represents the two-digit second (00-59).
+    FFF represents the three-digit fraction of a second (000-999).
+$gr
+    Start:  2022-03-23 18:00:00.000
+    End:    2022-03-30 18:00:00.000
+$x
+     the first bucket would have a timestamp of  $p
+       2022-03-23 18:00:00.000
+$k
+    And include the aggregated value from 2022-03-23 18:00:00.000 to 2022-03-24 18:00:00.000 (+24 hours or +1 day)
+"
+
+exit 0

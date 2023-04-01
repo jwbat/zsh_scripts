@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+# Description
+# search for files containing both search terms
+
+rg -l $1 | xargs rg -l $2
+
+exit 0

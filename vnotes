@@ -19,7 +19,12 @@ $k
 \t Mission Cloud  /  AWS  mgmt
 \t DataDog or New Relic  metrics monitoring
 
-
+$y
+1 invitation login email  (select only !)
+2 device status   acct -> bldg -> show most recent battery & rssi
+    - how many days since we heard from this device (SF)
+    - most recent timestamp from SF
+    - battery, rssi
 \t 
 "
 

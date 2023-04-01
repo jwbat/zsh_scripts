@@ -6,15 +6,13 @@
 # Usage
 # todo 
 
-echo "
-$red    ==============================================
-$yellow    1. $grey todo script                         (done)
-$yellow    2. $grey download Sal's data from Vutility   (done)
-$yellow    3. $grey make new repo for Hotdrop           (done) 
-$yellow    4. $sea transform data
-$yellow    5. $sea snowsql CLI install & config
-$yellow    6. $sea upload data to SF
-$red    ==============================================
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "k
+$x    ==============================================
+$s        JOIN sql
+$x    ==============================================
 "
 
 exit 0
