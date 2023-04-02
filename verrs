@@ -6,11 +6,11 @@ c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
 echo "
-$p      ~ $g ssh backend@deviaqpro.ventacity.net
+$p      ~ $g ssh backend@deviaqpro.ventacity.net    $x sshd  (alias)
 $p      ~ $g journalctl -f
 $p      ~ $g journalctl --user -u graphql-server.service
 $c
-     energy_pro.25[766412]: in energy_pro; objects/energy_pro.py
+     energy_pro.25[766412]: in energy_pro; $y objects/energy_pro.py $c
      TypeError: list indices must be integers or slices, not NoneType
      line 130, in fetch_energy_core; return build_energy_by_time(rcds, start_date, end_date);
 
@@ -21,7 +21,7 @@ $c
      line 22, in energy_consumption_by_time;
      return await fetch_energy(registry_info['registry_uuid'], start_date, end_date);
 
-     gql_server/objects/energy_pro.py,
+     $y objects/energy_pro.py, $c
      line 150, in fetch_energy;
      return await async_fetch_energy_core(registry_uuid, start_date, end_date);
 
