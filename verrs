@@ -1,0 +1,31 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+clear;
+
+echo "
+$p      ~ $g ssh backend@deviaqpro.ventacity.net
+$p      ~ $g journalctl -f
+$p      ~ $g journalctl --user -u graphql-server.service
+$c
+     energy_pro.25[766412]: in energy_pro; objects/energy_pro.py
+     TypeError: list indices must be integers or slices, not NoneType
+     line 130, in fetch_energy_core; return build_energy_by_time(rcds, start_date, end_date);
+
+     line 80, in build_energy_by_time; lst[idx] = datum;
+     TypeError: list indices must be integers or slices, not NoneType;;
+
+     gql_server/queries/energy_pro.py, 
+     line 22, in energy_consumption_by_time;
+     return await fetch_energy(registry_info['registry_uuid'], start_date, end_date);
+
+     gql_server/objects/energy_pro.py,
+     line 150, in fetch_energy;
+     return await async_fetch_energy_core(registry_uuid, start_date, end_date);
+
+     async_fetch_energy_core;
+     return await blocking_task;
+"
+exit 0
