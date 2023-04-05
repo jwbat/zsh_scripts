@@ -6,6 +6,33 @@ c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
 echo "$x
+    SELECT
+       TIME_SLICE(billing_date, 2, 'WEEK', 'START') AS \"START OF SLICE\",
+       TIME_SLICE(billing_date, 2, 'WEEK', 'END')   AS \"END OF SLICE\",
+       COUNT(*) AS \"NUMBER OF LATE BILLS\",
+       SUM(balance_due) AS \"SUM OF MONEY OWED\"
+    FROM accounts
+    WHERE balance_due > 0    -- bill hasn't yet been paid
+    GROUP BY \"START OF SLICE\", \"END OF SLICE\";
++----------------+--------------+----------------------+-------------------+
+| START OF SLICE | END OF SLICE | NUMBER OF LATE BILLS | SUM OF MONEY OWED |
+|----------------+--------------+----------------------+-------------------|
+| 2018-07-23     | 2018-08-06   |                    2 |            300.00 |
+| 2018-08-20     | 2018-09-03   |                    1 |            400.00 |
++----------------+--------------+----------------------+-------------------+
+
+    SELECT 
+      TIME_SLICE(stamp, 24, 'HOUR') AS start,
+      max(data:\"accumulated_nanoampere_hour\") AS max_accum_na_hr,
+      min(data:\"accumulated_nanoampere_hour\") AS min_accum_na_hr
+    FROM my_table
+    WHERE stamp >= 'start_date' 
+      AND stamp < 'end_date'
+    GROUP BY start
+    ORDER BY start ASC;
+
++----------------+--------------+----------------------+-------------------+
+
     TIMESTAMP_NTZ format: $a 'YYYY-MM-DD HH:MI:SS.FFF' $k
 
     YYYY represents the four-digit year.

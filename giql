@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "
+$g    Command + Enter       $a     Run the current query.
+$g    Option + Up           $a     Move the current line up.
+$g    Option + Down         $a     Move the current line down.
+$g    Command + /           $a     Comment out the current line or selection.
+$g    Control + Space       $a     Trigger the auto-complete suggestions.
+$g    Command + K           $a     Clear the query editor.
+$g    Command + P           $a     Open the Command Palette to access additional commands.
+$g    Command + Shift + P   $a     Open the Command Palette with focus on the search bar.
+$g    Command + D           $a     Duplicate the current line or selection.
+"
+
+exit 0
