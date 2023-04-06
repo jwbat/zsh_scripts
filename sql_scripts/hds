@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+bat /Users/james/Desktop/hd.csv
+
+exit 0

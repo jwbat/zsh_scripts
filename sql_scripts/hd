@@ -3,6 +3,14 @@
 
 outfile="$HOME/Desktop/hd.csv"
 statement="
+SELECT a.name, d.dev_eui, r.registry_uuid, a.asset_uuid
+FROM ubx_device d 
+JOIN ubx_asset a ON d.asset_uuid=a.asset_uuid 
+JOIN ubx_device_registry r ON r.serial_number=d.dev_eui
+WHERE a.known_asset_uuid='fa4338cc-3efc-400d-b704-e1b75a00ac44';
+"
+
+statement2="
 SELECT a.name, a.building_uuid, d.dev_eui, r.registry_uuid
 FROM ubx_device d 
 JOIN ubx_asset a ON d.asset_uuid=a.asset_uuid 
