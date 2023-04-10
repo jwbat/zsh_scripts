@@ -1,9 +1,9 @@
 #!/bin/zsh
 
+outfile="$HOME/Desktop/hdb.csv"
 
-outfile="$HOME/Desktop/hd.csv"
 statement="
-SELECT a.name, d.dev_eui, r.registry_uuid, a.asset_uuid
+SELECT a.name, d.dev_eui, a.building_uuid
 FROM ubx_device d 
 JOIN ubx_asset a ON d.asset_uuid=a.asset_uuid 
 JOIN ubx_device_registry r ON r.serial_number=d.dev_eui
@@ -19,7 +19,6 @@ else
 fi
 
 bat $outfile;
-
 
 
 exit 0

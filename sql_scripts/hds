@@ -1,5 +1,6 @@
 #!/bin/zsh
 
-bat /Users/james/Desktop/hd.csv
+bat /Users/james/Desktop/hd.csv;
+bat /Users/james/Desktop/hdb.csv;
 
 exit 0
