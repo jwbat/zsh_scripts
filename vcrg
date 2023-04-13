@@ -1,0 +1,39 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "$s
+           table_name                  |  estimated_row_count   $pg
+      +--------------------------------+-----------------------+
+        ubx_account                    |          0 
+        ubx_account_manufacturer       |          0 
+        ubx_account_model_number       |          0 
+        ubx_asset                      |          0 
+        ubx_asset_category             |          8 
+        ubx_asset_type                 |         93 
+        ubx_building                   |          0 
+        ubx_building_group             |          0 
+        ubx_building_group_map         |          0 
+        ubx_default_thresholds         |         12 
+        ubx_device                     |          0 
+        ubx_device_cluster_map         |         16 
+        ubx_device_data_cache          |         11 
+        ubx_device_property_state      |         71 
+        ubx_device_registry            |         16 
+        ubx_document                   |          0 
+        ubx_floor                      |          0 
+        ubx_floorplan                  |          0 
+        ubx_known_asset                |         17 
+        ubx_known_manufacturer         |          1 
+        ubx_permission_account         |          0 
+        ubx_permission_building        |          0 
+        ubx_permission_building_group  |          0 
+        ubx_threshold                  |          0 
+        ubx_user                       |          0 
+        ubx_user_invitation            |          0 
+        ubx_usergroup                  |          0 
+        ubx_usergroup_access           |          0 
+"
+
+exit 0
