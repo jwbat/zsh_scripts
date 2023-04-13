@@ -3,6 +3,15 @@
 clear;
 
 echo "
+ $aqua 04/10/23 $green
+    Meeting on agg current query.  Work on agg current query.
+
+ $aqua 04/10/23 $green
+    SW Team mtg.  Work on fixing the s-d-e environment
+
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+
  $aqua 03/16/23 $green
     scripts to obtain energy device related uuid's from CRDB
 

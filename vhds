@@ -1,0 +1,28 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
+
+echo "
+    $k buildingUuid $a 
+    2207f808-d1eb-4b35-884b-1f98b031dae2
+    $k registry_uuids $a
+    c0ab9f33-cdfc-4be6-9b97-4eb5f2b91bd7
+    f9e2ce41-1d1d-497f-bbc3-15e176e1ec58
+    75190fee-d1b2-461f-8684-5fdcca93f1af
+    f53357dc-8766-473e-a67a-02cb5765d22d
+
+$x
+    dev_eui                  name $h
+    2780edba388cc55a         HotDropB3
+    8b4ef86c2671da9d         HotDropA ADB
+    9cb2e60698070673         VU HDC1_c55a Kyle-House
+    ebdfe0c8ecf28dfb         VU HDC1_c55a Kyle-Garage
+
+
+"
+
+
+
+exit 0
