@@ -1,5 +1,4 @@
 #! python3
-
 import os
 import sys
 import subprocess as sp
@@ -19,6 +18,7 @@ rows = []
 
 
 p1 = sp.run('date', capture_output=True, text=True)
+sp.run(['clear'])
 date = p1.stdout;
 words = date.split(' ')[0 : 4]
 print(yellow + '\n\t\t\t Today is ' + ' '.join(words))

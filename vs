@@ -3,15 +3,83 @@
 clear;
 
 echo "
- $aqua 04/10/23 $green
-    Meeting on agg current query.  Work on agg current query.
+
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+
+ $aqua 04/14/23 $green
+    Dog River installation  (2 hrs)
+
+ $aqua 04/13/23 $green
+    aggregate current trend. Energy API mtg.   (4 hrs)
+
+ $aqua 04/12/23 $green
+    implement PR review recommendations
+
+ $aqua 04/11/23 $green
+    mtg on agg property trend, continue agg property trend work
 
  $aqua 04/10/23 $green
-    SW Team mtg.  Work on fixing the s-d-e environment
+    SW Team meeting.  aggregate propertyTrend for Building Energy Report
 
---------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------
+ $aqua 04/06/23 $green
+    confer with Jason to work out any kinks in aggEnergyConsumption.
+    check with Parker about  SQL for aggregate propertyTrend, use it in aggCurrentTrend
 
+ $aqua 04/05/23 $green
+    timezonify aggEnergyConsumptionByTime
+
+ $aqua 04/04/23 $green
+    connect with Parker to learn how his new SQL windowing works and may be used with the energy queries;
+    mtg in the p.m. with Parker, Jonah, et. al. on windowing / queries.
+    Put the new SQL to work in energy consumption device query to reflect TZ-informed start dates
+
+ $aqua 04/03/23 $green
+    SW Team meeting.  Work on fixing the s-d-e environment
+
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+
+ $aqua 03/30/23 $green
+    get energyConsumptionByTime query to also figure out the energy consumed
+    on the 1st day with data in a date range to make its chart consistent
+    with the property trend line graph for current.  discuss timezones w/ Jason
+
+ $aqua 03/29/23 $green
+    augment aggregate energy query for building report to return 
+    HotDrop names & their contributions to total energy
+
+ $aqua 03/28/23 $green
+    try to finish up  aggregate energy queries today excepting current trend 
+    which will take its cues from Parker's innovations
+
+ $aqua 03/27/23 $green
+    SW Team meeting
+    update energy pro queries, esp. aggregated building energy
+    script  common queries for getting registry_uuids for devices from CRDB
+
+...
+
+ $aqua 03/23/23 $green
+    ?
+
+ $aqua 03/22/23 $green
+    ?
+
+ $aqua 03/21/23 $green
+    energy pro queries
+
+ $aqua 03/20/23 $green
+    SW Team meeting
+    bring energy_trend_building GQL for aggregating current to a testable state
+
+
+"
+exit 0
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+
+"
  $aqua 03/16/23 $green
     scripts to obtain energy device related uuid's from CRDB
 
@@ -42,11 +110,6 @@ echo "
  $aqua 03/06/23 $green
     weekly SW team meeting.  setup s-d-e with AuthO.  Building Energy Report components
 
-"
-exit 0
--------------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------------
-
  $aqua 03/02/23 $green
     AWS CloudFormation for WebViewer Server deployment. due to issue of the Apryse CF template only geared for deployment
     to EC2, we're pausing this part of the project for now.  Discuss Retool project.
@@ -55,10 +118,10 @@ exit 0
     WebViewer Server.  Energy pro discussion with Terra & Jonah
 
  $aqua 02/28/23 $green
-    Monthly all-company mtg.  Discussion on naming conventions in GQl.  WebViewer Server eval.
+    Monthly all-company meeting.  Discussion on naming conventions in GQl.  WebViewer Server eval.
 
  $aqua 02/27/23 $green
-    SW Team mtg. pdf linearizations & PDFTron speedtests.  Docker + WebViewer Server evaluation
+    SW Team meeting. pdf linearizations & PDFTron speedtests.  Docker + WebViewer Server evaluation
 
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -93,7 +156,7 @@ $aqua 02/14/23 $green
     Highcharts stacked column chart Vue component for building aggregate energy
 
 $aqua 02/13/23 $green
-    SW Team mtg.
+    SW Team meeting.
     update GQL in aggregate energy query with a simpler, better SQL statement, other refactoring;
     look at luxon library docs & try out their datetime object methods
 
@@ -110,7 +173,7 @@ $aqua 02/07/23 $green
     aggregate building energy consumption query 
 
 $aqua 02/06/23 $green
-    SW Team mtg.  Assist Pat in AWS IoT.  aggregate building energy consumption GQL query
+    SW Team meeting.  Assist Pat in AWS IoT.  aggregate building energy consumption GQL query
 
 -------------------------------------------------------------------------------------------------------------------------
 
