@@ -9,24 +9,54 @@ echo "$pg
             so we can field connect to our gateways which are always
             going to be configured for DHCP.
 $x
-    DHCP stands for Dynamic Host Configuration Protocol, which is a network management protocol used
-    to assign IP addresses and other network configuration parameters to devices on a network.
-    A DHCP server is a computer program that provides this service to devices that request an
-    IP address and other network settings.
+        DHCP stands for Dynamic Host Configuration Protocol, which is a network management protocol used
+        to assign IP addresses and other network configuration parameters to devices on a network.
+        A DHCP server is a computer program that provides this service to devices that request an
+        IP address and other network settings.
 
-    In other words, a DHCP server automatically assigns IP addresses to devices on a
-    network, so that network administrators do not have to manually assign each IP address
-    . DHCP also provides other important network configuration parameters, such as subnet mask, default
-    gateway, and DNS server information.
+        In other words, a DHCP server automatically assigns IP addresses to devices on a
+        network, so that network administrators do not have to manually assign each IP address.
+        DHCP also provides other important network configuration parameters, such as subnet mask, default
+        gateway, and DNS server information.
 
-    When a device connects to a network, it sends a broadcast message requesting an
-    IP address from the DHCP server. The DHCP server responds with an available IP
-    address and other network configuration parameters, which the device then uses to connect to
-    the network.
+        When a device connects to a network, it sends a broadcast message requesting an
+        IP address from the DHCP server. The DHCP server responds with an available IP
+        address and other network configuration parameters, which the device then uses to connect to
+        the network.
 
-    DHCP is commonly used in local area networks (LANs), such as home or
-    office networks, to make it easier to manage and configure network settings for multiple
-    devices.
+        DHCP is commonly used in local area networks (LANs), such as home or
+        office networks, to make it easier to manage and configure network settings for multiple
+        devices.
+     ................................................................................................
+$s
+    To set up your MacBook as a DHCP server, you can use the built-in macOS Internet Sharing feature,
+    which allows you to share your Internet connection with other devices and configure your MacBook
+    as a DHCP server. Here are the steps to set up your MacBook as a DHCP server:
+
+$r    1. $k Connect your MacBook to the network that you want to provide DHCP service for.
+
+$r    2. $k Go to System Preferences and click on Sharing.
+
+$r    3. $k Select the Internet Sharing option from the left-hand pane.
+
+$r    4. $k Choose the Internet connection that you want to share from the \"Share your connection from\"
+        drop-down menu. This can be either Ethernet or Wi-Fi,
+        depending on how you are connected to the network.
+
+$r    5. $k Check the box next to \"Wi-Fi\" in the \"To computers using\" section to enable Wi-Fi sharing.
+
+$r    6. $k Click on the \"Wi-Fi Options\" button to configure your Wi-Fi network.
+        Set a network name, choose a security option and set a password.
+
+$r    7. $k Click on the \"Internet Sharing\" checkbox to enable Internet Sharing and start the DHCP service.
+
+
+    Your MacBook should now be acting as a DHCP server and providing IP addresses
+    and network settings to devices on the network that connect to the Wi-Fi network
+    you just created.
+
+$h       System Settings > General > Sharing > Internet Sharing
+
 "
 
 exit 0
