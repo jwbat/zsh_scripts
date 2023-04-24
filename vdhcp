@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
+
+echo "$pg
+            Figure out how to make a Mac act like a DHCP server,
+            so we can field connect to our gateways which are always
+            going to be configured for DHCP.
+$x
+    DHCP stands for Dynamic Host Configuration Protocol, which is a network management protocol used
+    to assign IP addresses and other network configuration parameters to devices on a network.
+    A DHCP server is a computer program that provides this service to devices that request an
+    IP address and other network settings.
+
+    In other words, a DHCP server automatically assigns IP addresses to devices on a
+    network, so that network administrators do not have to manually assign each IP address
+    . DHCP also provides other important network configuration parameters, such as subnet mask, default
+    gateway, and DNS server information.
+
+    When a device connects to a network, it sends a broadcast message requesting an
+    IP address from the DHCP server. The DHCP server responds with an available IP
+    address and other network configuration parameters, which the device then uses to connect to
+    the network.
+
+    DHCP is commonly used in local area networks (LANs), such as home or
+    office networks, to make it easier to manage and configure network settings for multiple
+    devices.
+"
+
+exit 0

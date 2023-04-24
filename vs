@@ -37,49 +37,44 @@ echo "
  $aqua 04/03/23 $green
     SW Team meeting.  Work on fixing the s-d-e environment
 
--------------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------------
-
- $aqua 03/30/23 $green
-    get energyConsumptionByTime query to also figure out the energy consumed
-    on the 1st day with data in a date range to make its chart consistent
-    with the property trend line graph for current.  discuss timezones w/ Jason
-
- $aqua 03/29/23 $green
-    augment aggregate energy query for building report to return 
-    HotDrop names & their contributions to total energy
-
- $aqua 03/28/23 $green
-    try to finish up  aggregate energy queries today excepting current trend 
-    which will take its cues from Parker's innovations
-
- $aqua 03/27/23 $green
-    SW Team meeting
-    update energy pro queries, esp. aggregated building energy
-    script  common queries for getting registry_uuids for devices from CRDB
-
-...
-
- $aqua 03/23/23 $green
-    ?
-
- $aqua 03/22/23 $green
-    ?
-
- $aqua 03/21/23 $green
-    energy pro queries
-
- $aqua 03/20/23 $green
-    SW Team meeting
-    bring energy_trend_building GQL for aggregating current to a testable state
-
 
 "
 exit 0
 -------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 
 "
+ $aqua 03/30/23 $green
+    timezone discussion w/ Jason.
+    adapt energyConsumptionByTime query to calculate energy consumed
+    on the 1st date with data in a date range to make Building Report charts align in the UI.
+    
+
+ $aqua 03/29/23 $green
+    augment building report GQL to return HotDrop names & their contributions to total energy
+
+ $aqua 03/28/23 $green
+    aggregate energy API
+
+ $aqua 03/27/23 $green
+    SW Team meeting.  aggregate building energy. script common CRDB queries
+
+...
+
+ $aqua 03/23/23 $green
+    energy API
+
+ $aqua 03/22/23 $green
+    energy API
+
+ $aqua 03/21/23 $green
+    energy API
+
+ $aqua 03/20/23 $green
+    SW Team meeting. GQL - energy trend building planning
+
  $aqua 03/16/23 $green
     scripts to obtain energy device related uuid's from CRDB
 
