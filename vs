@@ -4,6 +4,11 @@ clear;
 
 echo "
 
+ $aqua 04/25/23 $green
+    look into how to use a Mac as a DHCP server for connecting to gateways in the field.
+    MQTT topic filtering on DevEUI or GatewayEui with a CL parameter. AWS CLI permissions issue.
+    Fix bug in agg-energy-building
+
 -------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 

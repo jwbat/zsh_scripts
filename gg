@@ -17,7 +17,7 @@ c2="$(tput setaf 12)"
 ecrypt ~/.zprofile ~/.dotfiles/.zprofile_encrypted                       # encrypt zprofile
 ecrypt ~/.snowsql/config ~/.dotfiles/.snowsql_config_encrypted           # encrypt snowsql config
 
-for f in ~/macbook_certs/*; do                                        # encrypt vsd certs
+for f in ~/macbook_certs/*; do                                           # encrypt vsd certs
     ecrypt $f ~/.dotfiles/mb_certs_encrypted/$(basename $f)
 done
 
@@ -37,6 +37,8 @@ for f in ~/.dotfiles/mb_certs_encrypted/*; do                         # decrypt 
 done
 
 cp ~/.zprofile ~/code/zprofile
+
+bat $d2/stuff/reminders.txt;
 
 
 exit 0

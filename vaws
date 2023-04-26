@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
+
+echo "$s
+
+
+$c subscribe CLI $s
+    ~ aws iot-data subscribe --topic <topic> --cli-binary-format raw-in-base64-out <optional args>
+    ~ aws iot subscribe --topic lorawan/milesight --qos 1 --profile your-profile-name
+$c example $s
+    ~ aws iot-data subscribe --topic my/topic --qos 1 --cli-binary-format raw-in-base64-out
+
+$c list topics $s
+    ~ aws iot list-topics                           $x list all topics $s
+    ~ aws iot list-topics --topic-prefix my/topic   $x filter available topics by prefix $s
+
+"
+
+exit 0
