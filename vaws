@@ -4,19 +4,34 @@ r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
-echo "$s
-
+echo "$k
+        AWS commands                                       Alias
+$r    aws iam list-users                                    $s  ilu 
+$r    aws iot list-topic-rules                              $s  iotlr
+$r    aws iot list-attached-policies                        $s  iotlp 
+$r    aws iot list-thingsaiotlt 
+$r    aws iot describe-thing --thing-name                   $s  iotdt1 
+$r    aws s3 ls s3://lorawan-to-snowflake --summarize --human-readable   $s ls3 $r
+$r    aws iot describe-endpoint --endpoint-type iot:Data-ATS
 
 $c subscribe CLI $s
     ~ aws iot-data subscribe --topic <topic> --cli-binary-format raw-in-base64-out <optional args>
     ~ aws iot subscribe --topic lorawan/milesight --qos 1 --profile your-profile-name
 $c example $s
-    ~ aws iot-data subscribe --topic my/topic --qos 1 --cli-binary-format raw-in-base64-out
+    ~ aws iot-data subscribe --topic lorawan/milesight --qos 1 --cli-binary-format raw-in-base64-out
+
+    ~ aws iot-data subscribe -t lorawan/milesight -q 1 -e \$IOTENDPT
+    ~ aws iot subscribe -t lorawan/milesight -q 1 -e \$IOTENDPT
+    ~ aws iot-data subscribe --topic lorawan/milesight --qos 1 --endpoint \$IOTENDPT
+    ~ aws iot-data get-retained-message --topic lorawan/milesight --endpoint \$IOTENDPT
+
+
+$c publish CLI $s $x VV works VV
+$g aws iot-data publish --topic "myTopic" --cli-binary-format raw-in-base64-out --payload \"{\\\"temp\\\": 72}\"
 
 $c list topics $s
     ~ aws iot list-topics                           $x list all topics $s
     ~ aws iot list-topics --topic-prefix my/topic   $x filter available topics by prefix $s
-
 "
 
 exit 0

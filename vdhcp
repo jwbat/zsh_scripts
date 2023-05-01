@@ -56,6 +56,26 @@ $r    7. $k Click on the \"Internet Sharing\" checkbox to enable Internet Sharin
     you just created.
 
 $h       System Settings > General > Sharing > Internet Sharing
+     ................................................................................................
+$x
+            To connect your MacBook to a MultiTech gateway
+            using the Mac's DHCP server, follow these steps:
+
+        1  Connect your MacBook to the MultiTech gateway using an Ethernet cable.
+        2  Go to the Apple menu on your MacBook and select System Preferences.
+        3  Click on Network and select Ethernet from the list on the left.
+        4  Click on the Advanced button in the bottom right corner.
+        5  Go to the TCP/IP tab and select Using DHCP from the Configure IPv4 drop-down menu.
+        6  Click OK to save the changes.
+        7  Open Terminal on your MacBook by going to the Applications folder and selecting Utilities.
+        8  In the Terminal window, run 
+    $h
+            sudo launchctl load -w /System/Library/LaunchDaemons/bootps.plist
+    $x
+            and press Enter. This will start the DHCP server on your Mac.
+        9  Once the DHCP server is running, your MacBook will assign an IP address to the MultiTech gateway automatically.
+       10  You should now be able to access the MultiTech gateway from your MacBook using the assigned IP address.
+            Note: Make sure that the Ethernet cable is securely connected to both the MacBook and the MultiTech gateway.
 
 "
 
