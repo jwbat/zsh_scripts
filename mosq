@@ -1,8 +1,10 @@
 #!/bin/zsh
 
 c="$(tput setaf 228)"
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 
-echo "$c
+echo "$x
 \t ~ mosquitto -h
 \t start script is: ~ mos
 

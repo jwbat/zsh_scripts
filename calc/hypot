@@ -1,0 +1,21 @@
+#!python
+import sys
+from math import sqrt
+
+
+def get_args():
+    try:
+        if len(sys.argv) == 2:
+            return float(sys.argv[1]), float(sys.argv[1])
+        if len(sys.argv) == 3:
+            return float(sys.argv[1]), float(sys.argv[2])
+    except:
+        print('usage: hypot <number> <number>')
+        exit()
+
+
+def hypotenuse(a, b):
+    return sqrt(a * a + b * b)
+
+
+print(hypotenuse(*get_args()))

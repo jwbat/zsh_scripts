@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+# Description
+# subscribe to topics in vsd with mosquitto subscribe
+
+# Usage
+# vsq
+#       -d  (--debug),  -v (--verbose)
+
+
+mosquitto_sub \
+    --cafile root-CA.crt \
+    --cert james_macbook.cert.pem \
+    --key james_macbook.private.key \
+    -h $VSENDPT -p 8883 -q 0 \
+    -t lorawan/milesight \
+    -i james_macbook \
+    -d \
+    -v \
+    --tls-version tlsv1.2 \
+    -V mqttv5
+
+exit 0
+#    -i basicPubSub \

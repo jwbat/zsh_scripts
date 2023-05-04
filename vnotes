@@ -13,19 +13,23 @@ $k
 \t CRDB: ubx-dev
 $k 
 \t IAQ Conditions -- Dashboard for IAQ Pro100 IAQ1 
-$k 
+$x 
 \t git, Fargate, Docker, WebViewer Server
 
 \t Mission Cloud  /  AWS  mgmt
 \t DataDog or New Relic  metrics monitoring
 
-$y
-1 invitation login email  (select only !)
-2 device status   acct -> bldg -> show most recent battery & rssi
-    - how many days since we heard from this device (SF)
-    - most recent timestamp from SF
-    - battery, rssi
-\t 
+$x
+    VRF == mini-split  (?)
+    wire shark logs (?)
+    modbus table (?)
+$g
+    Vuetify
+    vue-slider-mark
+    vue-slider-mark-step
+$k
+    component:  ThresholdSliderField 
+
 "
 
 exit 0
