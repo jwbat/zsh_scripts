@@ -16,31 +16,29 @@ echo "
     Dog River installation  (2 hrs)
 
  $aqua 04/13/23 $green
-    aggregate current trend. Energy API mtg.   (4 hrs)
+    aggregate current trend. Energy API meeting.   (4 hrs)
 
  $aqua 04/12/23 $green
-    implement PR review recommendations
+    implement PR review recommendations in energy queries
 
  $aqua 04/11/23 $green
-    mtg on agg property trend, continue agg property trend work
+    meeting on energy queries; agg property trend 
 
  $aqua 04/10/23 $green
-    SW Team meeting.  aggregate propertyTrend for Building Energy Report
+    SW Team meeting.  plan aggregate property trend for Building Energy Report
 
  $aqua 04/06/23 $green
-    confer with Jason to work out any kinks in aggEnergyConsumption.
-    check with Parker about  SQL for aggregate propertyTrend, use it in aggCurrentTrend
+    sync backend work with Jason on frontend on energy query
 
  $aqua 04/05/23 $green
-    timezonify aggEnergyConsumptionByTime
+    timezone-informed aggregate building energy consumption by time query
 
  $aqua 04/04/23 $green
-    connect with Parker to learn how his new SQL windowing works and may be used with the energy queries;
-    mtg in the p.m. with Parker, Jonah, et. al. on windowing / queries.
-    Put the new SQL to work in energy consumption device query to reflect TZ-informed start dates
+    Meeting  with Jonah, Parker, et. al. on SQL windowing in energy queries.
+    energy consumption device query updates to reflect TZ-informed start dates
 
  $aqua 04/03/23 $green
-    SW Team meeting.  Work on fixing the s-d-e environment
+    SW Team meeting. backend development environment setup
 
 
 "
