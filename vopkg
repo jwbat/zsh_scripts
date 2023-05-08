@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+# conduit mtcap opkg
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "
+
+$x Installation:
+    ssh into the Conduit and type the following commands to install pip.
+    Make sure your Conduit is connected to the internet.
+$pg 
+     ~ opkg update
+     ~ opkg install python-pip
+     ~ pip install paho-mqtt
+
+$x scp the mqtt-client.py to your Conduit $pg
+     ~ chmod +x mqtt-client.py
+$x    run: $pg
+     ~ python mqtt-client.py
+
+$x opkg commands $pg
+       sudo opkg update
+       sudo opkg list
+       opkg install python3-pip
+       sudo opkg install python3-pip
+       which pip3
+
+       opkg install python3-requests
+"
+
+exit 0
