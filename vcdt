@@ -2,20 +2,21 @@
 
 # Usage
 # ven-wan
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 
-c1="$(tput setaf 87)"
 
-c2="$(tput setaf 229)"
-c3="$(tput setaf 250)"
+echo "$a
+     Multitech Conduit model: MTCAP-915-001A Firmware 6.0
+     192.168.0.55
+     u/n admin
+     p/w $CDT
 
-echo "$c
-\t Multitech Conduit model: MTCAP-915-001A Firmware 6.0
-\t 192.168.0.55
-\t u/n admin
-\t p/w $CDT
-
-\t deveui 44-91-60-00-00-f7-c2-73
-
+     deveui         44-91-60-00-00-f7-c2-73
+     MAC Address    00:08:00:4B:D2:16
+$x
+     DHCP lease range start -> end: $p
+     192.168.2.100	192.168.2.254
 "
 
 exit 0
