@@ -1,0 +1,49 @@
+#!/bin/zsh
+
+# Usage
+# ven-wan
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+
+echo "$a
+     Multitech Conduit model: MTCAP-915-001A Firmware 6.0
+     192.168.0.55
+     u/n admin
+     p/w $CDT
+$x
+     router         192.168.0.1
+     gateway eui    00-80-00-00-00-01-F8-E1
+                    008000000001f8e1
+     deveui         44-91-60-00-00-f7-c2-73
+     MAC Address    00:08:00:4B:D2:16
+$x
+     DHCP lease range start -> end: $p
+     192.168.2.100	192.168.2.254
+$r
+    ~ nmap -T4 192.168.2.100-254 $x
+        scan range from 192.168.2.100 to 192.168.2.254
+        -T option followed by a number from 0 to 5, with 5 being the slowest and most thorough and 0
+        being the fastest and least thorough
+$r
+    ~ networksetup -listallnetworkservices $x
+        AX88179A
+        Wi-Fi
+        Thunderbolt Bridge
+$r
+    ~ sudo networksetup -getinfo \"AX88179A\" $x
+        DHCP Configuration
+        IP address: 169.254.63.51
+        Subnet mask: 255.255.0.0
+        Router: (null)
+        Client ID:
+        IPv6: Automatic
+        IPv6 IP address: none
+        IPv6 Router: none
+        Ethernet Address: a0:ce:c8:6c:23:38
+$r
+    ~ netstat -nr
+    ~ netstat -an
+"
+
+exit 0

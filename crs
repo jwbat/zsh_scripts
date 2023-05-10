@@ -24,9 +24,15 @@ echo "#!/bin/zsh
 # Usage
 # 
 
+r=\$red; g=\$gold; y=\$yellow; a=\$aqua; pg=\$palegreen; k=\$khaki;
+c=\$cyan; x=\$grey; s=\$sea; gr=\$green; p=\$pink; h=\$honeydew;
+
+echo \"\$h
+\"
+
 exit 0" >> $name
 
 /bin/chmod 744 $name
-
+~/nvim-osx64/bin/nvim $name
 
 exit 0

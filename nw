@@ -1,0 +1,38 @@
+#!/bin/zsh
+
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "$h
+  netstat $x 
+    This command is used to display active network connections, as well as various
+    statistics about network traffic on a computer. It can be used to troubleshoot network issues
+    and identify potential security risks.
+$s
+  nmap $x 
+    This command is a network exploration and security auditing tool.
+    It can be used to scan networks to identify hosts and services,
+    and can also be used to test the security of networked systems by identifying open ports and vulnerabilities.
+$s
+  ifconfig $x 
+    This command is used to display information about network interfaces (such as Ethernet or Wi-Fi)
+    on a computer. It can be used to configure and troubleshoot network settings, such as IP addresses and network masks.
+$s
+  ipconfig $x 
+    This command is similar to ifconfig, but is used specifically on Windows operating systems to display
+    information about network interfaces and configure network settings. It can be used to view IP addresses,
+    subnet masks, and other network configuration information.
+
+    ~ networksetup -listallnetworkservices $x
+    ~ sudo networksetup -getinfo \"AX88179A\" $x
+    ~ netstat -nr
+$s
+    ~ ipconfig getifaddr en0    $x get IP address of Macbook $s
+    ~ ipconfig getpacket en0    $x display the DHCP lease information for the en0 interface,
+                                   usually the primary network interface on a MacBook.
+                                   If connected to a different network interface, replace
+                                   \"en0\" with that interface name, e.g. en1, en2, etc.
+"
+
+exit 0
