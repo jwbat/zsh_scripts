@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+x=$1
+purple='\033[0;35m'
+answer=`echo "scale=50; sqrt($x)" | bc`
+
+echo "${purple} ${answer}"
+
+
+exit 0

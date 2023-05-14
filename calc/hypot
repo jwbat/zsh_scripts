@@ -1,4 +1,8 @@
 #!python
+'''
+    Return hyptenuse given length of 2 sides.
+    When 1 arg is supplied, assume both arms of triangle to be that length.
+'''
 import sys
 from math import sqrt
 

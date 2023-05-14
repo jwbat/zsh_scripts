@@ -5,13 +5,15 @@
 
 name=$1
 
-echo "#! python3
+echo "#!python3
 
 # Description
 # 
 
 # Usage
 # 
+import sys
+from colored import fg
 
 " >> $name
 

@@ -1,10 +1,18 @@
-#!/bin/zsh
+#!python3
+import sys
+from math import sqrt
+from colored import fg
 
-x=$1
-purple='\033[0;35m'
-answer=`echo "scale=50; sqrt($x)" | bc`
-
-echo "${purple} ${answer}"
+green_yellow = fg(154)
 
 
-exit 0
+def get_arg():
+    try:
+        return float(sys.argv[1])
+    except:
+        print('usage: sqrt <number>')
+        exit()
+
+
+
+print('\n\t' + green_yellow, sqrt(get_arg()), '\n')
