@@ -6,8 +6,8 @@
 conduit;     # copy pw to clipboard
 
 #ssh -t admin@192.168.2.1 "cd /opt/lora; exec \$SHELL -l"
-#ssh -t admin@192.168.0.55 "cd /opt/lora/mt-iot; exec \$SHELL -l"
 #ssh -L 7000:localhost:22 admin@192.168.0.55
-ssh -L 7000:localhost:22 admin@192.168.2.1
+#ssh -L 7000:localhost:22 admin@192.168.2.1
+ssh -L 7000:localhost:80 admin@192.168.2.130
 
 exit 0

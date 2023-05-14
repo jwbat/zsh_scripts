@@ -4,7 +4,17 @@
 r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 
-echo "$h
+echo "$x flags returned by netstat $h
+    U: $x the route is up and can be used. $h
+    H: $x the destination is a host (as opposed to a network). $h
+    L: $x the route is a local (loopback) route. $h
+    G: $x the route uses a gateway. $h
+    W: $x the route is a wildcard route. $h
+    I: $x the route is an ICMP redirect. $h
+    R: $x the route was dynamically created by a routing protocol. $h
+    D: $x the route was created by a redirect. $h
+    A: $x the route is authoritative (i.e., added manually, not by a routing protocol). $h
+
   netstat $x 
     This command is used to display active network connections, as well as various
     statistics about network traffic on a computer. It can be used to troubleshoot network issues
@@ -33,6 +43,9 @@ $s
                                    usually the primary network interface on a MacBook.
                                    If connected to a different network interface, replace
                                    \"en0\" with that interface name, e.g. en1, en2, etc.
+$r
+    ~ netstat -nr | grep 192 | grep :
+    ~ arp -a                    $x address resolution protocol (map IP to MAC address) $r
 "
 
 exit 0

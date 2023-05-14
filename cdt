@@ -11,12 +11,12 @@ echo "$a
      192.168.0.55
      u/n admin
      p/w $CDT
+     MAC Address    00:08:00:4B:D2:16
+     deveui         44-91-60-00-00-f7-c2-73
+     gateway eui    00-80-00-00-00-01-F8-E1
 $x
      router         192.168.0.1
-     gateway eui    00-80-00-00-00-01-F8-E1
                     008000000001f8e1
-     deveui         44-91-60-00-00-f7-c2-73
-     MAC Address    00:08:00:4B:D2:16
 $x
      DHCP lease range start -> end: $p
      192.168.2.100	192.168.2.254
@@ -44,6 +44,7 @@ $r
 $r
     ~ netstat -nr
     ~ netstat -an
+    ~ nmap -sn 192.168.1.0/24
 "
 
 exit 0

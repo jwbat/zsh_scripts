@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "$h
+    nmap -sn 192.168.0.0/24 $x
+        Starting Nmap 7.93 ( https://nmap.org ) at 2023-05-11 17:01 PDT
+        Nmap scan report for modem.Home (192.168.0.1)
+        Host is up (0.032s latency).
+        Nmap scan report for 192.168.0.2
+        Host is up (0.024s latency).
+        Nmap scan report for 192.168.0.3
+        Host is up (0.075s latency).
+        Nmap scan report for 192.168.0.4
+        Host is up (0.043s latency).
+        Nmap scan report for 192.168.0.11
+        Host is up (0.021s latency).
+        Nmap done: 256 IP addresses (5 hosts up) scanned in 26.08 seconds
+"
+
+exit 0
