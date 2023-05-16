@@ -5,6 +5,7 @@
 '''
 import sys
 from math import sqrt
+from colored import fg
 
 
 def get_args():
@@ -22,4 +23,4 @@ def hypotenuse(a, b):
     return sqrt(a * a + b * b)
 
 
-print(hypotenuse(*get_args()))
+print('\n\t' + fg(154), hypotenuse(*get_args()), '\n')
