@@ -1,0 +1,68 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+clear;
+echo "$h
+    Q. $y Can you have a lambda call a webhook from a specific ip address? $k
+
+    Amazon Lambda, as of my knowledge cutoff in September 2021, doesn’t natively support making requests 
+    from a specific IP address. This is because AWS Lambda runs your code on AWS infrastructure, and 
+    you don’t have control over the specific IP address your function uses when it makes outbound connections
+    .
+    If you need to make a request from a specific IP address (for example, because the 
+    endpoint you’re calling has IP whitelisting), you can configure your Lambda function to access the internet 
+    via a VPC, and then use a NAT Gateway or NAT Instance. This allows you to specify 
+    an Elastic IP address, which can then be whitelisted by the receiving server.
+
+    Here’s a simplified step-by-step guide:
+
+    1. Create a new VPC or use an existing one.
+    2. Set up a private subnet within this VPC.
+    3. Create a new NAT Gateway in the VPC, and associate an Elastic IP address with it.
+    4. Configure the route table associated with your private subnet to route internet-bound traffic
+        (0.0.0.0/0) to the NAT Gateway.
+    5. In the Lambda function’s networking settings, select the VPC and private subnet that you’ve just set up.
+
+    With this setup, when your Lambda function makes an outbound request, it will appear to come from 
+    the Elastic IP address associated with your NAT Gateway. $pg
+
+    ----------------------------------------------------------------------------------------------------- $h
+    Q. $g Is there a standard structure for webhooks? $k
+
+    Webhooks, aka “HTTP callbacks”, are usually user-defined HTTP callbacks that are triggered 
+    by specific events. When a triggering event occurs, the source site makes an HTTP request to the 
+    URL configured for the webhook. Users can configure them to cause events on one site to invoke behavior 
+    on another.
+    There isn’t a universal “standard” structure for webhooks because they can be 
+    customized based on the specific needs of the application. However, there are some common practices in how 
+    they are typically structured:
+
+    1. **URL**: This is the endpoint where the HTTP request will be sent. This URL 
+        is provided by the system that will handle the event, and you set it up in the system 
+        that triggers the webhook.
+
+    2. **HTTP Method**: Most webhooks use the POST method, as 
+        they’re typically sending data as a result of an event. However, the method can be 
+        any valid HTTP method like GET, PUT, DELETE, etc., depending on the use case.
+    
+    3. **Headers**: Headers can be used to provide additional information about the request. For example
+        , you might include a content-type header to indicate whether you’re sending JSON or XML 
+        data.
+
+    4. **Payload or Body**: This is the data that is sent as a result 
+        of the event. The structure of the payload will depend on the specific event and the system that
+        ’s sending the webhook. It’s typically sent as JSON or XML.
+
+    5. ** Authentication**: This ensures that the request is coming from a trusted source. This could be a shared 
+        secret, a token in the header, or some other method depending on the system’s security requirements.
+
+    6. **Retry Policy**: It’s good practice to have a retry policy in 
+        place in case the webhook fails to deliver. The policy will depend on the specific requirements of the 
+        application.
+        Remember that while there are common practices, the specific implementation of a webhook can vary
+        significantly from one service to another. 
+"
+
+exit 0
