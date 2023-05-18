@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+clear;
+
+echo "$y
+    Create a new VPC in AWS console $k
+    1. Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+    2. In the navigation pane, choose [Your VPCs].
+    3. Choose [Create VPC].
+    4. In the [Name tag] field, you can give your VPC a name. This is optional but recommended for easier management later.
+    5. In the [IPv4 CIDR block] field, provide the CIDR block for your VPC.
+       This is the IP address range for the resources you will launch in the VPC. For example,
+       you can enter [10.0.0.0/16] for up to 65,536 private IPv4 addresses.
+    6. [IPv6 CIDR block] - Choose [No IPv6 CIDR Block] if you do not want to allocate an IPv6 CIDR block to your VPC,
+       [Amazon-provided IPv6 CIDR block] to have Amazon provide an IPv6 CIDR block, or [Specify a custom IPv6 CIDR block]
+        to provide your own. This is optional.
+    7. [Tenancy] - Select [Default] unless you have specific needs for a dedicated instance tenancy.
+    8. Once you fill out these details, click on the [Create VPC] button.
+
+    Once you've done this, AWS will create the VPC and automatically create a default subnet, a main route table,
+    and a default security group within the VPC.
+"
+exit 0

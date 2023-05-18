@@ -4,30 +4,7 @@ r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 
 clear;
-echo "$h
-    Q. $y Can you have a lambda call a webhook from a specific ip address? $k
-
-    Amazon Lambda, as of my knowledge cutoff in September 2021, doesn’t natively support making requests 
-    from a specific IP address. This is because AWS Lambda runs your code on AWS infrastructure, and 
-    you don’t have control over the specific IP address your function uses when it makes outbound connections
-    .
-    If you need to make a request from a specific IP address (for example, because the 
-    endpoint you’re calling has IP whitelisting), you can configure your Lambda function to access the internet 
-    via a VPC, and then use a NAT Gateway or NAT Instance. This allows you to specify 
-    an Elastic IP address, which can then be whitelisted by the receiving server.
-
-    Here’s a simplified step-by-step guide:
-
-    1. Create a new VPC or use an existing one.
-    2. Set up a private subnet within this VPC.
-    3. Create a new NAT Gateway in the VPC, and associate an Elastic IP address with it.
-    4. Configure the route table associated with your private subnet to route internet-bound traffic
-        (0.0.0.0/0) to the NAT Gateway.
-    5. In the Lambda function’s networking settings, select the VPC and private subnet that you’ve just set up.
-
-    With this setup, when your Lambda function makes an outbound request, it will appear to come from 
-    the Elastic IP address associated with your NAT Gateway. $pg
-
+echo "$pg
     ----------------------------------------------------------------------------------------------------- $h
     Q. $g Is there a standard structure for webhooks? $k
 
@@ -63,6 +40,41 @@ echo "$h
         application.
         Remember that while there are common practices, the specific implementation of a webhook can vary
         significantly from one service to another. 
+ $pg
+    ----------------------------------------------------------------------------------------------------- $y
+
+    Lambda in VPC $k
+    - Define VPC ID, Subnets, & Security Groups assigned to Lf
+    - Lambda will create an ENI (Elastic Network Interface) in your subnets behind the scenes
+    - AWSLambdaVPCAccessExecutionRole attached to Lf
+    + Deploy Lf in a private subnet; will have internet access if you have a NAT Gateway
+ $pg
+    ----------------------------------------------------------------------------------------------------- $h
+
+    Q. $y Can you have a lambda call a webhook from a specific ip address? $k
+
+    Amazon Lambda, as of my knowledge cutoff in September 2021, doesn’t natively support making requests 
+    from a specific IP address. This is because AWS Lambda runs your code on AWS infrastructure, and 
+    you don’t have control over the specific IP address your function uses when it makes outbound connections.
+    
+    If you need to make a request from a specific IP address (for example, because the 
+    endpoint you’re calling has IP whitelisting), you can configure your Lambda function to access the internet 
+    via a VPC, and then use a NAT Gateway or NAT Instance. This allows you to specify 
+    an Elastic IP address, which can then be whitelisted by the receiving server.
+
+    Here’s a simplified step-by-step guide:
+
+    1. Create a new VPC or use an existing one.
+    2. Set up a private subnet within this VPC.
+    3. Create a new NAT Gateway in the VPC, and associate an Elastic IP address with it.
+    4. Configure the route table associated with your private subnet to route internet-bound traffic
+        (0.0.0.0/0) to the NAT Gateway.
+    5. In the Lambda function’s networking settings, select the VPC and private subnet that you’ve just set up.
+
+    With this setup, when your Lambda function makes an outbound request, it will appear to come from 
+    the Elastic IP address associated with your NAT Gateway.
+ $pg
+    ----------------------------------------------------------------------------------------------------- $h
 "
 
 exit 0

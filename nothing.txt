@@ -1,0 +1,17 @@
+On AWS, from within a Lambda function, I want to make a request from a specific IP address because the 
+endpoint being called has IP whitelisting.
+Therefore, the Lambda function will be configured to access the internet via a VPC, 
+and use a NAT Gateway or NAT Instance. This will allow 
+an Elastic IP address to be specified, which can then be whitelisted by the receiving server.
+
+So far, I have done step 1 of the following.
+
+1. Create a new VPC.
+2. Set up a private subnet within this VPC.
+3. Create a new NAT Gateway in the VPC, and associate an Elastic IP address with it.
+4. Configure the route table associated with your private subnet to route internet-bound traffic
+    (0.0.0.0/0) to the NAT Gateway.
+5. In the Lambda function’s networking settings, select the VPC and private subnet that you’ve just set up.
+
+Should the VPC have an IPv6 CIDR, or is the IPv4 CIDR sufficient for my purposes, stated above?
+.........................................................................................................................
