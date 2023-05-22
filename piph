@@ -18,18 +18,6 @@ echo "$c
 \t pip install -r requirements.txt
 \t p -m venv venv --system-site-packages    (rare)
 \t ================================================
-
-
-\t --- pip ----------------------------------------
-\t p -m pip install --upgrade pip
-\t pip list
-\t p -m pip install fastapi
-\t ================================================
-
-
-\t --- fastapi-----------------------------------------------
-\t uvicorn main:app --reload       (run server; alias: uv) 
-\t ==========================================================
 "
 
 
