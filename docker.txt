@@ -1,0 +1,40 @@
+Even though your host machine is `arm64`, using Docker with the `lambci/lambda:build-python3.8`
+image should allow you to build a Lambda package that's compatible with the `x86_64`
+architecture used by AWS Lambda.
+
+Docker will pull down the `x86_64` Linux image and then build your Python dependencies within that environment.
+This means the dependencies will be built for the `x86_64` architecture, which is what AWS Lambda expects.
+
+
+1. Pull the Docker image:
+
+    ```
+    docker pull lambci/lambda:build-python3.8
+    ```
+
+2. Create your project directory, and create a `requirements.txt` file with your dependencies:
+
+    ```
+    mkdir my_lambda_function
+    echo requests > my_lambda_function/requirements.txt
+    ```
+
+3. Build your dependencies inside the Docker container:
+
+    ```
+    docker run -v "$PWD"/my_lambda_function:/var/task -it lambci/lambda:build-python3.8 /bin/bash -c "pip install -r requirements.txt -t ."
+    ```
+
+4. Package your dependencies and code:
+
+    ```
+    cd my_lambda_function
+    zip -r ../my_lambda_function.zip .
+    ```
+
+5. Upload the `my_lambda_function.zip` file to AWS Lambda.
+
+Even though your host machine is `arm64`, this should give you a Lambda package that's compatible 
+with the `x86_64` architecture. The magic here is Docker's ability to run containers for different 
+architectures than the host machine. 
+This is made possible by the QEMU emulator which is included with Docker Desktop for Mac.

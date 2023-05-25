@@ -1,17 +1,35 @@
-On AWS, from within a Lambda function, I want to make a request from a specific IP address because the 
-endpoint being called has IP whitelisting.
-Therefore, the Lambda function will be configured to access the internet via a VPC, 
-and use a NAT Gateway or NAT Instance. This will allow 
-an Elastic IP address to be specified, which can then be whitelisted by the receiving server.
+I assume you already have a VPC and subnet in place for this, correct? I'll move on with the next steps:
 
-So far, I have done step 1 of the following.
+Configure a NAT Gateway:
 
-1. Create a new VPC.
-2. Set up a private subnet within this VPC.
-3. Create a new NAT Gateway in the VPC, and associate an Elastic IP address with it.
-4. Configure the route table associated with your private subnet to route internet-bound traffic
-    (0.0.0.0/0) to the NAT Gateway.
-5. In the Lambda function’s networking settings, select the VPC and private subnet that you’ve just set up.
+Go to the VPC console, navigate to "NAT Gateways" (left side menu) and click on "Create NAT Gateway."
+Select a subnet.
+Follow the prompts to create a new Elastic IP or select an existing one.
+Click on "Create NAT Gateway" to create the NAT Gateway.
 
-Should the VPC have an IPv6 CIDR, or is the IPv4 CIDR sufficient for my purposes, stated above?
-.........................................................................................................................
+Now, you can create a security group:
+
+Again in the VPC console, go to "Security Groups" (left side menu) and click on "Create security group."
+Provide a name and description for the security group.
+Add an inbound rule to allow outbound HTTPS traffic (port 443) to the desired destination.
+Assign the security group to the Lambda function later.
+
+Create a Lambda function:
+
+Navigate to the AWS Lambda console (you can use the search box up top)
+Click on "Create function" and choose the appropriate runtime.
+Provide a function name, select the desired VPC, and choose the subnet.
+Expand "Advanced settings" and select the security group created in the steps above.
+Write the code for your Lambda function to make the HTTPS call.
+Save and test the Lambda function to ensure it works as expected.
+
+
+Set up an IoT Rule to trigger the Lambda function:
+
+Go to the IoT console.
+Create or select the desired IoT Rule.
+Configure the rule to trigger the Lambda function you created earlier.
+Customize the rule filters and actions according to your requirements.
+
+
+Please let me know your thoughts!
