@@ -6,33 +6,25 @@ c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
 echo "$a
-    Visual Representation of Room Occupancy
+                Visual Representation of Room Occupancy
 $h
-    1. Floor Plan Diagram:  $k In each room, show the number of people present. This could be represented numerically,
-        but to make it more visual, you could use a color gradient or size gradient for each room 
-        (where bigger or darker rooms mean more occupants).
-        The rooms could be color-coded based on occupancy levels (like a heatmap),
+    Floor Plan Diagram  $k In each room, show the number of people present.
+        Use a color gradient or size gradient for each room,
+        where bigger or darker rooms mean more occupants.
+        The rooms could be color-coded based on occupancy levels (heatmap),
         where a gradient from green (few people) to red (many people) is used. $h
 
-    2. Stacked Bar Chart: $k Each room could be represented as a separate bar on a bar chart.
+    Stacked Bar Chart $k Each room could be represented as a separate bar on a bar chart.
         The height of the bar represents the maximum capacity of the room. The bar could then 
         be filled up to the point representing current occupancy. Each segment could also be 
         color-coded based on the status of the room: green for available, yellow for partially occupied,
         red for full. $h
 
-    3. Infographic: $k Create an infographic with stylized icons for each room (for instance,
-        a bed icon for bedrooms, a desk icon for offices). Beside each icon, include a number 
-        or a bar chart representing occupancy. $h
-
-    4. Interactive 3D Model: $k For a more high-tech solution, you could create an interactive 
-        3D model of the building floor. Users could click on each room to see its occupancy.
-        Rooms could also be color-coded based on occupancy levels. $h
-
-    5. Matrix: $k If you want to display data for multiple days or times, you could create a matrix
+    Matrix $k To display data for multiple days or times, could create a matrix
         where rows represent rooms, and columns represent days or times. Each cell could be color-coded 
         based on the occupancy at that time. $h
 
-    7. Bubble Diagram: $k Each room could be represented by a bubble, with the size of the bubble indicating
+    Bubble Diagram $k Each room could be represented by a bubble, with the size of the bubble indicating
         the number of people in the room. The color of the bubble could represent the type of room 
         (office, conference room, etc.).
 "
