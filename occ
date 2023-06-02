@@ -6,27 +6,28 @@ c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
 echo "$a
-                Visual Representation of Room Occupancy
+                Room Occupancy Representation
 $h
-    Floor Plan Diagram  $k In each room, show the number of people present.
-        Use a color gradient or size gradient for each room,
-        where bigger or darker rooms mean more occupants.
-        The rooms could be color-coded based on occupancy levels (heatmap),
-        where a gradient from green (few people) to red (many people) is used. $h
+  Floor Plan Diagram  $k 
+  In each room, show the number of people present. Use a color gradient or size gradient for each room,
+  where bigger or darker rooms mean more occupants. The rooms could be color-coded based on occupancy
+  levels (heatmap), where a gradient from green (few people) to red (many people) is used. $h
 
-    Stacked Bar Chart $k Each room could be represented as a separate bar on a bar chart.
-        The height of the bar represents the maximum capacity of the room. The bar could then 
-        be filled up to the point representing current occupancy. Each segment could also be 
-        color-coded based on the status of the room: green for available, yellow for partially occupied,
-        red for full. $h
+  Stacked Bar Chart $k 
+  Each room could be represented as a separate bar on a bar chart.
+  The height of the bar represents the maximum capacity of the room. The bar could then 
+  be filled up to the point representing current occupancy. Each segment could also be 
+  color-coded based on the status of the room: green for available, yellow for partially occupied,
+  red for full. $h
 
-    Matrix $k To display data for multiple days or times, could create a matrix
-        where rows represent rooms, and columns represent days or times. Each cell could be color-coded 
-        based on the occupancy at that time. $h
+  Matrix $k 
+  To display data for multiple days or times, use a matrix where rows represent rooms, and columns 
+  represent days or times. Each cell could be color-coded based on the occupancy at that time. $h
 
-    Bubble Diagram $k Each room could be represented by a bubble, with the size of the bubble indicating
-        the number of people in the room. The color of the bubble could represent the type of room 
-        (office, conference room, etc.).
+  Bubble Diagram $k 
+  Each room could be represented by a bubble, with the size of the bubble indicating
+  the number of people in the room. The color of the bubble could represent the type of room 
+  (office, conference room, etc.).
 "
 
 exit 0
