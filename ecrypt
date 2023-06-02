@@ -6,8 +6,8 @@ import sys
 from cryptography.fernet import Fernet
 from colored import fg
 
-color1 = fg(189)
-color2 = fg(202)
+light_blue = fg(189)    # light_blue
+orange = fg(202)    # orange
 
 if len(sys.argv) != 3:
     print("usage: enc <name_of_file_to_encrypt> <name_of_encrypted_file>")
@@ -32,7 +32,7 @@ def load_key():
 #write_key()
 
 with open(file1, 'rb') as f:
-    print(f'\t {color2} reading {color1 + file1}..')
+    print(f'\t {orange} reading {light_blue + file1}..')
     data = f.read()
 
 key = load_key()
@@ -43,4 +43,4 @@ encrypted = fr.encrypt(data)
 with open(file2, 'wb') as f:
     f.write(encrypted)
 
-print(f'\t {color2} encrypted {color1 + file1} {color2}as {color1 + file2}')
+print(f'\t {orange} encrypted {light_blue + file1} {orange}as {light_blue + file2}')
