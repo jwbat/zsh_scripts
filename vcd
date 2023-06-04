@@ -3,30 +3,14 @@
 r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 
-echo "$g
+echo "$gr 
+                VS repos $g
+
         pb        $k   ~/code/aws/push_button              $g
         sub       $k   ~/code/aws/subscriber               $g
         ms        $k   ~/code/ventacity/milesight          $g
         abm       $k   ~/code/ventacity/milesight/ABM      $g
 "
 
-exit 0
-#!/bin/zsh
-
-# Author: James Batman
-# Date Created: 
-# Last Modified: 
-
-# Description
-# 
-
-# Usage
-# 
-
-r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
-c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
-
-echo "$h
-"
 
 exit 0

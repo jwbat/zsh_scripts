@@ -1,0 +1,17 @@
+#!python
+import json
+import subprocess
+from rich import pretty
+from rich.json import JSON
+from rich.console import Console
+
+
+def lorawan_devices():
+    result = subprocess.run(['aws', 'iotwireless', 'list-wireless-devices'], capture_output=True, text=True)
+    devices = json.loads(result.stdout)
+    return [device['Name'] for device in devices['WirelessDeviceList']] #  if 'abm' in device['Name']
+
+
+devices = lorawan_devices()
+for d in devices:
+    print(d)
