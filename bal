@@ -11,7 +11,6 @@ red = fg(196)
 yellow = fg(192)
 indianred = fg(202)
 khaki = fg(185)
-colors = [ indianred, khaki ]
 
 file = os.path.expanduser('~/code/shell/scripts/stuff/balance.csv')
 fields = []
@@ -36,14 +35,15 @@ with open(file, 'r') as csvfile:
         print(red + field.rjust(15), end='')
     print()
  
-    colors_idx = 0
-    color = colors[0]
     rcvd = ''
 
     for row in reader:
         idx = 0
         for item in row:
-            print(blue + item.rjust(15), end='')
+            color = blue
+            if idx == 2:
+                color = yellow
+            print(color + item.rjust(15), end='')
             idx += 1
         print()
 
