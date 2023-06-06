@@ -8,26 +8,39 @@ clear;
 echo "$a
                 Room Occupancy Representation
 $h
-  Floor Plan Diagram  $k 
-  In each room, show the number of people present. Use a color gradient or size gradient for each room,
-  where bigger or darker rooms mean more occupants. The rooms could be color-coded based on occupancy
-  levels (heatmap), where a gradient from green (few people) to red (many people) is used. $h
+      Floor Plan Diagram  $k 
+      In each room with an occ sensor, show the number of people present color-coded based on occupancy levels,
+      such as green for unoccupied and red for fully occupied (if max is known). 
+        Since assets on Floorplans are dragged to their correct location on the FloorplanMap, the occupancy
+      would appear next to the asset. $h
 
-  Stacked Bar Chart $k 
-  Each room could be represented as a separate bar on a bar chart.
-  The height of the bar represents the maximum capacity of the room. The bar could then 
-  be filled up to the point representing current occupancy. Each segment could also be 
-  color-coded based on the status of the room: green for available, yellow for partially occupied,
-  red for full. $h
+      Area Chart  $k 
+      Area charts are often used to represent volume over time and might be one of the more intuitive ways to
+      graphically represent the change in \"volume\" of people in a room over time.  Highcharts has options that
+      allow the user to hover over the marker or line (room) of interest to bring it to the front while simultaneously
+      fading out the others.  $h
 
-  Matrix $k 
-  To display data for multiple days or times, use a matrix where rows represent rooms, and columns 
-  represent days or times. Each cell could be color-coded based on the occupancy at that time. $h
+      Bar Chart Report $k
+      Each room with an occ sensor could be represented as a separate bar on a bar chart.
+      The height of the bar represents the maximum capacity of the room. The bar could then 
+      be filled up to the point representing current occupancy. The bar could be colored-coded based
+      on the status of the room: green for available, yellow for partially occupied,
+      red for full. $h
 
-  Bubble Diagram $k 
-  Each room could be represented by a bubble, with the size of the bubble indicating
-  the number of people in the room. The color of the bubble could represent the type of room 
-  (office, conference room, etc.).
+      Heatmap $k 
+      To display data for multiple days or times, use a heatmap where rows represent rooms, and columns 
+      represent days or times. Each cell could be color-coded based on the occupancy at that time. If max 
+      capacity is not known, color on a gradient from low historical occupancy to high. $h
+
+      Treemap $k
+      Treemaps display hierarchical data as a set of nested rectangles.  A leaf node's rectangle has an area 
+      proportional to a specified dimension of the data.  A rectangle's area could be determined by max
+      occupancy set by the user or determined by its max in historical data. $h
+
+      Bubble Diagram $k 
+      Each room with an occ sensor could be represented by a bubble, with the size of the bubble indicating
+      the number of people in the room. The color of the bubble could represent the type of room 
+      (office, conference room, etc.) $h
 "
 
 exit 0

@@ -3,14 +3,11 @@
 # Description
 # occupancy sensors 
 
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
-echo "$grey
-\t start testing them in real-world situations at home,
-\t to become familiar with their strengths and limitations,
-\t and then start thinking about how we might incorporate the data into UBX Floorplans/Dashboards/Reports.
-
-$pink VS121 $grey
+echo "$pink VS121 $grey
    default IP of sensor         192.168.1.1          
    default SSID                 Workplace Sensor_XXXXXX
    password                     UzzULs67hQaiGEg
@@ -21,32 +18,39 @@ $pink VS132 $grey
    default SSID is People Counter_XXXXXX
 
 $aqua
-\t VS121-915M notes  $grey
-\t  covers ~ 800 sq. ft.
-\t  ceiling or wall mountable
-\t  according to MS, counts moving objects if human as high as 98% accuracy 
-\t  map up to 16 custom regions - count in each region
-\t  count people crossing a line, in / out 
+   VS121-915M notes  $grey
+    covers ~ 800 sq. ft.
+    ceiling or wall mountable
+    according to MS, counts moving objects if human as high as 98% accuracy 
+    map up to 16 custom regions - count in each region
+    count people crossing a line, in / out 
 
-\t  $red use cases $grey
-\t  - find vacant, available meeting rooms, & optionally schedule an available room
+    $red use cases $grey
+    - find vacant, available meeting rooms, & optionally schedule an available room
 
-\t  - add MS D2D (device-to-device) to connect other devices for intelligently responding to person count,
-\t      e.g. turn on or off lights or heat (energy saving)
+    - add MS D2D (device-to-device) to connect other devices for intelligently responding to person count,
+        e.g. turn on or off lights or heat (energy saving)
 
 $aqua
-\t VS132-915M notes $grey
-\t  - restart browser and/or clear cache if GUI is malfunctioning
-\t  - reporting period is very regular -- set in GUI
-\t  - when configuring the Pass Area ROI (region of interest) in the GUI,
-\t      draw the Entrance Area at the top of the field
-\t      and the Exit Area at the bottom of the field
+   VS132-915M notes $grey
+    - restart browser and/or clear cache if GUI is malfunctioning
+    - reporting period is very regular -- set in GUI
+    - when configuring the Pass Area ROI (region of interest) in the GUI,
+        draw the Entrance Area at the top of the field
+        and the Exit Area at the bottom of the field
 
-\t   data:
-\t     "people_in": 1,                       
-\t     "people_out": 1,                      
-\t     "total_counter_in": 2,                
-\t     "total_counter_out": 2
+     data:
+       \"people_in\": 1,                       
+       \"people_out\": 1,                      
+       \"total_counter_in\": 2,                
+      \"total_counter_out\": 2
+ $k
+    Start with looking at the form of the data from $a
+     AM308 (motion / PIR)
+     VS121
+     VS132 $k
+    And try to define an MVP that would be cool and work with as many of those as possible
+
 "
 
 exit 0

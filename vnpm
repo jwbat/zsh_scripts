@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+# Description
+# healthy way to compile the UI 
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "$k
+    the fix for the build errors in npm build following the 
+    Vue version upgrade: $h
+
+    1) $gr rm -r node_modules package-lock.json $h
+    2)  ensure you have$p package.json $h file from develop (wherever)
+    3) $gr npm prune && npm install && npm run build
+
+    $y * do not * $c npm update $y!
+"
+
+exit 0
