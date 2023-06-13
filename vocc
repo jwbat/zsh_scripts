@@ -17,6 +17,8 @@ $pink VS132 $grey
    default IP of Wi-Fi is 192.168.1.1
    default SSID is People Counter_XXXXXX
 
+$x =========================================================================================== 
+
 $aqua
    VS121-915M notes  $grey
     covers ~ 800 sq. ft.
@@ -31,6 +33,8 @@ $aqua
     - add MS D2D (device-to-device) to connect other devices for intelligently responding to person count,
         e.g. turn on or off lights or heat (energy saving)
 
+$x =========================================================================================== 
+
 $aqua
    VS132-915M notes $grey
     - restart browser and/or clear cache if GUI is malfunctioning
@@ -39,11 +43,13 @@ $aqua
         draw the Entrance Area at the top of the field
         and the Exit Area at the bottom of the field
 
-     data:
+     data: $p
        \"people_in\": 1,                       
        \"people_out\": 1,                      
        \"total_counter_in\": 2,                
-      \"total_counter_out\": 2
+       \"total_counter_out\": 2
+
+$x =========================================================================================== 
  $k
     Start with looking at the form of the data from $a
      AM308 (motion / PIR)

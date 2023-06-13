@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+clear;
+
+echo "$a
+         Report of Devices 
+        to detect gaps in data $k
+     (either device problems --RF/batt, or gateway issues, which would manifest in multiple devices offline).
+
+    a CLI program that would query SF for this info $y
+
+        Inputs $h
+            Start date/time
+            End date/time
+            DevEUI list (or Building ID to query all devices at a building) $y
+        Output $h
+            DevEUI, Start timestamp, duration of all outages (outage defined as > 2.5X reporting interval)
+            GatewayEUIs $k
+
+    Eventually this would turn into a UBX Report of some sort.
+    Discuss key goals with Jonah & Arthur
+    Consider the problem and propose if you think of any improvements or alternatives
+    Develop CLI script that calls SF so Arthur and I can run as-needed
+    Propose form of Report on UBX (part of Wireless Device Report?  Different?)
+"
+
+exit 0

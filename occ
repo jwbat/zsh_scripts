@@ -8,6 +8,15 @@ clear;
 echo "$a
                 Room Occupancy Representation
 $h
+
+      Sensors $p AM308, VS121, VS132 $k
+      What all these devices have in common is the ability to keep track of the current number of people
+      in a room (PIR).  (Note that PIR also stands for \"passive infra-red sensor\", the technology used)
+      The VS132 counts people crossing a threshold, typically a doorway. It keeps track of
+      the number of people in and out in a reporting period as well as a running total of each; the
+      latter would probably be redundant with our historical data.  We will focus on PIR since it is the
+      common denominator. $h
+
       Floor Plan Diagram  $k 
       In each room with an occ sensor, show the number of people present color-coded based on occupancy levels,
       such as green for unoccupied and red for fully occupied (if max is known). 
@@ -16,9 +25,9 @@ $h
 
       Area Chart  $k 
       Area charts are often used to represent volume over time and might be one of the more intuitive ways to
-      graphically represent the change in \"volume\" of people in a room over time.  Highcharts has options that
-      allow the user to hover over the marker or line (room) of interest to bring it to the front while simultaneously
-      fading out the others.  $h
+      graphically represent the change in \"volume\" of people in a room over time.
+      Highcharts has options that allow the user to hover over the marker or line (room) of interest to bring 
+      it to the front while fading the others enhancing the ability to easily visualize the data.
 
       Bar Chart Report $k
       Each room with an occ sensor could be represented as a separate bar on a bar chart.
@@ -41,6 +50,10 @@ $h
       Each room with an occ sensor could be represented by a bubble, with the size of the bubble indicating
       the number of people in the room. The color of the bubble could represent the type of room 
       (office, conference room, etc.) $h
+
+      Line Graph $k 
+      Perhaps the simplest way to represent occupancy over time, whether for a single room or several, might
+      be the line graph.  $h
 "
 
 exit 0

@@ -11,7 +11,7 @@ echo "$k
     Vue version upgrade: $h
 
     1) $gr rm -r node_modules package-lock.json $h
-    2)  ensure you have$p package.json $h file from develop (wherever)
+    2)  ensure you have$p package.json $h from develop (wherever)
     3) $gr npm prune && npm install && npm run build
 
     $y * do not * $c npm update $y!

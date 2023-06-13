@@ -1,0 +1,53 @@
+#!/bin/zsh
+
+# Description
+# Little's Law of queuing theory to estimate the avg. amt. of time
+# an item stays in the system
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "$g
+                         Little's Law $h
+
+                from queuing theory estimates the avg.
+                duration of an item in the system $a
+
+        Little's Law states that the average number of items 
+        in a queuing system equals the average rate at which items 
+        arrive multiplied by the average time that an item spends in the system. 
+
+        Written out formally, Little's Law is: 
+
+               $y L = λW $s
+
+        - L is the average number of items in the queue (PIR)
+        - λ (lambda) is the average arrival rate (average rate of people entering the room)
+        - W is the average time an item spends in the system (average time a person spends in the room)
+
+        So, to estimate average length of stay (W), you can rearrange the equation:
+
+           $y     W = L / λ     $s
+
+        You would calculate λ (the average arrival rate) by 
+        dividing the total count of entries by the total time period.
+
+        L (the average number of people in the room) 
+        is a bit trickier to estimate without knowing the exact times 
+        people are in the room. A possible rough estimate could 
+        be to take the average of the total number of people 
+        in the room at regular intervals during the day. This
+        , however, assumes a fairly constant flow of people in 
+        and out, which may not always be accurate. 
+
+        Please note that this method provides an estimation and will not be 
+        perfectly accurate. It assumes that the system is stable (
+        the rate of entries and exits are balanced over the long 
+        term), that the flow of people in and out of 
+        the room is random and independent, and that the arrival 
+        rate and the number of people in the room are not 
+        correlated. Violations of these assumptions can result in inaccurate estimates 
+        of the average length of stay.
+"
+
+exit 0
