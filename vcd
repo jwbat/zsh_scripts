@@ -2,6 +2,7 @@
 
 r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
 
 echo "$gr 
                 VS repos $g
@@ -10,6 +11,7 @@ echo "$gr
         sub       $k   ~/code/aws/subscriber               $g
         ms        $k   ~/code/ventacity/milesight          $g
         abm       $k   ~/code/ventacity/milesight/ABM      $g
+        dvc       $k   ~/code/ventacity/devices            $g
 "
 
 
