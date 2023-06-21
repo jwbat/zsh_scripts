@@ -10,8 +10,6 @@ echo "$r
 $k 
 \t March 14 - 17 Jonah @ lorawan conference 
 $k 
-\t CRDB: ubx-dev
-$k 
 \t IAQ Conditions -- Dashboard for IAQ Pro100 IAQ1 
 $x 
 \t git, Fargate, Docker, WebViewer Server
@@ -24,12 +22,6 @@ $x
     wire shark logs (?)
     modbus table (?)
 $g
-    Vuetify
-    vue-slider-mark
-    vue-slider-mark-step
-$k
-    component:  ThresholdSliderField 
-
 "
 
 exit 0
