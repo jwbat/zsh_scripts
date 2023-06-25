@@ -11,7 +11,8 @@ echo "$gr
         sub       $k   ~/code/aws/subscriber               $g
         ms        $k   ~/code/ventacity/milesight          $g
         abm       $k   ~/code/ventacity/milesight/ABM      $g
-        dvc       $k   ~/code/ventacity/devices            $g
+        dch       $k   ~/code/ventacity/devices            $g
+        kr        $k   ~/code/cockroachdb                  $g
 "
 
 
