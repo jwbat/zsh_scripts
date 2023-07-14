@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+echo '0080000000022ab5' > out.txt
+./run.py --start '2023-07-10 03:00:00' --gateway 0080000000022ab5  --gap 11 >> out.txt
+echo '0080000000022ef7' >> out.txt
+./run.py --start '2023-07-10 03:00:00' --gateway 0080000000022ef7  --gap 11 >> out.txt
+echo '0080000000022ef9' >> out.txt
+./run.py --start '2023-07-10 03:00:00' --gateway 0080000000022ef9  --gap 11 >> out.txt
+echo '0080000000022ef8' >> out.txt
+./run.py --start '2023-07-10 03:00:00' --gateway 0080000000022ef8  --gap 11 >> out.txt
+echo '0080000000022f11' >> out.txt
+./run.py --start '2023-07-10 03:00:00' --gateway 0080000000022f11  --gap 11 >> out.txt
+echo '0080000000022ab4' >> out.txt
+./run.py --start '2023-07-10 03:00:00' --gateway 0080000000022ab4  --gap 11 >> out.txt
+echo '0080000000022f10' >> out.txt
+./run.py --start '2023-07-10 03:00:00' --gateway 0080000000022f10  --gap 11 >> out.txt
+echo '0080000000022ab3' >> out.txt
+./run.py --start '2023-07-10 03:00:00' --gateway 0080000000022ab3  --gap 11 >> out.txt
+
+exit 0
