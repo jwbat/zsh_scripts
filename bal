@@ -17,6 +17,10 @@ fields = []
 rows = []
 
 
+def clear():
+    sp.run('clear')
+
+
 def display_date():
     p1 = sp.run('date', capture_output=True, text=True)
     date = p1.stdout;
@@ -24,6 +28,7 @@ def display_date():
     print(yellow + '\n\t Today is ' + ' '.join(words))
 
 
+clear()
 display_date()
 
 with open(file, 'r') as csvfile:

@@ -1,0 +1,39 @@
+#!python3
+
+'''
+    Usage: ~ crdb "<CRDB query to execute>"
+'''
+
+import os
+import sys
+import argparse
+import subprocess
+
+
+cnx_str = os.getenv('UBX_GLOBAL')
+filename = 'output.csv'
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='')
+    parser.add_argument('query', type=str, nargs='+')
+    args = parser.parse_args()
+    return ' '.join(args.query)
+
+
+def show_output():
+    print()
+    cmd2 = ['bat', filename]
+    sp.run(cmd2)
+    print()
+
+
+def run():
+    query = parse_arguments()
+    cmd = ['cockroach', 'sql', '--url', cnx_str, '-e', query]
+    with open(filename, 'w') as f:
+        subprocess.run(cmd, stdout=f)
+    show_output()
+
+
+run()

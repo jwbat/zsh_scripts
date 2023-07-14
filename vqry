@@ -1,6 +1,30 @@
 #!/bin/zsh
 
-echo "$sea
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "$s
+query Building {
+  building(buildingUuid: \"4e4648b4-dd2e-47d6-896d-3ca86ce1dabe\") {
+    assets(knownAssets: true) {
+      assetUuid
+      knownAssetUuid
+      name
+      floor {
+        position
+        name
+      }
+      assetHealth(startDate: \"2023-06-25T00:00:00\", endDate: \"2023-06-25T23:59:59\") {
+        normalTimePct
+        propertyName
+      }
+    }
+  }
+}
+"
+
+exit 0
+
 query MyQuery {
   siteHealthOverTime(startDate: \"2022-04-01T00:00:00\",
                      endDate: \"2022-04-30T00:00:00\",
@@ -52,7 +76,3 @@ query lineGraph {
       sensor: MA,
       granularity: 10})
 }
-
-"
-
-exit 0

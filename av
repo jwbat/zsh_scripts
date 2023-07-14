@@ -1,0 +1,13 @@
+#!python3
+import os
+
+
+arn = os.getenv('abm_secrets_arn')  # files to open -see .zprofile
+
+print(f'''
+{{
+  "SecretId": "{ arn }",
+  "ClientRequestToken": "398457394857",
+  "Step": "createSecret"
+}}
+''')

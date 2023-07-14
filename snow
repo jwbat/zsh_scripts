@@ -1,0 +1,31 @@
+#!python3
+import os
+import sys
+import argparse
+import subprocess as sp
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='')
+    parser.add_argument('query', type=str, nargs='+')
+    args = parser.parse_args()
+    return ' '.join(args.query)
+
+
+query = parse_arguments()
+cmd = ['snowsql', '-c', 'xyz', '-q', query, '-o', 'output_format=csv']
+filename = 'output.csv'
+
+with open(filename, 'w') as f:
+    sp.run(cmd, stdout=f)
+
+with open(filename, 'r') as f:
+    lines = f.readlines()[2:-2]
+
+with open(filename, 'w') as f:
+    f.writelines(lines)
+
+
+cmd2 = ['bat', filename]
+print()
+sp.run(cmd2)
