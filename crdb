@@ -3,15 +3,19 @@
 '''
     Usage: ~ crdb "<CRDB query to execute>"
 '''
-
 import os
 import sys
 import argparse
-import subprocess
+import subprocess as sp
 
 
 cnx_str = os.getenv('UBX_GLOBAL')
 filename = 'output.csv'
+
+
+def cmd():
+    query = parse_arguments()
+    return ['cockroach', 'sql', '--url', cnx_str, '-e', query]
 
 
 def parse_arguments():
@@ -21,19 +25,20 @@ def parse_arguments():
     return ' '.join(args.query)
 
 
-def show_output():
+def bat_file():
     print()
-    cmd2 = ['bat', filename]
-    sp.run(cmd2)
+    sp.run(['bat', filename])
     print()
 
 
-def run():
-    query = parse_arguments()
-    cmd = ['cockroach', 'sql', '--url', cnx_str, '-e', query]
+def main():
     with open(filename, 'w') as f:
-        subprocess.run(cmd, stdout=f)
-    show_output()
+        try:
+            sp.run(cmd(), stdout=f, stderr=sp.PIPE, check=True)
+        except sp.CalledProcessError as e:
+            print(f"command \n\n { parse_arguments() } \n\n returned non-zero exit status {e.returncode}.", file=sys.stderr)
+            print(e.stderr.decode(), file=sys.stderr)
 
 
-run()
+main()
+bat_file()

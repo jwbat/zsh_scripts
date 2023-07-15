@@ -1,8 +1,22 @@
 #!python3
+
+'''
+    Usage: ~ snow "<Snowflake query to execute>"
+    see ~.snowsql/config for ubx configuration
+'''
 import os
 import sys
 import argparse
 import subprocess as sp
+from collections import deque
+
+
+outfile = 'output.csv'
+
+
+def cmd():
+    query = parse_arguments()
+    return ['snowsql', '-c', 'ubx', '-q', query, '-o', 'output_format=csv']
 
 
 def parse_arguments():
@@ -12,20 +26,44 @@ def parse_arguments():
     return ' '.join(args.query)
 
 
-query = parse_arguments()
-cmd = ['snowsql', '-c', 'xyz', '-q', query, '-o', 'output_format=csv']
-filename = 'output.csv'
-
-with open(filename, 'w') as f:
-    sp.run(cmd, stdout=f)
-
-with open(filename, 'r') as f:
-    lines = f.readlines()[2:-2]
-
-with open(filename, 'w') as f:
-    f.writelines(lines)
+def bat_file(file):
+    print()
+    sp.run(['bat', file])
+    print()
 
 
-cmd2 = ['bat', filename]
-print()
-sp.run(cmd2)
+def count_lines(filename):
+    result = sp.run(['wc', '-l', filename], stdout=sp.PIPE)
+    return int(result.stdout.decode().split()[0])
+
+
+def trim_file(outfile, N=2):
+    ''' trim N lines from beginning and end of outfile '''
+    dq = deque(maxlen=N)
+    temp = 'temp.csv'
+    sp.run(['mv', outfile, temp])
+    with open(temp, 'r') as f, open(outfile, 'w') as out:
+        for _ in range(N):
+            next(f)
+        for line in f:
+            dq.append(line)
+            if len(dq) >= N:
+                out.write(dq[0])
+    sp.run(['rm', temp])
+
+
+def main():
+    with open(outfile, 'w') as f:
+        try:
+            sp.run(cmd(), stdout=f, stderr=sp.PIPE, check=True)
+        except sp.CalledProcessError as e:
+            print(f'command \n\n { parse_arguments() } \n\n returned non-zero exit status {e.returncode}.', file=sys.stderr)
+            print(e.stderr.decode(), file=sys.stderr)
+
+    ''' snowflake writes extra stuff at start & end of output '''
+    if count_lines(outfile) > 4:
+        trim_file(outfile)
+
+
+main()
+bat_file(outfile)
