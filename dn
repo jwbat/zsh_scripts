@@ -1,0 +1,20 @@
+#!python3
+import os
+import subprocess
+from colored import fg
+
+
+def delete_last_n_lines(fname, N):
+    lines = int(subprocess.check_output(['wc', '-l', fname]).split()[0])
+    keep_lines = lines - N
+    temp = fname + '.temp'
+
+    if keep_lines > 0:
+        subprocess.run(['head', '-n', str(keep_lines), fname], stdout=open(temp, 'w'))
+    else:
+        open(temp, 'w').close()
+
+    os.rename(temp, fname)
+
+
+delete_last_n_lines('nothing.txt', 2)
