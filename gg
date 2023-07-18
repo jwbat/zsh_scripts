@@ -15,6 +15,7 @@ c2="$(tput setaf 12)"
 
 
 ecrypt ~/.zprofile ~/.dotfiles/.zprofile_encrypted                       # encrypt zprofile
+ecrypt ~/.zsh_a ~/.dotfiles/.zsh_a_encrypted                             # encrypt zsh_a
 ecrypt ~/.snowsql/config ~/.dotfiles/.snowsql_config_encrypted           # encrypt snowsql config
 
 for f in ~/macbook_certs/*; do                                           # encrypt vsd certs
@@ -30,6 +31,7 @@ for d in $ds; do
 done
 
 dcrypt ~/.dotfiles/.zprofile_encrypted ~/.zprofile                       # decrypt zprofile
+dcrypt ~/.dotfiles/.zsh_a_encrypted ~/.zsh_a                             # decrypt zsh_a
 dcrypt  ~/.dotfiles/.snowsql_config_encrypted ~/.snowsql/config          # decrypt snowsql config
 
 for f in ~/.dotfiles/mb_certs_encrypted/*; do                         # decrypt vsd certs
