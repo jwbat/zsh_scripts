@@ -1,0 +1,20 @@
+Current Rules (of interest)
+========================================================================================================
+Rule                     Topic pattern            Actions
+==================       ==================       ======================================================
+Milesight_Rule           lorawan/milesight        milesight_lambda, milesight_lambda (to be enabled)
+milesight_to_crdb        lorawan/milesight        pats_first
+
+
+Proposed Rules
+========================================================================================================
+Rule                     Topic pattern            Actions
+==================       ==================       ======================================================
+Milesight_Rule           lorawan/milesight/#      milesight_lambda, milesight_lambda (to be enabled)
+milesight_to_crdb        lorawan/milesight/#      pats_first
+ABM_Rule                 lorawan/milesight/abm    abm_lambda
+
+
+The proposed new topic patterns add a "#" which means any device with a desination to a subtopic will
+also trigger the rule.  At this point, to my knowledge, there aren't devices going to subtopic destinations.
+That means subtopics can be used to call lambdas more selectively (ABM_Rule / abm_lambda). 
