@@ -4,6 +4,34 @@ c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
 echo "
+ $a 05/25/23 $gr
+    test payload delivery to ABM webhook:  turn on IoT Rule to stream decoded AM308 data to ABM.
+    Document setup of VPC, NAT Gateway, and Lambda configuration.
+
+ $a 05/24/23 $gr
+    ABM Lambda
+
+ $a 05/23/23 $gr
+    ABM Lambda
+
+ $a 05/22/23 $gr
+    add functionality for subscribing to & filtering MQTT msgs in the ABM Lambda
+
+. . .
+
+ $a 05/18/23 $gr
+    \"wire\" VPC NAT gateway, route table; attach VPC to Lambda, start Lambda implementation.
+
+ $a 05/17/23 $gr
+    learn about VPCs, NATs, and web hooks.  IoT Rule & Lambda function: planning to send data to ABM's webhook.
+
+ $a 05/16/23 $gr
+    configure gateway with certs and Basic Station
+
+ $a 05/15/23 $gr
+    study isc-dhcp-server in Ubuntu for possible use connecting gateways in the field
+"
+exit 0
 
  $a 05/11/23 $gr
     isc-dhcp server configuration. gateway provisioning.
@@ -12,7 +40,7 @@ echo "
     provision and configure conduit
 
  $a 05/09/23 $gr
-    network commands.   get MT gateway to connect & say hi to IoT thru macOS's DHCP server
+    network commands.   get MT gateway to connect & say hi to IoT thru macOS\'s DHCP server
 
  $a 05/08/23 $gr
     Configure bash in Ubuntu Linux.  Investigate how to set up and use a DHCP server on Mac
@@ -39,7 +67,7 @@ echo "
     Diagnose permissions issue in IoT to allow subscription to MQTT topics locally
 
  $a 04/26/23 $gr
-    find a way to test Mac's DHCP server & cnx to a gateway;  local IoT topic subscription
+    find a way to test Mac\'s DHCP server & cnx to a gateway;  local IoT topic subscription
 
  $a 04/25/23 $gr
     look into how to use a Mac as a DHCP server for connecting to gateways in the field.
@@ -63,8 +91,6 @@ echo "
 . . .
 . . .
 
-"
-exit 0
 -------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -128,7 +154,7 @@ exit 0
     SW Team meeting. GQL - energy trend building planning
 
  $a 03/16/23 $gr
-    scripts to obtain energy device related uuid's from CRDB
+    scripts to obtain energy device related uuid\'s from CRDB
 
  $a 03/15/23 $gr
     work on understanding new infrastructure; building current aggregation query
@@ -144,7 +170,7 @@ exit 0
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
  $a 03/09/23 $gr
-    Create a Snowpipe to auto-ingest csv object files from the S3 bucket 'ubx-device-to-snowflake'
+    Create a Snowpipe to auto-ingest csv object files from the S3 bucket \'ubx-device-to-snowflake\'
     to the ventacity.ubx.UBX_DEVICE_DATA table.
 
  $a 03/08/23 $gr
@@ -159,7 +185,7 @@ exit 0
 
  $a 03/02/23 $gr
     AWS CloudFormation for WebViewer Server deployment. due to issue of the Apryse CF template only geared for deployment
-    to EC2, we're pausing this part of the project for now.  Discuss Retool project.
+    to EC2, we\'re pausing this part of the project for now.  Discuss Retool project.
 
  $a 03/01/23 $gr
     WebViewer Server.  Energy pro discussion with Terra & Jonah
@@ -192,7 +218,6 @@ exit 0
 #-------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------
 
-echo " 
 $a 02/16/23 $gr
     consult with Jonah on features & style of aggregate enery chart; finish chart; Git study
 
@@ -208,7 +233,7 @@ $a 02/13/23 $gr
     look at luxon library docs & try out their datetime object methods
 
 $a 02/09/23 $gr
-    discussion on Adam's updated Building Energy Report & comments
+    discussion on Adam\'s updated Building Energy Report & comments
     update aggregate energy query to be able return a total energy consumed from start date to end date.
     Look into the API for stacked bar charts in Highcharts
 
@@ -291,7 +316,7 @@ $aqua 01/03/23 $gr
 -------------------------------------------------------------------------------------------------------------------------
 
 $aqua 12/21/22 $gr
-    incorporate newly provisioned Milesight devices' fields for decoding in Lambda.  watch Cloudwatch logs.  query Lakehouse.
+    incorporate newly provisioned Milesight devices\' fields for decoding in Lambda.  watch Cloudwatch logs.  query Lakehouse.
 
 $aqua 12/20/22 $gr
     work on a unified decoder that decodes all fields from all Milesight devices in our inventory
@@ -312,6 +337,3 @@ $aqua 12/05/22 $green
     re-clone standalone-dev-env, run ./setup.sh, branch off py3-develop, add energypro queries,  
     re-factor for new directory structure since 1st writing the queries, test. 
     Milesight docs  
-
-"
-exit 0
