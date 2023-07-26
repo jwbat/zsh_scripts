@@ -7,15 +7,14 @@ clear;
 echo "$gr 
                 VS repos $g
 
-        pb        $k   ~/code/aws/push_button              $g
-        sub       $k   ~/code/aws/subscriber               $g
         ven       $k   ~/code/ventacity                    $g
         ms        $k   ~/code/ventacity/milesight          $g
         abm       $k   ~/code/ventacity/milesight/ABM      $g
         dch       $k   ~/code/ventacity/devices            $g
         uih       $k   ~/code/ventacity/ui-helper          $g
         kr        $k   ~/code/cockroachdb                  $g
+        pb        $k   ~/code/aws/push_button              $g
+        sub       $k   ~/code/aws/subscriber               $g
+        dest      $k   ~/code/aws/destinations             $g
 "
-
-
 exit 0

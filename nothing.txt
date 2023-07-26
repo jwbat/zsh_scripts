@@ -1,20 +1,19 @@
-Current Rules (of interest)
-========================================================================================================
-Rule                     Topic pattern            Actions
-==================       ==================       ======================================================
-Milesight_Rule           lorawan/milesight        milesight_lambda, milesight_lambda (to be enabled)
-milesight_to_crdb        lorawan/milesight        pats_first
+LoRaWAN_Milesight_ABM_Destination
+lorawan/milesight/abm
+24e124707d112135
 
 
-Proposed Rules
-========================================================================================================
-Rule                     Topic pattern            Actions
-==================       ==================       ======================================================
-Milesight_Rule           lorawan/milesight/#      milesight_lambda, milesight_lambda (to be enabled)
-milesight_to_crdb        lorawan/milesight/#      pats_first
-ABM_Rule                 lorawan/milesight/abm    abm_lambda
 
+In most of MQTT world, topic/# will be a valid destination for topic, topic/subtopic, topic/subtopic/subtopic2
+However, it is not that way in AWS IoT .
 
-The proposed new topic patterns add a "#" which means any device with a desination to a subtopic will
-also trigger the rule.  At this point, to my knowledge, there aren't devices going to subtopic destinations.
-That means subtopics can be used to call lambdas more selectively (ABM_Rule / abm_lambda). 
+Here's the fine print in AWS message routing:
+A subscription to sensor/# receives messages published to sensor/, sensor/temperature,
+sensor/temperature/room1, but not messages published to sensor. <---- **** !!
+
+============================================================================================
+
+Here's a way to handle the # and subtopics to invoke special lambdas that don't need invoking on all MS dvcs.
+pats_first is the MS processing Lambda that indirectly sends data on to S3 for snowpiping to SF.
+Rule milesight_to_crdb  has an Action that invokes it upon lorawan/milesight
+Rules can have multiple Actions, i.e. invoke multiple Lambdas.  Therefore, we can  add a new rule for ABM, abm_rule, that invokes both pats_first for general MS device decoding & piping to SF & writing to CRDB.  And it will also invoke abm_lambda for sending payloads to ABM's webhook.   This Rule would invoke on a topic like lorawan/milesight/abm/# or  lorawan/milesight/abm

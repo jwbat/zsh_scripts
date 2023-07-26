@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo " $gr
+        Google Slides.
+$h
+    1. Open a Google Slides presentation and select the slide where you want the flowchart.
+
+    2. Click on the \"Insert\" menu on the top and then select \"Shapes\".
+
+    3. You will see a variety of shapes, arrows, callouts, and equation symbols you can use
+       to design your flowchart. Click on the shape you want to start with and then click and drag on
+          your slide to create the shape. 
+
+    4. Repeat this process to add more shapes, and use arrows to show the flow between steps. 
+
+    5. You can then select a shape or arrow, right-click, and choose \"Format options \"
+       to modify its fill, border color, size, position, and more.
+
+    6. To add text inside a shape, just click on the shape and start typing. 
+
+    7. You can arrange your shapes and arrows as needed, and even group them together (by selecting
+       multiple shapes and right-clicking, then choosing \"Group\") for easier movement or formatting.
+$x
+    Remember that while Google Slides does offer basic shapes and tools to create a flowchart, it might not be
+    as feature-rich or convenient as specialized flowchart or diagramming software. However, it should be 
+    sufficient for creating simple flowcharts.
+"
+
+exit 0
