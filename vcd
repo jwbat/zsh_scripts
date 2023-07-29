@@ -8,6 +8,8 @@ echo "$gr
                 VS repos $g
 
         ven       $k   ~/code/ventacity                    $g
+        iaql      $k   ~/code/ventacity/iaq-lambda         $g
+        vu        $k   ~/code/ventacity/vutility           $g
         ms        $k   ~/code/ventacity/milesight          $g
         abm       $k   ~/code/ventacity/milesight/ABM      $g
         dch       $k   ~/code/ventacity/devices            $g

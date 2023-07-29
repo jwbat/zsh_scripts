@@ -1,10 +1,13 @@
-.....................................................................................................
 
-ABM repo => VS repos
 
-.....................................................................................................
+Q's for Pat:
+
+
 
 Hotdrop Direct
-    Vu decode
+  best_gateway_eui (keep?)
+  temp_c vs. temperature_celcius (we can see both names in ubx_device_property_state)
+  voltage: integer ?
 
-.....................................................................................................
+
+ABM repo => VS repos
