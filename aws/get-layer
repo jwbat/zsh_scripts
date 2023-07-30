@@ -1,0 +1,39 @@
+#!python3
+
+#  Description:  download the code for a Lambda Layer or print Layer description
+#  Usage:        get-layer <name-of-layer>  [-p] (-p : optionally print layer description)
+
+import sys
+import json
+import boto3
+import requests
+from rich.json import JSON
+from rich.console import Console
+
+
+def pretty_print(response):
+    console = Console()
+    s = json.dumps(response)
+    console.print(JSON(s))
+
+
+layer_name = sys.argv[1]
+client     = boto3.client('lambda')
+
+response = client.list_layer_versions(LayerName=layer_name)
+versions = [layer['Version'] for layer in response['LayerVersions']]
+version = max(versions) # latest version
+#version = int(sys.argv[2])
+
+response = client.get_layer_version(
+    LayerName=layer_name,
+    VersionNumber=version
+)
+if len(sys.argv) == 4 and sys.argv[2] == '-p':
+    pretty_print(response)
+    exit()
+
+download_url = response['Content']['Location']
+
+r = requests.get(download_url, allow_redirects=True)
+open(layer_name + '.zip', 'wb').write(r.content)

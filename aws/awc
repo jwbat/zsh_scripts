@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+d=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "
+$g        upl            $h   upl <lambda-function-name>    $x update Lambda
+$g        get-layer      $h   get-layer <name-of-layer>     $x get Layer
+$g        pub-layer      $h   pub-layer <name-of-layer>     $x publish Layer
+"
+
+exit 0

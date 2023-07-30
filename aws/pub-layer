@@ -1,0 +1,23 @@
+#!python3
+
+#   Description     publish Layer
+#   Usage:          pub-layer <name-of-layer>
+import sys
+import boto3
+import zipfile
+from colored import fg
+
+
+client = boto3.client('lambda')
+
+
+with open('package.zip', 'rb') as f:
+    layer_data = f.read()
+
+layer_name = sys.argv[1]
+response = client.publish_layer_version(
+    LayerName=layer_name,
+    Content={ 'ZipFile': layer_data },
+    CompatibleRuntimes=['python3.8'])
+
+print(response['LayerVersionArn'])
