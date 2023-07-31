@@ -1,0 +1,49 @@
+#!python3
+
+# Description
+# Usage
+import os
+import sys
+import argparse
+from colored import fg
+
+from reg_from_dev import get_registries
+from tables import get_crdb_tables, get_tables_and_columns
+
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='provide either a deveui')
+    parser.add_argument('-d', '--deveuis', type=str, nargs='+', help='provide 1 or more space-separated deveuis')
+    parser.add_argument('-t', '--tables', action='store_true', help='provide 1 or more space-separated deveuis')
+    return parser.parse_args()
+
+
+def get_registry_uuids(args):
+    get_registries(args.deveuis)
+
+
+def get_tables(args):
+    get_tables_and_columns()
+#    get_crdb_tables()
+
+
+def handle_b(args):
+    print("Handling -b with argument:", args.b)
+
+
+option_handlers = {
+    'deveuis': get_registry_uuids,
+    'tables': get_tables,
+}
+
+
+def main():
+    args = parse_arguments()
+    
+    for option, handler in option_handlers.items():
+        if getattr(args, option, None):
+            handler(args)
+
+
+main()

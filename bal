@@ -6,6 +6,7 @@ import subprocess as sp
 import csv
 from colored import fg
 
+
 blue = fg(87)
 red = fg(196)
 yellow = fg(192)
