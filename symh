@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Description - symlink help
+# Usage - ~ symh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
+
+echo "
+$gr       ln -s /path/to/original /path/to/symlink    $k  create symlink
+$gr       rm /path/to/symlink                         $k  remove symlink
+$gr       alias 'syms'                                $k  list symlinks
+"
+
+exit 0
