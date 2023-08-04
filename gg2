@@ -7,8 +7,8 @@
 # Usage
 # gg2
 
-d1=~/.dotfiles
-d2=~/code/shell/scripts
+d1=$HOME/.dotfiles
+d2=$HOME/code/shell/scripts
 ds=($d1 $d2) 
 c1="$(tput setaf 120)"
 c2="$(tput setaf 12)"
@@ -17,9 +17,9 @@ g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; x=$grey; s=$sea; gr=$green
 # an associative array defining the files to encrypt and their corresponding encrypted names
 typeset -A files
 files=(
-  "~/.zprofile"                    "~/.dotfiles/.zprofile_encrypted"
-  "~/.zsh_a"                       "~/.dotfiles/.zsh_a_encrypted"
-  "~/.snowsql/config"              "~/.dotfiles/.snowsql_config_encrypted"
+  "$HOME/.zprofile"                    "$HOME/.dotfiles/.zprofile_encrypted"
+  "$HOME/.zsh_a"                       "$HOME/.dotfiles/.zsh_a_encrypted"
+  "$HOME/.snowsql/config"              "$HOME/.dotfiles/.snowsql_config_encrypted"
 )
 # encrypt files
 for original in "${(@k)files}"; do
@@ -29,8 +29,8 @@ for original in "${(@k)files}"; do
 done
 
 
-for f in ~/macbook_certs/*; do                                           # encrypt vsd certs
-    ecrypt $f ~/.dotfiles/mb_certs_encrypted/$(basename $f)
+for f in $HOME/macbook_certs/*; do                                           # encrypt vsd certs
+    ecrypt $f $HOME/.dotfiles/mb_certs_encrypted/$(basename $f)
 done
 
 
@@ -48,11 +48,11 @@ for original in "${(@k)files}"; do
   echo "$h decrypted $a $encrypted $p -> $pg $original"
 done
 
-for f in ~/.dotfiles/mb_certs_encrypted/*; do                         # decrypt vsd certs
-    dcrypt $f ~/macbook_certs/$(basename $f)
+for f in $HOME/.dotfiles/mb_certs_encrypted/*; do                         # decrypt vsd certs
+    dcrypt $f $HOME/macbook_certs/$(basename $f)
 done
 
-cp ~/.zprofile ~/code/zprofile
+cp $HOME/.zprofile $HOME/code/zprofile
 
 bat $d2/stuff/reminders.txt;
 
