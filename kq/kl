@@ -1,0 +1,54 @@
+#!python3
+
+# Description
+# Usage
+import os
+import sys
+import argparse
+from colored import fg
+
+from reg_from_dev import get_registries
+from get_tables import get_tables_and_columns
+from tbl_to_csv import to_csv
+
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='provide either a deveui')
+    parser.add_argument('-d', '--deveuis', type=str, nargs='+', help='provide 1 or more space-separated deveuis.')
+    parser.add_argument('-t', '--tables', action='store_true', help='get tables & cols. takes no args.')
+    parser.add_argument('-c', '--csv', type=str, help='supply table name')
+    return parser.parse_args()
+
+
+def get_registry_uuids(args):
+    get_registries(args.deveuis)
+
+
+def get_tables(args):
+    get_tables_and_columns()
+
+def write_to_csv(args):
+    to_csv(args.csv)
+
+
+def handle_b(args):
+    print("Handling -b with argument:", args.b)
+
+
+option_handlers = {
+    'deveuis': get_registry_uuids,
+    'tables': get_tables,
+    'csv': write_to_csv,
+}
+
+
+def main():
+    args = parse_arguments()
+    
+    for option, handler in option_handlers.items():
+        if getattr(args, option, None):
+            handler(args)
+
+
+main()

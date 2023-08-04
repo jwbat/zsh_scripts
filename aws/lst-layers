@@ -1,0 +1,27 @@
+#!python3
+
+# Description
+# Usage
+
+import sys
+import boto3
+import json
+from rich.json import JSON
+from rich.console import Console
+
+outfile = 'layers.json'
+
+def pretty_print(response):
+    console = Console()
+    s = json.dumps(response)
+    console.print(JSON(s))
+
+
+client = boto3.client('lambda')
+
+response = client.list_layers()
+pretty_print(response)
+
+with open(outfile, 'w') as f:
+    json.dump(response, f, indent=4)
+

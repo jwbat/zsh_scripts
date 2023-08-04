@@ -4,9 +4,9 @@ d=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 
 echo "
-$g        upl            $h   upl <lambda-function-name>    $x update Lambda
-$g        get-layer      $h   get-layer <name-of-layer>     $x get Layer
-$g        pub-layer      $h   pub-layer <name-of-layer>     $x publish Layer
+$g        upl            $x update Lambda      $h   upl <lambda-function-name>    
+$g        get-layer      $x get Layer          $h   get-layer <name-of-layer>     
+$g        pub-layer      $x publish Layer      $h   pub-layer <name-of-layer>     
 "
 
 exit 0

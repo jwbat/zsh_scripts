@@ -1,0 +1,3 @@
+ubx_device_registry	        ['registry_uuid', 'known_asset_uuid', 'serial_number', 'latest_data_stamp', 'device_id']
+ubx_device_data_cache	    ['stamp', 'dev_eui', 'datum_uuid', 'properties']
+ubx_device_property_state	['registry_uuid', 'property_name', 'property_value', 'update_stamp']

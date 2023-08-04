@@ -1,0 +1,23 @@
+#!python3
+
+# Description
+# Usage
+
+import sys
+import boto3
+import json
+from rich.json import JSON
+from rich.console import Console
+
+def pretty_print(response):
+    console = Console()
+    s = json.dumps(response)
+    console.print(JSON(s))
+
+
+fname = sys.argv[1]
+
+client = boto3.client('lambda')
+response = client.get_function(FunctionName=fname)
+
+pretty_print(response)

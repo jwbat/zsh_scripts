@@ -1,6 +1,9 @@
+import os
 from colored import fg
 from db import execute_query
 
+
+outfile = 'tables.txt'
 
 gold  = fg(220)
 green = fg(150)
@@ -21,11 +24,17 @@ def get_tables_and_columns():
             tables_and_columns[table_name] = []
         tables_and_columns[table_name].append(column_name)
 
-    print()
-    for key in tables_and_columns.keys():
-        print(gold + key.rjust(32) + ': ' + green, tables_and_columns[key])
+    if os.path.isfile(outfile):
+        os.remove(outfile)
+
+    with open(outfile, 'a') as f:
         print()
-    print()
+        for key in tables_and_columns.keys():
+            f.write(key)
+            f.write('\t' + str(tables_and_columns[key]) + '\n')
+            print(gold + key.rjust(32) + ': ' + green, tables_and_columns[key])
+            print()
+        print()
 
 
 

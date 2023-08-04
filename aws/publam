@@ -1,30 +1,32 @@
 #!python3
 
 # Description:  package & update Lambda functions 
-# Usage         pu <name-of-lam-fcn>
+# Usage         publam <name-of-lam-fcn>
 import os
 import sys
 import boto3
 import zipfile
 
 
-fcn_name = sys.argv[1]
-root_dir = 'python'
+f_name = sys.argv[1]
 py_file  = 'lambda_function.py'
+crt_file = 'root.crt'
 pkg      = 'package.zip'
 
 
 def update():
     client = boto3.client('lambda')
     with zipfile.ZipFile(pkg, 'w') as f:
-        f.write(os.path.join(root_dir, python_file))
+        f.write(py_file)
+        f.write(crt_file)
 
     with open(pkg, 'rb') as f:
         zipped = f.read()
 
     response = client.update_function_code(
-        FunctionName=function_name,
-        ZipFile=zipped) # , Publish=True automatically create a new version
+        FunctionName=f_name,
+        ZipFile=zipped,)
+        #Publish=True) # automatically create a new version 
 
     os.remove(pkg)
     print(response['FunctionArn'])

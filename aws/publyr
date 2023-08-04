@@ -1,0 +1,32 @@
+#!python3
+
+#   Description     publish Layer
+#   Usage:          publyr <file-name> <name-of-layer> 
+import os
+import sys
+import shutil
+import zipfile
+import boto3
+
+
+file_name  = sys.argv[1]
+layer_name = sys.argv[2]
+
+client = boto3.client('lambda')
+
+shutil.copy(file_name, layer_name + '/python')
+os.chdir(layer_name)
+shutil.make_archive('package', 'zip', '.', 'python/')
+
+with open('package.zip', 'rb') as f:
+    layer_data = f.read()
+
+response = client.publish_layer_version(
+    LayerName=layer_name,
+    Content={ 'ZipFile': layer_data },
+    CompatibleRuntimes=['python3.8'],
+    CompatibleArchitectures=['x86_64'])
+
+print(response['LayerVersionArn'])
+os.remove('package.zip')
+

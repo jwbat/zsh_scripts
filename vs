@@ -4,6 +4,56 @@ c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
 echo "
+
+$g  Thu $gr 08/03/23 $k
+$g  Wed $gr 08/02/23 $k
+$g  Tue $gr 08/01/23 $k
+$g  Mon $gr 07/31/23 $k
+$g  Thu $gr 07/27/23 $k
+$g  Wed $gr 07/26/23 $k
+$g  Tue $gr 07/25/23 $k
+$g  Mon $gr 07/24/23 $k
+
+$g  Thu $gr 07/20/23 $k
+$g  Wed $gr 07/19/23 $k
+$g  Tue $gr 07/18/23 $k
+$g  Mon $gr 07/17/23 $k
+$g  Thu $gr 07/13/23 $k
+$g  Wed $gr 07/12/23 $k
+$g  Tue $gr 07/11/23 $k
+$g  Mon $gr 07/10/23 $k
+
+$g  Thu $gr 07/06/23 $k
+$g  Wed $gr 07/05/23 $k
+$g  Tue $gr 07/04/23 $k
+$g  Mon $gr 07/03/23 $k
+$g  Thu $gr 06/29/23 $k
+$g  Wed $gr 06/28/23 $k
+$g  Tue $gr 06/27/23 $k
+$g  Mon $gr 06/26/23 $k
+
+$g  Thu $gr 06/22/23 $k
+$g  Wed $gr 06/21/23 $k
+$g  Tue $gr 06/20/23 $k
+$g  Mon $gr 06/19/23 $k
+$g  Thu $gr 06/15/23 $k
+$g  Wed $gr 06/14/23 $k
+$g  Tue $gr 06/13/23 $k
+$g  Mon $gr 06/12/23 $k
+
+$g  Thu $gr 06/08/23 $k
+$g  Wed $gr 06/07/23 $k
+$g  Tue $gr 06/06/23 $k
+$g  Mon $gr 06/05/23 $k
+$g  Thu $gr 06/01/23 $k
+$g  Wed $gr 05/31/23 $k
+$g  Tue $gr 05/30/23 $k
+$g  Mon $gr 05/29/23 $k
+
+"
+exit 0
+
+
  $a 05/25/23 $gr
     test payload delivery to ABM webhook:  turn on IoT Rule to stream decoded AM308 data to ABM.
     Document setup of VPC, NAT Gateway, and Lambda configuration.
@@ -23,15 +73,13 @@ echo "
     \"wire\" VPC NAT gateway, route table; attach VPC to Lambda, start Lambda implementation.
 
  $a 05/17/23 $gr
-    learn about VPCs, NATs, and web hooks.  IoT Rule & Lambda function: planning to send data to ABM's webhook.
+    learn about VPCs, NATs, and web hooks.  IoT Rule & Lambda function: planning to send data to the ABM webhook.
 
  $a 05/16/23 $gr
     configure gateway with certs and Basic Station
 
  $a 05/15/23 $gr
     study isc-dhcp-server in Ubuntu for possible use connecting gateways in the field
-"
-exit 0
 
  $a 05/11/23 $gr
     isc-dhcp server configuration. gateway provisioning.

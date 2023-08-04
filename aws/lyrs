@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+bat ~/code/shell/scripts/aws/layers.json
+
+exit 0

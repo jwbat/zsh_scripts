@@ -1,9 +1,5 @@
 
 
-Q's for Pat:
-
-
-
 Hotdrop Direct
   best_gateway_eui (keep?)
   temp_c vs. temperature_celcius (we can see both names in ubx_device_property_state)

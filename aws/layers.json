@@ -1,0 +1,172 @@
+{
+    "ResponseMetadata": {
+        "RequestId": "8ce4298e-e5b1-49d9-80b0-25b5f701d9e6",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "date": "Tue, 01 Aug 2023 01:19:25 GMT",
+            "content-type": "application/json",
+            "content-length": "4186",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "8ce4298e-e5b1-49d9-80b0-25b5f701d9e6"
+        },
+        "RetryAttempts": 0
+    },
+    "Layers": [
+        {
+            "LayerName": "aiohttp-38",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:aiohttp-38",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:aiohttp-38:1",
+                "Version": 1,
+                "Description": "aiohttp for python 3.8",
+                "CreatedDate": "2023-05-04T16:27:42.970+0000",
+                "CompatibleRuntimes": [
+                    "python3.8"
+                ],
+                "CompatibleArchitectures": [
+                    "x86_64"
+                ]
+            }
+        },
+        {
+            "LayerName": "crdb_handler-38",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:crdb_handler-38",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:crdb_handler-38:4",
+                "Version": 4,
+                "Description": "Add test and staging servers",
+                "CreatedDate": "2023-07-13T18:15:43.135+0000",
+                "CompatibleRuntimes": [
+                    "python3.8"
+                ],
+                "CompatibleArchitectures": [
+                    "x86_64"
+                ]
+            }
+        },
+        {
+            "LayerName": "data_change_handler-38",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:data_change_handler-38",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:data_change_handler-38:6",
+                "Version": 6,
+                "Description": "A handler for publishing ubx data changes to mqtt",
+                "CreatedDate": "2023-07-10T17:46:15.881+0000",
+                "CompatibleRuntimes": [
+                    "python3.8"
+                ],
+                "CompatibleArchitectures": [
+                    "x86_64"
+                ]
+            }
+        },
+        {
+            "LayerName": "handle_decoded_data-38",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:handle_decoded_data-38",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:handle_decoded_data-38:2",
+                "Version": 2,
+                "CreatedDate": "2023-08-01T00:35:11.352+0000",
+                "CompatibleRuntimes": [
+                    "python3.8"
+                ],
+                "CompatibleArchitectures": [
+                    "x86_64"
+                ]
+            }
+        },
+        {
+            "LayerName": "modbus_lorawan",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:modbus_lorawan",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:modbus_lorawan:27",
+                "Version": 27,
+                "CreatedDate": "2023-07-26T19:13:38.063+0000",
+                "CompatibleRuntimes": [
+                    "python3.8"
+                ]
+            }
+        },
+        {
+            "LayerName": "psycopg2-layer",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:psycopg2-layer",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:psycopg2-layer:8",
+                "Version": 8,
+                "Description": "Psycopg2 for python 3.8 with $PGSSLROOTCERT = ./root.crt",
+                "CreatedDate": "2023-05-26T17:39:34.001+0000",
+                "CompatibleRuntimes": [
+                    "python3.8"
+                ],
+                "CompatibleArchitectures": [
+                    "x86_64"
+                ]
+            }
+        },
+        {
+            "LayerName": "requests-38",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:requests-38",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:requests-38:1",
+                "Version": 1,
+                "Description": "requests for python3.8",
+                "CreatedDate": "2023-03-23T17:50:50.430+0000",
+                "CompatibleRuntimes": [
+                    "python3.8"
+                ],
+                "CompatibleArchitectures": [
+                    "x86_64"
+                ]
+            }
+        },
+        {
+            "LayerName": "requests-layer-2",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:requests-layer-2",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:requests-layer-2:1",
+                "Version": 1,
+                "Description": "compatible with python 3.10 runtime",
+                "CreatedDate": "2023-05-18T20:22:57.586+0000",
+                "CompatibleRuntimes": [
+                    "python3.10",
+                    "python3.8",
+                    "python3.9",
+                    "python3.7"
+                ],
+                "CompatibleArchitectures": [
+                    "arm64"
+                ]
+            }
+        },
+        {
+            "LayerName": "requests_layer",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:requests_layer",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:requests_layer:1",
+                "Version": 1,
+                "Description": "include requests module in python lambdas",
+                "CreatedDate": "2022-11-30T19:51:21.920+0000",
+                "CompatibleRuntimes": [
+                    "python3.9",
+                    "python3.7"
+                ]
+            }
+        },
+        {
+            "LayerName": "ubx_thresholds",
+            "LayerArn": "arn:aws:lambda:us-west-2:508328745727:layer:ubx_thresholds",
+            "LatestMatchingVersion": {
+                "LayerVersionArn": "arn:aws:lambda:us-west-2:508328745727:layer:ubx_thresholds:8",
+                "Version": 8,
+                "Description": "Utility for querying and evaluating asset thresholds, Requires CRDB Handler",
+                "CreatedDate": "2023-07-28T17:50:05.696+0000",
+                "CompatibleRuntimes": [
+                    "python3.8"
+                ],
+                "CompatibleArchitectures": [
+                    "x86_64"
+                ]
+            }
+        }
+    ]
+}
