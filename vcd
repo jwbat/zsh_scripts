@@ -18,6 +18,8 @@ echo "$gr
         pb        $k   ~/code/aws/push_button              $g
         sub       $k   ~/code/aws/subscriber               $g
         dest      $k   ~/code/aws/destinations             $g
+        vul       $k   ~/code/aws/vu_lambda                $g
         za        $k   ~/code/shell/scripts/aws            $g
+
 "
 exit 0
