@@ -1,25 +1,36 @@
 #!/bin/zsh
 
 # Description
-# git push listed repos
+# git push listed repos.  encrypt dotfiles, decrypt
 # vsd = ventacity-saas-devel
 
 # Usage
-# gg
+# gg2
 
-d1=~/.dotfiles
-d2=~/code/shell/scripts
+d1=$HOME/.dotfiles
+d2=$HOME/code/shell/scripts
 ds=($d1 $d2) 
 c1="$(tput setaf 120)"
 c2="$(tput setaf 12)"
+g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+# an associative array defining the files to encrypt and their corresponding encrypted names
+typeset -A files
+files=(
+  "$HOME/.zprofile"                    "$HOME/.dotfiles/.zprofile_encrypted"
+  "$HOME/.zsh_a"                       "$HOME/.dotfiles/.zsh_a_encrypted"
+  "$HOME/.snowsql/config"              "$HOME/.dotfiles/.snowsql_config_encrypted"
+)
+# encrypt files
+for original in "${(@k)files}"; do
+  encrypted="${files[$original]}"
+  ecrypt "$original" "$encrypted"
+  echo "$h encrypted $pg $original $p -> $a $encrypted"
+done
 
 
-ecrypt ~/.zprofile ~/.dotfiles/.zprofile_encrypted                       # encrypt zprofile
-ecrypt ~/.zsh_a ~/.dotfiles/.zsh_a_encrypted                             # encrypt zsh_a
-ecrypt ~/.snowsql/config ~/.dotfiles/.snowsql_config_encrypted           # encrypt snowsql config
-
-for f in ~/macbook_certs/*; do                                           # encrypt vsd certs
-    ecrypt $f ~/.dotfiles/mb_certs_encrypted/$(basename $f)
+for f in $HOME/macbook_certs/*; do                                           # encrypt vsd certs
+    ecrypt $f $HOME/.dotfiles/mb_certs_encrypted/$(basename $f)
 done
 
 
@@ -30,15 +41,18 @@ for d in $ds; do
     git -C $d push -u origin main
 done
 
-dcrypt ~/.dotfiles/.zprofile_encrypted ~/.zprofile                       # decrypt zprofile
-dcrypt ~/.dotfiles/.zsh_a_encrypted ~/.zsh_a                             # decrypt zsh_a
-dcrypt  ~/.dotfiles/.snowsql_config_encrypted ~/.snowsql/config          # decrypt snowsql config
-
-for f in ~/.dotfiles/mb_certs_encrypted/*; do                         # decrypt vsd certs
-    dcrypt $f ~/macbook_certs/$(basename $f)
+# decrypt files
+for original in "${(@k)files}"; do
+  encrypted="${files[$original]}"
+  dcrypt "$encrypted" "$original"
+  echo "$h decrypted $a $encrypted $p -> $pg $original"
 done
 
-cp ~/.zprofile ~/code/zprofile
+for f in $HOME/.dotfiles/mb_certs_encrypted/*; do                         # decrypt vsd certs
+    dcrypt $f $HOME/macbook_certs/$(basename $f)
+done
+
+cp $HOME/.zprofile $HOME/code/zprofile
 
 bat $d2/stuff/reminders.txt;
 
