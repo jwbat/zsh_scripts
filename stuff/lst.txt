@@ -1,9 +1,4 @@
-
-
-Hotdrop Direct
-  best_gateway_eui (keep?)
-  temp_c vs. temperature_celcius (we can see both names in ubx_device_property_state)
-  voltage: integer ?
-
+layer & lambda dir structure
+layer & lambda *.sh scripts
 
 ABM repo => VS repos

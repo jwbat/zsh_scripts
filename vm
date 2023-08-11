@@ -1,0 +1,46 @@
+#!/bin/zsh
+# 
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
+
+echo "$k
+    For power cycling the MultiTech Gateway and then trying to get it to connect 
+    through the MacBook Internet Sharing, here's a recommended sequence of steps
+    to ensure a smooth connection process:
+
+    1. **Turn Off Internet Sharing on MacBook**:
+
+    2. **Power Off the MultiTech Gateway**: - unplug it.
+
+    3. **Wait for a Minute**:
+        - This ensures that the MultiTech Gateway is completely powered down and any
+          temporary configurations or states are cleared.
+
+    4. **Turn On Internet Sharing on MacBook**:
+        - Go back to System Preferences > Sharing.
+        - Check the box for Internet Sharing.
+        - Ensure that the correct connection is set to be shared 
+            (for example, if you want to share your MacBook's Wi-Fi connection over Ethernet,
+            select Wi-Fi in the \"Share your connection from\" dropdown and check the Ethernet box
+            in the \"To computers using\" section).
+
+    5. **Power On the MultiTech Gateway**:
+        - Turn the MultiTech Gateway back on.
+
+    6. **Wait for Connection**:
+        - Give it a few minutes to boot up completely and attempt to obtain an IP
+          address and other network details from the MacBook's Internet Sharing feature.
+
+    7. **Check Connectivity**:
+        - After a few minutes, check the MultiTech's web interface to see if it has obtained an IP
+          address and other network details. You can also try to access the internet through it, as previously discussed.
+
+    By setting up in this sequence, you're ensuring that the MacBook
+    is ready and waiting with its Internet Sharing feature active when 
+    the MultiTech Gateway starts up and begins seeking network details.
+    This can help with a smoother and more successful connection process.
+"
+
+exit 0

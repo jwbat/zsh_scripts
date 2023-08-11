@@ -54,7 +54,5 @@ done
 
 cp $HOME/.zprofile $HOME/code/zprofile
 
-bat $d2/stuff/reminders.txt;
-
 
 exit 0

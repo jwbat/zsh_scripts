@@ -7,19 +7,23 @@ clear;
 echo "$gr 
                 VS repos & cd aliases $g
 
-        ven       $k   ~/code/ventacity                    $g
-        iaql      $k   ~/code/ventacity/iaq-lambda         $g
-        vu        $k   ~/code/ventacity/vutility           $g
-        ms        $k   ~/code/ventacity/milesight          $g
-        abm       $k   ~/code/ventacity/milesight/ABM      $g
-        dch       $k   ~/code/ventacity/devices            $g
-        uih       $k   ~/code/ventacity/ui-helper          $g
-        kr        $k   ~/code/cockroachdb                  $g
-        pb        $k   ~/code/aws/push_button              $g
-        sub       $k   ~/code/aws/subscriber               $g
-        dest      $k   ~/code/aws/destinations             $g
-        vul       $k   ~/code/aws/vu_lambda                $g
-        za        $k   ~/code/shell/scripts/aws            $g
+        ven       $k   ~/code/ventacity                          $g
+        iaql      $k   ~/code/ventacity/iaq-lambda               $g
 
+        vut       $k   ~/code/ventacity/vutility                 $g
+        hdd       $k   ~/code/ventacity/vutility/hdd             $g
+        vul       $k   ~/code/ventacity/vutility/vu_lambda       $g
+
+        inva      $k   ~/code/aws/inventory                      $g
+        pb        $k   ~/code/aws/push_button                    $g
+        sub       $k   ~/code/aws/subscriber                     $g
+        dest      $k   ~/code/aws/destinations                   $g
+
+        ms        $k   ~/code/ventacity/milesight                $g
+        abm       $k   ~/code/ventacity/milesight/ABM            $g
+        dch       $k   ~/code/ventacity/devices                  $g
+        uih       $k   ~/code/ventacity/ui-helper                $g
+        kr        $k   ~/code/cockroachdb                        $g
+        za        $k   ~/code/shell/scripts/aws                  $g
 "
 exit 0
