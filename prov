@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+
+echo "$p
+    > AWS Devices window > select Add Device > select version OTAA V1.0.x
+        give it the DevEUI, Appkey, and AppEUI
+
+    > select the US915-A-OTAA profile
+        and the only Service Profile there is.
+
+"
+
+exit 0
