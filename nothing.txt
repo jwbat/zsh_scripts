@@ -1,8 +1,0 @@
-"accumulated_nanoampere_hour"
-"average_milliampere"
-"maximum_milliampere"
-"minimum_milliampere"
-
-"supply_voltage"
-"temperature_celsius"
-
