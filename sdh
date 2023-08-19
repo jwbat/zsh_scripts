@@ -1,0 +1,27 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
+
+echo "
+    $x basic syntax
+    $s sd 'search_pattern' 'replace_pattern' 
+
+    $x simple string replacement
+    $s echo Hello world | sd world tree
+
+    $x by default, all occurrences are replaced
+    $s echo apple apple apple | sd apple banana
+
+    $x regular expressions
+    $s echo \"abc123\" | sd '[0-9]+' '456'
+
+    $x edit file in place
+    $s sd -i 'search_pattern' 'replace_pattern' filename.txt
+    
+    $x capitalize
+    $s echo 'input text here' | tr 'a-z' 'A-Z'
+"
+
+exit 0
