@@ -5,71 +5,18 @@ c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
 echo " $a
- capture everything in a Google Doc, covering things like Destinations/Rules/Actions/Topics/Lambdas.
- A hitchhiker’s guide to our AWS IoT, covering a brief description of the general 
- concepts (with links to AWS docs)? Calling out key quirks and features like the # difference in AWS MQTT.
- Cover the specifics of our setup (names of lambdas and what they do), perhaps including a flowchart diagram
- from either Google Slides or LucidChart?
+    We get requests (Aubrey and ESCO so far) for the ability to
+    compare one sensor to another (usually an outdoor air temp sensor against an interior or HVAC sensor).
+    I’m contemplating a “Compare to…” option on each HC Linegraph that would let you pick any other
+    like Property (Temp vs Temp, RH vs RX) and turn the HC into a dual line graph
+    (not dual Y-axis for now, hence property req)
 
- $x see: vslides $k
+    It’ll need some interactive dialog to find the Property of interest:
+    Building -> SmartAsset -> Property list
+     (current Building)
 
-IoT Core
-
-Destinations
-============
-Assigning a “destination” to a device is the way to determine which rule will process a message from that device.
-The destination includes the 'topic' in its configuration, e.g. 'lorawan/milesight'.
-
-Rules
-=====
-Each rule has an associated topic -defined in a rudimentary SQL statment- such any message routed to that topic will
-trigger the rule.  That SQL may look something like: SELECT * FROM 'lorawan/milesight'.  It is possible to select on 
-particular fields of the incoming JSON, though at present we do not do so.  As written, the whole message is passed on
-for processing to the Action(s) that will be called by the rule.
-
-Actions
-=======
-The Action(s) called, such as invoking Lambda function(s), are defined in the rule.
-The simplest way to enable / disable the processing of messages to a particular topic 
-by a particular Lambda is by removing an Action from the Rule that calls the Lambda.
-For example, say all messages with a destination of 'topic/subtopic' are processed by two Lambda functions,
-L1 and L2, and it is 'Rule_A' that invokes them.   We wish to continue processing those messages by L1,
-but temporarily disable processing by L2.   Simply remove the Action defined in Rule_A that calls that Lambda, and
-add it back when ready to resume.
-
-
-    Lambda:  call a Lambda function with the message data.
-    Republish:  republish the MQTT message to another topic.
-    SNS:  send the message data to an Amazon SNS topic.
-    SQS:  send the message data to an Amazon SQS queue.
-    Kinesis:  send message data to an Amazon Kinesis Data Stream.
-    Firehose:  send message data to an Amazon Kinesis Data Firehose stream.
-    DynamoDB:  write the message data to an Amazon DynamoDB table.
-    DynamoDBv2:  write the message data to an Amazon DynamoDB table (supports more flexible payload parsing).
-    Elasticsearch:  write the message data to an Amazon Elasticsearch Service domain.
-    IoT Events  sends the message data to AWS IoT Events.
-    IoT SiteWise  sends the message data to AWS IoT SiteWise.
-    Step Functions  starts an execution of a Step Functions state machine with the message data.
-    CloudWatch metric  captures a CloudWatch metric.
-    CloudWatch alarm  changes a CloudWatch alarm.
-    CloudWatch Logs  logs the message data to CloudWatch Logs.
-    Timestream:  write the message data to an Amazon Timestream database.
-    HTTP:  send an HTTPS request to a Web Service endpoint.
-
-
-Topics
-======
-  # –
-In most of MQTT world, topic/# will be a valid destination for topic, topic/subtopic, topic/subtopic/subtopic2
-However, it is not that way in AWS IoT.
-Here's the fine print in AWS message routing:
-A subscription to sensor/# receives messages published to sensor/, sensor/temperature,sensor/temperature/room1, but not messages published to sensor. <---- **** !!
-
-Lambdas
-=======
-If a Lambda function is triggered by an S3 event like a new file being uploaded,
-the received event will be a JSON object containing details about the S3 bucket and the object that triggered the event.
-
+    let’s make the MVP that it’s only the Current Building and we’ll worry about adding that feature later
+    (Building selection within the account)
 "
 
 exit 0

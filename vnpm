@@ -5,6 +5,7 @@
 
 r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
 
 echo "$k
     the fix for the build errors in npm build following the 

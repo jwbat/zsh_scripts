@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+clear;
+
+echo "$h
+    Thanks for the debug info. The sensor hasn’t started since the last NFC
+    write on August 16th when AppEUI and AppKey was changed. If you haven’t
+    done so already I suggest you place it in a well-lit area, for example
+    near a window so that the sensor can charge up it’s internal energy storage.
+    The brighter it is the faster the charge process will be.
+    If you don’t see any activity from the sensor after a day or so you can do 
+    a hardware reset by removing the back cover and briefly short the two pads
+    circled below with a pair of tweezers, short piece of wire etc.
+    If the sensor is charged you should see the LED in the center of the sensor 
+    blink red, green, yellow.
+"
+
+exit 0
