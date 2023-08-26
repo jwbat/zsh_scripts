@@ -4,7 +4,7 @@ r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 clear;
 
-echo " $a
+echo " $k
     We get requests (Aubrey and ESCO so far) for the ability to
     compare one sensor to another (usually an outdoor air temp sensor against an interior or HVAC sensor).
     I’m contemplating a “Compare to…” option on each HC Linegraph that would let you pick any other
@@ -17,6 +17,32 @@ echo " $a
 
     let’s make the MVP that it’s only the Current Building and we’ll worry about adding that feature later
     (Building selection within the account)
+
+$a
+    We use a $g dialog $a component in various places, usually with forms.
+        Take a look at the $y EditAssetDialog $a
+
+    I would recommend starting with UI for comparing: $p
+        Place the button
+        Wire it up to the dialog
+        Hook up the dialog to get a list of building’s assets (and props?) $a
+
+
+    the query: the floorplan tab already uses it $p 
+        BuildingFloorplansTab, buildingAssets $a query
+
+$c
+         Not sure how you’ll need to filter assets.
+         We don’t have a straightforward way to ask for
+         all assets that support a given property.
+
+         It would be easy enough to ask for assets of the same known asset UUID
+
+         The $a IAQ $c report does look for all IAQ-ish assets,
+         so maybe some of that code can be used as a guide.
+
+         the dialog could just contain a message (if there are none to compare)
+
 "
 
 exit 0

@@ -1,0 +1,154 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; 
+z="$(tput setaf 252)"
+
+clear;
+
+echo "$k
+    It shouldn’t take drastic change to make a huge impact.
+    I wasn’t always productive, and I’d often go weeks sulking and watching crap on tv.
+    These tips turned my creative life around.
+    Now I can’t stop...
+$g
+        1.$c Meditate for a minute before starting any work. $z
+
+        Focus on your breath. 
+        Enjoy the sensations of being there, free of any pressure to perform.
+        Allow your mind to still like particles floating to the bottom of a jar of water.
+        From a place of calm, you have a crucial starter’s advantage. 
+        Now you’re a freaking zen monk, and it’s not even 8am. 
+        This is where creativity and energy flourish.
+$g
+        2.$c Stop being a little bitch. $z
+
+        Most of us are unproductive because we’re complaining to ourselves 
+        in the dim theatre of our minds about how ‘hard everything is.’ 
+        Stop whining, and stop moaning.
+        Find your inner badass who’s been standing there for close to a year
+        sharpening his blade waiting for you to locate your nuts.
+        Bring that dude out and unleash the demons of hell.
+$g
+        3.$c Decide to have fun. $z
+
+        Most people freeze like frightened bunnies when it comes to ‘productivity’ 
+        because they view it as high pressure and kinda dull. 
+        Productivity doesn’t have to be some heavy ‘discipline’ that takes effort.
+        All you need to do is figure out the next small step and find a way to enjoy it. 
+        YOU bring the enjoyment. You can choose to be silly. 
+        You’ll never outwork someone who’s enjoying themselves.
+$g
+        4.$c Walk an hour a day. $z
+
+        What?
+        Yes, spending time outdoors being ‘unproductive’ seems counterintuitive.
+        But most of us are low energy because we’re on our fat butts all day, and we allow our minds to grow thick with worry.
+        Walking clears all of this out, gets us into our bodies and multiplies our creativity.
+        If you want the secret ‘hack’ - walking is it (so is any movement).
+$g
+        5.$c Free-write like a champion. $z
+
+        Write anything that comes to mind for at least a minute. 
+        Allow your fingers to perform a lap dance for you on the keyboard, and just have fun seeing what shows up.
+        Write total and unmitigated drivel. 
+        Create something so beautifully disgraceful on the page that you have to laugh. 
+        This is pure release. Now you’re in fluid motion and primed for further productive output.
+$g
+        6.$c Leave your peepee alone. $z
+
+        I get it - bouncy big boobs on the Internet give you a comforting rush that you can’t
+        get anywhere else because Jane won’t respond to your texts.
+        But if you want to experience unparalleled creativity, you need to quit that shit and transmute your sex energy.
+        After a few days, you will be astounded at how powerful this is.
+$g
+        7.$c Do ’the thing.’ $z
+
+        Do the thing you’ve been avoiding.
+        Clean the snowdrifts of dust from under your damn bed for a change. 
+        Wash the dishes. 
+        Do that ‘dull’ chore. It’s not hard; it just requires effort.
+        Do the thing, and bring as much enjoyment as you can to it. 
+        Make sweet sexy love to the chore and shake your hips while you do it. 
+        It’s done, and you feel good about yourself. Now tell me you don’t feel four times productive.
+$g
+        8.$c Save the croissants for a Saturday. $z
+
+        I see you. Shovelling that extra-large croissant into your mouth hole on a Tuesday morning at the cafe.
+        Then I continue watching (and judging you) as you scroll cute cats on Instagram -
+        that article you were planning to write now a distant dream. 
+        Treat yourself less, so you do and be more.
+        Drop the carby crap, and you’ll be light on your toes, brain firing, and ready to rock.
+$g
+        9.$c Decide to be a warrior. $z
+
+        There’s something incredibly enlightening about how a simple decision can alter reality right now. 
+        Decide to be the most courageous, brutal, animal version of yourself.
+        There are always two parts to you: owner or wimp victim. 
+        Kill poor widdle victim daily.
+        Embody the posture and vibe of your cheerful warrior-self. 
+        Write me a letter in blood telling me how this went for you.
+$g
+        10.$c Rewrite IMMENSE goals daily. $z
+
+        Most of us never reach our goals.
+        That’s ok. But most goals are boring as all hell.
+        The real, secret value of goals is the excitement they stir in you today. 
+        Hitch a ride on this hack by rewriting exciting, mega goals once or even twice daily.
+        Stop being a dweeb, and lean into your greatness.
+        Physically write them down, and you will embody them via muscular activation.
+$g
+        11.$c Drink like an elephant. $z
+
+        I don’t need to tell you what Sally in Biology class wouldn’t shut up about: we’re mostly made of water.
+        So drink up. Most of us are tired because we’re dehydrated.
+        Drink (and don’t pretend that gin you’re slugging is water). 
+        Guzzle it in. 
+        Instant energy.
+$g
+        12.$c Perform the sexy snake dance. $z
+
+        I’m not messing with you.
+        Get your fat ass up right now and perform appalling physical shapes in your room. Be nasty.
+        Gyrate like you’ve been involuntarily celibate for a decade, and you’ve just been unleashed -
+        the degenerate chimp you are - on Spring Break. 
+        Productivity is all in the hips, my friend.
+$g
+        13.$c Adopt a wild persona. $z
+
+        Newsflash: you aren’t your ‘personality.’ 
+        You don’t need to buy into the story you keep telling yourself about who you are -
+        that you’re *sigh* - ‘just kind of a lazy dude.’ Shut it.
+        Choose to be who you need to be. 
+        If you need to be calm, open and receptive, be that.
+        But right now, you need your productivity game on, so be a wild, creative maniac. You can be that right now. 
+        *pssst. Be it.
+$g
+        14.$c Triple down on the present moment. $z
+
+        The ultimate productivity secret no one tells you is this: do one thing at a time,
+        with full enjoyment and presence.
+        A cheeky little trick to encourage this further is to set yourself a window of timed,
+        dedicated work - like 15 minutes of writing to a timer with no distractions.
+        This gets you out of your worries and into the untamed, crystal clear beauty of the right fucking now.
+        If you learned nothing over the course of this, leave knowing at least this:
+        Pour everything you have into one thing at a time.
+        That’s it. You got this ;). Now go raise hell.
+
+        $g  1. $k Meditate for 1 minute before work
+        $g  2. $k Stop being a little bitch
+        $g  3. $k Decide to have fun
+        $g  4. $k Walk an hour
+        $g  5. $k Free-write like a champion
+        $g  6. $k Leave your peepee alone
+        $g  7. $k Do a hard, but easy chore.
+        $g  8. $k Save the croissants for a Saturday
+        $g  9. $k Decide to be a warrior
+        $g 10. $k Rewrite IMMENSE goals
+        $g 11. $k Drink like an elephant
+        $g 12. $k Do the sexy snake dance
+        $g 13. $k Adopt a wild persona
+        $g 14. $k Triple down on the present.
+"
+
+exit 0
