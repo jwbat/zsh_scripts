@@ -1,5 +1,24 @@
 
+ Thu  08/31/23
+ Wed  08/30/23
+ Tue  08/29/23
+ Mon  08/28/23
+ Thu  08/24/23
+ Wed  08/23/23
+ Tue  08/22/23
+ Mon  08/21/23
+ 
+ Thu  08/17/23
+ Wed  08/16/23
+ Tue  08/15/23
+ Mon  08/14/23
+ Thu  08/10/23
+ Wed  08/09/23
+ Tue  08/08/23
+ Mon  08/07/23
 
+*
+ Invoice 34
  Thu  08/03/23 
  Wed  08/02/23 
  Tue  08/01/23 
@@ -8,28 +27,55 @@
  Wed  07/26/23 
  Tue  07/25/23 
  Mon  07/24/23 
-
-*
- Thu  07/20/23 
- Wed  07/19/23 
- Tue  07/18/23 
- Mon  07/17/23 
- Thu  07/13/23 
- Wed  07/12/23 
- Tue  07/11/23 
- Mon  07/10/23 
-
- Thu  07/06/23 
- Wed  07/05/23 
- Tue  07/04/23 
- Mon  07/03/23 
- Thu  06/29/23 
- Wed  06/28/23 
- Tue  06/27/23 
- Mon  06/26/23 
 *
 
 ---
+ Invoice 33
+ Thu  07/20/23 
+    programmatically change route destinations for devices in IoT.  Test with a single device,
+    verify that Lambdas are invoked.  Move ABM device routes from lorawan/milesight to lorawan/milesight/abm .
+ Wed  07/19/23 
+    Vutility HotDrop Direct: wireless amperage meter & byte map guide.  plan, begin implemention of decoder.
+    Discuss IoT Rules for routing MileSight devices with Pat
+ Tue  07/18/23 
+    IoT Rules, topics discussion with Pat:  turning off a redundant IoT rule that pipes Milesight data to SF.
+    Begin study of Vutility HotDrop direct & thinking about its decoding lambda.
+    Update abm_lambda to decode a newly added device type at UCLA, Milesight AM107.
+ Mon  07/17/23 
+    SW team meeting.  Finish ABM token rotation Lambda.  Update the ABM payload Lambda.
+ Thu  07/13/23 
+    ABM token rotation lambda: set up VPC & NAT gateway
+ Wed  07/12/23 
+    live testing of IAQ report.  Begin ABM token rotation project - study how to create a Lambda 
+    using a VPC NAT gateway to fetch a new token every 24 hours, and store it in secrets manager.
+ Tue  07/11/23 
+    IAQ Report wrap up
+ Mon  07/10/23 
+    SW team meeting. IAQ Report current readings
+---
+
+---
+ Invoice 32
+ Thu  07/06/23 
+    IAQ report:  generalize HighCharts Heatmap options to work with different components
+ Wed  07/05/23 
+    IAQ report
+ Tue  07/04/23 
+    co. holiday
+ Mon  07/03/23 
+    co. holiday
+ Thu  06/29/23 
+    integrate building asset API into report component; thresholds & colors.
+ Wed  06/28/23 
+    IAQ Report
+ Tue  06/27/23 
+    study API side for current IAQ report's query. Assist team member with installation of snowflake driver.
+ Mon  06/26/23 
+    SW team meeting.  IAQ Report for current values
+---
+
+---
+ Invoice 31
  Thu  06/22/23 
     add feature to diagnostic tool - return a list of all deveuis that have passed thru a gateway.
     UI project - begin an IAQ Report for current values
