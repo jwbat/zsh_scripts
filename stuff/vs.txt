@@ -1,0 +1,404 @@
+
+
+ Thu  08/03/23 
+ Wed  08/02/23 
+ Tue  08/01/23 
+ Mon  07/31/23 
+ Thu  07/27/23 
+ Wed  07/26/23 
+ Tue  07/25/23 
+ Mon  07/24/23 
+
+*
+ Thu  07/20/23 
+ Wed  07/19/23 
+ Tue  07/18/23 
+ Mon  07/17/23 
+ Thu  07/13/23 
+ Wed  07/12/23 
+ Tue  07/11/23 
+ Mon  07/10/23 
+
+ Thu  07/06/23 
+ Wed  07/05/23 
+ Tue  07/04/23 
+ Mon  07/03/23 
+ Thu  06/29/23 
+ Wed  06/28/23 
+ Tue  06/27/23 
+ Mon  06/26/23 
+*
+
+---
+ Thu  06/22/23 
+    add feature to diagnostic tool - return a list of all deveuis that have passed thru a gateway.
+    UI project - begin an IAQ Report for current values
+ Wed  06/21/23 
+    documented install & usage for gateway diagnostic tool; beta released to Arthur;
+    fix a kink for one of the CLI options.   new project:   IAQ Report for most recent IAQ values
+ Tue  06/20/23 
+    extend diagnostic tool from being able to find device outages also to find gateway outages.
+ Mon  06/19/23 
+    device diagnostic tool wrap up & testing.  write up installation and usage instructions. SW team mtg.
+ Thu  06/15/23 
+    device reporting diagnostic tool SQL. consult with Arthur & Jonah on desired final features
+ Wed  06/14/23 
+    work with SQL to help diagnose device reporting gaps.
+ Tue  06/13/23 
+    collect reporting interval data on all device types, match it up with known_asset_uuid's
+    for CLI program that will look for missed packets in ubx_device_data between given dates 
+    for a given deveui or registry_uuid
+ Mon  06/12/23 
+    Begin CLI program for detection of device connection problems in the field. SW Team mtg.
+---
+
+---
+ Invoice 30
+ Thu  06/08/23 
+    PTO
+ Wed  06/07/23 
+    further study of Highcharts for occupancy sensors.  add HC occupancy demos for report.
+ Tue  06/06/23 
+    Highcharts implementations for occupancy data
+ Mon  06/05/23 
+    PR thresholdsliderfield indicator.  SW team meeting.   investigation of occupancy sensor UI representation.
+ Thu  06/01/23 
+    investigate possibilities for representing occupancy sensor data.   debug frontend code compilation issue.
+ Wed  05/31/23 
+    update ThresholdSlider component to match Xuan design tweak.  debug UI Loading issue:
+    resolved by the introduction of required GQL environment variable
+ Tue  05/30/23 
+    IoT Rule to streaming the AM308 to ABM.   SmartButton Lambda for sending RSSIs etc to our Slack webhook
+ Mon  05/29/23 
+    Document VPC & webhook setup.  Test.  SW Team mtg.
+---
+
+ 05/25/23 
+    test payload delivery to ABM webhook. Document setup of VPC, NAT Gateway, and Lambda configuration.
+
+ 05/24/23 
+    ABM Lambda
+
+ 05/23/23 
+    ABM Lambda
+
+ 05/22/23 
+    add functionality for subscribing to & filtering MQTT msgs in the ABM Lambda
+
+. . .
+
+ 05/18/23 
+    \"wire\" VPC NAT gateway, route table; attach VPC to Lambda, start Lambda implementation.
+
+ 05/17/23 
+    learn about VPCs, NATs, and web hooks.  IoT Rule & Lambda function: planning to send data to the ABM webhook.
+
+ 05/16/23 
+    configure gateway with certs and Basic Station
+
+ 05/15/23 
+    study isc-dhcp-server in Ubuntu for possible use connecting gateways in the field
+
+ 05/11/23 
+    isc-dhcp server configuration. gateway provisioning.
+
+ 05/10/23 
+    provision and configure conduit
+
+ 05/09/23 
+    network commands.   get MT gateway to connect & say hi to IoT thru macOS\'s DHCP server
+
+ 05/08/23 
+    Configure bash in Ubuntu Linux.  Investigate how to set up and use a DHCP server on Mac
+    for connecting to gateways in the field.
+
+
+ 05/04/23 
+    implement new ThresholdFieldSlider indicator.
+
+ 05/03/23 
+    upgrade to Ubuntu 22. Log in to the UI.   Threshold slider in UI. 
+
+ 05/02/23 
+    finish up local IoT - MQTT subscriptions: listen and filter for gateway_euis and dev_euis;
+    document installation, usage, permissions for using the new CLI tool.
+
+ 05/01/23 
+    troubleshoot permissions issue in AWS IoT
+. . .
+. . .
+
+ 04/27/23 
+    Snowflake deletions in preparation of the restaurant deployments; coord with @Parker.
+    Diagnose permissions issue in IoT to allow subscription to MQTT topics locally
+
+ 04/26/23 
+    find a way to test Mac\'s DHCP server & cnx to a gateway;  local IoT topic subscription
+
+ 04/25/23 
+    look into how to use a Mac as a DHCP server for connecting to gateways in the field.
+    MQTT topic filtering on DevEUI or GatewayEui with a CL parameter. AWS CLI permissions issue.
+    Fix bug in agg-energy-building
+
+ 04/24/23 
+    PTO
+
+ 04/20/23 
+    Retool testing; make demo-ready
+
+ 04/19/23 
+    CRUD operations in Retool
+
+ 04/18/23 
+    Retool for CockroachDB administration, WebUI widgets
+
+ 04/17/23 
+    exploration of Retool for building WebUIs for CockroachDB administrative tasks
+. . .
+. . .
+
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+
+ 04/14/23 
+    Dog River installation  (2 hrs)
+
+ 04/13/23 
+    aggregate current trend. Energy API meeting.   (4 hrs)
+
+ 04/12/23 
+    implement PR review recommendations in energy queries
+
+ 04/11/23 
+    meeting on energy queries; agg property trend 
+
+ 04/10/23 
+    SW Team meeting.  plan aggregate property trend for Building Energy Report
+
+ 04/06/23 
+    sync backend work with Jason on frontend on energy query
+
+ 04/05/23 
+    timezone-informed aggregate building energy consumption by time query
+
+ 04/04/23 
+    Meeting  with Jonah, Parker, et. al. on SQL windowing in energy queries.
+    energy consumption device query updates to reflect TZ-informed start dates
+
+ 04/03/23 
+    SW Team meeting. backend development environment setup
+
+
+ 03/30/23 
+    timezone discussion w/ Jason.
+    adapt energyConsumptionByTime query to calculate energy consumed
+    on the 1st date with data in a date range to make Building Report charts align in the UI.
+    
+
+ 03/29/23 
+    augment building report GQL to return HotDrop names & their contributions to total energy
+
+ 03/28/23 
+    aggregate energy API
+
+ 03/27/23 
+    SW Team meeting.  aggregate building energy. script common CRDB queries
+
+...
+
+ 03/23/23 
+    energy API
+
+ 03/22/23 
+    energy API
+
+ 03/21/23 
+    energy API
+
+ 03/20/23 
+    SW Team meeting. GQL - energy trend building planning
+
+ 03/16/23 
+    scripts to obtain energy device related uuid\'s from CRDB
+
+ 03/15/23 
+    work on understanding new infrastructure; building current aggregation query
+
+ 03/14/23 
+    study the new infrastructure: CRDB & gql queries.
+    artificially generate parallel time series for building wide current to temporarily
+    fill in for lack of hotdrop data in ubx_device_data
+
+ 03/13/23 
+    setup new standalone env, install arm64 version of crdb binary for ubuntu,
+    & populate personal crdb cluster; study the new gql queries.
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+ 03/09/23 
+    Create a Snowpipe to auto-ingest csv object files from the S3 bucket \'ubx-device-to-snowflake\'
+    to the ventacity.ubx.UBX_DEVICE_DATA table.
+
+ 03/08/23 
+    Query updates for energy pro.  UI components for energy pro
+
+ 03/07/23 
+    Meet with Pat on snowpipe creation. Bugfix in aggEnergyByTime query. Troubleshoot login issue.
+    Update queries in energy pro to enable better handling of fetches of no data in the UI.
+
+ 03/06/23 
+    weekly SW team meeting.  setup s-d-e with AuthO.  Building Energy Report components
+
+ 03/02/23 
+    AWS CloudFormation for WebViewer Server deployment. due to issue of the Apryse CF template only geared for deployment
+    to EC2, we\'re pausing this part of the project for now.  Discuss Retool project.
+
+ 03/01/23 
+    WebViewer Server.  Energy pro discussion with Terra & Jonah
+
+ 02/28/23 
+    Monthly all-company meeting.  Discussion on naming conventions in GQl.  WebViewer Server eval.
+
+ 02/27/23 
+    SW Team meeting. pdf linearizations & PDFTron speedtests.  Docker + WebViewer Server evaluation
+
+-------------------------------------------------------------------------------------------------------------------------
+
+ 02/23/23 
+    PDF linearization, speed-testing, troubleshooting.  WebViewer Server, Docker, Fargate study
+
+ 02/22/23 
+    Apryse docs.  Linearization of PDFs using the Apryse SDK.  python script with pikepdf lib
+
+ 02/21/23 
+    Git study.  Discuss next projects: Apryse / PDFTron pdf linearization.
+
+ 02/20/23 
+    Presidents Day
+
+
+#-------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------
+
+$a 02/16/23 
+    consult with Jonah on features & style of aggregate enery chart; finish chart; Git study
+
+$a 02/15/23 
+    (same as 14th)
+
+$a 02/14/23 
+    Highcharts stacked column chart Vue component for building aggregate energy
+
+$a 02/13/23 
+    SW Team meeting.
+    update GQL in aggregate energy query with a simpler, better SQL statement, other refactoring;
+    look at luxon library docs & try out their datetime object methods
+
+$a 02/09/23 
+    discussion on Adam\'s updated Building Energy Report & comments
+    update aggregate energy query to be able return a total energy consumed from start date to end date.
+    Look into the API for stacked bar charts in Highcharts
+
+$a 02/08/23 
+    minor refactoring in building aggregate energy query
+    make a flow diagram for energy query;  meeting with Jonah: energy pro
+
+$a 02/07/23 
+    aggregate building energy consumption query 
+
+$a 02/06/23 
+    SW Team meeting.  Assist Pat in AWS IoT.  aggregate building energy consumption GQL query
+
+-------------------------------------------------------------------------------------------------------------------------
+
+$a 01/30/23 
+    PTO - driving to pdx.  SW team meeting.  Look into CA certificate expiration for CRDB Serverless.
+
+$a 01/26/23 
+    work with Pat on Lambda env, use his x86 - compiled pscyopg2 library; finish env & test
+
+$a 01/25/23 
+    troubleshoot Lambda env:  build postgres and awslambda-psycopg2 packages from source with SSL support
+    for inclusion in lambda layer.
+
+$a 01/24/23 
+    compile psycopg2 dependencies for Linux before  inclusion into Lambda Layer;
+
+$a 01/23/23 
+    Begin work on Lambda environment to include the psycopg2 library, a PostgreSQL adapter,
+    for interaction between IoT and CRDB.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+$a 01/19/23 
+    finish up occupancy sensors; document their configuration.
+    Study issue of possible UI representations for occupancy data.
+    Re-publish decoded packet data from Lambda for consumption by other services.
+    add SecretsManager with permissions, access secrets in Lambda
+
+$a 01/18/23 
+    more testing of Milesight occupancy sensors
+
+$a 01/17/23 
+    connect, test occupancy sensors
+
+$a 01/16/23 
+    MLK Holiday
+
+-------------------------------------------------------------------------------------------------------------------------
+
+$a 01/12/23 
+    refactor Milesight Lambda to locally subscribe to IoT messages;
+    Setup & test Milesight occupancy sensors.
+
+$a 01/11/23 
+    UBX demo meeting
+    thingify Mac at saas-devel
+    IoT meeting with Pat
+    Milesight device + NFC app for device initialization
+
+$a 01/10/23 
+    pick up Milesight sensors in Mosier and Hood River, connect to lorawan, provision them on AWS IoT
+
+$a 01/09/23 
+    bring frontend energy pro report up to date with new branch on port-pages, energy-report-v2;
+    test with up-to-date sbp-mono branch.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+$aqua 01/05/23 
+    work with new branch sbp-mono for energypro, update, test
+
+$aqua 01/04/23 
+    AWS SDK
+
+$aqua 01/03/23 
+    Review & merge PR for sbp-mono energyrpo; configure AWS CLI & test usage; test AWS SDK
+
+-------------------------------------------------------------------------------------------------------------------------
+
+$aqua 12/21/22 
+    incorporate newly provisioned Milesight devices\' fields for decoding in Lambda.  watch Cloudwatch logs.  query Lakehouse.
+
+$aqua 12/20/22 
+    work on a unified decoder that decodes all fields from all Milesight devices in our inventory
+
+$aqua 12/19/22 
+    proofread, re-write, integrate new MS sensor decoders into  IoT  + Lambda.  S3 Lifecycle .
+
+-------------------------------------------------------------------------------------------------------------------------
+
+$aqua 12/07/22 een
+    CRDB refresh; stored procedures?; new release notes
+
+$aqua 12/06/22 een
+    Milesight docs; plan the Lambdas & snowpipe of Milesight devices arriving this week; snowsql, copy into VARIANT
+    for snowpipe definition.
+
+$aqua 12/05/22 een
+    re-clone standalone-dev-env, run ./setup.sh, branch off py3-develop, add energypro queries,  
+    re-factor for new directory structure since 1st writing the queries, test. 
+    Milesight docs  

@@ -1,0 +1,87 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 231)"
+clear;
+
+echo "$k 
+        YT Channels
+$r
+        ❯ C ➟ Jacob Sorber
+        ❯ C++ ➟ TheCherno
+        ❯ Python ➟ Corey Schafer
+        ❯ JavaScript ➟ developedbyed
+        ❯ Java ➟ amigoscode
+        ❯ C# ➟ kudvenkat
+        ❯ Golang ➟ Jon Calhoun
+        ❯ Swift ➟ CodeWithChris
+        ❯ Kotlin ➟ PhilippLackner
+        ❯ PHP ➟ ProgramWithGio
+        ❯ Dart ➟ Flutterly
+        ❯ Ruby ➟ DriftingRuby
+        ❯ Rust ➟ NoBoilerplate
+        ❯ TypeScript ➟ Matt Pocock
+        ❯ Lua ➟ Steve's teacher
+        ❯ R ➟ marinstatlectures
+        ❯ SQL ➟ Joey Blue
+
+        ❯ C++ ➟ javidx9
+        ❯ JavaScript ➟ Akshay Saini
+        ❯ TypeScript ➟ basarat
+        ❯ TypeScript ➟ TypeScriptTV
+        ❯ C# ➟ Microsoft Developer [Bob Tabor]
+        ❯ C# ➟ dotnet [Scott/Kendra]
+$pg
+               -- Frameworks --
+$r
+        ❯ Node.js ➟ Traversy Media
+        ❯ React ➟ Dave Gray
+        ❯ React ➟ Jack Herrington
+        ❯ Next.js ➟ Lama Dev
+        ❯ Vue ➟ Vue Mastery
+        ❯ Svelte ➟ Joy of Code
+        ❯ Angular ➟ Angular University
+        ❯ Django ➟ CodingEntrepreneurs
+        ❯ Laravel ➟ LaravelDaily
+        ❯ Blazor ➟ James Montemagno
+        ❯ Spring ➟ SpringSourceDev
+        ❯ SpringBoot ➟ amigoscode
+        ❯ Ruby on Rails ➟ GorailsTV
+        ❯ Flutter ➟ The Flutter Way
+        ❯ Flutter ➟ Tadas Petra
+$pg
+                 -- Special Mentions --
+$r
+        ❯ Programming in 100 Sec ➟ Fireship
+        ❯ DSA ➟ take U forward
+        ❯ Interviews ➟ NeetCode
+        ❯ Projects ➟ JavaScript King
+$pg
+                 -- Code Editors --
+$r
+        ❯ Vim ➟ ThePrimeagen
+        ❯ VS Code ➟ Visual Studio Code
+        ❯ Jupyter Notebook ➟ Corey Schafer
+$pg
+                 -- Free Education --
+$r
+        ➟ freecodecamp
+        ➟ Simplilearn
+        ➟ edureka!
+$pg
+                  -- Allrounders --
+$r
+       ➟ TechWithTim
+       ➟ WebDevSimplified
+       ➟ programmingwithmosh
+       ➟ Traversy Media
+       ➟ BroCodez
+       ➟ thenewboston
+       ➟ Telusko
+       ➟ Derek Banas
+       ➟ CodeWithHarry
+       ➟ MySirG .com
+"
+
+exit 0
