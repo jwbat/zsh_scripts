@@ -1,0 +1,52 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 231)"
+
+echo "$g
+    SQL Optimization Techniques $k
+
+    1. Create an index on huge tables (>1.000.000) rows.
+
+    2. Use EXIST() instead of COUNT() to find an element in the table.
+
+    3. SELECT fields instead of using SELECT *
+
+    4. Avoid Subqueries in WHERE Clause
+
+    5. Avoid SELECT DISTINCT where possible.
+
+    6. Use the WHERE Clause instead of HAVING.
+
+    7. Create joins with INNER JOIN (not WHERE)
+
+    8. Use LIMIT to sample query results.
+
+    9. Use UNION ALL instead of UNION wherever possible.
+
+    10. Use UNION where instead of WHERE ... or ... query.
+
+    11. Run your query during off-peak hours.
+
+    12. Avoid using OR in join queries.
+
+    13. Choose GROUP BY over window functions.
+
+    14. Use derived and temporary tables.
+
+    15. Drop the index before loading bulk data.
+
+    16. Use materialized views instead of views.
+
+    17. Avoid != or <> (not equal) operator
+
+    18. Minimize the number of subqueries.
+
+    19. Use INNER join as little as possible when you can get the same output using LEFT/RIGHT join?
+
+    20. Frequently try to use temporary sources to retrieve the same dataset.
+
+"
+
+exit 0

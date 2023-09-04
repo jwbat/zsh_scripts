@@ -1,0 +1,109 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 146)"
+
+echo "$k
+    1. Link or story technique
+$z
+    Prompt: \"Help me to memorize this list of words: [words] by using the link or story technique.\"
+$k
+    2. Mnemonic device
+$z
+    Prompt: \"Show me how to use a mnemonic device to remember [information] better.\"
+$k
+    3. Spaced repetition
+$z
+    Prompt: \"What is the concept of spaced repetition and why is it effective for memorizing [topic]?\"
+$k
+    4. Visual memory
+$z
+    Prompt: \"Give me some tips to improve my visual memory and create mental images of [information].\"
+$k
+    5. Mind map
+$z
+    Prompt: \"Teach me how to use mind maps to organize and memorize [information].\"
+$k
+    6. Acronym
+$z
+    Prompt: \"Provide me with some examples of acronyms that can help me memorize [information].\"
+$k
+    7. Memory palace
+$z
+    Prompt: \"Demonstrate how to use the memory palace technique to store and retrieve [information] in my brain.\"
+$k
+    8. Flashcard
+$z
+    Prompt: \"Tell me some benefits of using flashcards for memorizing [information].\"
+$k
+    9. Rhyme or song
+$z
+    Prompt: \"Create a rhyme or song to make memorizing [information] more fun and easy.\"
+$k
+    10. Memory error
+$z
+    Prompt: \"Identify some common memory errors and how to avoid them when learning [topic].\"
+$k
+    11. Chunking
+$z
+    Prompt: \"Apply the chunking technique to break down [information] into smaller units.\"
+$k
+    12. Association
+$z
+    Prompt: \"Explain how to use association to link [new information] to [old information] that I already know or remember.\"
+$k
+    13. Substitution
+$z
+    Prompt: \"Suggest how to use the substitution method to replace difficult words or concepts in [topic] with simpler ones.\"
+$k
+    14. Chaining
+$z
+    Prompt: \"Make a story or sequence of events from [information] that I want to memorize by using the chaining technique.\"
+$k
+    15. Elaboration
+$z
+    Prompt: \"Describe how to use elaboration to deepen my understanding and memory of [topic].\"
+$k
+    16. Peg system
+$z
+    Prompt: \"Guide me on how to use the peg system to memorize a list of [items].\"
+$k
+    17. Keyword method
+$z
+    Prompt: \"Illustrate how to use the keyword method to memorize [foreign words] and their meanings.\"
+$k
+    18. Loci method
+$z
+    Prompt: \"Review the order of [events] or [steps] by using the loci method.\"
+$k
+    19. First letter technique
+$z
+    Prompt: \"Form a sentence or phrase from the first letters of each item in this list: [words] or [names] by using the first letter technique.\"
+$k
+    20. Major system
+$z
+    Prompt: \"Convert [numbers] or [dates] into words by using the major system.\"
+$k
+    21. Feynman technique
+$z
+    Prompt: \"Simplify and explain [concept] in simple terms by using the Feynman technique.\"
+$k
+    22. Method of loci
+$z
+    Prompt: \"Memorize the names and locations of [countries] or [cities] on a map by using the method of loci.\"
+$k
+    23. Acronym method
+$z
+    Prompt: \"Generate a word from the first letters of each item in this list: [categories] or [criteria] by using the acronym method.\"
+$k
+    24. Roman room technique
+$z
+    Prompt: \"Prepare a speech or presentation on [topic] by using the Roman room technique.\"
+$k
+    25. Journey method
+$z
+    Prompt: \"Recall a story or plot of [book] or [movie] by using the journey method.\"
+"
+
+exit 0
