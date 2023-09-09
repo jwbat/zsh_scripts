@@ -1,0 +1,28 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 231)"
+
+echo "Please select an option:"
+echo "1) cd into \$HOME directory"
+echo "2) List files in the current directory"
+echo "3) Display the current user"
+
+read choice
+
+case $choice in
+    1)
+        cd $HOME
+        ;;
+    2)
+        cd $HO
+        ;;
+    3)
+        echo $USER
+        ;;
+    *)
+        echo "Invalid option"
+        ;;
+
+esac

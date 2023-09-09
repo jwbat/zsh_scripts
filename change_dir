@@ -1,0 +1,37 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 231)"
+
+
+clear;
+echo "$gr
+       please select a directory to cd into:
+       $h 1) $p home $h 2) $p scripts $h 3) $p python $h 4) $p UI $h
+       $h 5) $p CRDB $h 6) $p SF      $h 7) $p        $h 8) $p    $h
+"
+
+read choice
+
+case $choice in
+    1)
+        cd $HOME
+        ;;
+    2)
+        cd $HOME/code/shell/scripts
+        ;;
+    3)
+        cd $HOME/code/python
+        ;;
+    4)
+        cd $HOME/code/ventacity/sbg-webapp/modules/vue-ui/src && n12 && y
+        ;;
+    5)
+        cd $HOME/code/cockroachdb
+        ;;
+    6)
+        cd $HOME/code/snowflake
+        ;;
+esac
+
+clear;
