@@ -1,4 +1,0 @@
-🔥
-
-outfile=$HOME/Desktop/outfile.csv:csv
-snowsql -q $statement -o "$outfile";
