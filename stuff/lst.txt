@@ -1,5 +1,5 @@
-abm_lambda / Avi
+    abm_lambda / Avi
 
-repos: james-compare, Wm
+    how do Lambda aliases work?
 
 

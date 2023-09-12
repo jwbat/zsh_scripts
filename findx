@@ -1,0 +1,38 @@
+#!python3
+
+# Description
+# find all files with a given extension in pwd & sub-dirs recursively
+
+# Usage
+# findx <extension>
+
+import sys
+import glob
+from colored import fg
+
+
+thistle = fg(182)
+yellow  = fg(190)
+grey    = fg(254)
+
+def print_result(files, ext):
+    print()
+    for file in files:
+        print(thistle + ' ' + file)
+    print()
+    print(grey + '\t found ' + yellow + str(len(files)) + grey + ' files with extension, ' + yellow + ext)
+
+
+def get_extension_from_input():
+    try:
+        return sys.argv[1]
+    except:
+        print('please supply an extension to search for as a single arg')
+        exit()
+
+
+ext = get_extension_from_input()
+path = '**/*.' + ext
+files = glob.glob(path, recursive=True)
+
+print_result(files, ext)

@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 231)"
+
+echo "$s
+                                    code                    freeCodeCamp.org
+                                    design                  Uxcel.com
+                                    UX                      LawsOfUx.com
+                                    data structures         csvistool.com
+                                    algorithms              Visualgo.net
+                                    linux                   LinuxSurvival.com
+                                    Git                     LearnGitBranching.js.org
+                                    SQL                     Sqlbolt.com
+"
+
+exit 0

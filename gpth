@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 231)"
+clear;
+
+echo "$h
+    define structure & target output, e.g. HTML + JS + CSS
+    ask before answer
+    perspective prompting:  \"Act as a ... \"
+
+    laddering:  complex task => task1, task2, task3
+
+    Code interpreter
+    ================
+    Utility tasks:
+        perform math calculations
+        generate data
+        extract info from files
+        transform file content
+    Data Analytics:  
+        load, clean, & transform data
+        create charts
+        dummy data generation
+    Image editing:
+        transform images
+        extract data from images
+        generate images
+"
+
+exit 0

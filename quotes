@@ -22,7 +22,8 @@ q1="$c0   Files are a means to store data in a storage device."
 q2="$c1   An object is a region of storage that has a type and a value."
 q3="$c3   An expression is referentially transparent if it has no observable
    side effects, and therefore all functions used in that expression
-   are pure. - Ivan Cukic"
+   are pure. 
+   - Ivan Cukic"
 q4="$c4   For what shall it profit a man,
    if he shall gain the whole world but lose his soul?"
 q5="$c2   You can't make somebody understand something if their salary
@@ -34,9 +35,13 @@ q6="$c3   Any fool can write code that a computer can understand.
 q7="$c1   When clients of a complex system are ignorant of how it works,
    yet happy with what it does, that says a lot about the design of the system. 
     - Scott Meyers"
+q8="$c4   There is a wise passivity that enables things to come about less by
+   what is done than by what is not done, that opens up possibility where
+   activity closes it donw. 
+    - Iain McGilchrist"
 
 
-qs=($q1 $q2 $q3 $q4 $q5 $q6 $q7)
+qs=($q1 $q2 $q3 $q4 $q5 $q6 $q7 $q8)
 
 for q in $qs; do
    echo ""
