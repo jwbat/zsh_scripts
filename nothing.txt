@@ -1,0 +1,2 @@
+@Jonah  See what you think of this strategy for converting the series of 1's & 0's for "pir" to a unitless activity level. 
+  find a weighted moving average and scale from 0 - 5.    A window size of 5 would therefore be looking at a 50 minute interval, and weight would of course be highest for the center of the window.

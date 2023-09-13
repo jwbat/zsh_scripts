@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 229)"
+clear;
+
+echo "
+   $g How to Resolve a Merge Conflict $z
+    After a git merge with conflicts has occurred,
+    git will indicate that conflicts exist and need to be resolved.
+    Files with conflicts will be listed. Open a conflicted file,
+    which might look like this:
+$r
+        <<<<<<< HEAD $x
+        // this is your local change $r
+        int x = 10;
+        ======= $x
+        // this is the incoming change $r  
+        int x = 20;
+        >>>>>>> branch-name
+$z
+    Edit the files to resolve conflicts. Decide which code to keep, which to discard,
+    or how to otherwise combine the conflicted lines.  Remove conflict markers.
+$gr
+        git add <filenames>
+        git commit -m 'msg'
+$z
+    Resolved.
+"
+
+exit 0

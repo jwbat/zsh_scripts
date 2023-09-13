@@ -26,7 +26,8 @@ echo "#!/bin/zsh
 
 r=\$red; g=\$gold; y=\$yellow; a=\$aqua; pg=\$palegreen; k=\$khaki;
 c=\$cyan; x=\$grey; s=\$sea; gr=\$green; p=\$pink; h=\$honeydew;
-z=\"\$(tput setaf 231)\"
+z=\"\$(tput setaf 229)\"
+clear;
 
 echo \"\$h
 \"

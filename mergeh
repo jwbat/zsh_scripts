@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 229)"
+clear;
+
+echo "$z
+    Say we have branch B which branched from branch A.
+    A has since made commits, and we want to merge those changes on A back into B.
+            
+        $gr git checkout B
+        $gr git fetch
+        $gr git merge A
+        $z <resolve conflicts>
+        $gr git add .
+        $gr git commit -m 'msg'
+"
+
+exit 0
