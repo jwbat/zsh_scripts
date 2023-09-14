@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 229)"
+clear;
+
+echo "$k
+    To undo all changes in working directory since last commit
+$g
+        git checkout -- .   $x discards all changes
+$k
+    Alternatively, to eliminate all changes to tracked files in
+    both working directory & staging, resetting them to the state
+    of the last commit ('HEAD')
+$g
+        git reset --hard HEAD
+"
+
+exit 0
