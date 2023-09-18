@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+# usage: crlx "<SQL statement>"
+
+cmd=$1
+
+cockroach sql --url $gerbil --execute $cmd --format=csv > /Users/james/Desktop/file.csv;
+
+exit 0

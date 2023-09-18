@@ -46,9 +46,11 @@ def trim_file(outfile, N=2):
         for _ in range(N):
             next(f)
         for line in f:
-            dq.append(line)
+            cleaned_line = line.replace('\\n', '')
+            dq.append(cleaned_line)
             if len(dq) >= N:
                 out.write(dq[0])
+
     sp.run(['rm', temp])
 
 
@@ -66,4 +68,4 @@ def main():
 
 
 main()
-bat_file(outfile)
+#bat_file(outfile)

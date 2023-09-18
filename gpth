@@ -11,22 +11,44 @@ echo "$h
     perspective prompting:  \"Act as a ... \"
 
     laddering:  complex task => task1, task2, task3
+$y
+        Code interpreter $k
+        ================
+        Utility tasks:
+            perform math calculations
+            generate data
+            extract info from files
+            transform file content
+        Data Analytics:  
+            load, clean, & transform data
+            create charts
+            dummy data generation
+        Image editing:
+            transform images
+            extract data from images
+            generate images
+$g
+    Simplified Data Analytics Workflow $h
+    ================================== $gr
+    Data prep               -->     Data Analysis       -->     Data Visualization  $x
+    load & clean raw data           apply statistics            create charts
+                                     (mean & median)
+$x
+$pg     'Act as a pro data analyst.  use Python to clean the uploaded csv'   
 
-    Code interpreter
-    ================
-    Utility tasks:
-        perform math calculations
-        generate data
-        extract info from files
-        transform file content
-    Data Analytics:  
-        load, clean, & transform data
-        create charts
-        dummy data generation
-    Image editing:
-        transform images
-        extract data from images
-        generate images
+$g
+    Image Editing $h
+    ============= $gr
+    analyze / transform / extract data / generate images $k
+    get metadata, crop, change aspect ratio, extract the color palette, convert file format $z
+    Optical Character Recognition - $x recognize text in unploaded digital image and output as text
+     $pg 'use OCR to analyze the image and extract the text'
+
+$g
+    Content Creation $h
+    ================ $gr
+    $k create blog post, articles, video scripts
+        $x targe audience
 "
 
 exit 0
