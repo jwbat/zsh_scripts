@@ -2,47 +2,88 @@
 
 r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
-clear;
+z="$(tput setaf 250)"
 
-echo " $k
-    We get requests (Aubrey and ESCO so far) for the ability to
-    compare one sensor to another (usually an outdoor air temp sensor against an interior or HVAC sensor).
-    I’m contemplating a “Compare to…” option on each HC Linegraph that would let you pick any other
-    like Property (Temp vs Temp, RH vs RX) and turn the HC into a dual line graph
-    (not dual Y-axis for now, hence property req)
+echo " $c
+    We’re recording all of the HRV data into the Data Lake.
+    So it would be relatively easy for us to add a “History” tab and graph the various HRV parameters.
 
-    It’ll need some interactive dialog to find the Property of interest:
-    Building -> SmartAsset -> Property list
-     (current Building)
+    Some possible examples are:
+        One Linegraph with all 5 temperatures graphed:
+            Outside Air
+            Supply Air
+            Return Air
+            Exhaust Air
+            Target Temp (rarely changes, but useful to compare against Supply Air temp)
 
-    let’s make the MVP that it’s only the Current Building and we’ll worry about adding that feature later
-    (Building selection within the account)
+        One Linegraph with Bypass % 
+           (or should this also go on the above graph, since it impacts temps?  
+            We haven’t done a Dual-Axis graph yet, but that should be viable.
+        One Linegraph with Preheater % ?
+        One Linegraph with two flow rates?
+$x
+        _____________________________________________________________________________________________________ 
+$gr
+    What should the route be for an HRV history tab? =>$p history $gr
 
-$a
-    We use a $g dialog $a component in various places, usually with forms.
-        Take a look at the $y EditAssetDialog $a
+    I would recommend treating this as the first step: creating a history tab with placeholder content,
+    like just a placeholder heading that says “History”.
+    There are a few things to figure out with regards to how adding tabs works.
+$k
+    Will getting the data for an HRV be an  asset(assetUuid) query ? $gr
+    No, currently it would be a series of propertyTrend queries. That’s currently called by PropertyGraph.
+$k
+    Can I create a new LineGraph component ? $gr
+    I would definitely not create a component that is hardcoded for displaying these 5 lines.
+    If you want to explore the creation of a component that can flexibly display multiple series 
+    that share the same unit, that sounds like something we might be able to reuse elsewhere. (edited) 
+$g
+    Jonah and I are on the fence about the value of showing a graph with these lines all criss-crossing 
+    each other, so if there’s any way you could prototype this to show what it would look like with real data,
+    I’d recommend that.
+$k
+    Navigator? 5 Lines? 1 ?  we don't know yet, .. $gr
+    And from that perspective, if the easiest way to prototype these ideas is to create a hardcoded 
+    5-line component at first, I understand that
+$x
+     _____________________________________________________________________________________________________ 
 
-    I would recommend starting with UI for comparing: $p
-        Place the button
-        Wire it up to the dialog
-        Hook up the dialog to get a list of building’s assets (and props?) $a
-
-
-    the query: the floorplan tab already uses it $p 
-        BuildingFloorplansTab, buildingAssets $a query
-
-$c
-         Not sure how you’ll need to filter assets.
-         We don’t have a straightforward way to ask for
-         all assets that support a given property.
-
-         It would be easy enough to ask for assets of the same known asset UUID
-
-         The $a IAQ $c report does look for all IAQ-ish assets,
-         so maybe some of that code can be used as a guide.
-
-         the dialog could just contain a message (if there are none to compare)
-
+$g
+    1. Δ Airflow vs Time $z
+       a. Y-axis units: CFM
+       b. Y-axis scale: Automatic
+       c. Note
+          i. Specifically for DCV and VAV modes
+         ii. If in CAV mode
+             1. Target airflow
+             2. Filter percentage (if possible)
+$g
+    2. Temperature vs Time $z
+        a. Y-axis units: Fahrenheit
+        b. Y-axis scale: Automatic
+        c. Y-axis items:
+           i. Outdoor Air Temperature
+          ii. Supply Air Temperature
+         iii. Return Air Temperature
+$g
+    3. Bypass Percent Open vs Time $z
+        a. Y-axis units: Percentage (0-100%)
+        b. Y-axis scale: Fixed
+        c. Y-axis items:
+           i.  Temperature setpoint
+           ii. Temperature setpoint sensor value (if possible)
+$g
+    4. Preheater Power vs Time $z
+        a. Y-axis units: Percentage (0-100%)
+        b. Y-axis scale: Fixed
+        c. Note
+           i.  Preheater power register: 30042
+$g
+    5. Postheater Power vs Time $z
+        a. Y-axis units: Percentage (0-100%)
+        b. Y-axis scale: Fixed
+        c. Note
+           i. Postheater power register: 30044
 "
 
 exit 0
