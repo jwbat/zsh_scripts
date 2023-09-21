@@ -2,8 +2,8 @@
 
 # usage: crlx "<SQL statement>"
 
-cmd=$1
+query=$1
 
-cockroach sql --url $gerbil --execute $cmd --format=csv > /Users/james/Desktop/file.csv;
+cockroach sql --url $gerbil --execute $query --format=csv > output.csv;
 
 exit 0

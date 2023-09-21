@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+outfile="$HOME/Desktop/registry.csv"
+registry_uuid="$1"
+
+#, a.building_uuid,
+statement="
+ SELECT r.registry_uuid, r.serial_number, a.asset_uuid
+ FROM ubx_asset a 
+ JOIN ubx_device d ON a.asset_uuid = d.asset_uuid 
+ JOIN ubx_device_registry r ON d.dev_eui = r.serial_number 
+ WHERE r.registry_uuid = '$registry_uuid';
+"
+
+cockroach sql --database="defaultdb" --execute=$statement --url=$gerbil > $outfile;
+
+if [ "$?" -eq 0 ]; then
+  echo "CRDB local registries dumped successfully to $outfile"
+else
+  echo "Error: Database dump failed"
+fi
+
+bat $outfile;
+
+exit 0

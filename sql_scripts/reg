@@ -1,25 +1,49 @@
-#!/bin/zsh
+#! python
+import os
+import sys
+import argparse
+import psycopg2
 
-outfile="$HOME/Desktop/registry.csv"
-registry_uuid="$1"
 
-#, a.building_uuid,
-statement="
- SELECT r.registry_uuid, r.serial_number, a.asset_uuid
- FROM ubx_asset a 
- JOIN ubx_device d ON a.asset_uuid = d.asset_uuid 
- JOIN ubx_device_registry r ON d.dev_eui = r.serial_number 
- WHERE r.registry_uuid = '$registry_uuid';
-"
+cr_user     = os.getenv('CR_USER')
+cr_pw       = os.getenv('CR_PW')
+cr_host     = os.getenv('CR_HOST')
+cr_port     = os.getenv('CR_PORT')
+cr_database = os.getenv('CR_DATABASE')
 
-cockroach sql --database="defaultdb" --execute=$statement --url=$gerbil > $outfile;
+deveuis = sys.argv[1: ]
+deveuis = [s.lower() for s in deveuis]
 
-if [ "$?" -eq 0 ]; then
-  echo "CRDB local registries dumped successfully to $outfile"
-else
-  echo "Error: Database dump failed"
-fi
 
-bat $outfile;
+def query_crdb(deveuis=[]):
 
-exit 0
+    try:
+        conn = psycopg2.connect(
+            user=cr_user,
+            password=cr_pw,
+            host=cr_host,
+            port=cr_port,
+            database=cr_database
+        )
+        query = f'''
+            SELECT serial_number AS deveui, registry_uuid
+            FROM ubx_device_registry
+            WHERE serial_number IN %s
+        '''
+        cur = conn.cursor()
+        cur.execute(query, (tuple(deveuis),))
+        return cur.fetchall()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print("Error: ", error)
+
+    finally:
+        if conn is not None:
+            cur.close()
+            conn.close()
+
+
+rows = query_crdb(deveuis=deveuis)
+print('deveui'.rjust(25), 'registry_uuid'.rjust(40))
+for r in rows:
+    print(r[0].rjust(25), r[1].rjust(40))

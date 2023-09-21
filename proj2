@@ -1,0 +1,50 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$zhaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
+z="$(tput setaf 157)"
+
+echo " $y
+                HRV History Spec $z
+                1.$g Airflow vs Time $z
+                    1. Y-axis-1 units: CFM
+                    2. Y-axis-1 scale: Automatic
+                    3. Y-axis-1 items:
+                        1. Supply Airflow
+                        2. Extract Airflow
+                        3. Target Airflow (only applicable in CAV mode)
+                    4. Y-axis-2 units: Percentage (0-100%)
+                    5. Y-axis-2 scale: Fixed
+                    6. Y-axis-2 items:
+                        1. Supply Filter Percentage
+                        2. Extract Filter Percentage
+                2.$g Temperature vs Time $z
+                    1. Y-axis-1 units: Fahrenheit
+                    2. Y-axis-1 scale: Automatic
+                    3. Y-axis-1 items:
+                        1. Outdoor Air Temperature
+                        2. Supply Air Temperature
+                        3. Return Air Temperature
+                3.$g Bypass Percent Open vs Time $z
+                    1. Y-axis-1 units: Percentage (0-100%)
+                    2. Y-axis-1 scale: Fixed
+                    3. Y-axis-1 items:
+                        1. Bypass Percent Open
+                    4. Y-axis-2 units: Fahrenheit
+                    5. Y-axis-2 scale: Automatic
+                    6. Y-axis-2 items:
+                        1. Temperature Setpoint
+                        2. Temperature Setpoint Sensor Value
+                4.$g Preheater Power vs Time $z
+                    1. Y-axis-1 units: Percentage (0-100%)
+                    2. Y-axis-1 scale: Fixed
+                    3. Y-axis-1 items:
+                        1. Preheater Percent Power
+                5.$g Postheater Power vs Time $z
+                    1. Y-axis-1 units: Percentage (0-100%)
+                    2. Y-axis-1 scale: Fixed
+                    3. Y-axis-1 items:
+                        1. Postheater Percent Power
+
+"
+exit 0

@@ -84,6 +84,31 @@ $g
         b. Y-axis scale: Fixed
         c. Note
            i. Postheater power register: 30044
-"
 
+$x  --------------------------------------------------------------------------------
+$k
+    We have decided to ship an MVP version of the Asset History tab for VS.
+    It will contain separate graphs for key properties, exactly like we currently
+    have on the IAQ Asset Dashboard. The properties we want to display are:
+$gr
+        Airflow In
+        Airflow Out
+        Outside Air
+        Exhaust Air
+        Return Air
+        Supply Air
+        Bypass Percent
+        Preheater Power
+        Postheater Power
+$k
+    A few notes on those: $p
+        Airflow is in CFM
+        “Air” props are temperatures, in Farenheit
+        Bypass is in percentage
+        Pre/Postheater Power are in percentage
+$k
+    for this very first version, these are all separate graphs that aren’t connected.
+    we will be using the$r PropertyGraph$k component for them.
+    get them via$g propertyTrend$k queries
+"
 exit 0
