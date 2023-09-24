@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
+
+echo "$x
+    1. \`brew list\`
+
+    2. \`pip freeze\` or \`pip list\`.
+
+    3. Software manually downloaded usually resides in the \`/Applications\` directory.
+        You can list them by navigating to the folder and viewing its contents.
+
+    4. **System Profiler**: You can use the \`system_profiler SPApplicationsDataType\`
+        command to list all applications, though this will include pre-installed apps as well.
+
+    5. **App Store**: Open the Mac App Store and go to the "Purchased" tab to see apps you’ve downloaded from there.
+
+    6. **npm**: Similar to pip and Homebrew, you can list packages for other package managers
+
+    7. **ls /usr/local/bin**: This directory often contains symlinks to installed packages;
+        run \`ls /usr/local/bin\` in the terminal to list them.
+
+    Combining the outputs from these methods should give you a fairly comprehensive list,
+    although it may require some manual work to filter out the apps that came pre-installed.
+"
+
+exit 0
