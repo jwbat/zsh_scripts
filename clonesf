@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+
+echo "
+$y   CREATE DATABASE $p CLONE_DATABASE $y CLONE $p SOURCE_DATABASE; $x
+       [ cmd ]       <new DB name> [ cmd ]  <src db name>
+
+$pg
+    SHOW DATABASES;
+    DESCRIBE DATABASE$p CLONE_DATABASE;
+"
+
+exit 0

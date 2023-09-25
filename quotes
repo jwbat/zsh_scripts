@@ -39,9 +39,13 @@ q8="$c4   There is a wise passivity that enables things to come about less by
    what is done than by what is not done, that opens up possibility where
    activity closes it donw. 
     - Iain McGilchrist"
+q9="$c3    The \"How\" is the killer of all great dreams.
+    Do hard things.  Do your thing.  Do it for decades.  Write your story. "
+q10="$c2    Don't write a story about what happened. 
+    Write your story, then make that happen."
 
 
-qs=($q1 $q2 $q3 $q4 $q5 $q6 $q7 $q8)
+qs=($q1 $q2 $q3 $q4 $q5 $q6 $q7 $q8 $q9 $q10)
 
 for q in $qs; do
    echo ""
