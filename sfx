@@ -68,4 +68,3 @@ def main():
 
 
 main()
-#bat_file(outfile)
