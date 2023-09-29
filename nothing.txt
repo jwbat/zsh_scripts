@@ -1,4 +1,10 @@
-@Jonah  See what you think of this strategy for converting the series of 1's & 0's for "pir" to a unitless activity level. 
-  find a weighted moving average and scale from 0 - 5.    A window size of 5 would therefore be looking at a 50 minute interval, and weight would of course be highest for the center of the window.
-
-
+tooltip: {
+    xDateFormat: "%Y-%m-%d %I:%M:%S %p",
+    pointFormatter: function () {
+      const value = this.y;
+      const formattedValue = formatNumber(value, { format: self.format });
+      return `<b>${formattedValue} ${self.options.hideValueUnit ? undefined : `${self.unitStr}` }</b>`; <== new
+      //return `<b>${formattedValue}</b>`;  <== formerly
+    }
+    //valueSuffix: this.options.hideValueUnit ? undefined : `${this.unitStr}`  <== not used now
+},

@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
+
+echo "$rs
+        In Suriname, more people speak Sranan Tongo than Dutch.
+        While Dutch is the official language of the country and is used in education,
+        government, business, and the media, Sranan Tongo, an English-based creole language,
+        is widely spoken as a lingua franca.
+
+        Dutch is the native language of approximately 60% of the Surinamese population,
+        with an additional 20%-30% speaking it as a second language.
+
+        Sranan Tongo is spoken by a significant portion of the population and is used in daily life.
+
+        Other languages spoken in Suriname include Sarnami Hindustani (a dialect of Bhojpuri),
+        the Maroon languages (Saramaccan, Ndyuka, Aluku, Paramaccan, and Matawai), and Javanese.
+
+        Suriname is a linguistically diverse country, with over 14 local languages being spoken.
+
+        While Dutch is the official language and is widely used in various contexts,
+        Sranan Tongo is more commonly spoken in everyday interactions,
+        reflecting the cultural and linguistic diversity of Suriname.
+"
+
+exit 0

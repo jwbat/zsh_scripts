@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
+
+echo "$h
+  				Suriname
+$gr
+        - [   ] Order adapter. $y  $gr
+        - [   ]$r booking.com => lodging in Paramaribo. $y \$10 - \$80 $gr
+        - [   ] packing: $c bathing suit
+
+        - [$y X$gr ] What is the exchange rate?     $z 1 USD = 21 SRD $gr
+        - [$y X$gr ] Order a guidebook for Suriname.$z Suriname (Bradt Travel Guide), Briggs, Philip (AMZ) $gr
+        - [$y X$gr ] Skyscanner.com flights.        $z \$984 RT / Dec. 8 - Jan. 11 $gr
+"
+
+exit 0
