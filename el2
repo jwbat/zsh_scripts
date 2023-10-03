@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+query="
+    SELECT 
+        MAX((property_value->'offline'->>'last_seen')::TIMESTAMPTZ AT TIME ZONE 'America/Los_Angeles') AS time,
+        ROUND(MAX(CAST(property_value->>'temp_c' AS FLOAT) * 9/5 + 32), 1) AS TEMP,
+        MAX(property_value->>'rh_pct') AS RH
+    FROM ubx_device_property_state 
+    WHERE registry_uuid = 'bbc7b9e0-4178-4d55-be2e-71a37ed8be98';
+"
+
+cockroach sql --url $UBX_GLOBAL --execute $query --format=csv > output2.csv;
+tab output2.csv;
+
+exit 0
