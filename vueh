@@ -1,43 +1,26 @@
 #!/bin/zsh
 
-# Description
-# vue help 
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
 
-# Usage
-# vueh 
-c="$(tput setaf 87)"
+echo "$gr
 
-echo "$c
-  npm install -g @vue/cli
-  npm update -g @vue/cli
-  vue --version
+    vue serve  $k <ComponentName.vue>       $x serve a single .vue file as a full project with no project setup
+                                           use case: quick prototyping of a single component $gr
+    vue build  $k <ComponentName.vue>       $x build a single .vue file into a minified, production-ready JS file
+                                           use case: compile a single .vue file for use in another project $gr
+    vue add    $k <@vue/cli-plugin-babel>   $x installs a plugin and invokes its generator
+                                           use case: add a new capability to project (e.g. TS or PWA) $gr
 
-  npm install -g create-vue@latest
+    vue invoke $k <vuetify>                 $x invoke the generator of a plugin in an already created project
+                                           use case: you've manually added a plugin and want to run its setup script $gr
+    vue upgrade $k                          $x upgrade pkgs and run migrations: 
+                                           upgrade to a newer version of Vue CLI or any installed plugins $gr
 
-  // create build-tool enabled project
-  npm init vue@latest      (alias = niv) 
-  npm install
-  vue add vuetify
-  npm run dev
-
-  // or
-  vue create projectname
-  npm install vue-router@4
-  npm install pinia@next
-=======
-  npm init vue@latest                       =niv
-  npm install                               =ni
-  npm run dev                               =nrd
-
-  // or
-  vue create projectname
-  cd projectname
-  vue add vuetify
-  vue create --help
-=======
-  npm install highcharts
-  npm install highcharts-vue
+    vue add vuetify $k                      $x adds the vuetify cli plugin to the project $gr
+    vue create $k <project-name>            $p << start here $gr
 "
-
 
 exit 0

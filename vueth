@@ -1,0 +1,39 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
+
+echo "$h
+    Yes, when you install Vuetify as a Vue CLI plugin using `vue add vuetify`,
+    it will automatically set up your project so that Vuetify is available globally.
+    This means you won't have to import Vuetify into every single component file.
+
+    The plugin will typically modify your project's `main.js` or `main.ts` file 
+    (or equivalent entry point) to include code that installs Vuetify as a Vue plugin.
+    It will look something like this:
+
+    ```javascript
+    import Vue from 'vue';
+    import Vuetify from 'vuetify';
+    import 'vuetify/dist/vuetify.min.css';
+
+    Vue.use(Vuetify);
+
+    // ... rest of the code
+    ```
+
+    By calling `Vue.use(Vuetify)`, Vuetify's components and features become globally available
+    to all Vue components in the project. You can then use Vuetify's components in your Vue files
+    without having to import them individually.
+
+    Additionally, the Vuetify plugin often sets up a Vuetify options file,
+    where you can configure themes, icons, and other global Vuetify settings.
+    This file is usually imported and used in the `main.js` or `main.ts` file as well.
+
+    So, in short, installing Vuetify as a Vue CLI plugin takes care of the global setup for you,
+    making it available throughout the project without additional imports in each component.
+"
+
+exit 0
