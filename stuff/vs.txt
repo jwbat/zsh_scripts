@@ -22,11 +22,19 @@
  Thu  08/03/23 
  Wed  08/02/23 
  Tue  08/01/23 
+    dial in the new layer 'handle_decoded_data'  with vu_hotdrop_direct lambda.   see about getting 1 or 2 hotdrops into crdb
  Mon  07/31/23 
+    plan, begin a Layer so a new device decoding lambda only needs to call 1 or  2
+    imported methods to forward the decoded packet.   Get some info for ABM.
  Thu  07/27/23 
+    vu lambda.  look at the crdb lambda layer. repackage some iot utility scripts
  Wed  07/26/23 
+    Vutility Direct packet decoding
  Tue  07/25/23 
+    turned on abm_lambda with a 201 response posting payloads to their webhook.
+    Document the EventBridge event scheme for token rotation.   Continue IoT guide.
  Mon  07/24/23 
+    write a GDoc guide to our IoT destinations, rules, actions, topics, & lambdas
 *
 
 ---

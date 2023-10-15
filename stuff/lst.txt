@@ -1,5 +1,7 @@
+    
+    @snake-case for event listeners in compare-energy-bldg
+
+
+    ================
     abm_lambda / Avi
-
     how do Lambda aliases work?
-
-

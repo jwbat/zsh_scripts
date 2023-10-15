@@ -19,8 +19,12 @@ echo "$gr
     vue upgrade $k                          $x upgrade pkgs and run migrations: 
                                            upgrade to a newer version of Vue CLI or any installed plugins $gr
 
+    npm update vue $k                       $x update Vue.js in an existing project $gr
+    npm show vue version $k                 $x show the latest version of Vue.js $gr
+    npm install -g @vue/cli $k              $x install latest version of vue globally $gr
+
     vue add vuetify $k                      $x adds the vuetify cli plugin to the project $gr
-    vue create $k <project-name>            $p << start here $gr
+    vue create $k <project-name>            $p << start project $gr
 "
 
 exit 0
