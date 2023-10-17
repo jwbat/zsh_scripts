@@ -1,24 +1,38 @@
-There are sort of 2 parts to a device in the database. First there's a a registry entry in the global database under ubx_device_registry, which requires the devices serial number (i.e. dev_eui) and known_asset_uuid. Then an asset can be created for the device in a local cluster using the dev_eui and known_asset_uuid. There's a helper script in sbp-mono for creating the smart asset for a registered device: https://github.com/ventacity/sbp-mono/blob/develop/strawberry-gql/dev-scripts/create_smart_assets.py
+There are sort of 2 parts to a device in the database. First there's
+a registry entry in the global database under ubx_device_registry, which requires the devices serial number 
+(dev_eui) and known_asset_uuid. Then an asset can be created for the device
+in a local cluster using the dev_eui and known_asset_uuid. There's a helper script in
+sbp-mono for creating the smart asset for a registered device: 
+https://github.com/ventacity/sbp-mono/blob/develop/strawberry-gql/dev-scripts/create_smart_assets.py
 
-I think the first thing for getting the new kind of hotdrop into the db is to create a new known_asset since that's require for both the registry entry and the smart asset
+I think the first thing for getting the new kind of hotdrop into the db is to create
+a new known_asset since that's require for both the registry entry and the smart asset
 
-we've got a process for managing known assets based on some spreadsheets and some scripts to generate sql. I can add a new known asset pretty easily given a name for the new model
+we've got a process for managing known assets based on some spreadsheets and some scripts
+to generate sql. I can add a new known asset pretty easily given a name for the new model
 
-the registry entry needs a* known_asset_uuid, so we'll need to create a new known asset before creating the registry entry
+the registry entry needs a* known_asset_uuid, so we'll need to create a new
+known asset before creating the registry entry
 
-The model name is pretty easy to change. I'll just use UBX-MON-NRG101 as a placeholder for now and will go ahead and make a known asset
+The model name is pretty easy to change. I'll just use UBX-MON
+-NRG101 as a placeholder for now and will go ahead and make a known asset
 
-the gist of the process is that we have some excel files in https://github.com/ventacity/sbp-mono/tree/develop/strawberry-gql/dev-scripts/global_data/source_data that define the data, and then there are scripts in dev-scripts/global_data to generate uuid's and sql
+the gist of the process is that we have some excel files in 
+https://github.com/ventacity/sbp-mono/tree/develop/strawberry-gql/dev-scripts/global_data/source_data
+that define the data, and then there are scripts in dev-scripts/global_data to generate uuid's and sql
 
 @William Laub go with NRG201 please (I’m going to use the last digit as indicator of different sizes… 1=300A 2=600A
 
-the new known_asset_uuid is 03fab9b8-36df-4356-83bb-2f9e76f921a3 , so you should be able to create ubx_device_registry entry in the global cluster using that known_asset_uuid and your dev_eui (for the serial_number column)
+the new known_asset_uuid is 03fab9b8-36df-4356-83bb-2f9e76f921a3 ,
+so you should be able to create ubx_device_registry entry in the global cluster using that known_asset_uuid and
+your dev_eui (for the serial_number column)
 
-is serial number always the same as dev_eui for sensor devices?  yeah should be - & for lorawan devices in general
+serial number === dev_eui  (for lorawan devices in general) 
 
 there's also an optional device_id, which I believe comes from aws and is used to talk to the hrv's
 
-insert into ubx_device_registry(dev_eui, known_asset_uuid) values ('<your dev_eui>', '03fab9b8-36df-4356-83bb-2f9e76f921a3');
+insert into ubx_device_registry (dev_eui, known_asset_uuid) 
+values ('<your dev_eui>', '03fab9b8-36df-4356-83bb-2f9e76f921a3');
 
 
 

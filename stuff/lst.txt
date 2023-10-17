@@ -1,5 +1,13 @@
+    1.  test, refactor, PR compare energy bldg  
+            @snake-case for event listeners in compare-energy-bldg
+    2.  compare navigator issue:  https://github.com/ventacity/sbg-webapp/issues/459
+    3.  Tstat docs & begin thinking about downlink msgs
+    4.  lux levels
+    5.  energy report bar chart compare
+    6.  Energy Report bar chart (9/10 bug)
+
     
-    @snake-case for event listeners in compare-energy-bldg
+
 
 
     ================
