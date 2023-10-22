@@ -1,0 +1,28 @@
+#! python
+# Description
+# convert string to base64 
+
+import sys
+import binascii
+from colored import fg
+
+
+
+def string_to_base64(s):
+    byte_data = s.encode('utf-8')                   # string -> bytes
+    base64_data = binascii.b2a_base64(byte_data)    # bytes -> base64
+    return base64_data.decode('utf-8').strip()      # bytes like object -> string
+
+
+def get_args():
+    return sys.argv[1:]
+
+
+def run():
+    print()
+    for s in get_args():
+        print(fg(216) + '\t' + string_to_base64(s))
+    print()
+
+
+run()

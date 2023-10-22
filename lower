@@ -1,0 +1,12 @@
+#!python3
+
+import sys
+from colored import fg
+
+
+red = fg(196)
+
+for s in sys.argv[1:]:
+    print(red + '\t\t' + s.lower())
+
+

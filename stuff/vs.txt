@@ -1,4 +1,28 @@
 ---
+Invoice 38
+  Thu  09/28/23
+  Wed  09/27/23
+  Tue  09/26/23
+  Mon  09/25/23
+  Thu  09/21/23
+  Wed  09/20/23
+  Tue  09/19/23
+  Mon  09/18/23
+---
+
+---
+Invoice 37
+  Thu  09/14/23
+  Wed  09/13/23
+  Tue  09/12/23
+  Mon  09/11/23
+  Thu  09/07/23
+  Wed  09/06/23
+  Tue  09/05/23
+  Mon  09/04/23
+---
+
+---
 Invoice 36
  Thu  08/31/23
     linegraph compare feature - error handling, style details, make ts happy, minor refactoring, pr.

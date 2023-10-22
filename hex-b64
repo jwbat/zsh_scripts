@@ -1,0 +1,19 @@
+#! python
+
+# Description
+# convert a hex string to base 64 
+
+import sys
+import binascii
+from colored import fg
+
+
+color = fg(190)
+
+def hex_to_b64(s):
+    decoded_bytes = binascii.unhexlify(hex_str)
+    return binascii.b2a_base64(decoded_bytes).decode('utf-8').strip()
+
+
+hex_str = sys.argv[1]
+print(color + '\n\t' + hex_to_b64(hex_str))
