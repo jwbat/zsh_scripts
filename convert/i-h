@@ -1,6 +1,5 @@
 #! python
-# Description
-# convert integers to hex 
+# Description - convert integers to hex 
 
 
 import sys
@@ -21,6 +20,7 @@ def int_to_bytes(n, byteorder='big'):
 
 def int_to_hex(n):
     byte_data = int_to_bytes(n)
+#    print('byte_data: ', byte_data)
     return binascii.hexlify(byte_data).decode('utf-8')
 
 

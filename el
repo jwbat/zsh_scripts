@@ -11,6 +11,6 @@ query="
 "
 
 cockroach sql --url $UBX_GLOBAL --execute $query --format=csv > output.csv;
-tab output*.csv;
+tab output.csv;
 
 exit 0
