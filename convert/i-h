@@ -19,9 +19,8 @@ def int_to_bytes(n, byteorder='big'):
 
 
 def int_to_hex(n):
-    byte_data = int_to_bytes(n)
-#    print('byte_data: ', byte_data)
-    return binascii.hexlify(byte_data).decode('utf-8')
+    b = int_to_bytes(n)
+    return binascii.hexlify(b).decode('utf-8')
 
 
 def pretty_print(xs, ys):

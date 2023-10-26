@@ -1,1 +1,13 @@
 components/CompareBuildingDialog.vue ln #107 NOTE remove line
+
+
+	         ambient_temperature:              20.8
+	    temperature_alarm_temp_c:              25.1
+	      temperature_alarm_type:         threshold
+	            fan_control_mode:              auto
+	          fan_control_status:               off
+	                  plan_event:              away
+	    temperature_control_mode:           heating
+	  temperature_control_status:           standby
+	          target_temperature:              20.5
+	               system_status:                on

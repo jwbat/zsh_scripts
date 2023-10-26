@@ -16,7 +16,7 @@ c3 = fg(213)
 
 def hex_to_base64(n):
     b = binascii.unhexlify(n)
-    return binascii.b2a_base64(b).decode('utf-8').strip()
+    return binascii.b2a_base64(b, newline=False).decode('utf-8')
 
 
 def pretty_print(xs, ys):
