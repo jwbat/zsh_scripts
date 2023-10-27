@@ -1,15 +1,14 @@
-    1.  test, refactor, PR compare energy bldg  
-            @snake-case for event listeners in compare-energy-bldg
-    2.  compare navigator issue:  https://github.com/ventacity/sbg-webapp/issues/459
-    3.  Tstat docs & begin thinking about downlink msgs
-    4.  lux levels
-    5.  energy report bar chart compare
-    6.  Energy Report bar chart (9/10 bug)
+    -   downlink msg
+
+    -   compare energy bldg PR refactor
+
+    -   energy report bar chart compare
 
     
+    -   how do Lambda aliases work?
 
+    ================ ^ vs ^ ================ 
+    =============== V non V ================ 
 
-
-    ================
-    abm_lambda / Avi
-    how do Lambda aliases work?
+    -   Couleur Locale Paramaribo
+    -   mhd hosting on aws
