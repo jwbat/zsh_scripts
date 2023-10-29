@@ -20,6 +20,8 @@ files=(
   "$HOME/.zprofile"                    "$HOME/.dotfiles/.zprofile_encrypted"
   "$HOME/.zsh_a"                       "$HOME/.dotfiles/.zsh_a_encrypted"
   "$HOME/.snowsql/config"              "$HOME/.dotfiles/.snowsql_config_encrypted"
+  "$HOME/.aws/config"                  "$HOME/.dotfiles/.aws_config_encrypted"
+  "$HOME/.aws/credentials"             "$HOME/.dotfiles/.aws_credentials_encrypted"
 )
 # encrypt files
 for original in "${(@k)files}"; do
@@ -28,11 +30,9 @@ for original in "${(@k)files}"; do
   echo "$h encrypted $pg $original $p -> $a $encrypted"
 done
 
-
 for f in $HOME/macbook_certs/*; do                                           # encrypt vsd certs
     ecrypt $f $HOME/.dotfiles/mb_certs_encrypted/$(basename $f)
 done
-
 
 for d in $ds; do
     echo "$c1 $d $c2"
