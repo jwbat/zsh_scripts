@@ -9,6 +9,25 @@ echo "$h
     amplify add auth        $x # supports social sign-in                            $h
     amplify add api         $x # leverage AppSync, DynamoDB                         $h
     amplify add hosting     $x # deploy f/e to CloudFront, b/e to Amplify           $h
+
+
+    amplify status          $x  show what has been added already & if it's locally configured or deployed   $h
+
+    amplify add <category>  $x  add features like user login or a backend API   $h
+
+    amplify push            $x  build all local backend resources and provision it in the cloud $h
+
+    amplify console         $x  open Amplify Console and view project status    $h
+
+    amplify publish         $x  build local backend and frontend resources
+                                (if you have hosting category added) and provision it in the cloud $h
+
+    amplify add api         $x  create a backend API    $h
+    amplify push            $x  to deploy everything    $h
+
+    $r Amplify + Lambda + API Gateway + DynamoDB + IAM
+    $g   API Gateway ---> invoke ---> Lambda
+
 "
 
 exit 0

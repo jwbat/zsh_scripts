@@ -1,13 +1,51 @@
-components/CompareBuildingDialog.vue ln #107 NOTE remove line
+
+Byte: 0=disable, 1=enable
+-------------------------
+Bit     Option
+-----------------
+ 0      System on/off
+ 1      Temperature +
+ 2      Temperature -
+ 3      Fan mode
+ 4      Temperature control mode
+ 5      Reset
+6-7     00
 
 
-	         ambient_temperature:              20.8
-	    temperature_alarm_temp_c:              25.1
-	      temperature_alarm_type:         threshold
-	            fan_control_mode:              auto
-	          fan_control_status:               off
-	                  plan_event:              away
-	    temperature_control_mode:           heating
-	  temperature_control_status:           standby
-	          target_temperature:              20.5
-	               system_status:                on
+
+
+
+    controls                        params
+    ========                        ======================================================
+    reboot
+    get_current_data
+    fan_mode                        auto, on, circulate
+    plan_event                      wake, away, home, sleep
+    threshold_alarm                 temp_c, disable, min, max, between, min_or_max
+    temperature_control_mode        target_temp (temp_c), heat, emergency_heat, cool, auto
+    temperature_tolerance           target_tolerance_temp_c, control_tolerance_temp_c
+    freeze_protection               temp_c, disable, enable
+
+
+    reporting interval  Y
+    child lock          Y
+    time zone           Y
+    daylight saving time Y
+
+    data storage        N
+    data retransmission N
+    multicast group     N
+
+
+    "advanced" (requires tstat to be wired to test)
+    ===============================================
+    Reversing Valve   N
+    Freeze Protection Y
+    Room Card Setting N
+
+
+
+
+    ff06 01 6400 0000 0000 0000     enable threshold alarm & set min threshold value as 10°C.
+
+    ff06 12 0000 0a00 0000 5802     persistant high temp. threshold diff = 1 °C, dur = 10 min.

@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
+
+echo "$g
+    
+    brew update                    $x  fetches the newest version of Homebrew and all formulae from GitHub. $g
+    brew upgrade                   $x  upgrade all installed packages to their latest versions $g
+    brew upgrade <formula>         $x  update a specific package $g
+    brew cleanup                   $x  after upgrade, rm old versions of installed packages to free up disk space  $g
+"
+
+exit 0
