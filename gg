@@ -22,6 +22,8 @@ files=(
   "$HOME/.snowsql/config"              "$HOME/.dotfiles/.snowsql_config_encrypted"
   "$HOME/.aws/config"                  "$HOME/.dotfiles/.aws_config_encrypted"
   "$HOME/.aws/credentials"             "$HOME/.dotfiles/.aws_credentials_encrypted"
+  "$HOME/.sbg-env"                     "$HOME/.dotfiles/.sbg-env_encrypted"
+  "$HOME/.ui-env"                      "$HOME/.dotfiles/.ui-env_encrypted"
 )
 # encrypt files
 for original in "${(@k)files}"; do
