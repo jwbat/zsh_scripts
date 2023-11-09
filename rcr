@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+# Description
+# uses the 'translate' command `tr` to remove the carriage return character
+#  that looks like "^M" & comes from pasting non-unix code
+#  hence, `rcr` == "remove carriage return" (char)
+
+# Usage
+# tr <filename> 
+
+
+tr -d '\r' < $1 > tempfile && mv tempfile $1
+
+exit 0
