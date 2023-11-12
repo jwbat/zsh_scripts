@@ -1,0 +1,15 @@
+I would like a list that follows the pattern below, i.e.
+with dates in descending order and only including dates that fall on Mon through Thu.
+The dates of the new list should be 10/02/23 through 10/27/23.
+The list should not be enumerated or bulleted.
+
+  Thu  09/28/23
+  Wed  09/27/23
+  Tue  09/26/23
+  Mon  09/25/23
+
+  Thu  09/21/23
+  Wed  09/20/23
+  Tue  09/19/23
+  Mon  09/18/23
+

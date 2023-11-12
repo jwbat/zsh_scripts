@@ -1,0 +1,21 @@
+#! python
+
+# Description
+# take a hex, return some bits 
+
+# Usage
+# h-bits <hex_string>
+
+import sys
+from colored import fg
+
+
+def hex_to_bits(h):
+    h = h.replace('0x', '')
+    i = int(h, 16)
+    return bin(i)[2:]
+    
+
+
+bits = hex_to_bits(sys.argv[1])
+print(fg(214), '\n\t', bits)

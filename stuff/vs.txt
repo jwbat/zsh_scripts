@@ -1,27 +1,93 @@
+
+---
+Invoice 40
+    Thu  10/26/23
+        tstat downlinks
+    Wed  10/25/23
+        learn about our downlink infra w/ Pat.  Tstat downlinks.
+    Tue  10/24/23
+        tstat lambda
+    Mon  10/23/23
+        SW Team Meeting. discussion of tstat data shape.  update decode to reflect team decisions.  lambda handler.
+    Thu  10/19/23
+        flesh out decoding of wt201 t stat.  experiment with more downlink messages.
+    Wed  10/18/23
+        start getting familiar with the MS wt201 tstat & tstats in general
+    Tue  10/17/23
+        subvert default behavior of HighCharts navigator on legend clicks.
+        review recommendations in compare energy.
+    Mon  10/16/23
+        SW Team Meeting.  test, refactor, PR compare energy bldg.  navigator issue repair.
+
+---
+Invoice 39
+    Thu  10/12/23
+        compare whole building energy
+    Wed  10/11/23
+        whole building energy compare
+    Tue  10/10/23
+        device energy compare & whole building energy compare
+    Mon  10/09/23
+        SW Team Meeting. building selector recommended changes:  
+        query on dialog open, add loading bar / spinner.
+        roll those changes into an energy compare pr. 
+    Thu  10/05/23
+        extend compare asset feature to energy
+    Wed  10/04/23
+        building selection drop down menu for compare asset dialog.  impl pr review recommendations.
+        make pr for bldg selector dropdown.  Look at Elsys downlink commands.
+    Tue  10/03/23
+        squash & merge tooltip updates.    compare across assets PR,  extend for multiple buildings,
+        add building drop down menu to choose building in compare asset dialog.
+    Mon  10/02/23
+        SW Team Meeting. use extended API to extend compare feature to work across different asset types
+
 ---
 Invoice 38
   Thu  09/28/23
+    wrap up tooltip units issue and add asset names to tooltips when comparing assets.
+    update PR for Motion Detected (data:pir) property graph.
   Wed  09/27/23
+    Graph tool tip units,  show series name when comparing.   check PRs.
   Tue  09/26/23
+    battery level column for Wireless Devices Report.   look into, fix linegraph bug.
+    look into Energy Report issue. 
   Mon  09/25/23
+    SW Team Meeting.  help get Jackson set up with cloning SF DB.   check in on ABM lambda metrics.
+    prep for adding an MS device,  possibly an AM104.
   Thu  09/21/23
+    Graph lux for MS AM308's
   Wed  09/20/23
+    HRV history tab
   Tue  09/19/23
+    HRV history
   Mon  09/18/23
----
+    SW Team Meeting.  HRV & tab configuration studies in prep for working on a history tab component.
 
 ---
 Invoice 37
   Thu  09/14/23
+    last things with activity line graph.   implement pr review recommendation in compare dialog.
+    investigate HighChart options for toggling on/off lines in a multi-line graph in prep for new HRV history tab.
   Wed  09/13/23
+    pir / activity line graph
   Tue  09/12/23
+    Test & wrap up compare legend.   "activity" / pir  line graph. 
   Mon  09/11/23
+    SW Team Meeting.  Adding a legend to the compare asset line graphs.
   Thu  09/07/23
+    Backend dev environment back up & running.  Test updates in compare feature.
+    Begin/plan activity level line graph for AM308's and AM107's.
   Wed  09/06/23
+    upgrade compare feature code with Jason's very excellent PR review recommendations.
+    Review PR's.   Check on ABM Lambda for any 401 responses.
   Tue  09/05/23
+    SW Team Meeting.  Investigate ABM Lambda Cloudwatch logs. Review PR's.
+    Add a PR for abm-lambda-handler to iaq-lambda.
   Mon  09/04/23
----
+    Labor Day
 
+==============================================================================================================================
 ---
 Invoice 36
  Thu  08/31/23
