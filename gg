@@ -44,17 +44,17 @@ for d in $ds; do
 done
 
 # decrypt files
-for original in "${(@k)files}"; do
-  encrypted="${files[$original]}"
-  dcrypt "$encrypted" "$original"
-  echo "$h decrypted $a $encrypted $p -> $pg $original"
-done
+#for original in "${(@k)files}"; do
+#  encrypted="${files[$original]}"
+#  dcrypt "$encrypted" "$original"
+#  echo "$h decrypted $a $encrypted $p -> $pg $original"
+#done
 
-for f in $HOME/.dotfiles/mb_certs_encrypted/*; do                         # decrypt vsd certs
-    dcrypt $f $HOME/macbook_certs/$(basename $f)
-done
+#for f in $HOME/.dotfiles/mb_certs_encrypted/*; do                         # decrypt vsd certs
+#    dcrypt $f $HOME/macbook_certs/$(basename $f)
+#done
 
-cp $HOME/.zprofile $HOME/code/zprofile
+#cp $HOME/.zprofile $HOME/code/zprofile
 
 
 exit 0
