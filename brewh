@@ -11,6 +11,7 @@ echo "$g
     brew upgrade                   $x  upgrade all installed packages to their latest versions $g
     brew upgrade <formula>         $x  update a specific package $g
     brew cleanup                   $x  after upgrade, rm old versions of installed packages to free up disk space  $g
+    brew uninstall <formula>       $x  aka 'remove'  $g
 "
 
 exit 0
