@@ -9,9 +9,9 @@ from colored import fg
 
 xs = sys.argv[1:]
 
-c1 = fg(150)
-c2 = fg(154)
-c3 = fg(213)
+col1 = fg(150)
+col2 = fg(154)
+col3 = fg(213)
 
 
 def base64_to_hex(n):
@@ -21,10 +21,10 @@ def base64_to_hex(n):
 
 def pretty_print(xs, ys):
     print()
-    print('\t' + c3 + 'base64'.rjust(24) + c3 + 'hex'.rjust(48))
+    print(col3 + 'base64'.rjust(42) + col3 + 'hex'.rjust(72))
     for idx in range(len(xs)):
         x, y = xs[idx], ys[idx]
-        print('\t' + c1 + x.rjust(24) + c2 + y.rjust(48))
+        print(col1 + x.rjust(42) + col2 + y.rjust(72))
     print()
 
 

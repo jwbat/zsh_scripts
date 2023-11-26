@@ -1,0 +1,14 @@
+#! python
+
+# Description
+# convert bits to int 
+
+import sys
+from colored import fg
+
+
+s = sys.argv[1]
+i = int(s, 2)
+print('\n\t' + fg(160), i, '\n')
+
+
