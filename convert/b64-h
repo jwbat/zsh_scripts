@@ -21,10 +21,11 @@ def base64_to_hex(n):
 
 def pretty_print(xs, ys):
     print()
-    print(col3 + 'base64'.rjust(42) + col3 + 'hex'.rjust(72))
+    #print(col3 + 'base64'.rjust(42) + '\n' + col3 + 'hex'.rjust(72))
     for idx in range(len(xs)):
         x, y = xs[idx], ys[idx]
-        print(col1 + x.rjust(42) + col2 + y.rjust(72))
+        print(col3 + 'base64: '.rjust(10) + '\n ' + col1 + x)
+        print(col3 + 'hex: '.rjust(10) + '\n ' + col2 + y)
     print()
 
 
