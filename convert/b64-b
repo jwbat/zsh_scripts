@@ -1,0 +1,27 @@
+#! python
+
+# Description
+# base64 to bytes 
+
+import sys
+import binascii
+from colored import fg
+
+
+col1 = fg(150)
+col2 = fg(154)
+col3 = fg(213)
+
+
+def pretty_print(xs, ys):
+    print()
+    for idx in range(len(xs)):
+        x, y = xs[idx], ys[idx]
+        print(col3 + 'base64: '.rjust(10) + '\n ' + col1 + x)
+        print(col3 + 'bytes: '.rjust(10) + '\n ' + col2, y)
+    print()
+
+
+xs = sys.argv[1:]
+ys = [binascii.a2b_base64(x) for x in xs]
+pretty_print(xs, ys)
