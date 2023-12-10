@@ -4,14 +4,14 @@
 
 import sys
 import binascii
-from colored import fg
+from cored import fg
 
 
 xs = sys.argv[1:]
 
-col1 = fg(150)
-col2 = fg(154)
-col3 = fg(213)
+c1 = fg(150)
+c2 = fg(154)
+c3 = fg(213)
 
 
 def base64_to_hex(n):
@@ -23,8 +23,8 @@ def pretty_print(xs, ys):
     print()
     for idx in range(len(xs)):
         x, y = xs[idx], ys[idx]
-        print(col3 + 'base64: '.rjust(10) + col1 + x)
-        print(col3 + 'hex: '.rjust(10) + col2 + y)
+        print(c3 + ' base64: ', c1 + x)
+        print(c3 + ' hex: ', c2 + y)
     print()
 
 
