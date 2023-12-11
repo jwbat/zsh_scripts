@@ -1,0 +1,18 @@
+#! python
+
+# Description
+# 
+
+# Usage
+# 
+import datetime
+from colored import fg
+
+
+local_time = datetime.datetime.now()
+pst_time   = local_time - datetime.timedelta(hours=5)
+
+print()
+print(fg(193), 'PST:           ', fg(152), pst_time.strftime("%I:%M %p"))
+print(fg(193), 'Suriname time: ', fg(221), local_time.strftime("%I:%M %p"))
+print()

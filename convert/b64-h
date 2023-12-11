@@ -4,7 +4,7 @@
 
 import sys
 import binascii
-from cored import fg
+from colored import fg
 
 
 xs = sys.argv[1:]
