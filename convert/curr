@@ -1,0 +1,16 @@
+#! python
+
+# Description
+# 
+
+# Usage
+# 
+from sys import argv
+from colored import fg
+
+print()
+print(fg(190), '1 USD = 37.68 SRD = 0.93 EUR')
+print()
+
+
+

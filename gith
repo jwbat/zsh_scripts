@@ -160,6 +160,10 @@ echo "${c1}
 \t ==================================
 \t git reset --hard 68fc38313               $c2 # make a previous commit the HEAD $c1
 \t git push origin <branch-name> --force    $c2 #  and on the remote $c1
+\t ==================================
+\t git reset --hard origin/<branch>         $c2 # discard local changes, and $c1
+\t git fetch origin                         $c2 # bring local up to date with remote $c1
+\t git pull origin <branch>
 "
 
 exit 0
