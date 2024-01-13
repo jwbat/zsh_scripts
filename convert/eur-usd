@@ -6,8 +6,7 @@ from sys import argv
 from colored import fg
 
 
-# previously:  0.93
-eur_per_usd = 0.91
+eur_per_usd = 0.92
 
 eur = float(argv[1])
 usd = eur * (1 / eur_per_usd)

@@ -1,19 +1,15 @@
 #! python
 
-# Description
-# convert EUR to SRD 
 from sys import argv
 from colored import fg
 
 
-eur_per_usd = 0.92
 srd_per_usd = 37.70
 
 
-eur = float(argv[1])
-srd = eur * (1 / eur_per_usd) * srd_per_usd
+usd = float(argv[1])
+srd = usd * srd_per_usd
 srd = round(srd, 2)
 print()
 print(fg(190) + '\t' +  str(srd))
 print()
-
