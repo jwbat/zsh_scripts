@@ -1,0 +1,56 @@
+#!/bin/zsh
+
+# Author: James Batman
+# Date Created: 
+# Last Modified: 
+
+# Description
+# 
+
+# Usage
+# 
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
+
+echo "$x
+    Using $r requests.Session() $x in the $r requests $x library can enhance performance,
+    especially when making multiple requests to the same host, due to several reasons:
+$x
+1. **Persistent Connections**:
+    $r requests.Session()$x  maintains a persistent connection with the server.
+    In a normal request without a session, each time you make a request, a new network connection is created,
+    used, and then closed. When using a session, the underlying TCP connection is reused for multiple HTTP
+    requests to the same host. This reuse eliminates the overhead of establishing a new connection for each request,
+    which is particularly beneficial in scenarios like your Lambda function where multiple requests are made in 
+    quick succession.
+
+2. **Connection Pooling**:
+    Sessions use a connection pool, which means that connections are kept alive and reused,
+    reducing the time spent in the handshake phase of the TCP protocol.
+    This is more efficient than opening and closing a connection for each request,
+    which is what happens when you use $r requests.post()$x  directly without a session.
+
+3. **Keep-Alive**:
+    HTTP/1.1 has a feature called 'Keep-Alive', which keeps the connection open for multiple requests.
+    $r requests.Session() $x takes advantage of this feature. Without a session, each request would need
+    to renegotiate and set up a new connection (complete with TCP and possibly TLS/SSL handshakes),
+    which is more time-consuming.
+
+4. **Headers and Authentication Persistence**:
+    Sessions also allow you to persist certain parameters across requests.
+    For instance, if you are using the same headers (like $r Authorization $x headers in your case)
+    or cookies across multiple requests, you can set them once on the session,
+    and they will be applied to all requests made with that session.
+    This simplifies the code and can also contribute to performance improvements,
+    as headers don’t need to be re-sent each time.
+
+  Using $r requests.Session() $x in scenarios where multiple requests are made to the same host
+  can lead to significant performance improvements by reducing the overhead associated with setting 
+  up and tearing down connections. This is particularly beneficial in network-intensive applications
+  or where response time is critical.
+"
+
+exit 0
