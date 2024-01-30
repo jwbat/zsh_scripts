@@ -1,0 +1,23 @@
+#! python
+
+# Description
+# 
+
+# Usage
+# 
+import sys
+from binascii import hexlify
+from colored import fg
+
+
+def int_to_bytes(n, byteorder='big'):
+    return n.to_bytes((n.bit_length() + 7) // 8, byteorder)
+
+
+def int_to_hex(n):
+    b = int_to_bytes(n)
+    return hexlify(b).decode('utf-8')
+
+bits = sys.argv[1]
+i = int(bits, 2)
+print('\n\t', fg(190), int_to_hex(i), '\n')

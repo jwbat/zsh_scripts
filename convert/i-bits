@@ -1,0 +1,15 @@
+#! python
+
+# Description
+# convert integer to bits 
+
+# Usage
+# i-bits <integer>
+
+import sys
+from colored import fg
+
+
+i = int(sys.argv[1])
+bits = bin(i)[2:]
+print('\n\t' + fg(190), bits, '\n')

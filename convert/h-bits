@@ -1,7 +1,7 @@
 #! python
 
 # Description
-# take a hex, return some bits 
+# hex to bits 
 
 # Usage
 # h-bits <hex_string>
