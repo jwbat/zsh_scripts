@@ -2,7 +2,68 @@ Tue  12/12/23  All co. mtg.
 12/06/23  2 hrs
 12/05/23  4 hrs
 
----
+Invoice 43
+    Thu  12/07/23
+        Examine content of schedules being returned across several uplink packets.
+        Deliver a thermostat to Mosier.  
+    Wed  12/06/23
+        Using info from MS support to test WT201 scheduling. More communications with MS.
+    Tue  12/05/23
+        WT201.
+    Mon  12/04/23
+        SW Team Meeting.  Apply Milesight javascript code to WT201 schedule testing.
+    Thu  11/30/23
+        Present test results to Milesight support with example downlink & uplink msgs.
+    Wed  11/29/23
+        WT201 scheduling.
+    Tue  11/28/23
+        WT201 scheduling.
+    Mon  11/27/23
+        SW Team Meeting.  WT201 scheduling.
+ 
+
+Invoice 42
+    Thu  11/23/23
+        Thanksgiving
+    Wed  11/22/23
+        PTO - Thanksgiving holiday travel
+    Tue  11/21/23
+        Decode tstat schedules from uplink messages upon querying schedule.  Test scheduling.
+    Mon  11/20/23
+        SW Team Meeting.  WT201 firmware update.  Review latest edition of WT201 docs.  
+    Thu  11/16/23
+        Get a tour of new vue-ui architecture by Jason.   
+        Begin building-to-building comparison feature for daily bar chart  in energy report.
+    Wed  11/15/23
+        Enable comparison in daily energy bar charts at the device level. 
+        Make recommended updates in compare-energy-bldg-power-graph.
+    Tue  11/14/23
+        Compare daily energy bar chart: device-level comparison.
+    Mon  11/13/23
+        SW Team Meeting. Building energy comparison, refactor PowerGraph.
+ 
+
+Invoice 41
+    Thu  11/09/23
+        Testing of WT201. Documentation.
+    Wed  11/08/23
+        Collect and compose questions about WT201.
+    Tue  11/07/23
+        WT201 documentation.
+    Mon  11/06/23
+        SW Team Meeting.  WT201 documentation.  communications with MS.
+    Thu  11/02/23
+        WT201 downlink messages; documentation
+    Wed  11/01/23
+        WT201 downlink messages; documentation
+    Tue  10/31/23
+        troubleshooting frontend build environment post node upgrade.
+        WT201 downlinks using new user guide specifications.
+    Mon  10/30/23
+        SW Team Meeting. Update Energy Report compare building re review recommendations.
+        Update node environment & work thru possible M1 dependencies incompatibility.
+
+
 Invoice 40
     Thu  10/26/23
         tstat downlinks
@@ -22,7 +83,7 @@ Invoice 40
     Mon  10/16/23
         SW Team Meeting.  test, refactor, PR compare energy bldg.  navigator issue repair.
 
----
+
 Invoice 39
     Thu  10/12/23
         compare whole building energy
@@ -45,7 +106,7 @@ Invoice 39
     Mon  10/02/23
         SW Team Meeting. use extended API to extend compare feature to work across different asset types
 
----
+
 Invoice 38
   Thu  09/28/23
     wrap up tooltip units issue and add asset names to tooltips when comparing assets.
@@ -67,7 +128,7 @@ Invoice 38
   Mon  09/18/23
     SW Team Meeting.  HRV & tab configuration studies in prep for working on a history tab component.
 
----
+
 Invoice 37
   Thu  09/14/23
     last things with activity line graph.   implement pr review recommendation in compare dialog.
@@ -90,8 +151,7 @@ Invoice 37
   Mon  09/04/23
     Labor Day
 
-==============================================================================================================================
----
+
 Invoice 36
  Thu  08/31/23
     linegraph compare feature - error handling, style details, make ts happy, minor refactoring, pr.
