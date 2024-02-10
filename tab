@@ -14,12 +14,20 @@ else:
     path = sys.argv[1]
 
 frame = pd.read_csv(path)
+frame.fillna('', inplace=True)
 
 for idx, col in enumerate(frame.columns):
     color = colors[idx % len(colors)]
     frame[col] = frame[col].apply(lambda x: f'{ color } { x } { grey }')
+
+    # Determine the maximum width for each column to right-align
+    #max_widths = {col: max(frame[col].apply(lambda x: len(x))) for col in frame.columns}
+    #for col in frame.columns:
+        #frame[col] = frame[col].apply(lambda x: str(x).rjust(18))
     frame.rename(columns={ col: f'{ color } { col } { grey }' }, inplace=True)
 
+
 print(grey)
-table = tabulate(frame, headers='keys', tablefmt='fancy_grid', showindex=False)
+#table = tabulate(frame, headers='keys', tablefmt='fancy_grid', showindex=False)
+table = tabulate(frame, headers='keys', showindex=False)
 print(table)

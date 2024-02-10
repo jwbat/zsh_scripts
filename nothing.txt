@@ -1,9 +1,33 @@
 
- STANDBY
- 1-STAGE HEATING
- 2-STAGE HEATING
- 3-STAGE HEATING
- 4-STAGE HEATING
- EMERGENCY HEATING
- 1-STAGE COOLING
- 2-STAGE COOLING
++---------------------------+---------+----------+------------------------------+
+|              01           |   02    |   03     |              04              |  < dates
++---------------------------+---------+----------+------------------------------+
+|         A1α       A1Ω     |    ∅    |    ∅     |     A4α              A4Ω     |  < acc_na_hr data
+|          v         v      |         |          |      v                v      |  
++---------------------------+---------+----------+------------------------------+
+          t1         t2     t3        t4         t5     t6               t7        < timestamps
+
+     A  : acc_na_hr                      ∅  : no data
+    A1α : first data pt. of A on 01     A4α : first data pt. of A on 04
+    A1Ω :  last data pt. of A on 01     A4Ω :  last data pt. of A on 04
+    
+    t1 to t7: time stamps
+    tx - ty : delta t in seconds
+    t4 - t3 : nr of seconds in a day = 86400 s
+
+      dates     calculation of na_hr (actual & estimated)
+      =====     ================================================
+        01      actual    =  A1Ω - A1α
+        01      est       =  (A4α - A1Ω) * (t3 - t2) / (t6 - t2)
+
+        02      actual    =  0
+        02      est       =  (A4α - A1Ω) * 86400 / (t6 - t2)
+
+        03      actual    =  0
+        03      est       =  (A4α - A1Ω) * 86400 / (t6 - t2)
+
+        04      actual    = A4Ω - A4α
+        04      est       = (A4α - A1Ω) * (t6 - t5) / (t6 - t2)
+
+
+α  Ω    ∆  ∅
