@@ -1,7 +1,7 @@
 #!python3
 
 '''
-    Usage: ~ snow "<Snowflake query to execute>"
+    Usage: ~ sfx "<Snowflake query to execute>"
     see ~.snowsql/config for ubx configuration
 '''
 import os
