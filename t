@@ -14,6 +14,7 @@ else:
     path = sys.argv[1]
 
 frame = pd.read_csv(path)
+frame.fillna('', inplace=True)
 
 for idx, col in enumerate(frame.columns):
     color = colors[idx % len(colors)]

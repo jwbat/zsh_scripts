@@ -1,26 +1,62 @@
-#!/bin/zsh
-
-# Author: James Batman
-# Date Created: 11/16/2021
-# Last Modified: 11/16/2021
-
-# Description
-# Convert F to C or C to F
+#! python
 
 # Usage
-# temp -[f | c] 30
-
-if [ -z $1 ] || [ -z $2 ]; then
-    echo " usage: temp -f 65 (convert 65 F to C)"
-fi
-
-while getopts "f:c:" opt; do
-    case $opt in
-        c) echo "scale=2; ($OPTARG * 9 / 5) + 32" | bc;;
-        f) echo "scale=2; ($OPTARG - 32) * 5 / 9" | bc;;
-        \?) ;;
-    esac
-done
+# temp -c 
+import sys
+import argparse
+from colored import fg
 
 
-exit 0
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='')
+    parser.add_argument('-c', '--celcius', type=float, nargs='+', help='', dest='c')
+    parser.add_argument('-f', '--fahrenheit', type=float, nargs='+', help='', dest='f')
+    parser.add_argument('-i', '--increment', type=float, help='', dest='i')
+    parser.add_argument('-n', '--number', type=int, help='', dest='n')
+    return parser.parse_args()
+
+
+def celc_to_fahr(cs):
+    results = [] 
+    for c in cs:
+        f = 32.0 + c * 9 / 5
+        f = round(f, 2)
+        results.append(f)
+    return results
+
+
+def fahr_to_celc(fs):
+    results = []
+    for f in fs:
+        c = (f - 32.0) * 5 / 9
+        #c = round(c, 2)
+        results.append(c)
+    return results
+
+
+def populate(x, inc, N):
+    return [x + inc * n for n in range(N)]
+
+
+def print_lists(xs, ys, h1='', h2=''):
+    print()
+    print(fg(252) + '  ', h1.ljust(10), fg(254), h2.ljust(10))
+    for idx in range(len(xs)):
+        print(fg(186) + '  ', str(xs[idx]).ljust(10), fg(220), str(ys[idx]).ljust(10))
+    print()
+
+
+args = parse_arguments()
+cs, fs = args.c, args.f
+inc, N = args.i, args.n
+
+
+if cs:
+    if inc and N:
+        cs = populate(cs[0], inc, N)
+    print_lists(cs, celc_to_fahr(cs), h1='celc', h2='fahr')
+if fs:
+    if inc and N:
+        fs = populate(fs[0], inc, N)
+    print_lists(fs, fahr_to_celc(fs), h1='fahr', h2='celc')
+

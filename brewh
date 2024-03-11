@@ -5,13 +5,18 @@ c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
 z="$(tput setaf 229)"
 clear;
 
-echo "$g
-    
-    brew update                    $x  fetches the newest version of Homebrew and all formulae from GitHub. $g
-    brew upgrade                   $x  upgrade all installed packages to their latest versions $g
-    brew upgrade <formula>         $x  update a specific package $g
-    brew cleanup                   $x  after upgrade, rm old versions of installed packages to free up disk space  $g
-    brew uninstall <formula>       $x  aka 'remove'  $g
+echo "$x
+                             shortcut     $k
+    brew update              $r brewup   $x   fetches the newest version of Homebrew and all formulae from GH. $k
+    brew upgrade             $r brewug   $x   upgrade all installed packages to their latest versions $k
+    brew upgrade <formula>               $x update a specific package $k
+    brew cleanup             $r brewcl   $x   after upgrade, rm old versions of installed packages $k
+
+    brew install <formula>   $r brewi    $x $k
+    brew uninstall <formula> $r brewun   $x $k
+
+    brew search <term>                   $x  $k
+    brew info <formula>                  $x  $k
 "
 
 exit 0
