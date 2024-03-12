@@ -1,11 +1,36 @@
 #!/bin/zsh
 
-echo "$grey
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
+
+echo " $x
    commands
-   ---------------------------------------------------------------------  $red
+   ---------------------------------------------------------------------  $k
     ~ aws iam list-users
     ~ aws s3 ls s3://lorawan-to-snowflake --summarize --human-readable
     ~ aws s3 cp s3://lorawan-to-snowflake/<filename> test.csv
+
+    $gr steps for duplicating a lambda w/ a new name $k
+    ~ aws lambda get-function --function-name <name> > info.json
+    $x # download fcn code to a zip: $k
+    ~ aws lambda get-function \
+--function-name <name> \
+--query 'Code.Location' \
+--output text | xargs curl -O
+    $x create new fcn using names & arns from step 1 $r
+    ~ aws lambda create-function 
+        --function-name newLambdaName 
+        --runtime python3.8 
+        --role <arn> 
+        --handler newrelic_lambda_wrapper.handler 
+        --environment 'Variables={PGSSLROOTCERT=./root.crt,<key>=<value>}'
+        --layers <arn> <arn> <arn>  
+        --zip-file fileb://originalLambdaCode.zip
 " 
+
+exit 0
+"
 
 exit 0
