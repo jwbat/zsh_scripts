@@ -11,6 +11,7 @@ echo " $x
     ~ aws iam list-users
     ~ aws s3 ls s3://lorawan-to-snowflake --summarize --human-readable
     ~ aws s3 cp s3://lorawan-to-snowflake/<filename> test.csv
+    ~ aws iotwireless get-wireless-device --identifier-type WirelessDeviceId --identifier <DeviceId>
 
     $gr steps for duplicating a lambda w/ a new name $k
     ~ aws lambda get-function --function-name <name> > info.json

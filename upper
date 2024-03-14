@@ -4,4 +4,4 @@ from colored import fg
 
 
 for s in sys.argv[1:]:
-    print(fg(186), s.lower())
+    print(fg(186), s.upper())

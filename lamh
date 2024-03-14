@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
+
+echo "
+    $gr ============================================ $k
+    $gr steps for duplicating a lambda w/ a new name $k
+    $gr ============================================ $k
+    $x 1. get lambda info $pg
+     ~ aws lambda get-function --function-name <name> > info.json
+
+    $x 2. download fcn code to a zip: $pg
+     ~ aws lambda get-function \
+--function-name <name> \
+--query 'Code.Location' \
+--output text | xargs curl -O
+
+    $x 3. create new fcn using names & arns from step 1 $pg
+     ~ aws lambda create-function 
+        --function-name <new-lambda-name>
+        --runtime python3.8 
+        --role <arn> 
+        --handler newrelic_lambda_wrapper.handler 
+        --environment 'Variables={PGSSLROOTCERT=./root.crt,<key>=<value>}'
+        --layers <arn> <arn> <arn>  
+        --zip-file fileb://originalLambdaCode.zip
+"
+
+exit 0

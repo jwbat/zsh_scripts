@@ -1,38 +1,25 @@
 #!/bin/zsh
 
-# Description
-# deployment command for AWS Lambda
-
-# aws lambda update-function-code
-#aws lambda delete-function --function-name crdb_test
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
 clear;
 
-echo "
-$aqua
- zip -r deployment-package.zip .
- zip -g deployment-package.zip crdb_test.py root.crt psycopg2
+echo "$x
+     zip -r deployment-package.zip .
+     zip -g deployment-package.zip crdb_test.py root.crt psycopg2
+     p -m pip install --only-binary :all: --platform manylinux1_x86_64  --target ./package -r requirements.txt
 
- p -m pip install --only-binary :all: --platform manylinux1_x86_64  --target ./package -r requirements.txt
-
-$gold
- aws lambda delete-function --function-name crdb_test
-
- aws lambda create-function \\
-    --function-name crdb_test \\
-    --region us-west-2 \\
-    --zip-file fileb://package.zip \\
-    --handler crdb_test.lambda_handler \\
-    --runtime python3.8 \\
-    --role arn:aws:iam::508328745727:role/IoT_Lambda_Role \\
-    --environment \"Variables={PGSSLROOTCERT=./root.crt}\"
+$g
+  aws lambda delete-function --function-name crdb_test
 
   aws lambda create-function \\
-    --function-name pats_first \\
+    --function-name <name> \\
     --region us-west-2  \\
     --zip-file fileb://x.zip  \\
     --handler lambda_function.lambda_handler \\
     --runtime python3.8 \\
-    --role arn:aws:iam::508328745727:role/IoT_Lambda_Role  \\
+    --role <arn>  \\
     --environment \"Variables={PGSSLROOTCERT=./root.crt}\"
 "
 exit 0
