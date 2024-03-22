@@ -1,0 +1,37 @@
+
+      yAxis: {
+        gridLineWidth: 1,
+        tickInterval: undefined,
+        tickAmount: 6,
+        labels: {
+          enabled: true
+        }
+      }
+
+
+      plotOptions: {
+        series: {
+          dataLabels: {
+            enabled: true,
+            formatter: function() {
+              const n = 5;
+              if (this.point.index % n === 0) 
+                return formatYValue(this.y);
+              return null;
+            }
+          },
+          marker: {
+            enabled: true,
+            radius: 3, // Adjust the size of the marker
+            symbol: "circle", // Default is 'circle', but you can change to 'square', 'diamond', etc.
+            // Enable marker only for the same points as the labels
+            enabledThreshold: 0, // Ensure markers are always shown regardless of zoom
+            states: {
+              hover: {
+                enabled: true, // Enlarge marker on hover
+                radius: 5
+              }
+            }
+          }
+        }
+      }

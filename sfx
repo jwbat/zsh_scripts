@@ -5,6 +5,7 @@
     see ~.snowsql/config for ubx configuration
 '''
 import os
+import csv
 import sys
 import argparse
 import subprocess as sp
@@ -54,6 +55,26 @@ def trim_file(outfile, N=2):
     sp.run(['rm', temp])
 
 
+def convert_value(val):
+    try: return int(val)
+    except ValueError:
+        try: return float(val)
+        except ValueError: return val
+
+
+def correct_number_formatting(filename):
+    '''Re-reads the CSV file and writes numbers without quotes.'''
+    with open(filename, 'r') as infile:
+        reader = csv.reader(infile)
+        rows = list(reader)
+
+    with open(filename, 'w', newline='') as outfile:
+        writer = csv.writer(outfile, quoting=csv.QUOTE_MINIMAL)
+        for row in rows:
+            new_row = [convert_value(val) for val in row]
+            writer.writerow(new_row)
+
+
 def main():
     with open(outfile, 'w') as f:
         try:
@@ -65,6 +86,8 @@ def main():
     ''' snowflake writes extra stuff at start & end of output '''
     if count_lines(outfile) > 4:
         trim_file(outfile)
+
+    correct_number_formatting(outfile)
 
 
 main()

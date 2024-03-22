@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-#        MAX((property_value->'offline'->>'last_seen')::TIMESTAMPTZ AT TIME ZONE 'America/Los_Angeles') AS time,
 query="
     SELECT 
         MAX((property_value->>'watchdog_last_seen')::TIMESTAMPTZ AT TIME ZONE 'America/Los_Angeles') AS time,
