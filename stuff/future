@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 229)"
+clear;
+
+echo "$s
+            The Future is Yours to Create $r
+
+            The future is unknown, aka a total mystery! 
+            Oooh, just think about the possibilities!
+            That’s pretty exciting stuff, if you ask me.
+
+            What would you paint with your cosmic paint brush
+            if the future was truly a blank canvas with unlimited possibility?
+            If you were given permission to create a tomorrow that encompassed
+            your heart’s desire, where would you start?
+
+            Can you bring awareness to how the past is informing the vision you have for the future?
+            While it’s important to honor what’s gone before,
+            try not to limit what’s possible in the days, weeks,
+            years, decades to come.
+
+            You’re creating your future with your thoughts, words,
+            and actions, here and now.
+
+"
+
+exit 0
