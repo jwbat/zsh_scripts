@@ -1,0 +1,14 @@
+#! python
+
+# Description
+# 2 ^ n 
+
+# Usage
+# 2p <arg>
+from sys import argv
+from colored import fg
+
+n = int(argv[1])
+print(fg(220), 2 ** n)
+
+

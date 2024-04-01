@@ -1,8 +1,64 @@
 
-
 Tue  02/13/24  All co. mtg.
-Tue  12/12/23  All co. mtg.
 
+Invoice 45
+    Thu  02/08/24
+        present new method of getting estimated & actual daily energy to #ubx-energy.
+        write SQL & update GQL object file with the new algorithm
+    Wed  02/07/24
+        energy pro discussions
+    Tue  02/06/24
+        investigating energy pro anomaly
+    Mon  02/05/24
+        SW Team mtg.  investigate an anomaly in daily energy bar
+    Thu  02/01/24
+        testing wired WT201 with schedules & new downlinks available to wired tstats.
+    Wed  01/31/24
+        begin working with a wired tstat
+    Tue  01/30/24
+        investigate issues with downloading graph images in highcharts.
+        1st find the missing link in dev env w/ William's patient help.
+    Mon  01/29/24
+        SW Team Mtg. launch single-endpt. ABM lambda, check metrics, update PR,
+        delete rotation lambda & event that calls it.
+        Update lambda's python runtime version & package up a requests layer for python 3.11.
+
+Invoice 45
+    Thu  01/25/24
+        cold. (0 hr.)
+    Wed  01/24/24
+        cold. (0 hr.)
+    Tue  01/23/24
+        timeout with a cold. ABM lambda metrics (1 hr.)
+    Mon  01/22/24
+        SW Team mtg. tstat schedule content.  MS communications.   ready  ABM lambda to just use the new API on their say so.
+    Thu  01/18/24
+        tstat schedule content - reformulate downlink commands to use °F.   
+        Update uplink decoding for schedule content.
+    Wed  01/17/24
+        draft PR for the new ABM API lambda handler.   study firmware updates to the MS tstat
+    Tue  01/16/24
+        update abm lambda-handler to send data to a new API endpoint in addition to the old one;
+        update secrets.   learn about OAuth2.0 & grant type, client credentials
+    Mon  01/15/24
+        SW Team Mtg. catch up on Slack msgs.  read communications from ABM on API change.
+
+
+Invoice 44
+    Fri  12/15/23
+        WT201 GDoc additions.   look over lambda handler, push any last changes. --> PTO.
+    Thu  12/14/23
+        add scheduling info to the WT201 GDoc.  Communicate findings on temperature target anomaly to MS support.
+        Consult w/ Parker on anything scheduling or tstat for API.
+    Wed  12/13/23
+        testing tstat downlinks & uplinks
+    Tue  12/12/23
+        all co. mtg.  testing tstat downlinks & uplinks
+    Mon  12/11/23
+        SW Team Meeting.  scheduling uplinks & downlinks.
+        pass the data shape to #ubx-thermostat momentarily for Parker's inspection & comment
+
+===============================================================================================================
 
 Invoice 43
     Thu  12/07/23
@@ -76,9 +132,9 @@ Invoice 40
     Mon  10/23/23
         SW Team Meeting. discussion of tstat data shape.  update decode to reflect team decisions.  lambda handler.
     Thu  10/19/23
-        flesh out decoding of wt201 t stat.  experiment with more downlink messages.
+        flesh out decoding of WT201 t stat.  experiment with more downlink messages.
     Wed  10/18/23
-        start getting familiar with the MS wt201 tstat & tstats in general
+        start getting familiar with the MS WT201 tstat & tstats in general
     Tue  10/17/23
         subvert default behavior of HighCharts navigator on legend clicks.
         review recommendations in compare energy.
