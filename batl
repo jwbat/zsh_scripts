@@ -1,0 +1,18 @@
+#! python
+# Usage
+# batl [nr of lines] <filename> 
+import sys
+from colored import fg
+from sys import argv
+import subprocess as sp
+
+args = argv[1 :]
+len1 = len(args) == 1
+nlines = 5 if len1 else args[0]
+fname  = args[0] if len1 else args[1]
+
+nlines = int(nlines)
+cmd = f'tail -n {nlines} {fname} | bat --style=plain'
+result = sp.run(cmd, shell=True, stdout=sp.PIPE, text=True).stdout
+result = result.replace('\n', '\n\t')
+print('\n' + fg(138) + '\t' + result)
