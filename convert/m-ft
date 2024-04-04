@@ -1,0 +1,26 @@
+#! python3
+from sys import argv
+from colored import fg
+
+# convert meters to feet
+
+color = fg(214)
+
+def m_to_ft(meters):
+    return meters * 3.28084
+ 
+def print_usage():
+    print(' usage: m-ft <number>')
+
+
+if len(argv) != 2:
+    print_usage()
+
+
+try:
+    meters = eval(argv[1])
+    ft = m_to_ft(meters)
+    print('\n' + color + str(round(ft, 2)).rjust(30) + '\n')
+
+except:
+    print_usage()
