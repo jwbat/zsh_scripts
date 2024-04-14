@@ -1,0 +1,19 @@
+#! python
+import sys
+from colored import fg
+
+r = fg(197) # red
+w = fg(230) # white
+g = fg(220) # gold
+y = fg(248) # grey
+
+s = f'''
+{w}        To                              Paid by        How      Date        Amt
+{y}    ==========================          =======       =====     =====       ====
+{r}    Gorge Title                            J          check     04/13       5500.
+{r}    Columbia Gorge Inspections             J          portal    04/10       1100.
+
+'''
+
+
+print(s)
