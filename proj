@@ -2,113 +2,37 @@
 
 r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
-z="$(tput setaf 250)"
+z="$(tput setaf 63)"
+
+clear;
 
 echo " $c
-    We’re recording all of the HRV data into the Data Lake.
-    So it would be relatively easy for us to add a “History” tab and graph the various HRV parameters.
-
-    Some possible examples are:
-        One Linegraph with all 5 temperatures graphed:
-            Outside Air
-            Supply Air
-            Return Air
-            Exhaust Air
-            Target Temp (rarely changes, but useful to compare against Supply Air temp)
-
-        One Linegraph with Bypass % 
-           (or should this also go on the above graph, since it impacts temps?  
-            We haven’t done a Dual-Axis graph yet, but that should be viable.
-        One Linegraph with Preheater % ?
-        One Linegraph with two flow rates?
+    HC options for adding Notes to a Linegraph: $z
+      https://www.highcharts.com/docs/advanced-chart-features/annotations-module
+      https://www.highcharts.com/docs/stock/flag-series
 $x
-        _____________________________________________________________________________________________________ 
-$gr
-    What should the route be for an HRV history tab? =>$p history $gr
+      Can we have a Note attached that looks like an Annotation?
+      (shows at least some of the Note text, perhaps with a “…”) and 
+      where the user can hover/click to expand to read the full Note.
+$c
+    Some annotations (when they are specific to that Property) would make sense attached to the Linegraph $k
+      Others (like when we show Journal events that might be related to the Property)
+      might be better shown on the X-axis (is that an option with Annotations? or just Flags?)
+$c
+    What is the best way to capture user clicks on the Linegraph to add a text Annotation (Note)? $k
+      What is the HC mechanism to do this or intercept such an event?
+      Is there any reason to consider allowing  X-axis Annoations/Flags?
+$c
+    Generally, some brainstorming on how these Notes related to the Journal and the Assets that they are attached to $k
+      Example:$x Any time someone changes a config setting on an HVAC machine,
+               that event should appear on any Linegraphs that related to indoor comfort and air quality.
+               Should we put an X-axis Flag on every Linegraph that could be relevant (all IAQ sensors, all variables)? $k
+      What are some other use cases for Notes as they related to Journal and various Asset Properties?
+$pg
+    How do we handle attaching a Note to time series data when the 
+    Snowflake Aggregation Window (MIN/MAX/AVG) changes dynamically
+    based on the size of the Navigator View Window (Start/End Times)?
 
-    I would recommend treating this as the first step: creating a history tab with placeholder content,
-    like just a placeholder heading that says “History”.
-    There are a few things to figure out with regards to how adding tabs works.
-$k
-    Will getting the data for an HRV be an  asset(assetUuid) query ? $gr
-    No, currently it would be a series of propertyTrend queries. That’s currently called by PropertyGraph.
-$k
-    Can I create a new LineGraph component ? $gr
-    I would definitely not create a component that is hardcoded for displaying these 5 lines.
-    If you want to explore the creation of a component that can flexibly display multiple series 
-    that share the same unit, that sounds like something we might be able to reuse elsewhere. (edited) 
-$g
-    Jonah and I are on the fence about the value of showing a graph with these lines all criss-crossing 
-    each other, so if there’s any way you could prototype this to show what it would look like with real data,
-    I’d recommend that.
-$k
-    Navigator? 5 Lines? 1 ?  we don't know yet, .. $gr
-    And from that perspective, if the easiest way to prototype these ideas is to create a hardcoded 
-    5-line component at first, I understand that
-$x
-     _____________________________________________________________________________________________________ 
-
-$g
-    1. Δ Airflow vs Time $z
-       a. Y-axis units: CFM
-       b. Y-axis scale: Automatic
-       c. Note
-          i. Specifically for DCV and VAV modes
-         ii. If in CAV mode
-             1. Target airflow
-             2. Filter percentage (if possible)
-$g
-    2. Temperature vs Time $z
-        a. Y-axis units: Fahrenheit
-        b. Y-axis scale: Automatic
-        c. Y-axis items:
-           i. Outdoor Air Temperature
-          ii. Supply Air Temperature
-         iii. Return Air Temperature
-$g
-    3. Bypass Percent Open vs Time $z
-        a. Y-axis units: Percentage (0-100%)
-        b. Y-axis scale: Fixed
-        c. Y-axis items:
-           i.  Temperature setpoint
-           ii. Temperature setpoint sensor value (if possible)
-$g
-    4. Preheater Power vs Time $z
-        a. Y-axis units: Percentage (0-100%)
-        b. Y-axis scale: Fixed
-        c. Note
-           i.  Preheater power register: 30042
-$g
-    5. Postheater Power vs Time $z
-        a. Y-axis units: Percentage (0-100%)
-        b. Y-axis scale: Fixed
-        c. Note
-           i. Postheater power register: 30044
-
-$x  --------------------------------------------------------------------------------
-$k
-    We have decided to ship an MVP version of the Asset History tab for VS.
-    It will contain separate graphs for key properties, exactly like we currently
-    have on the IAQ Asset Dashboard. The properties we want to display are:
-$gr
-        Airflow In
-        Airflow Out
-        Outside Air
-        Exhaust Air
-        Return Air
-        Supply Air
-        Bypass Percent
-        Preheater Power
-        Postheater Power
-$k
-    A few notes on those: $p
-        Airflow is in CFM
-        “Air” props are temperatures, in Farenheit
-        Bypass is in percentage
-        Pre/Postheater Power are in percentage
-$k
-    for this very first version, these are all separate graphs that aren’t connected.
-    we will be using the$r PropertyGraph$k component for them.
-    get them via$g propertyTrend$k queries
+    Can you make any sort of visual marker appear in the Navigator?
 "
 exit 0

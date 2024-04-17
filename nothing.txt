@@ -1,4 +1,8 @@
-"period_in":  int,
-"period_out": int,
-"total_in":   int,
-"total_out":  int
+ Dedicated "Annotation Mode" Toggle
+Provide a UI element such as a toggle button or checkbox that lets users switch between normal interaction mode and annotation mode. When in annotation mode, clicks on the chart could be used to place annotations, while disabling or altering the tooltip behavior temporarily.
+
+ Double Click or Long Press
+You could use a double-click or long press as a trigger to add an annotation. This would leave the single click behavior unchanged for showing tooltips. Double-clicks are less likely to occur accidentally, making this a reliable way to differentiate user intent.
+
+ Custom Toolbar or Buttons
+Add custom buttons or a toolbar to the chart interface. For instance, a button that says "Add Annotation" which, when clicked, could change the behavior of the next click on the chart to place an annotation instead of showing a tooltip.

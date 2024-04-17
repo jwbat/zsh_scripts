@@ -12,6 +12,7 @@ s = f'''
 {y}    ==========================          =======       =====     =====       ====
 {r}    Gorge Title                            J          check     04/13       5500.
 {r}    Columbia Gorge Inspections             J          portal    04/10       1100.
+{r}    Appraisal, Newrez LLC                  J          visa      04/17        800.
 
 '''
 
