@@ -1,7 +1,45 @@
+    Fri  03/22/24  Milesight meeting
 
-Tue  02/13/24  All co. mtg.
+Invoice 48
+    Thu  03/07/24
+        CO2 sensor care & calibration, Elsys & AM103L
+    Wed  03/06/24
+        tstat
+    Tue  03/05/24
+        back to tstat.   check in on the AM103L.
+    Mon  03/04/24
+        MS AM103
+    Thu  02/29/24
+        tstat schedules
+    Wed  02/28/24
+        assess present state & needs of thermostat
+    Tue  02/27/24
+        cross-examine wssd energy report data in spreadsheet for estimated kwh correctness.
+        discuss w/ Jonah.   finish energypro optimization, pr.
+    Mon  02/26/24
+        optimizing energy pro; test; PR
 
-Invoice 45
+Invoice 47
+    Thu  02/22/24
+        test energy, look for any missed optimization, encapsulation
+    Wed  02/21/24
+        put together parts for energy & aggregate / bldg energy API and test
+    Tue  02/20/24
+        upgrade SQL in energy pro & aggregate energy to select data beyond start & end dates for better estimates
+    Mon  02/19/24
+        investigate line graph issue for device energy.   building / aggregate energy report API.
+    Thu  02/15/24
+        make agg energy API compatible with device energy updates
+    Wed  02/14/24
+        get updated energy API ready for front end testing
+    Tue  02/13/24
+        energy pro API
+    Mon  02/12/24
+        daily energy API using new SQL query
+
+===============================================================================================================
+
+Invoice 46
     Thu  02/08/24
         present new method of getting estimated & actual daily energy to #ubx-energy.
         write SQL & update GQL object file with the new algorithm
@@ -58,7 +96,6 @@ Invoice 44
         SW Team Meeting.  scheduling uplinks & downlinks.
         pass the data shape to #ubx-thermostat momentarily for Parker's inspection & comment
 
-===============================================================================================================
 
 Invoice 43
     Thu  12/07/23
