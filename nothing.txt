@@ -1,3 +1,16 @@
+==== LLM =====================================================================================================
+Streamlit - partnered with SF 
+DB "Views" 
+
+
+
+
+
+
+
+
+
+====== Annotations ===========================================================================================
  Dedicated "Annotation Mode" Toggle
 Provide a UI element such as a toggle button or checkbox that lets users switch between normal interaction mode and annotation mode. When in annotation mode, clicks on the chart could be used to place annotations, while disabling or altering the tooltip behavior temporarily.
 
