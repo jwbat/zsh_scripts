@@ -7,7 +7,7 @@
 # pyh 
 
 echo "
-\t $gold brew install pyenv     $sea  (edit .zprofile, .zshrc; see: towardsdatascience)
+\t $gold brew install pyenv     $sea  (edit .zprofile, .zshrc)
 \t $gold pyenv install -l       $sea  (see available versions)
 \t $gold pyenv versions         $sea  (see versions installed on your system)
 \t $gold pyenv install 3.10.3
