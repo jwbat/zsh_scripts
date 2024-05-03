@@ -1,36 +1,32 @@
 #! python
-'''
-Solve pangram
-'''
-from json import load
-from sys import argv
+import os
+import json
+from random import randint
 from colored import fg
+from sys import argv
 
 
-fname = '/Users/james/words.json'
-ltrs = argv[1].lower()      # Spelling Bee letters 
-S = set(list(ltrs))
-K = len(S)
+dir_path     = os.path.expanduser('~')
+fname        = 'words.json'
+file_path    = os.path.join(dir_path, fname)
+color_codes  = [221, 157, 160, 6, 9, 209]
+randcolor    = lambda : fg(color_codes[randint(0, len(color_codes) - 1)])
+pprint       = lambda s: print(randcolor() + s.rjust(25))
+
+with open(file_path, 'r') as f:
+    d = json.load(f)
 
 
-def make_color_toggler():
-    i = 1
-    def f():
-        nonlocal i
-        i = [1, 0][i]
-        return [fg(221), fg(214)][i]
-    return f
-
-
-def solve():
-    clr = make_color_toggler()
-    with open(fname, 'r') as f:
-        words = load(f)
-        while words:
-            w = words.popitem()[0]
-            set(list(w)) == S and print('\t', clr(), w, end='  ')
+def solve(ltrs):
+    for word in d:
+        s1 = set(list(ltrs))
+        s2 = set(list(word))
+        if s1 == s2:
+            pprint(word)
 
 
 print()
-solve()
-print('\n')
+pprint('~' * 8)
+solve(argv[1])
+pprint('~' * 8)
+print()
