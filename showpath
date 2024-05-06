@@ -1,0 +1,21 @@
+#! python
+#  Usage: showpath [<filter_word>] 
+import os
+from sys import argv
+from colored import fg
+
+
+path_var    = os.getenv('PATH')
+directories = path_var.split(os.pathsep)
+filter_word = '' if not len(argv) == 2 else argv[1]
+
+
+def print_directories():
+    print(fg(81))
+    for d in directories:
+        if filter_word in d:
+            print('  ' + d)
+    print()
+
+
+print_directories()

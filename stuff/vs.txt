@@ -1,17 +1,62 @@
     Mon  04/22/24  SW meeting, Occ meeting, Tstat meeting
-    Fri  03/22/24  Milesight meeting
+
+Invoice 50          03/25 - 04/05
+    Thu  04/04/24
+        PR review & recommended improvements in chart exporting.
+        Test accuracy of vs350 threshold counter.
+    Wed  04/03/24
+        Threshold counter Lambda, testing, & PR.
+    Tue  04/02/24
+        VS350 Lambda. Meeting with Parker & Jonah on thermostat.
+    Mon  04/01/24
+        MS VS350 threshold people counter:  documentation.
+        Highcharts column range chart mock-up with dummy data.  register at IoT.
+    Thu  03/28/24
+        Travel to Mosier to pick up new occupancy sensor.
+        Ideas session w/ Jonah on occ sensor data representation. PRs.
+    Wed  03/27/24
+        PR Highcharts exporting updates.  display days of the week on Highcharts xAxes
+    Tue  03/26/24
+        Combine Highcharts graph exporting & resizing updates.  Experiment with y-axis options.
+    Mon  03/25/24
+        PR review.  Coalesce chart events. Butterfly: chart exporting demo images.
+
+Invoice 49          03/11 - 03/22
+    Fri  03/22/24  
+        Milesight meeting (3 hr)
+    Thu  03/21/24
+        data labels on chart exporting
+    Wed  03/20/24
+        Highcharts exporting
+    Tue  03/19/24
+        Highcharts graph exports:  dynamic & proportionate aspect ratios, additional info
+    Mon  03/18/24
+        elsys eco co2 data plot. elsys NFC app.   
+        UI: aspect ratio issue on download of Highcharts graphs.
+    Thu  03/14/24
+        ready Milesight CT10x updates to pats-first lambda for PR.
+        Try the Elsys NFC app & its config options 
+        -- come up with any questions we might have for Elsys.
+    Wed  03/13/24
+        Elsys ECO co2 data.  Milesight CT10x lambda.  register a CT103.
+    Tue  03/12/24
+        Milesight CT10x
+    Mon  03/11/24
+        Milesight CT10x decoding Lambda
+
+===============================================================================================================
 
 Invoice 48
     Thu  03/07/24
         CO2 sensor care & calibration, Elsys & AM103L
     Wed  03/06/24
-        tstat
+        thermostat
     Tue  03/05/24
-        back to tstat.   check in on the AM103L.
+        back to thermostat.   check in on the AM103L.
     Mon  03/04/24
         MS AM103
     Thu  02/29/24
-        tstat schedules
+        thermostat schedules
     Wed  02/28/24
         assess present state & needs of thermostat
     Tue  02/27/24
@@ -38,8 +83,6 @@ Invoice 47
     Mon  02/12/24
         daily energy API using new SQL query
 
-===============================================================================================================
-
 Invoice 46
     Thu  02/08/24
         present new method of getting estimated & actual daily energy to #ubx-energy.
@@ -49,13 +92,13 @@ Invoice 46
     Tue  02/06/24
         investigating energy pro anomaly
     Mon  02/05/24
-        SW Team mtg.  investigate an anomaly in daily energy bar
+        SW Team meeting.  investigate an anomaly in daily energy bar
     Thu  02/01/24
-        testing wired WT201 with schedules & new downlinks available to wired tstats.
+        testing wired WT201 with schedules & new downlinks available to wired thermostats.
     Wed  01/31/24
-        begin working with a wired tstat
+        begin working with a wired thermostat
     Tue  01/30/24
-        investigate issues with downloading graph images in highcharts.
+        investigate issues with downloading graph images in higHighcharts.
         1st find the missing link in dev env w/ William's patient help.
     Mon  01/29/24
         SW Team Mtg. launch single-endpt. ABM lambda, check metrics, update PR,
@@ -70,12 +113,12 @@ Invoice 45
     Tue  01/23/24
         timeout with a cold. ABM lambda metrics (1 hr.)
     Mon  01/22/24
-        SW Team mtg. tstat schedule content.  MS communications.   ready  ABM lambda to just use the new API on their say so.
+        SW Team meeting. thermostat schedule content.  MS communications.   ready  ABM lambda to just use the new API on their say so.
     Thu  01/18/24
-        tstat schedule content - reformulate downlink commands to use °F.   
+        thermostat schedule content - reformulate downlink commands to use °F.   
         Update uplink decoding for schedule content.
     Wed  01/17/24
-        draft PR for the new ABM API lambda handler.   study firmware updates to the MS tstat
+        draft PR for the new ABM API lambda handler.   study firmware updates to the MS thermostat
     Tue  01/16/24
         update abm lambda-handler to send data to a new API endpoint in addition to the old one;
         update secrets.   learn about OAuth2.0 & grant type, client credentials
@@ -88,11 +131,11 @@ Invoice 44
         WT201 GDoc additions.   look over lambda handler, push any last changes. --> PTO.
     Thu  12/14/23
         add scheduling info to the WT201 GDoc.  Communicate findings on temperature target anomaly to MS support.
-        Consult w/ Parker on anything scheduling or tstat for API.
+        Consult w/ Parker on anything scheduling or thermostat for API.
     Wed  12/13/23
-        testing tstat downlinks & uplinks
+        testing thermostat downlinks & uplinks
     Tue  12/12/23
-        all co. mtg.  testing tstat downlinks & uplinks
+        all co. meeting.  testing thermostat downlinks & uplinks
     Mon  12/11/23
         SW Team Meeting.  scheduling uplinks & downlinks.
         pass the data shape to #ubx-thermostat momentarily for Parker's inspection & comment
@@ -124,7 +167,7 @@ Invoice 42
     Wed  11/22/23
         PTO - Thanksgiving holiday travel
     Tue  11/21/23
-        Decode tstat schedules from uplink messages upon querying schedule.  Test scheduling.
+        Decode thermostat schedules from uplink messages upon querying schedule.  Test scheduling.
     Mon  11/20/23
         SW Team Meeting.  WT201 firmware update.  Review latest edition of WT201 docs.  
     Thu  11/16/23
@@ -162,17 +205,17 @@ Invoice 41
 
 Invoice 40
     Thu  10/26/23
-        tstat downlinks
+        thermostat downlinks
     Wed  10/25/23
         learn about our downlink infra w/ Pat.  Tstat downlinks.
     Tue  10/24/23
-        tstat lambda
+        thermostat lambda
     Mon  10/23/23
-        SW Team Meeting. discussion of tstat data shape.  update decode to reflect team decisions.  lambda handler.
+        SW Team Meeting. discussion of thermostat data shape.  update decode to reflect team decisions.  lambda handler.
     Thu  10/19/23
         flesh out decoding of WT201 t stat.  experiment with more downlink messages.
     Wed  10/18/23
-        start getting familiar with the MS WT201 tstat & tstats in general
+        start getting familiar with the MS WT201 thermostat & thermostats in general
     Tue  10/17/23
         subvert default behavior of HighCharts navigator on legend clicks.
         review recommendations in compare energy.
@@ -257,7 +300,7 @@ Invoice 36
  Tue  08/29/23
     compare property linegraph wiring
  Mon  08/28/23
-    SW team mtg.  add more granular logging to abm_lambda to try to diagnose occasionally excessive duration issue
+    SW team meeting.  add more granular logging to abm_lambda to try to diagnose occasionally excessive duration issue
     (is it a server timeout on their end?)    Compare feature for linegraphs in UI:  implement dialog.
  Thu  08/24/23
     planning linegraph compare feature for 2 like-properties - consult with Jason
@@ -267,7 +310,7 @@ Invoice 36
     turn on rule for elsys lambda to go live with new, tested layer, ubx_data_utils, and one in-house elsys sensor.
     begin looking into a adding a "compare to" option  for comparing 2 like properties on linegraphs
  Tue  08/22/23
-    layer discussion &planning w/ team.  all co. mtg;  test layer.  get Jackson setup with Snowflake.
+    layer discussion &planning w/ team.  all co. meeting;  test layer.  get Jackson setup with Snowflake.
  Mon  08/21/23
     discussion with Wm on modularizing handle_decoded_data layer.   refactor layer.
 ---
@@ -281,7 +324,7 @@ Invoice 36
  Tue  08/15/23
     put elsys sensors into crdb with ka_uuid's & registry_uuid's;  elsys lambda
  Mon  08/14/23
-    SW team mtg.  elsys sensors: docs, provisioning, decoding
+    SW team meeting.  elsys sensors: docs, provisioning, decoding
  Thu  08/10/23
     travel to hand-off location in HR.  get acquainted with the brand new Elsys.se climate sensors from Sweden.
     Configure & possibly provision / register on IoT, and/or begin a decoding lambda.
@@ -291,7 +334,7 @@ Invoice 36
     refactor handle_decoded_data layer & vu_hotdrop_direct lambda;
     test; find permission issue, enable rule, deploy, pr.
  Mon  08/07/23
-    SW team mtg.  investigating hotdrop data issue with William & Jonah.   test new layer with Pat.
+    SW team meeting.  investigating hotdrop data issue with William & Jonah.   test new layer with Pat.
     PR hotdrop direct lambda & layer.  AWS infrastructure inventory table.
 ---
 
@@ -304,7 +347,7 @@ Invoice 36
  Tue  08/01/23 
     dial in the new layer 'handle_decoded_data'  with vu_hotdrop_direct lambda.   see about getting 1 or 2 hotdrops into crdb
  Mon  07/31/23 
-    SW team mtg.  plan, begin a Layer so a new device decoding lambda only needs to call 1 or  2
+    SW team meeting.  plan, begin a Layer so a new device decoding lambda only needs to call 1 or  2
     imported methods to forward the decoded packet.   Get some info for ABM.
  Thu  07/27/23 
     vu lambda.  look at the crdb lambda layer. repackage some iot utility scripts
@@ -314,7 +357,7 @@ Invoice 36
     turned on abm_lambda with a 201 response posting payloads to their webhook.
     Document the EventBridge event scheme for token rotation.   Continue IoT guide.
  Mon  07/24/23 
-    SW team mtg.  write a GDoc guide to our IoT destinations, rules, actions, topics, & lambdas
+    SW team meeting.  write a GDoc guide to our IoT destinations, rules, actions, topics, & lambdas
 ---
 
 ---
@@ -373,7 +416,7 @@ Invoice 36
  Tue  06/20/23 
     extend diagnostic tool from being able to find device outages also to find gateway outages.
  Mon  06/19/23 
-    device diagnostic tool wrap up & testing.  write up installation and usage instructions. SW team mtg.
+    device diagnostic tool wrap up & testing.  write up installation and usage instructions. SW team meeting.
  Thu  06/15/23 
     device reporting diagnostic tool SQL. consult with Arthur & Jonah on desired final features
  Wed  06/14/23 
@@ -383,7 +426,7 @@ Invoice 36
     for CLI program that will look for missed packets in ubx_device_data between given dates 
     for a given deveui or registry_uuid
  Mon  06/12/23 
-    Begin CLI program for detection of device connection problems in the field. SW Team mtg.
+    Begin CLI program for detection of device connection problems in the field. SW Team meeting.
 ---
 
 ---
@@ -391,7 +434,7 @@ Invoice 36
  Thu  06/08/23 
     PTO
  Wed  06/07/23 
-    further study of Highcharts for occupancy sensors.  add HC occupancy demos for report.
+    further study of Highcharts for occupancy sensors.  add Highcharts occupancy demos for report.
  Tue  06/06/23 
     Highcharts implementations for occupancy data
  Mon  06/05/23 
@@ -404,7 +447,7 @@ Invoice 36
  Tue  05/30/23 
     IoT Rule to streaming the AM308 to ABM.   SmartButton Lambda for sending RSSIs etc to our Slack webhook
  Mon  05/29/23 
-    Document VPC & webhook setup.  Test.  SW Team mtg.
+    Document VPC & webhook setup.  Test.  SW Team meeting.
 ---
 
  05/25/23 
@@ -431,19 +474,19 @@ Invoice 36
     configure gateway with certs and Basic Station
 
  05/15/23 
-    study isc-dhcp-server in Ubuntu for possible use connecting gateways in the field
+    study isc-dHighchartsp-server in Ubuntu for possible use connecting gateways in the field
 
  05/11/23 
-    isc-dhcp server configuration. gateway provisioning.
+    isc-dHighchartsp server configuration. gateway provisioning.
 
  05/10/23 
     provision and configure conduit
 
  05/09/23 
-    network commands.   get MT gateway to connect & say hi to IoT thru macOS\'s DHCP server
+    network commands.   get MT gateway to connect & say hi to IoT thru macOS\'s DHighchartsP server
 
  05/08/23 
-    Configure bash in Ubuntu Linux.  Investigate how to set up and use a DHCP server on Mac
+    Configure bash in Ubuntu Linux.  Investigate how to set up and use a DHighchartsP server on Mac
     for connecting to gateways in the field.
 
 
@@ -467,10 +510,10 @@ Invoice 36
     Diagnose permissions issue in IoT to allow subscription to MQTT topics locally
 
  04/26/23 
-    find a way to test Mac\'s DHCP server & cnx to a gateway;  local IoT topic subscription
+    find a way to test Mac\'s DHighchartsP server & cnx to a gateway;  local IoT topic subscription
 
  04/25/23 
-    look into how to use a Mac as a DHCP server for connecting to gateways in the field.
+    look into how to use a Mac as a DHighchartsP server for connecting to gateways in the field.
     MQTT topic filtering on DevEUI or GatewayEui with a CL parameter. AWS CLI permissions issue.
     Fix bug in agg-energy-building
 

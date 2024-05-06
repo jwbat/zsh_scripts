@@ -1,0 +1,21 @@
+#! python
+import os
+import sys
+from colored import fg
+
+
+def remove_duplicate_paths():
+    old_path = os.environ['PATH']
+    path_list = old_path.split(':')
+    unique_path_list = []
+
+    for path in path_list:
+        if path not in unique_path_list:
+            unique_path_list.append(path)
+
+    new_path = ':'.join(unique_path_list)
+    os.environ['PATH'] = new_path
+    print(f"export PATH='{new_path}'")
+
+
+remove_duplicate_paths()
