@@ -1,3 +1,4 @@
+    Tue  05/07/24 Tstat API integration discussions, meetings
     Mon  04/22/24  SW meeting, Occ meeting, Tstat meeting
 
 Invoice 50          03/25 - 04/05
