@@ -1,3 +1,11 @@
+
+ byte 1    plan             
+ byte 2    temp_ctl_mode    
+ byte 3    fan_mode         
+ byte 4    target_temp      
+ byte 5    temp_tolerance   
+
+
 next proj
 =========
 
