@@ -1,3 +1,7 @@
+Since we want to maintain 1 °F precision, the downlink module converts a 0.1-prec °C
+to F int.  The lambda will do the opposite, take an int in F and convert to ^.
+
+
 
  byte 1    plan             
  byte 2    temp_ctl_mode    
