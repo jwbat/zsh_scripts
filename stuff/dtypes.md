@@ -1,4 +1,4 @@
-`Data Types and Ranges`
+
 
 
 | Data Type | Low Range                                | High Range                                |
