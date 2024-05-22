@@ -1,3 +1,17 @@
+target_temp:  21.1
+tolerance_temp:  1.4
+
+target_temp:  21.7
+tolerance_temp:  2.5
+
+target_temp:  22.2
+tolerance_temp:  3.4
+
+target_temp:  22.8
+tolerance_temp:  4.5
+
+
+
 Since we want to maintain 1 °F precision, the downlink module converts a 0.1-prec °C
 to F int.  The lambda will do the opposite, take an int in F and convert to ^.
 
