@@ -1,27 +1,29 @@
 #!python3
-# usage: ecrypt <path_of_unencrypted_file> <path_of_encrypted_file>
-
+# usage: ecrypt <path_of_file_to_encrypt> <path_of_encrypted_file>
 import os
 import sys
 from cryptography.fernet import Fernet
 from colored import fg
 
+
 light_blue = fg(153)    # light_blue
-orange = fg(202)    # orange
+orange     = fg(202)    # orange
 
 if len(sys.argv) != 3:
-    print("usage: enc <name_of_file_to_encrypt> <name_of_encrypted_file>")
+    print('usage: ecrypt <path_of_file_to_encrypt> <path_of_encrypted_file>')
     exit()
 
 
-file1 = sys.argv[1]     # file to encrypt
-file2 = sys.argv[2]     # encrypted file
+file1   = sys.argv[1]     # file to encrypt
+file2   = sys.argv[2]     # encrypted file
 keypath = os.path.expanduser('~/code/key.key')
 
-def write_key():
-    key = Fernet.generate_key()
-    with open(keypath, 'wb') as key_file:
-        key_file.write(key)
+# commented out for safety
+# def write_key():
+    # key = Fernet.generate_key()
+    # with open(keypath, 'wb') as key_file:
+        # key_file.write(key)
+
 
 def load_key():
     f = open(keypath, 'rb')
@@ -29,17 +31,16 @@ def load_key():
     f.close()
     return key
 
+
 #write_key()
 
 with open(file1, 'rb') as f:
     print(f'\t {orange} reading {light_blue + file1}..')
     data = f.read()
 
-key = load_key()
-fr = Fernet(key)         # initialize Fernet
-
-
-encrypted = fr.encrypt(data)
+key       = load_key()
+fern      = Fernet(key)                # initialize Fernet
+encrypted = fern.encrypt(data)
 with open(file2, 'wb') as f:
     f.write(encrypted)
 
