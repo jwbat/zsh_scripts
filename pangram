@@ -1,14 +1,15 @@
 #! python
-import os
 import json
+from sys import argv
+from os.path import expanduser, join
 from random import randint
 from colored import fg
-from sys import argv
 
 
-dir_path     = os.path.expanduser('~')
-fname        = 'words_alpha.txt'
-fpath        = os.path.join(dir_path, fname)
+DIR          = expanduser('~')
+FNAME        = 'words_alpha.txt'
+fpath        = join(DIR, FNAME)
+
 color_codes  = [221, 157, 160, 6, 9, 209]
 randcolor    = lambda : fg(color_codes[randint(0, len(color_codes) - 1)])
 pprint       = lambda s: print(randcolor() + s.rjust(25))
