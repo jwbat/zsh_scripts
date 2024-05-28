@@ -1,4 +1,4 @@
-Yes, a C++ program that uses SDL2 (Simple DirectMedia Layer 2) can be compiled for Android.
+A C++ program that uses SDL2 (Simple DirectMedia Layer 2) can be compiled for Android.
 SDL2 is a cross-platform development library designed to provide low-level access to audio,
 keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
 It is used by video playback software, emulators, and popular games, making it a versatile

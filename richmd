@@ -1,0 +1,12 @@
+#! python
+from sys import argv
+from rich.console import Console
+from rich.markdown import Markdown
+
+
+fpath = argv[1]
+
+with open(fpath, 'r') as file:
+    content = file.read()
+
+Console().print(Markdown(content))
