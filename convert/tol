@@ -1,0 +1,31 @@
+#! python
+
+# convert a tolerance from F to C or C to F. 
+# Usage
+# tol -c <tolerance in C> --> F
+# tol -f <tolerance in F> --> C
+import sys
+import argparse
+from colored import fg
+
+
+def print_vals(vals):
+    print(fg(157))
+    [print(str(val).rjust(6), end='') for val in vals]
+    print('\n')
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='')
+    parser.add_argument('-c', '--celcius', type=float, nargs='+', help='', dest='c')
+    parser.add_argument('-f', '--fahrenheit', type=float, nargs='+', help='', dest='f')
+    return parser.parse_args()
+
+args = parse_arguments()
+cs, fs = args.c, args.f
+
+if cs:
+    print_vals([round(c * 9 / 5, 1) for c in cs])
+if fs:
+    print_vals([round(f * 5 / 9, 1) for f in fs])
+
