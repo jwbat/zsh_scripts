@@ -25,7 +25,7 @@ def pretty_print(xs, ys):
         x, y = xs[idx], ys[idx]
         print(c3 + ' base64: ', c1 + x)
         print(c3 + ' hex: ', c2 + y)
-    print()
+        print()
 
 
 ys = [base64_to_hex(x) for x in xs]

@@ -28,4 +28,48 @@ Let's calculate it.
 
 The 8-bit Two's Complement representation of \(-3\) is \(11111101\).
 
-This system allows for easy addition and subtraction of signed integers, and it's widely used in computer arithmetic.
+# Convert signed byte, `b'\xfb'`, back into its decimal representation
+
+1. **Interpret the Byte as Unsigned**: 
+First, convert the byte to its unsigned decimal value.
+    - `b'\xfb'` in hexadecimal is `FB`.
+    - In binary, `FB` is `1111 1011`.
+    - The unsigned decimal value of `FB` is \( 15 \times 16 + 11 = 241 \).
+
+2. **Check the Sign Bit**: In an 8-bit signed integer, the most significant bit (MSB) indicates the sign:
+    - If the MSB is `0`, the value is positive.
+    - If the MSB is `1`, the value is negative.
+
+3. **Convert from Unsigned to Signed**:
+    - Since the MSB of `1111 1011` is `1`, it indicates a negative value.
+    - To convert this unsigned value to a signed value, we subtract \(2^8\) (256) from it.
+
+\[ \text{Signed Value} = \text{Unsigned Value} - 256 \]
+
+4. **Calculate the Signed Value**:
+    - For `b'\xfb'`:
+    - Unsigned value is 251.
+    - Signed value: \( 251 - 256 = -5 \).
+
+So, `b'\xfb'` corresponds to `-5` in decimal.
+
+### Python Implementation
+You can use Python's `int.from_bytes` method with the `signed` parameter to convert bytes directly to a signed integer:
+
+```python
+# The byte representation
+byte_value = b'\xfb'
+
+# Convert to signed integer
+signed_value = int.from_bytes(byte_value, byteorder='little', signed=True)
+
+print(signed_value)  # Output: -5
+```
+
+Here’s a breakdown of the Python code:
+- `int.from_bytes(byte_value, byteorder='little', signed=True)`:
+    - `byte_value` is the byte string `b'\xfb'`.
+    - `byteorder='little'` specifies the byte order (endianness). For a single byte, this doesn't matter.
+    - `signed=True` indicates that the byte should be interpreted as a signed integer.
+
+This method handles the two's complement conversion for you, resulting in the correct signed integer value `-5`.

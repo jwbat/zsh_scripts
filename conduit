@@ -1,5 +1,0 @@
-#!/bin/zsh
-
-echo -n $CDT | pbcopy;
-
-exit 0
