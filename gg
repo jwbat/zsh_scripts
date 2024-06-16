@@ -32,8 +32,9 @@ for original in "${(@k)files}"; do
   echo "$h encrypted $pg $original $p -> $a $encrypted"
 done
 
-for f in $HOME/macbook_certs/*; do                                           # encrypt vsd certs
-    ecrypt $f $HOME/.dotfiles/mb_certs_encrypted/$(basename $f)
+# encrypt vsd certs
+for f in $HOME/macbook_certs/*; do
+    ecrypt $f $HOME/.dotfiles/macbook_certs_encrypted/$(basename $f)
 done
 
 for d in $ds; do
@@ -43,6 +44,7 @@ for d in $ds; do
     git -C $d push -u origin main
 done
 
+exit 0
 # decrypt files
 #for original in "${(@k)files}"; do
 #  encrypted="${files[$original]}"
@@ -57,4 +59,3 @@ done
 #cp $HOME/.zprofile $HOME/code/zprofile
 
 
-exit 0

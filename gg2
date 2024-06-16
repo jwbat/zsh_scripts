@@ -1,0 +1,64 @@
+#! python
+import json
+import subprocess as sp
+from os import environ, listdir
+from os.path import join, expanduser
+from colored import fg
+from utils import encrypt, decrypt, compare
+
+
+# directories
+home = expanduser('~')
+dotfiles = f'{home}/.dotfiles'
+scripts = f'{home}/code/shell/scripts'
+repos = [dotfiles, scripts]
+
+
+fpaths = {
+    f'{home}/.zprofile':        f'{dotfiles}/.zprofile.age',
+    f'{home}/.zsh_a':           f'{dotfiles}/.zsh_a.age',
+    f'{home}/.snowsql/config':  f'{dotfiles}/.snowsql_config.age',
+    f'{home}/.aws/config':      f'{dotfiles}/.aws_config.age',
+    f'{home}/.aws/credentials': f'{dotfiles}/.aws_credentials.age',
+    f'{home}/.sbg-env':         f'{dotfiles}/.sbg-env.age',
+    f'{home}/.ui-env':          f'{dotfiles}/.ui-env.age',
+}
+
+
+def add_cert_paths():
+    source_dir = f'{home}/macbook_certs'
+    dest_dir = f'{dotfiles}/macbook_certs_ageified'
+    for fname in listdir(source_dir):
+        source_path = join(source_dir, fname)
+        dest_path = join(dest_dir, fname)
+        fpaths[source_path] = dest_path
+
+
+def ageify(fpaths):
+    for fpath, fpath_age in fpaths.items():
+        encrypt(fpath_age, fpath)
+
+
+def deageify(fpaths):
+    for fpath, fpath_age in fpaths.items():
+        decrypt(fpath + '_2', fpath_age)
+        print('compared: ', compare(fpath, fpath + '2'))
+
+
+def update_repos():
+    for directory in repos:
+        try:
+            sp.run(['git', '-C', directory, 'add', '.'], check=True)
+            sp.run(['git', '-C', directory, 'commit', '-m', '.'], check=True)
+            sp.run(['git', '-C', directory, 'push', '-u', 'origin', 'main'], check=True)
+        except sp.CalledProcessError as e:
+            print(f'error running git command in {directory}: {e}')
+
+
+add_cert_paths()
+ageify(fpaths)
+update_repos()
+
+
+# deageify(files)
+
