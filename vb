@@ -1,12 +1,12 @@
 #!python3
-import os
-import sys
+from os import getenv, chdir
+from os.path import expanduser
 import subprocess as sp
 
 
-v     = os.path.expanduser('~/nvim-osx64/bin/nvim')
-path  = os.path.expanduser('~/code/ventacity/sbg-webapp/modules/vue-ui/src')
-ui    = os.getenv('UI')   # files to open
+v     = expanduser('~/nvim-osx64/bin/nvim')
+path  = expanduser('~/code/ventacity/sbg-webapp/modules/vue-ui/src')
+ui    = getenv('UI')   # files to open
 
-os.chdir(path)
+chdir(path)
 sp.run(v + ' ' + ui, shell=True)

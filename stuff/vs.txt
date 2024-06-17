@@ -1,3 +1,4 @@
+    Fri  06/14/24 state management meeting (5)
     Tue  05/07/24 Tstat API integration discussions, meetings
     Mon  04/22/24  SW meeting, Occ meeting, Tstat meeting
 

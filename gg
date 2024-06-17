@@ -1,61 +1,60 @@
-#!/bin/zsh
-
-# Description
-# git push listed repos.  encrypt dotfiles, decrypt
-# vsd = ventacity-saas-devel
-
-# Usage
-# gg2
-
-d1=$HOME/.dotfiles
-d2=$HOME/code/shell/scripts
-ds=($d1 $d2) 
-c1="$(tput setaf 120)"
-c2="$(tput setaf 12)"
-g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
-
-# an associative array defining the files to encrypt and their corresponding encrypted names
-typeset -A files
-files=(
-  "$HOME/.zprofile"                    "$HOME/.dotfiles/.zprofile_encrypted"
-  "$HOME/.zsh_a"                       "$HOME/.dotfiles/.zsh_a_encrypted"
-  "$HOME/.snowsql/config"              "$HOME/.dotfiles/.snowsql_config_encrypted"
-  "$HOME/.aws/config"                  "$HOME/.dotfiles/.aws_config_encrypted"
-  "$HOME/.aws/credentials"             "$HOME/.dotfiles/.aws_credentials_encrypted"
-  "$HOME/.sbg-env"                     "$HOME/.dotfiles/.sbg-env_encrypted"
-  "$HOME/.ui-env"                      "$HOME/.dotfiles/.ui-env_encrypted"
-)
-# encrypt files
-for original in "${(@k)files}"; do
-  encrypted="${files[$original]}"
-  ecrypt "$original" "$encrypted"
-  echo "$h encrypted $pg $original $p -> $a $encrypted"
-done
-
-# encrypt vsd certs
-for f in $HOME/macbook_certs/*; do
-    ecrypt $f $HOME/.dotfiles/macbook_certs_encrypted/$(basename $f)
-done
-
-for d in $ds; do
-    echo "$c1 $d $c2"
-    git -C $d add . && 
-    git -C $d commit -m "." &&
-    git -C $d push -u origin main
-done
-
-exit 0
-# decrypt files
-#for original in "${(@k)files}"; do
-#  encrypted="${files[$original]}"
-#  dcrypt "$encrypted" "$original"
-#  echo "$h decrypted $a $encrypted $p -> $pg $original"
-#done
-
-#for f in $HOME/.dotfiles/mb_certs_encrypted/*; do                         # decrypt vsd certs
-#    dcrypt $f $HOME/macbook_certs/$(basename $f)
-#done
-
-#cp $HOME/.zprofile $HOME/code/zprofile
+#! python
+import json
+import subprocess as sp
+from os import environ, listdir
+from os.path import join, expanduser
+from colored import fg
+from utils import encrypt, decrypt, compare
 
 
+# directories
+home = expanduser('~')
+dotfiles = f'{home}/.dotfiles'
+scripts = f'{home}/code/shell/scripts'
+repos = [dotfiles, scripts]
+
+fpaths = {
+    f'{home}/.zprofile':        f'{dotfiles}/.zprofile.age',
+    f'{home}/.zsh_a':           f'{dotfiles}/.zsh_a.age',
+    f'{home}/.snowsql/config':  f'{dotfiles}/.snowsql_config.age',
+    f'{home}/.aws/config':      f'{dotfiles}/.aws_config.age',
+    f'{home}/.aws/credentials': f'{dotfiles}/.aws_credentials.age',
+    f'{home}/.sbg-env':         f'{dotfiles}/.sbg-env.age',
+    f'{home}/.ui-env':          f'{dotfiles}/.ui-env.age',
+}
+
+
+def add_cert_paths():
+    source_dir = f'{home}/macbook_certs'
+    dest_dir = f'{dotfiles}/macbook_certs_ageified'
+    for fname in listdir(source_dir):
+        source_path = join(source_dir, fname)
+        dest_path = join(dest_dir, fname)
+        fpaths[source_path] = dest_path
+
+
+def ageify():
+    for fpath, fpath_age in fpaths.items():
+        encrypt(fpath_age, fpath)
+
+
+def deageify():
+    for fpath, fpath_age in fpaths.items():
+        decrypt(fpath + '2', fpath_age)
+        print('compared: ', compare(fpath, fpath + '2'))
+
+
+def update_repos():
+    for directory in repos:
+        try:
+            sp.run(['git', '-C', directory, 'add', '.'], check=True)
+            sp.run(['git', '-C', directory, 'commit', '-m', '.'], check=True)
+            sp.run(['git', '-C', directory, 'push', '-u', 'origin', 'main'], check=True)
+        except sp.CalledProcessError as e:
+            print(f'error running git command in {directory}: {e}')
+
+
+add_cert_paths()
+ageify()
+update_repos()
+# deageify(files)
