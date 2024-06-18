@@ -1,4 +1,4 @@
-## Discarding Local Changes (Hard Reset)
+# Discarding Local Changes (Hard Reset)
 
 To discard local changes and make the local branch exactly match the remote branch -
 
@@ -14,3 +14,17 @@ discarding all changes in the working directory and index (staging)
 3. Reset the local branch to match the remote branch
 
 `git reset --hard origin/<branch-name>`
+
+
+# Discard not yet staged changes
+
+`git checkout -- .`
+
+# Discard staged changes not yet committed
+
+`git reset HEAD .`
+
+# Discard all local changes, incl uncommitted & unstaged
+
+`git reset --hard HEAD`
+
