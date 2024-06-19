@@ -8,10 +8,10 @@ from utils import encrypt, decrypt, compare
 
 
 # directories
-home = expanduser('~')
+home     = expanduser('~')
 dotfiles = f'{home}/.dotfiles'
-scripts = f'{home}/code/shell/scripts'
-repos = [dotfiles, scripts]
+scripts  = f'{home}/code/shell/scripts'
+repos    = [dotfiles, scripts]
 
 fpaths = {
     f'{home}/.zprofile':        f'{dotfiles}/.zprofile.age',

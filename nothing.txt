@@ -1,12 +1,20 @@
-UI forms:  "dirty fields"
+[connections]
+accountname = xxxxxxxx
+region = us-west-2
+username = xxxxxxx
+password = xxxxxxxxxxxxxxx
+dbname = VS
+schemaname = UBX
+warehousename = COMPUTE_WH
 
-Fs  1      2    3     4     5
-Cs  0.6   1.1   1.7   2.2   2.8
-
-Cs  0.6   1.1   1.7   2.2   2.8
-Fs  1.1   2.0   3.1   4.0   5.0
-
-
+[connections.sl]
+accountname = xxxxxxxx
+region = us-west-2
+username = xxxxxxx
+password = xxxxxxxxxxxxxxx
+dbname = VS_CLONE_STREAMLIT
+schemaname = UBX
+warehousename = COMPUTE_WH
 
 
 
