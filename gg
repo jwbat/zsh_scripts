@@ -33,24 +33,34 @@ def add_cert_paths():
         fpaths[source_path] = dest_path
 
 
+def get_decrypted_fpaths(fpaths):
+    return { k + '2': k for k in fpaths.keys() }
+
+
 def ageify():
     for fpath, fpath_age in fpaths.items():
         encrypt(fpath_age, fpath)
 
 
-def deageify():
+def deageify(fpaths):
     msg_color = fg(204)
     success_color = fg(154)
     error_color = fg(129)
+    decrypted_fpaths = get_decrypted_fpaths(fpaths)
     print(msg_color + 'file encryption/decryption comparisons:')
 
-    for fpath, fpath_age in fpaths.items():
-        decrypted_path = fpath + '2'
-        decrypt(decrypted_path, fpath_age)
-        if compare(fpath, decrypted_path) == 0:
-            print(success_color + 'ok', end=' ')
-        else:
-            print(error_color + f' decryption error: {fpath} and {decrypted_path} do not match')
+    if all((compare(k, v) == 0 for k, v in get_decrypted_fpaths(fpaths))):
+        print(success_color + 'all decryptions match')
+    else:
+        [print(error_color + f'{k} & {v} do not match') for k, v in get_decrypted_fpaths(fpaths) if compare(k, v) != 0]
+
+    # for fpath, fpath_age in fpaths.items():
+        # decrypted_path = fpath + '2'
+        # decrypt(decrypted_path, fpath_age)
+        # if compare(fpath, decrypted_path) == 0:
+            # print(success_color + 'ok', end=' ')
+        # else:
+            # print(error_color + f' decryption error: {fpath} and {decrypted_path} do not match')
     print()
 
 
