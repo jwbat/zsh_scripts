@@ -28,9 +28,10 @@ def add_cert_paths():
     source_dir = f'{home}/macbook_certs'
     dest_dir = f'{dotfiles}/macbook_certs_ageified'
     for fname in listdir(source_dir):
-        source_path = join(source_dir, fname)
-        dest_path = join(dest_dir, fname)
-        fpaths[source_path] = dest_path
+        if fname[-3:] in ['pem', 'crt', 'key']:
+            source_path = join(source_dir, fname)
+            dest_path = join(dest_dir, fname)
+            fpaths[source_path] = dest_path
 
 
 def get_decrypted_fpaths(fpaths):
@@ -78,5 +79,4 @@ def update_repos():
 add_cert_paths()
 ageify()
 update_repos()
-decrypted_fpaths = get_decrypted_fpaths(fpaths)
-print(decrypted_fpaths)
+deageify(fpaths)
