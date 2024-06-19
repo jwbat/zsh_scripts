@@ -78,4 +78,4 @@ def update_repos():
 add_cert_paths()
 ageify()
 update_repos()
-deageify()
+deageify(fpaths)
