@@ -78,4 +78,5 @@ def update_repos():
 add_cert_paths()
 ageify()
 update_repos()
-deageify(fpaths)
+decrypted_fpaths = get_decrypted_fpaths(fpaths)
+print(decrypted_fpaths)
