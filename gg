@@ -28,7 +28,7 @@ def add_cert_paths():
     source_dir = f'{home}/macbook_certs'
     dest_dir = f'{dotfiles}/macbook_certs_ageified'
     for fname in listdir(source_dir):
-        if fname[-3:] in ['pem', 'crt', 'key']:
+        if fname[-3:] in ['pem', 'crt', 'key']:     # skip decrypted paths which have '2' tacked on the end
             source_path = join(source_dir, fname)
             dest_path = join(dest_dir, fname)
             fpaths[source_path] = dest_path
@@ -51,19 +51,11 @@ def deageify(fpaths):
     print(msg_color + 'file encryption/decryption comparisons:')
 
     if all((compare(k, v) == 0 for k, v in get_decrypted_fpaths(fpaths).items())):
-        print(success_color + 'all decryptions match')
+        print(success_color + 'yay!  all decryptions match')
     else:
-        [print(error_color + f'{k} & {v} do not match') for k, v in get_decrypted_fpaths(fpaths).items() if compare(k, v) != 0]
-
-    # for fpath, fpath_age in fpaths.items():
-        # decrypted_path = fpath + '2'
-        # decrypt(decrypted_path, fpath_age)
-        # if compare(fpath, decrypted_path) == 0:
-            # print(success_color + 'ok', end=' ')
-        # else:
-            # print(error_color + f' decryption error: {fpath} and {decrypted_path} do not match')
-    print()
-
+        [print(error_color + f'files {k} & {v} do not match') 
+         for k, v in get_decrypted_fpaths(fpaths).items()
+         if compare(k, v) != 0]
 
 
 def update_repos():
