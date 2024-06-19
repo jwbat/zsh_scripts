@@ -43,7 +43,7 @@ def deageify():
         decrypted_path = fpath + '2'
         decrypt(decrypted_path, fpath_age)
         print((fg(190)))
-        if compare(fpath, decrypted_path):
+        if compare(fpath, decrypted_path) == 0:
             print('OK', end=' ')
         else:
             print(fg(129) + f' decryption error: {fpath} and {decrypted_path} do not match')
