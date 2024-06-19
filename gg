@@ -50,11 +50,11 @@ def deageify(fpaths):
     decrypted_fpaths = get_decrypted_fpaths(fpaths)
     print(msg_color + 'comparing file encryption/decryptions...', end='  ')
 
-    if all((compare(k, v) == 0 for k, v in get_decrypted_fpaths(fpaths).items())):
+    if all((compare(k, v) == 0 for k, v in decrypted_fpaths.items())):
         print(success_color + 'yay!  all decryptions match')
     else:
         [print(error_color + f'files {k} & {v} do not match') 
-         for k, v in get_decrypted_fpaths(fpaths).items()
+         for k, v in decrypted_fpaths.items()
          if compare(k, v) != 0]
 
 
