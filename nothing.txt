@@ -1,22 +1,8 @@
-[connections]
-accountname = xxxxxxxx
-region = us-west-2
-username = xxxxxxx
-password = xxxxxxxxxxxxxxx
-dbname = VS
-schemaname = UBX
-warehousename = COMPUTE_WH
+ubx_device_registry	['registry_uuid', 'known_asset_uuid', 'serial_number', 'latest_data_stamp', 'device_id']
 
-[connections.sl]
-accountname = xxxxxxxx
-region = us-west-2
-username = xxxxxxx
-password = xxxxxxxxxxxxxxx
-dbname = VS_CLONE_STREAMLIT
-schemaname = UBX
-warehousename = COMPUTE_WH
-
-
+ubx_asset	['asset_uuid', 'account_uuid', 'building_uuid', 'floor_uuid', 'name', 'serial_number',
+            'online', 'active', 'floor_x', 'floor_y', 'category_uuid', 'asset_type_uuid', 'mfg_uuid',
+            'model_uuid', 'known_asset_uuid', 'deleted']
 
 ==== pyzipper ================================================================================================
 
