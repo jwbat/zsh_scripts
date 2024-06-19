@@ -71,4 +71,4 @@ def update_repos():
 add_cert_paths()
 ageify()
 update_repos()
-deageify(fpaths)
+# deageify(fpaths)  # check in on /Users/james/.dotfiles/macbook_certs_ageified for deageify: non-matching
