@@ -49,10 +49,10 @@ def deageify(fpaths):
     decrypted_fpaths = get_decrypted_fpaths(fpaths)
     print(msg_color + 'file encryption/decryption comparisons:')
 
-    if all((compare(k, v) == 0 for k, v in get_decrypted_fpaths(fpaths))):
+    if all((compare(k, v) == 0 for k, v in get_decrypted_fpaths(fpaths).items())):
         print(success_color + 'all decryptions match')
     else:
-        [print(error_color + f'{k} & {v} do not match') for k, v in get_decrypted_fpaths(fpaths) if compare(k, v) != 0]
+        [print(error_color + f'{k} & {v} do not match') for k, v in get_decrypted_fpaths(fpaths).items() if compare(k, v) != 0]
 
     # for fpath, fpath_age in fpaths.items():
         # decrypted_path = fpath + '2'
