@@ -43,6 +43,7 @@ def deageify():
     success_color = fg(154)
     error_color = fg(129)
     print(msg_color + 'file encryption/decryption comparisons:')
+
     for fpath, fpath_age in fpaths.items():
         decrypted_path = fpath + '2'
         decrypt(decrypted_path, fpath_age)
