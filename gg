@@ -48,7 +48,7 @@ def deageify(fpaths):
     success_color = fg(154)
     error_color = fg(129)
     decrypted_fpaths = get_decrypted_fpaths(fpaths)
-    print(msg_color + 'file encryption/decryption comparisons:', end='  ')
+    print(msg_color + 'comparing file encryption/decryptions...', end='  ')
 
     if all((compare(k, v) == 0 for k, v in get_decrypted_fpaths(fpaths).items())):
         print(success_color + 'yay!  all decryptions match')
