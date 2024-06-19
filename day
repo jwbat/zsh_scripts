@@ -1,5 +1,5 @@
 #! python3
-import datetime as dt
+from datetime import datetime
 from colored import fg
 
 
@@ -11,16 +11,19 @@ red = fg(196)
 grey = fg(252)
 
 
-day_of_week = dt.datetime.now().strftime('%A')
-month = dt.datetime.now().strftime('%B ')
-date = dt.datetime.now().strftime('%d')
-year = dt.datetime.now().strftime('%Y')
+day_of_week = datetime.now().strftime('%A')
+month = datetime.now().strftime('%B ')
+date = datetime.now().strftime('%d')
+year = datetime.now().strftime('%Y')
+
+time = datetime.now().strftime('%-I:%M %p')
 
 print('\n\t\t' 
         + orange + day_of_week 
-        + '\t'
-        + purple + month
-        + blue + date 
+        + '\t\t'
+        + blue + month
+        + date 
         + grey + ', ' 
-        + red + year
+        + blue + year + '\t\t'
+        + yellow + time
         + '\n')
