@@ -40,9 +40,15 @@ def ageify():
 
 def deageify():
     for fpath, fpath_age in fpaths.items():
-        decrypt(fpath + '2', fpath_age)
-        if compare(fpath, fpath + '2'):
-            print(fg(190) + '\t OK')
+        decrypted_path = fpath + '2'
+        decrypt(decrypted_path, fpath_age)
+        print((fg(190)))
+        if compare(fpath, decrypted_path):
+            print('OK', end=' ')
+        else:
+            print(fg(129) + f' decryption error: {fpath} and {decrypted_path} do not match')
+    print()
+
 
 
 def update_repos():
@@ -58,4 +64,4 @@ def update_repos():
 add_cert_paths()
 ageify()
 update_repos()
-deageify(files)
+deageify()
