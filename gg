@@ -50,7 +50,7 @@ def ageify():
 def deageify(fpaths):
     msg_color = fg(204)
     success_color = fg(154)
-    error_color = fg(129)
+    error_color = fg(230)
     decrypted_fpaths = get_decrypted_fpaths(fpaths)
     print(msg_color + 'comparing file encryption/decryptions...', end='  ')
 
