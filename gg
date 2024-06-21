@@ -72,7 +72,7 @@ def update_repos():
             print(f'error running git command in {directory}: {e}')
 
 
-add_cert_paths()
+# add_cert_paths()
 ageify()
 update_repos()
-# deageify(fpaths)  # check in on /Users/james/.dotfiles/macbook_certs_ageified for deageify: non-matching
+deageify(fpaths)  # check in on /Users/james/.dotfiles/macbook_certs_ageified for deageify: non-matching
