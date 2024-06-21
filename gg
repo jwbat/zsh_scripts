@@ -30,8 +30,12 @@ def add_cert_paths():
     for fname in listdir(source_dir):
         if fname[-3:] in ['pem', 'crt', 'key']:     # skip decrypted paths which have '2' tacked on the end
             source_path = join(source_dir, fname)
-            dest_path = join(dest_dir, fname)
+            dest_path = join(dest_dir, fname) + '.age'
             fpaths[source_path] = dest_path
+            # print(source_path, ': \n', dest_path, '\n')
+
+# add_cert_paths()
+# exit()
 
 
 def get_decrypted_fpaths(fpaths):
