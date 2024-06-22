@@ -3,7 +3,7 @@ import json
 import subprocess as sp
 from os import environ, listdir, makedirs
 from os.path import join, expanduser, basename, dirname
-from colored import fg
+from colored import fg, attr
 from utils import encrypt, decrypt, compare
 
 
@@ -45,8 +45,7 @@ def print_comparisons(orig_paths, decrypted_paths):
             print(success_color + ' ok ', end='')
         else:
             print(error_color + f' {opath} and \n {depath} differ')
-    print('\n')
-
+    print('\n', attr('reset'))
 
 
 def update_repos():
