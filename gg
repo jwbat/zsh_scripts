@@ -43,8 +43,7 @@ def deageify(fpaths):
 
 
 def update_repos():
-    run_cmd = lambda cmd: sp.run(cmd, check=True)
-    # run_cmd = lambda cmd: sp.run(cmd, check=True, capture_output=True, text=True)
+    run_cmd = lambda cmd: sp.run(cmd, check=True) # , capture_output=True, text=True)
 
     for dpath in repos:
         try:
