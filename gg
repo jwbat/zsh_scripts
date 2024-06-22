@@ -45,7 +45,7 @@ def print_comparisons(orig_paths, decrypted_paths):
             print(success_color + ' ok ', end='')
         else:
             print(error_color + f' {opath} and \n {depath} differ')
-    print('\n', attr('reset'))
+    print('\n', fg(230))
 
 
 def update_repos():
