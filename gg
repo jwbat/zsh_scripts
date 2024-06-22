@@ -48,14 +48,14 @@ def update_repos():
     for dpath in repos:
         try:
             result = run_cmd(['git', '-C', dpath, 'add', '.'])
-            print(f'Add output: {result.stdout.strip()}')
-            print(f'Add error: {result.stderr.strip()}', '\n')
+            # print(f'Add output: {result.stdout.strip()}')
+            # print(f'Add error: {result.stderr.strip()}', '\n')
             result = run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
-            print(f'commit output: {result.stdout.strip()}')
-            print(f'commit error: {result.stderr.strip()}', '\n')
+            # print(f'commit output: {result.stdout.strip()}')
+            # print(f'commit error: {result.stderr.strip()}', '\n')
             result = run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
-            print(f'push output: {result.stdout.strip()}')
-            print(f'push error: {result.stderr.strip()}', '\n')
+            # print(f'push output: {result.stdout.strip()}')
+            # print(f'push error: {result.stderr.strip()}', '\n')
         except sp.CalledProcessError as e:
             print(f'error running git command in {dpath}: {e}')
 
