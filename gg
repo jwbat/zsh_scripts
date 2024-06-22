@@ -2,49 +2,30 @@
 import json
 import subprocess as sp
 from os import environ, listdir
-from os.path import join, expanduser
+from os.path import join, expanduser, basename
 from colored import fg
 from utils import encrypt, decrypt, compare
 
 
-# directories
 home     = expanduser('~')
 dotfiles = f'{home}/.dotfiles'
 scripts  = f'{home}/code/shell/scripts'
 repos    = [dotfiles, scripts]
 
-fpaths = {
-    f'{home}/.zprofile':        f'{dotfiles}/.zprofile.age',
-    f'{home}/.zsh_a':           f'{dotfiles}/.zsh_a.age',
-    f'{home}/.snowsql/config':  f'{dotfiles}/.snowsql_config.age',
-    f'{home}/.aws/config':      f'{dotfiles}/.aws_config.age',
-    f'{home}/.aws/credentials': f'{dotfiles}/.aws_credentials.age',
-    f'{home}/.sbg-env':         f'{dotfiles}/.sbg-env.age',
-    f'{home}/.ui-env':          f'{dotfiles}/.ui-env.age',
-}
+get_encrypted_path = lambda s: s.replace(f'{home}', f'{dotfiles}') + '.age'
 
+certdirs = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs']
+orig_paths = [
+    f'{home}/.zprofile', f'{home}/.zsh_a', f'{home}/.sbg-env', f'{home}/.ui-env',
+    f'{home}/.snowsql/config', f'{home}/.aws/config', f'{home}/.aws/credentials'
+] + [join(certdir, fname) for certdir in certdirs for fname in listdir(certdir)]
 
-def add_cert_paths():
-    source_dir = f'{home}/macbook_certs'
-    dest_dir = f'{dotfiles}/macbook_certs_ageified'
-    for fname in listdir(source_dir):
-        if fname[-3:] in ['pem', 'crt', 'key']:     # skip decrypted paths which have '2' tacked on the end
-            source_path = join(source_dir, fname)
-            dest_path = join(dest_dir, fname) + '.age'
-            fpaths[source_path] = dest_path
-            # print(source_path, ': \n', dest_path, '\n')
-
-# add_cert_paths()
-# exit()
-
-
-def get_decrypted_fpaths(fpaths):
-    return { k + '2': k for k in fpaths.keys() }
+encrypted_paths = [get_encrypted_path(p) for p in orig_paths]
 
 
 def ageify():
-    for fpath, fpath_age in fpaths.items():
-        encrypt(fpath_age, fpath)
+    for epath, opath in zip(encrypted_paths, orig_paths):
+        encrypt(epath, opath)
 
 
 def deageify(fpaths):
@@ -53,7 +34,6 @@ def deageify(fpaths):
     error_color = fg(230)
     decrypted_fpaths = get_decrypted_fpaths(fpaths)
     print(msg_color + 'comparing file encryption/decryptions...', end='  ')
-
     if all((compare(k, v) == 0 for k, v in decrypted_fpaths.items())):
         print(success_color + 'yay!  all decryptions match')
     else:
@@ -63,16 +43,15 @@ def deageify(fpaths):
 
 
 def update_repos():
-    for directory in repos:
+    for dpath in repos:
         try:
-            sp.run(['git', '-C', directory, 'add', '.'], check=True)
-            sp.run(['git', '-C', directory, 'commit', '-m', '.'], check=True)
-            sp.run(['git', '-C', directory, 'push', '-u', 'origin', 'main'], check=True)
+            sp.run(['git', '-C', dpath, 'add', '.'], check=True)
+            sp.run(['git', '-C', dpath, 'commit', '-m', '.'], check=True)
+            sp.run(['git', '-C', dpath, 'push', '-u', 'origin', 'main'], check=True)
         except sp.CalledProcessError as e:
-            print(f'error running git command in {directory}: {e}')
+            print(f'error running git command in {dpath}: {e}')
 
 
-# add_cert_paths()
 ageify()
 update_repos()
-deageify(fpaths)  # check in on /Users/james/.dotfiles/macbook_certs_ageified for deageify: non-matching
+# deageify(fpaths)

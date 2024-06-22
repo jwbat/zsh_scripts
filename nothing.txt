@@ -1,8 +1,3 @@
-ubx_device_registry	['registry_uuid', 'known_asset_uuid', 'serial_number', 'latest_data_stamp', 'device_id']
-
-ubx_asset	['asset_uuid', 'account_uuid', 'building_uuid', 'floor_uuid', 'name', 'serial_number',
-            'online', 'active', 'floor_x', 'floor_y', 'category_uuid', 'asset_type_uuid', 'mfg_uuid',
-            'model_uuid', 'known_asset_uuid', 'deleted']
 
 ==== pyzipper ================================================================================================
 
