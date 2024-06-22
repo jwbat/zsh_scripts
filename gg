@@ -43,11 +43,19 @@ def deageify(fpaths):
 
 
 def update_repos():
+    run_cmd = lambda cmd: sp.run(cmd, check=True, capture_output=True, text=True)
+
     for dpath in repos:
         try:
-            sp.run(['git', '-C', dpath, 'add', '.'], check=True)
-            sp.run(['git', '-C', dpath, 'commit', '-m', '.'], check=True)
-            sp.run(['git', '-C', dpath, 'push', '-u', 'origin', 'main'], check=True)
+            result = run_cmd(['git', '-C', dpath, 'add', '.'])
+            print(f'Add output: {result.stdout}')
+            print(f'Add error: {result.stderr}')
+            result = run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
+            print(f'commit output: {result.stdout}')
+            print(f'commit error: {result.stderr}')
+            result = run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
+            print(f'push output: {result.stdout}')
+            print(f'push error: {result.stderr}')
         except sp.CalledProcessError as e:
             print(f'error running git command in {dpath}: {e}')
 
