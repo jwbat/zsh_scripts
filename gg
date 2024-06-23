@@ -38,8 +38,8 @@ def deageify():
 
 
 def print_comparisons(orig_paths, decrypted_paths):
-    msg_color, success_color, error_color = fg(153), fg(154), fg(230)
-    print(msg_color + f' comparing decrypted vs. original dotfiles..')
+    msg_color, success_color, error_color = fg(173), fg(154), fg(230)
+    print(msg_color + f' comparing decrypted with original dotfiles..')
     for opath, depath in zip(orig_paths, decrypted_paths):
         if not compare(opath, depath):
             print(success_color + ' ok ', end='')
