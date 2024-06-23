@@ -10,19 +10,19 @@ from utils import encrypt, decrypt, compare
 home     = expanduser('~')
 dotfiles = f'{home}/.dotfiles'
 scripts  = f'{home}/code/shell/scripts'
+certdirs = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs']
 repos    = [dotfiles, scripts]
 
-get_encrypted_path = lambda s: s.replace(f'{home}', f'{dotfiles}') + '.age'
-get_decrypted_path = lambda s: s.replace(f'{dotfiles}', f'{home}/deageified_dots')[:-4]
-
-certdirs = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs']
 orig_paths = [
     f'{home}/.zprofile', f'{home}/.zsh_a', f'{home}/.sbg-env', f'{home}/.ui-env',
     f'{home}/.snowsql/config', f'{home}/.aws/config', f'{home}/.aws/credentials'
 ] + [join(certdir, fname) for certdir in certdirs for fname in listdir(certdir)]
 
-encrypted_paths = [get_encrypted_path(p) for p in orig_paths]
-decrypted_paths = [get_decrypted_path(p) for p in encrypted_paths]
+make_encrypted_path = lambda s: s.replace(f'{home}', f'{dotfiles}') + '.age'
+make_decrypted_path = lambda s: s.replace(f'{dotfiles}', f'{home}/deageified_dots')[:-4] # remove '.age'
+# put decrypted files altogether in one dir for easy reference ^^
+encrypted_paths = [make_encrypted_path(p) for p in orig_paths]
+decrypted_paths = [make_decrypted_path(p) for p in encrypted_paths]
 
 
 def ageify():
@@ -39,7 +39,7 @@ def deageify():
 
 def print_comparisons(orig_paths, decrypted_paths):
     msg_color, success_color, error_color = fg(153), fg(154), fg(230)
-    print(msg_color + f' comparing original & decrypted dotfiles:')
+    print(msg_color + f' comparing decrypted vs. original dotfiles..')
     for opath, depath in zip(orig_paths, decrypted_paths):
         if not compare(opath, depath):
             print(success_color + ' ok ', end='')
@@ -50,7 +50,6 @@ def print_comparisons(orig_paths, decrypted_paths):
 
 def update_repos():
     run_cmd = lambda cmd: sp.run(cmd, check=True) # , capture_output=True, text=True)
-
     for dpath in repos:
         try:
             run_cmd(['git', '-C', dpath, 'add', '.'])
