@@ -39,13 +39,13 @@ def deageify():
 
 def print_comparisons(orig_paths, decrypted_paths):
     msg_color, success_color, error_color = fg(153), fg(154), fg(230)
-    print(msg_color + f'comparing original & decrypted dotfiles:')
+    print(msg_color + f' comparing original & decrypted dotfiles:')
     for opath, depath in zip(orig_paths, decrypted_paths):
         if not compare(opath, depath):
             print(success_color + ' ok ', end='')
         else:
             print(error_color + f' {opath} and \n {depath} differ')
-    print('\n', fg(230))
+    print('\n', fg(252))
 
 
 def update_repos():
