@@ -3,20 +3,15 @@ from datetime import datetime
 from colored import fg
 
 
-blue = fg(122)
-orange = fg(220)
-yellow = fg(190)
-purple = fg(200)
-red = fg(196)
-grey = fg(252)
-
+blue, orange, yellow, purple, red, grey = fg(122), fg(220), fg(190), fg(200), fg(196), fg(252)
 
 day_of_week = datetime.now().strftime('%A')
 month = datetime.now().strftime('%B ')
 date = datetime.now().strftime('%d')
 year = datetime.now().strftime('%Y')
 
-time = datetime.now().strftime('%-I:%M %p')
+time = datetime.now().strftime('%-I:%M %p').replace('PM', 'p.m.').replace('AM', 'a.m.')
+
 
 print('\n\t\t' 
         + orange + day_of_week 
