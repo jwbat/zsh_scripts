@@ -43,7 +43,7 @@ def print_comparisons(orig_paths, decrypted_paths):
     for opath, depath in zip(orig_paths, decrypted_paths):
         if not compare(opath, depath):
             file = depath.split('/')[-1]
-            print(fg(228) + file + success_color + ': ok ')
+            print(fg(253) + file + success_color + ': ok ')
         else:
             print(error_color + f' {opath} and \n {depath} differ')
     print('\n', fg(252))
