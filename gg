@@ -42,7 +42,8 @@ def print_comparisons(orig_paths, decrypted_paths):
     print(msg_color + f' comparing decrypted with original dotfiles..')
     for opath, depath in zip(orig_paths, decrypted_paths):
         if not compare(opath, depath):
-            print(success_color + ' ok ', end='')
+            file = depath.split('/')[-1]
+            print(msg_color + file + success_color + ' ok ', end='')
         else:
             print(error_color + f' {opath} and \n {depath} differ')
     print('\n', fg(252))
