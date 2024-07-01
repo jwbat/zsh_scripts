@@ -13,8 +13,17 @@ s = f'''
 {r}    Gorge Title                            J          check     04/13       5500.
 {r}    Columbia Gorge Inspections             J          portal    04/10       1100.
 {r}    Appraisal, Newrez LLC                  J          visa      04/17        800.
+{r}    Lester moving                          J          check     06/05       1582.
+{r}    ====== ======                          ================     =====       ====.
+{w}    total                                                                   8982.
 
-{r}    MK Pump & Drilling                     M          wire      04/22        964.
+{g}    MK Pump & Drilling                     M          wire      04/22        964.
+{g}    Alpha Environmental                    M          card      05/12       1078.
+{g}    Alpha Environmental                    M          card      06/05       1078.
+{g}    ====== ======                          ================     =====       ====.
+{w}    total                                                                   3120.
+
+       difference = 8982 - 3120 = 5262
 
 '''
 
