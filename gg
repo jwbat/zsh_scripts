@@ -50,12 +50,20 @@ def print_comparisons(orig_paths, decrypted_paths):
 
 
 def update_repos():
-    run_cmd = lambda cmd: sp.run(cmd, check=True) # , capture_output=True, text=True)
+    run_cmd = lambda cmd: sp.run(cmd, capture_output=True, text=True) 
     for dpath in repos:
         try:
             run_cmd(['git', '-C', dpath, 'add', '.'])
-            run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
-            run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
+            status_result = run_cmd(['git', '-C', dpath, 'status', '--porcelain'])
+            if status_result.stdout.strip():
+                # Changes exist, proceed with commit and push
+                run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
+                run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
+                print(f"Repository {dpath} updated and pushed successfully.")
+            else:
+                print(f"No changes in repository {dpath}. Skipping commit and push.")
+            # run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
+            # run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
         except sp.CalledProcessError as e:
             print(f'error running git command in {dpath}: {e}')
 
