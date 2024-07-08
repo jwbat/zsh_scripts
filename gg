@@ -57,7 +57,7 @@ def update_repos():
             if run_cmd(['git', '-C', dpath, 'status', '--porcelain']).stdout.strip():
                 run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
                 run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
-                print(f"Repository {dpath} updated and pushed successfully.")
+                print(f"Repository{fg(208)} {dpath} {fg(230)} updated and pushed successfully.")
             else:
                 print(f"No changes in repository {dpath}. Skipping commit and push.")
         except sp.CalledProcessError as e:
