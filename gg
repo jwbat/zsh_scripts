@@ -59,7 +59,7 @@ def update_repos():
                 run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
                 print(f'{fg(230)} Repository{fg(208)} {dpath} {fg(230)} updated and pushed successfully.')
             else:
-                print(f'{fg(138)} No changes in repository {dpath}. Skipping commit and push.')
+                print(f'{fg(123)} No changes in repository {dpath}. Skipping commit and push.')
         except sp.CalledProcessError as e:
             print(f'error running git command in {dpath}: {e}')
 
