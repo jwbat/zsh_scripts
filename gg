@@ -39,11 +39,11 @@ def deageify():
 
 def print_comparisons(orig_paths, decrypted_paths):
     msg_color, success_color, error_color = fg(173), fg(154), fg(230)
-    print(msg_color + f'\n comparing {len(orig_paths)} decrypted dotfiles with the original pre-encrypted ones..')
+    print(msg_color + f'\n comparing {len(orig_paths)} decrypted dotfiles with the original pre-encrypted ones..\n')
     for opath, depath in zip(orig_paths, decrypted_paths):
         if not compare(opath, depath):
             file = depath.split('/')[-1]
-            print('\t' + fg(142) + file + fg(254) + ' -> ' + success_color +'ok ')
+            print('  ' + fg(142) + file + fg(254) + ' -> ' + success_color +'ok ')
         else:
             print(error_color + f' {opath} and \n {depath} differ')
     print('\n', fg(252))
