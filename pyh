@@ -15,6 +15,12 @@ echo "
 \t $gold pyenv local 3.10.3     $sea  (make only current directory use this version)
 \t $gold python pgm.py          $sea  (use the enabled version of python)
 
+\t $sea use a particular python version in environment
+\t $sea ==============================================
+\t $gold ~ pyenv version
+\t $gold ~ pyenv which python     
+\t $gold ~ \$(pyenv which python) -m venv venv
+
     - go to your ubuntu VM
     - create a Python 3.8 virtual environment
     - activate it
