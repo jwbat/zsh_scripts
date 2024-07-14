@@ -1,5 +1,4 @@
 #! python
-# Description
 descr = '''convert hex strings to ints'''
 import sys
 import binascii
@@ -18,10 +17,10 @@ def parse_arguments():
     return parser.parse_args()
 
 
-args        = parse_arguments()
-hexes       = args.hex_strings
-byteorder   = 'little' if args.little else 'big'
-signed      = args.signed
+args      = parse_arguments()
+hexes     = args.hex_strings
+byteorder = 'little' if args.little else 'big'
+signed    = args.signed
 
 
 def hex_to_int(h):
