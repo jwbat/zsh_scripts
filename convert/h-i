@@ -30,11 +30,12 @@ def hex_to_int(h):
 
 
 def pretty_print(xs, ys):
+    col1, col2 = 18, 12
     print()
-    print('\t' + c3 + 'hex'.rjust(24) + c3 + 'int'.rjust(48))
+    print(c3 + 'hex'.rjust(col1) + c3 + 'int'.rjust(col1))
     for idx in range(len(xs)):
         x, y = xs[idx], ys[idx]
-        print('\t' + c1 + x.rjust(24) + c2 + y.rjust(48))
+        print(c1 + x.rjust(col1) + c2 + y.rjust(col1))
     print()
 
 
