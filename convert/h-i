@@ -1,22 +1,32 @@
 #! python
 # Description
-# convert hex to int 
-
-
+descr = '''convert hex strings to ints'''
 import sys
 import binascii
+import argparse
 from colored import fg
 
 
-xs = sys.argv[1:]
-
-c1 = fg(150)
-c2 = fg(154)
-c3 = fg(213)
+c1, c2, c3 = fg(150), fg(154), fg(213)
 
 
-def hex_to_int(n):
-    return str(int(n, 16))
+def parse_arguments():
+    parser = argparse.ArgumentParser(description=descr)
+    parser.add_argument('-l', '--little', action='store_true', help='optional flag - if present, use little endian byte order')
+    parser.add_argument('-s', '--signed', action='store_true', help='optional flag - if present, signed ints')
+    parser.add_argument('hex_strings', type=str, nargs='*', help='hex strings to be processed')
+    return parser.parse_args()
+
+
+args        = parse_arguments()
+hexes       = args.hex_strings
+byteorder   = 'little' if args.little else 'big'
+signed      = args.signed
+
+
+def hex_to_int(h):
+    bytes_value = bytes.fromhex(h)
+    return int.from_bytes(bytes_value, byteorder=byteorder, signed=signed)
 
 
 def pretty_print(xs, ys):
@@ -28,5 +38,5 @@ def pretty_print(xs, ys):
     print()
 
 
-ys = [hex_to_int(x) for x in xs]
-pretty_print(xs, ys)
+ints = [str(hex_to_int(h)) for h in hexes]
+pretty_print(hexes, ints)
