@@ -1,0 +1,30 @@
+#! python
+# Usage
+# add_link <label> <url> 
+from sys import argv
+from os.path import expanduser
+
+
+home      = expanduser('~')
+path      = f'{home}/code/links/index.md'
+
+
+def get_args():
+    label, url, attr = argv[1], argv[2], None
+    if len(argv) > 3:
+        attr = argv[3]
+    return label, url, attr
+
+
+def format_string(label, url, attr):
+    s = f'''[{label}]({url})\n'''
+    if attr:
+        s += f'~ {attr}  \n\n'
+    else:
+        s += '\n'
+    return s
+
+
+s = format_string(*get_args())
+with open(path, 'a') as f:
+    f.write(s)

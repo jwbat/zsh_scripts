@@ -8,7 +8,7 @@
 
 `gh auth status`    (logged in)
 
-
+***
 
 1. **Clone a repository:**
    ```sh

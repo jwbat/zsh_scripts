@@ -1,4 +1,7 @@
 #! python
+'''
+ encryption by Rustlang system tool, age
+'''
 import json
 import subprocess as sp
 from os import environ, listdir, makedirs
@@ -20,7 +23,7 @@ orig_paths = [
 
 make_encrypted_path = lambda s: s.replace(f'{home}', f'{dotfiles}') + '.age'
 make_decrypted_path = lambda s: s.replace(f'{dotfiles}', f'{home}/deageified_dots').removesuffix('.age')
-# put decrypted files altogether in one dir for easy reference ^^
+# put decrypted files together in one dir for easy reference ^^
 encrypted_paths = [make_encrypted_path(p) for p in orig_paths]
 decrypted_paths = [make_decrypted_path(p) for p in encrypted_paths]
 
