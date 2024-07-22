@@ -71,7 +71,6 @@ def update_repos():
 
 chdir(scripts)
 printcwd()
-# print(fg(250), '\n cwd ', fg(137), getcwd())
 ageify()
 deageify()
 print_comparisons(orig_paths, decrypted_paths)
