@@ -4,7 +4,7 @@
 '''
 import json
 import subprocess as sp
-from os import environ, listdir, makedirs
+from os import environ, listdir, makedirs, chdir
 from os.path import join, expanduser, basename, dirname
 from colored import fg, attr
 from utils import encrypt, decrypt, compare
@@ -68,6 +68,7 @@ def update_repos():
             print(f'error running git command in {dpath}: {e}')
 
 
+chdir(scripts)
 ageify()
 deageify()
 print_comparisons(orig_paths, decrypted_paths)
