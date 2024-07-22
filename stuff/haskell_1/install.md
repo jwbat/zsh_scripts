@@ -39,17 +39,21 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 This message ensures that you have all the necessary components for a successful Haskell installation on your M1 MacBook,  
 taking into account the specific requirements of the ARM architecture.
 
->  ===============================================================================
+
 >  
->  OK! /Users/james/.zshrc has been modified. Restart your terminal for the changes to take effect,
+>  OK! /Users/james/.zshrc has been modified.  
+>  Restart your terminal for the changes to take effect,  
 >  or type ". /Users/james/.ghcup/env" to apply them in your current terminal session.
 >  
->  ===============================================================================
+
+>    
+>  All done!  
+>    
+>  To start a simple repl, run: 
 >  
->  All done!
->  
->  To start a simple repl, run: `ghci`
->  
+
+`ghci`  
+
 >  To start a new haskell project in the current directory, run:  
 >  `cabal init --interactive`
 >  
@@ -57,3 +61,10 @@ taking into account the specific requirements of the ARM architecture.
 >  `ghcup tui`
 >  
 >  If you are new to Haskell, check out https://www.haskell.org/ghcup/steps/
+
+### llvm
+`brew list llvm`  (llvm is a collection of tools, not an executable)  
+`which clang`            
+`which llvm-config`  
+`brew --prefix llvm`    where brew installed llvm
+
