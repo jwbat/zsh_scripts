@@ -15,6 +15,7 @@ dotfiles = f'{home}/.dotfiles'
 scripts  = f'{home}/code/shell/scripts'
 certdirs = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs']
 repos    = [dotfiles, scripts]
+printcwd = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
 
 orig_paths = [
     f'{home}/.zprofile', f'{home}/.zsh_a', f'{home}/.sbg-env', f'{home}/.ui-env',
@@ -69,7 +70,8 @@ def update_repos():
 
 
 chdir(scripts)
-print(fg(250), '\n cwd ', fg(137), getcwd())
+printcwd()
+# print(fg(250), '\n cwd ', fg(137), getcwd())
 ageify()
 deageify()
 print_comparisons(orig_paths, decrypted_paths)
