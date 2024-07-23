@@ -68,3 +68,15 @@ taking into account the specific requirements of the ARM architecture.
 `which llvm-config`  
 `brew --prefix llvm`    where brew installed llvm
 
+### Hoogle
+`cabal update`
+`cabal install hoogle`
+`hoogle --version`
+
+Use Hoogle to search for functions, types, and modules.
+Symlinking 'hoogle' to '/Users/james/.cabal/bin/hoogle'
+
+Hoogle is a Haskell API search engine.
+This can help you see what functions are available in a particular module.
+You can access Hoogle online at Hoogle or use it locally if you have it installed.
+
