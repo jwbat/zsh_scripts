@@ -1,4 +1,13 @@
-## priority of LLM testing and integration planning
+### Gateway Diagnostics
+
+[Kanban](https://github.com/orgs/ventacity/projects/4/views/4?pane=issue&itemId=72123910)  
+
+[Slack msg](https://ventacity.slack.com/archives/D038GQZGW3F/p1721844881157629)    
+
+
+---
+
+##### priority of LLM testing and integration planning
 
 1. User Querying About Assets (not time series data)
 This seems like the easiest thing to productize that has high likelihood of being reliable. Let users ask question about assets like “How many RTU’s do I have in New England, and give me a breakdown of total counts by Make and Model”

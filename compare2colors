@@ -1,0 +1,24 @@
+#! python
+# usage: compare2colors <hex> <hex>   (alias: c2)
+from sys import argv
+from os import getenv
+from os.path import expanduser, join
+import subprocess as sp
+from PIL import Image, ImageDraw
+
+
+def get_filepath():
+    desktop   = getenv('DESKTOP')
+    imagefile = 'color_comparison.png'
+    return join(desktop, imagefile)
+
+
+color1, color2 = argv[1], argv[2] 
+
+image = Image.new('RGB', (400, 200))
+draw  = ImageDraw.Draw(image)
+draw.rectangle([0, 0, 199, 199], fill=color1)   # left half
+draw.rectangle([200, 0, 399, 199], fill=color2) # right half
+
+image.save(fpath)
+sp.run(['open', fpath])
