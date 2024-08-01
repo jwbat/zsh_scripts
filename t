@@ -4,8 +4,8 @@ import pandas as pd
 from colored import fg
 from tabulate import tabulate
 
-gold, honey, green, red, grey = fg(220), fg(194), fg(84), fg(196), fg(245)
-colors  = [red, gold, honey, green]
+gold, honey, green, red, grey, orange = fg(220), fg(194), fg(84), fg(196), fg(245), fg(208)
+colors  = [gold, red, honey, green, orange]
 
 
 if len(sys.argv) == 1:
