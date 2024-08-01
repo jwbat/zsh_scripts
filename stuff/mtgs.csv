@@ -1,2 +1,3 @@
-month, mtg, Starlink, FZDXX interest, downpayment
-July 2024, 1134, 60, 5.15%, 50_000
+month, mtg, Starlink, FZDXX interest * dnpymt / 12, total
+July 2024, 1134, 60, 0.0515 * 50_000 / 12 = 214, 1408
+Aug 2024, 1134, 60, 0.0517 * 50_000 / 12 = 215, 1409

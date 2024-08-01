@@ -1,0 +1,26 @@
+#! python
+
+# Description
+# convert UTC timestamp to west coast US local time 
+
+from sys import argv
+from colored import fg
+from datetime import datetime
+import pytz
+
+
+local_timezone = 'America/Los_Angeles'
+
+
+def convert_utc_to_local(utc_timestamp):
+    utc_time = datetime.strptime(utc_timestamp, '%Y-%m-%d %H:%M:%S.%f %z')
+    
+    utc_zone = pytz.utc
+    local_zone = pytz.timezone(local_timezone)
+    local_time = utc_time.astimezone(local_zone)
+    return local_time.strftime('%Y-%m-%d %H:%M:%S')
+
+
+utc_timestamp = argv[1]
+local_time = convert_utc_to_local(utc_timestamp)
+print(local_time)
