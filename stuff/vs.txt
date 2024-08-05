@@ -1,6 +1,4 @@
-    Fri  06/14/24 state management meeting (5)
-    Tue  05/07/24 Tstat API integration discussions, meetings
-    Mon  04/22/24  SW meeting, Occ meeting, Tstat meeting
+
 
 Invoice 56          06/17/24 - 06/28/24
     Wed 06/26
@@ -9,21 +7,23 @@ Invoice 56          06/17/24 - 06/28/24
     Tue 06/25
         prompts & parameterized query experiments in streamlit / openai app on crdb local
     Mon 06/24
-        PR reviews.  Streamlit / openai app & security considerations.
+        SW team meeting.  PR reviews.  Streamlit / openai app & security considerations.
     Wed 06/19
         OpenAI API, Streamlit studies
     Tue 06/18
         email MS about how to interpret the CT10x's current data.
         investigation of Highcharts PDF export issue.
     Mon 06/17
-        chart export as PDF issue.  CT10x investigations
+        SW team meeting.  chart export as PDF issue.  CT10x investigations
 
 Invoice 55          06/03/24 - 06/14/24
+    Fri  06/14 
+        state management meeting (4.5)
     Tue 06/11
         some Tstat testing.  start getting familiar with Jackson's LLM work and documentation.
         annotations discussion, maybe
     Mon 06/10
-        update wt201 UBX documentation for v1.3, update my device names.
+        SW team meeting.  update wt201 UBX documentation for v1.3, update my device names.
         refresh my memory on annotations.  discussion on NRG200 needs for production.
     Fri 06/07
         thinking about timestamps in schedules as UX.
@@ -32,7 +32,7 @@ Invoice 55          06/03/24 - 06/14/24
     Tue 06/04
         re-checked changing of target temp for current mode.  resume tstat schedule testing.
     Mon 06/03
-        tstat testing via ubx, lcd, ULs, & DLs.  check C/F conversions.
+        SW team meeting.  tstat testing via ubx, lcd, ULs, & DLs.  check C/F conversions.
 
 Invoice 54          05/20/24 - 05/31/24
     Thu 05/30
@@ -51,7 +51,7 @@ Invoice 54          05/20/24 - 05/31/24
         update NFC app for Android from an APK file.
         Test tstat schedule_content target_temp scale/mode changes using Toolbox & check results in uplinks.
     Mon 05/20
-        bring tstat's v1.3 fw updates in ULs & DLs to testable state, test in °F & °C modes.
+        SW team meeting.  bring tstat's v1.3 fw updates in ULs & DLs to testable state, test in °F & °C modes.
 
 Invoice 53          05/06/24 - 05/17/24
     Wed 05/15
@@ -60,12 +60,13 @@ Invoice 53          05/06/24 - 05/17/24
         Tstat FW v1.3 worked via Android + Toolbox.  Uninstall Windows11 from VM.
         getting into ms' js files for v1.3 encoding / decoding.
     Mon 05/13
-        catch up on Tstat messages, issues.   Install Win10 in VM for wt201 FW update.
+        SW team meeting.  catch up on Tstat messages, issues.   Install Win10 in VM for wt201 FW update.
         Update Lambda & downlinks with 0.1°C prec. in schedule temp setting.
     Tue 05/07
+        Tstat API integration discussions, meetings.
         assist with Tstat when needed.   more situational data gathering on VS350 Occ.
     Mon 05/06
-        get some firm numbers on vs350 occ sensor in 2  orientations.  p.m. discussion on next project.
+        SW team meeting.  get some firm numbers on vs350 occ sensor in 2  orientations.  p.m. discussion on next project.
 
 Invoice 52          04/22/24 - 05/03/24
     Thu 05/02
@@ -76,7 +77,7 @@ Invoice 52          04/22/24 - 05/03/24
     Tue 04/30
         register a new tstat.  diagnose how Toolbox is handling schedule time indices vis-a-vis uplink data
     Mon 04/29
-        pickup a tstat in HR; look at how schedule time indexing changes (thru uplink data)
+        SW team meeting.  pickup a tstat in HR; look at how schedule time indexing changes (thru uplink data)
         when schedule is edited on Toolbox app.
         study gdoc on UBX data, dev-script for registering a new device.
     Thu 04/24
@@ -91,6 +92,7 @@ Invoice 52          04/22/24 - 05/03/24
         probably finish survey of the HC annotations module and flag series for showing journal
         items and marking events on charts
     Mon 04/22
+        SW team meeting. Occupancy sensor meeting. Tstat meeting.
         continue experimentation & charting of the annotations and flag series landscape
 
 Invoice 51          04/08/24 - 04/19/24
@@ -101,7 +103,7 @@ Invoice 51          04/08/24 - 04/19/24
     Tue 04/16
         begin looking at the highcharts annotations module & flag series
     Mon 04/15
-        fixed HC xAxis label formatting.  customize exported chart file name.  possible mtg on tstat.
+        SW team meeting.  fixed HC xAxis label formatting.  customize exported chart file name.  possible mtg on tstat.
     Thu 04/11
         prevent the deprecated, do-nothing reset zoom button from appearing on mobile
     Wed 04/10
@@ -110,7 +112,7 @@ Invoice 51          04/08/24 - 04/19/24
         return to the reset zoom issue on mobile.  out from mid-morning to early afternoon.
         tweaks to exported chart data labels - i.e. dynamic spacing to prevent overcrowding or excessive sparseness.
     Mon 04/08
-        data label overlay in exported chart pngs
+        SW team meeting.  data label overlay in exported chart pngs
 
 ============================================================================================
 

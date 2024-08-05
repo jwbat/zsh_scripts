@@ -4,6 +4,16 @@
 
 [Slack msg](https://ventacity.slack.com/archives/D038GQZGW3F/p1721844881157629)    
 
+We’ve been seeing some periodic gaps in cellular connectivity in field systems,
+but since we don’t have any routine monitoring we don’t know how prevalent this issue
+is or what the baseline reliability is for Sierra Wireless (our cell provider).
+You developed two apps a while back to look at gaps in data streams (at Snowflake?)
+We’re wondering how close these tools are to something which could monitor all our field
+deployments to give us a daily report or alert of any downtime of more than (30 minutes?)
+I figured I’d start by asking you instead of diving into Github to dig up you documentation.
+So… the request is for you to remind us what you have already developed, and tell us if either
+tool could be readily adapted for this broader mission.  Thanks!
+
 
 ---
 
