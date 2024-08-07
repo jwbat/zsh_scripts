@@ -3,7 +3,7 @@
 # Usage
 # sshc 
 
-conduit;     # copy pw to clipboard
+echo -n $CDT | pbcopy
 
 #ssh -t admin@192.168.2.1 "cd /opt/lora; exec \$SHELL -l"
 #ssh -L 7000:localhost:22 admin@192.168.0.64
@@ -12,6 +12,7 @@ conduit;     # copy pw to clipboard
 #ssh -L 7000:localhost:22 admin@192.168.2.2
 #ssh -L 7000:localhost:80 admin@192.168.2.130
 
-ssh admin@192.168.0.55
+
+ssh -t admin@192.168.1.227 "cd /opt/lora; exec \$SHELL -l"
 
 exit 0

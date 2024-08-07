@@ -97,22 +97,22 @@ Invoice 52          04/22/24 - 05/03/24
 
 Invoice 51          04/08/24 - 04/19/24
     Thu 04/18
-        hands-on:  try making a draggable, editable annotation in the UI.
+        Try making a draggable, editable annotation in the UI.
     Wed 04/17
-        Wednesday  annotations module in HC, flag series, GDoc.   possibly try out in UI.
+        Annotations module and flag series in Highcharts, documentation.  Experiment with those in the UI.
     Tue 04/16
-        begin looking at the highcharts annotations module & flag series
+        Begin examination of the highcharts annotations module & flag series
     Mon 04/15
-        SW team meeting.  fixed HC xAxis label formatting.  customize exported chart file name.  possible mtg on tstat.
+        SW team meeting.  Highcharts xAxis label formatting.  Customize exported chart file name.  Mtg on tstat.
     Thu 04/11
-        prevent the deprecated, do-nothing reset zoom button from appearing on mobile
+        Prevent Highcharts' deprecated reset zoom button from appearing on mobile.
     Wed 04/10
         PTO
     Tue 04/09
-        return to the reset zoom issue on mobile.  out from mid-morning to early afternoon.
-        tweaks to exported chart data labels - i.e. dynamic spacing to prevent overcrowding or excessive sparseness.
+        Reset zoom issue that occurs in the UI on mobile.
+        Adjustments to exported chart data labels - i.e. spacing that is dynamic with the number of points.
     Mon 04/08
-        SW team meeting.  data label overlay in exported chart pngs
+        SW team meeting.  Data label overlay in exported chart pngs
 
 ============================================================================================
 

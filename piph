@@ -17,6 +17,14 @@ echo "$c
 \t deactivate
 \t pip install -r requirements.txt
 \t p -m venv venv --system-site-packages    (rare)
+
+$grey get pip list from python 3.11 to 3.12 after upgrade via pyenv: $aqua
+  pyenv shell 3.11.0
+  pip freeze > requirements.txt
+
+  pyenv shell 3.12.0
+  pip install -r requirements.txt --upgrade
+
 \t ================================================
 "
 

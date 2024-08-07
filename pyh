@@ -20,7 +20,7 @@ echo "
 \t $gold ~ pyenv version
 \t $gold ~ pyenv which python     
 \t $gold ~ \$(pyenv which python) -m venv venv
-
+$khaki
     - go to your ubuntu VM
     - create a Python 3.8 virtual environment
     - activate it
@@ -29,6 +29,13 @@ echo "
     - find the path of that module
     - copy it to your project root
     - use the x86 architecture
+$gold
+  brew update
+  brew upgrade pyenv
+  pyenv install 3.12.0
+  pyenv global 3.12.0
+  python --version
+
 "
 
 
