@@ -10,17 +10,19 @@ from colored import fg, attr
 from utils import encrypt, decrypt, compare
 
 
-home     = expanduser('~')
-dotfiles = f'{home}/.dotfiles'
-scripts  = f'{home}/code/shell/scripts'
-certdirs = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs']
-repos    = [dotfiles, scripts]
-printcwd = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
+home        = expanduser('~')
+dotfiles    = f'{home}/.dotfiles'
+scripts     = f'{home}/code/shell/scripts'
+sensitives  = f'{home}/sensitives'
+certdirs    = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs']
+repos       = [dotfiles, scripts]
+printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
 
 orig_paths = [
     f'{home}/.zprofile', f'{home}/.zsh_a', f'{home}/.sbg-env', f'{home}/.ui-env',
     f'{home}/.snowsql/config', f'{home}/.aws/config', f'{home}/.aws/credentials'
-] + [join(certdir, fname) for certdir in certdirs for fname in listdir(certdir)]
+] + [join(certdir, fname) for certdir in certdirs for fname in listdir(certdir)
+] + [join(sensitives, fname) for fname in listdir(sensitives)]
 
 make_encrypted_path = lambda s: s.replace(f'{home}', f'{dotfiles}') + '.age'
 make_decrypted_path = lambda s: s.replace(f'{dotfiles}', f'{home}/deageified_dots').removesuffix('.age')
