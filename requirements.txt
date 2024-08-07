@@ -35,7 +35,6 @@ GitPython==3.1.43
 graphql-core==3.2.3
 grip==4.6.2
 h11==0.14.0
--e git+https://github.com/jwbat/vutility.git@04b3eb39ca2af42b22c117df02a376fe2a3e0da4#egg=handle_decoded_data&subdirectory=Layer/handle_decoded_data-38/src
 httpcore==1.0.5
 httpx==0.27.0
 idna==3.4
@@ -122,7 +121,6 @@ tqdm==4.66.4
 traitlets==5.10.0
 typing-inspect==0.8.0
 typing_extensions==4.12.2
--e git+https://github.com/jwbat/lambda-layers.git@e8e08adb7a65a8bded827b9e380aecf71c3255f8#egg=ubx_data_utils&subdirectory=ubx_data_utils-38/src
 urllib3==1.26.14
 uvicorn==0.20.0
 wcwidth==0.2.6

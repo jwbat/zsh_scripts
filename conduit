@@ -16,7 +16,7 @@ echo "$a
      gateway eui    00-80-00-00-00-01-F8-E1
 $x
      router         192.168.0.1
-                    008000000001f8e1
+     GatewayEui     008000000001f8e1
 $x
      DHCP lease range start -> end: $p
      192.168.2.100	192.168.2.254
