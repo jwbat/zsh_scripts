@@ -1,0 +1,16 @@
+#! python
+
+# Description
+# convert image file to png 
+
+# Usage
+# mpng <image-file>
+from sys import argv
+
+
+# magick convert image.heic image.png
+
+fname = argv[1]
+
+
+

@@ -5,14 +5,14 @@
 import json
 import subprocess as sp
 from os import environ, listdir, makedirs, chdir, getcwd
-from os.path import join, expanduser, basename, dirname
-from colored import fg, attr
+from os.path import join, expanduser, dirname
+from colored import fg
 from utils import encrypt, decrypt, compare
 
 
 home        = expanduser('~')
-dotfiles    = f'{home}/.dotfiles'
 scripts     = f'{home}/code/shell/scripts'
+dotfiles    = f'{home}/.dotfiles'
 sensitives  = f'{home}/sensitives'
 certdirs    = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs']
 repos       = [dotfiles, scripts]
