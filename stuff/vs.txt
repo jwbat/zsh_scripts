@@ -1,3 +1,4 @@
+current point of progress => jump to => ***
 
 
 Invoice 56          06/17/24 - 06/28/24
@@ -52,48 +53,53 @@ Invoice 54          05/20/24 - 05/31/24
         Test tstat schedule_content target_temp scale/mode changes using Toolbox & check results in uplinks.
     Mon 05/20
         SW team meeting.  bring tstat's v1.3 fw updates in ULs & DLs to testable state, test in °F & °C modes.
-
+***
 Invoice 53          05/06/24 - 05/17/24
     Wed 05/15
-        wt201 FW v1.3  updates in ULs & DLs.  integrate with refactored tstat_api & lambda handler
+        Make WT201 v1.3 updates in Lambda and downlink module.
     Tue 05/14
-        Tstat FW v1.3 worked via Android + Toolbox.  Uninstall Windows11 from VM.
-        getting into ms' js files for v1.3 encoding / decoding.
+        WT201 FW v1.3 works via Android + Toolbox.  Uninstall Windows11 from VM.
+        Examine Milesight JavaScript files for FW v1.3: encoding and decoding MQTT messages.
     Mon 05/13
-        SW team meeting.  catch up on Tstat messages, issues.   Install Win10 in VM for wt201 FW update.
-        Update Lambda & downlinks with 0.1°C prec. in schedule temp setting.
+        SW team meeting.  Catch up on thermostat API integration discussion.
+        Install Win10 in VM for WT201 FW update.
+        Update Lambda and downlinks module to handle 0.1°C precision in schedule temperature settings.
     Tue 05/07
         Tstat API integration discussions, meetings.
-        assist with Tstat when needed.   more situational data gathering on VS350 Occ.
+        Assist with thermostat API integration as needed.  Continue physical testing of VS350 occupancy
+        sensor for its effect on accuracy.
     Mon 05/06
-        SW team meeting.  get some firm numbers on vs350 occ sensor in 2  orientations.  p.m. discussion on next project.
+        SW team meeting.  Physical testing of the VS350 occupancy sensor in different orientations.
+        Discussion on next project.
 
 Invoice 52          04/22/24 - 05/03/24
     Thu 05/02
-        more testing of tstat schedules -  downlinks vs settings read by toolbox app
+        More testing for thermostat schedules.
     Wed 05/01
-        wt201 FW update.   resume checking toolbox settings vs uplinks/downlinks.
-        test schedules, push updates (incl. a fix for schedule days).
+        Do a WT201 FW update.   More checking of Toolbox settings as compared to data in 
+        uplink and downlink messages.  Test schedules; push updates for thermostat.
     Tue 04/30
-        register a new tstat.  diagnose how Toolbox is handling schedule time indices vis-a-vis uplink data
+        Register a new tstat.  Complete diagnosis of how Toolbox is handling schedule time indices.
     Mon 04/29
-        SW team meeting.  pickup a tstat in HR; look at how schedule time indexing changes (thru uplink data)
-        when schedule is edited on Toolbox app.
-        study gdoc on UBX data, dev-script for registering a new device.
+        SW team meeting.  Pick up a thermostat in Hood River. 
+        Study how schedule time indexing changes by examining uplink data
+        when schedule is edited via Toolbox app.
+        Look at Gdoc on UBX data and dev-script for registering new devices.
     Thu 04/24
-        LLM demo meeting.   discussion starters for annotation point placement on user-created notes.
-        start reading docs on the LLM work.
-        begin planning MS CT dashboard, queries - what if anything might be different from Vu energy dash.
+        LLM demo meeting.   Discussion on annotation point placement on user-created notes.
+        Start reading our documentation on the LLM work done to date.
+        Begin planning MS CT dashboard, queries: what if anything might be different from the
+        energy dashboard for Vutility CT devices.
     Wed 04/24
-        wrap up tour-de-annotations module, flag series in HC.
-        Discuss ux of how notes would attach to series data in annotation mode.
-        Update rule & destination so ubx-occ100 inserts to crdb/sf.
+        Finish tour of annotations and flag series in highcharts.
+        Discussion on the UX of how notes would attach to series data in annotation mode.
+        Update cloud rules & destination for UBX-OCC100 route to CRDB & SF.
     Tue 04/23
-        probably finish survey of the HC annotations module and flag series for showing journal
-        items and marking events on charts
+        Continue survey of the highcharts annotations module and flag series for display of journal
+        items and marking events.
     Mon 04/22
         SW team meeting. Occupancy sensor meeting. Tstat meeting.
-        continue experimentation & charting of the annotations and flag series landscape
+        Experimentation with annotations and flag series
 
 Invoice 51          04/08/24 - 04/19/24
     Thu 04/18
