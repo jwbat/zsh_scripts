@@ -85,7 +85,7 @@ Invoice 52          04/22/24 - 05/03/24
         Study how schedule time indexing changes by examining uplink data
         when schedule is edited via Toolbox app.
         Look at Gdoc on UBX data and dev-script for registering new devices.
-    Thu 04/24
+    Thu 04/25
         LLM demo meeting.   Discussion on annotation point placement on user-created notes.
         Start reading our documentation on the LLM work done to date.
         Begin planning MS CT dashboard, queries: what if anything might be different from the
