@@ -18,6 +18,7 @@ certdirs    = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs']
 repos       = [dotfiles, scripts]
 printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
 
+# paths for encryption
 orig_paths = [
     f'{home}/.zprofile', f'{home}/.zsh_a', f'{home}/.sbg-env', f'{home}/.ui-env',
     f'{home}/.snowsql/config', f'{home}/.aws/config', f'{home}/.aws/credentials'
