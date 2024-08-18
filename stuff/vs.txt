@@ -1,4 +1,4 @@
-current point of progress => jump to => ***
+current point of progress => jump to => ===
 
 
 Invoice 56          06/17/24 - 06/28/24
@@ -35,25 +35,27 @@ Invoice 55          06/03/24 - 06/14/24
     Mon 06/03
         SW team meeting.  tstat testing via ubx, lcd, ULs, & DLs.  check C/F conversions.
 
+===
+
 Invoice 54          05/20/24 - 05/31/24
     Thu 05/30
-        use ubx dev to test  t-stat
+        Test thermostats on UBX dev.
     Wed 05/29
-        investigating possible temp tolerance issue.  other t-stat testing.
+        Investigate possible temperature tolerance issue.  More thermostat testing.
     Tue 05/28
-        t-stat temp tolerance conversion issue.
-        read tolerances via Toolbox & check vs downlinks.
-        other t-stat testing.
+        Thermostat temperature tolerance conversion issue.
+        Read tolerances via Toolbox & check vs downlinks. Other t-stat testing.
     Wed 05/22
-        gather a little more info for a communication with MS on tstat v1.3 issue:
-        can only set DL schedule temp unit to F.  testing v1.3.
-        update non-schedule target temp DL.
+        Gather info for communication with MS on thermostat v1.3 issue:
+        can only set downlink schedule temp unit to F.  testing v1.3.
+        Update (non-schedule) target temp downlink code.
     Tue 05/21
-        update NFC app for Android from an APK file.
-        Test tstat schedule_content target_temp scale/mode changes using Toolbox & check results in uplinks.
+        Update NFC app for Android via APK (Android ecosystem) file.
+        Test thermostat schedule_content target_temp scale/mode changes using Toolbox & check results in uplinks.
     Mon 05/20
-        SW team meeting.  bring tstat's v1.3 fw updates in ULs & DLs to testable state, test in °F & °C modes.
-***
+        SW team meeting.  Bring thermostat firmware v1.3 updates in Lambda and downlink modules to a testable state;
+        Test with changes to °F / °C modes by NFC app.
+
 Invoice 53          05/06/24 - 05/17/24
     Wed 05/15
         Make WT201 v1.3 updates in Lambda and downlink module.
@@ -120,7 +122,7 @@ Invoice 51          04/08/24 - 04/19/24
     Mon 04/08
         SW team meeting.  Data label overlay in exported chart pngs
 
-============================================================================================
+............................................................................................
 
 Invoice 50          03/25 - 04/05
     Thu  04/04/24
@@ -166,7 +168,7 @@ Invoice 49          03/11 - 03/22
     Mon  03/11/24
         Milesight CT10x decoding Lambda
 
-===============================================================================================================
+...............................................................................................................
 
 Invoice 48
     Thu  03/07/24
