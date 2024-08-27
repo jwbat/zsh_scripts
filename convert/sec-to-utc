@@ -1,0 +1,17 @@
+#! python
+
+# Description
+# 
+
+# Usage
+# 
+from sys import argv
+from colored import fg
+from datetime import datetime, timezone
+
+
+def seconds_to_utc_datetime(seconds):
+    return datetime.fromtimestamp(int(seconds), tz=timezone.utc)
+
+
+print('utc datetime: ', seconds_to_utc_datetime(argv[1]))
