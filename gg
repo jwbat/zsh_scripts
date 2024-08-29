@@ -14,7 +14,7 @@ home        = expanduser('~')
 scripts     = f'{home}/code/shell/scripts'
 dotfiles    = f'{home}/.dotfiles'
 sensitives  = f'{home}/sensitives'
-certdirs    = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs']
+certdirs    = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs', f'{home}/ubx_api_certs']
 repos       = [dotfiles, scripts]
 printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
 
