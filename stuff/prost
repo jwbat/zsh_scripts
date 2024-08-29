@@ -13,8 +13,17 @@ echo "$rs
     Oregano $k              - (completely inhibit growth candida)  $rs
     Grapeseed extract $k    - (kills candida)  $rs
     Muira Puama $k          - (kills candida)  $rs
-
     Lycopene
+ $x
+  ===========================================================================================
+$g
+    aromatase$h activity increases with age, catalyzes testosterone -> estrogen, causes BPH $g
+    --------- $h
+    these raise aromatase activity (not good): $r 
+      body fat, insulin, high-carb diet, alcohol, whole grains. $h
+
+    these lower aromatase activity (good): $gr  
+      cruciferous vegetables, flaxseed, green tea, citrus peel
 "
 
 exit 0
