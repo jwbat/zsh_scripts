@@ -1,0 +1,18 @@
+#! python
+
+# Description
+# 
+
+# Usage
+# 
+from sys import argv
+from colored import fg
+from utils import encrypt, decrypt, compare
+
+
+path_decrypted, path_encrypted = argv[1], argv[2]
+# print(path_decrypted, path_encrypted)
+
+decrypt(path_decrypted, path_encrypted)
+
+
