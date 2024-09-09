@@ -1,26 +1,74 @@
 #! python
-import sys
-import pandas as pd
-from colored import fg
-from tabulate import tabulate
+from json import load, dump
+from time import sleep
+from os import listdir, getcwd, getenv
+from os.path import join, expanduser, exists
+from pathlib import Path
+import subprocess as sp
+from rich.console import Console
+from rich.markdown import Markdown
+import argparse
 
-gold, honey, green, red, grey, orange = fg(220), fg(194), fg(84), fg(196), fg(245), fg(208)
-colors  = [gold, red, honey, green, orange]
 
 
-if len(sys.argv) == 1:
-    path = 'output.csv'
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='')
+    parser.add_argument('-a', '--auto', action='store_true', help='rifle thru files on auto-pilot')
+    return parser.parse_args()
+
+
+def is_markdown(f):
+    sfx = Path(f).suffix
+    return sfx == '.md' or sfx == '.markdown'
+
+
+home  = getenv('HOME')
+fpath = join(home, 'state.json')
+cwd   = getcwd()
+files = [file for file in listdir(cwd) if is_markdown(file)]
+N     = len(files)
+state = dict()
+
+
+def show_md(file):
+    sp.run('clear')
+    with open(join(cwd, file)) as f:
+        content = f.read()
+    Console().print(Markdown(content))
+
+
+def get_state():
+    if exists(fpath):
+        with open(fpath, 'r') as f:
+            state.update(load(f))
+
+
+def store_state():
+    with open(fpath, 'w') as f:
+        dump(state, f, indent=4)
+
+
+def rifle_through(files):
+    n = 0
+    while True:
+        show_md(files[n])
+        n = (n + 1) % N
+        sleep(1)
+
+
+def show_next_markdown(files):
+    get_state()
+    n = state.get(cwd, 0)
+    file = join(cwd, files[n])
+    state[cwd] = (n + 1) % N
+    store_state()
+    show_md(file)
+
+
+
+args = parse_arguments()
+auto = args.auto
+if auto:
+    rifle_through(files)
 else:
-    path = sys.argv[1]
-
-frame = pd.read_csv(path)
-frame.fillna('', inplace=True)
-
-for idx, col in enumerate(frame.columns):
-    color = colors[idx % len(colors)]
-    frame[col] = frame[col].apply(lambda x: f'{ color } { x } { grey }')
-    frame.rename(columns={ col: f'{ color } { col } { grey }' }, inplace=True)
-
-print(grey)
-table = tabulate(frame, headers='keys', tablefmt='fancy_grid', showindex=False)
-print(table)
+    show_next_markdown(files)

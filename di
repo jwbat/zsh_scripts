@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# move generated static files to sister dir, deploy, and push
+# move generated static files to deployment repo, deploy, and push
 # (for deployment to GitHub Pages)
 
 npm run generate
