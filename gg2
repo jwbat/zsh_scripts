@@ -12,21 +12,26 @@ from ageifier import encrypt, decrypt, compare, copy_dir, encrypt_dir, decrypt_d
 from shutil import copy, copytree, rmtree
 
 
-home        = getenv('HOME')
-dotfiles    = getenv('DOTS')
-sensitives  = getenv('SENS')
-dotsens     = Path(dotfiles) / sensitives
-scripts     = getenv('Z')
+home        = Path(getenv('HOME'))
+dotfiles    = Path(getenv('DOTS'))
+sens        = Path(getenv('SENS'))
+sens2       = Path(home) / 'sens2'
+dotsens     = Path(dotfiles) / sens
+scripts     = Path(getenv('Z'))
 repos       = [dotfiles, scripts]
 printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
 
-configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.snowsql', '.aws')
-config_paths = [Path.home() / name for name in configs]
-config_dest  = Path(sensitives) / 'configs'
+# configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws')
+# config_paths = [Path.home() / name for name in configs]
+# config_dest  = Path(sens) / 'configs'
+# [copy_into(p, config_dest) for p in config_paths]
 
-[copy_into(p, config_dest) for p in config_paths]
-# copy_dir(sensitives, dotsens)
-# encrypt_dir(dotsens)
+copy_into(sens, dotfiles)
+encrypt_dir(dotsens)
+copy_dir(dotsens, sens2)
+decrypt_dir(sens2)
+decrypt_dir(sens)
+
 exit()
 
 
