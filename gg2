@@ -2,83 +2,58 @@
 '''
  encryption by Rustlang system tool, age ("a good encryption")
 '''
-import json
 import subprocess as sp
-from os import getenv, listdir, makedirs, chdir, getcwd
-from os.path import join, expanduser, dirname, isfile, isdir
+from os import getenv, chdir, getcwd
 from pathlib import Path
+from ageifier import (encrypt, decrypt, encrypt_dir, decrypt_dir,
+                     compare, compare_dirs, copy_dir, copy_into, abspath)
 from colored import fg
-from ageifier import encrypt, decrypt, compare, copy_dir, encrypt_dir, decrypt_dir, copy_into
-from shutil import copy, copytree, rmtree
 
 
-home        = Path(getenv('HOME'))
-dotfiles    = Path(getenv('DOTS'))
-sens        = Path(getenv('SENS'))
-sens2       = Path(home) / 'sens2'
-dotsens     = Path(dotfiles) / sens
-scripts     = Path(getenv('Z'))
-repos       = [dotfiles, scripts]
+getpath     = lambda s: Path(getenv(s))
+
+home        = getpath('HOME')
+dots        = getpath('DOTS')
+sensitives  = getpath('SENS')
+scripts     = getpath('Z')
+repos       = [dots, scripts]
 printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
 
-# configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws')
-# config_paths = [Path.home() / name for name in configs]
-# config_dest  = Path(sens) / 'configs'
-# [copy_into(p, config_dest) for p in config_paths]
+configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws')
+config_paths = [home / name for name in configs]
+config_dest  = sensitives / 'configs'
+[copy_into(p, config_dest) for p in config_paths]
 
-copy_into(sens, dotfiles)
-encrypt_dir(dotsens)
-copy_dir(dotsens, sens2)
-decrypt_dir(sens2)
-decrypt_dir(sens)
-
-exit()
+copy_into(sensitives, dots)
+encrypt_dir(dots / 'sensitives')
+copy_into(dots / 'sensitives', home / 'desens')
+decrypt_dir(home / 'desens')
+compare_dirs(sensitives, home / 'desens')
 
 
-# def ageify():
-    # for epath, opath in zip(encrypted_paths, orig_paths):
-        # encrypt(epath, opath)
+# ===========================================================================================
+# exit()  # a line in the sand has been drawn
+# ===========================================================================================
 
 
-# def deageify():
-    # for depath, enpath in zip(decrypted_paths, encrypted_paths):
-        # dname = dirname(depath)
-        # makedirs(dname, exist_ok=True)
-        # decrypt(depath, enpath)
+def update_repos():
+    repo_color, msg_color, msg2_color = fg(208), fg(186), fg(123)
+    run_cmd = lambda cmd: sp.run(cmd, capture_output=True, text=True) 
+    for dirpath in repos:
+        dpath = abspath(dirpath)
+        try:
+            run_cmd(['git', '-C', dpath, 'add', '.'])
+            if run_cmd(['git', '-C', dpath, 'status', '--porcelain']).stdout.strip():
+                run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
+                run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
+                print(f'{msg2_color} Repository{repo_color} {dpath} {msg2_color}updated and pushed successfully.')
+            else:
+                print(f'{msg_color} No changes in repository{repo_color} {dpath}{msg_color}. Skipping commit and push.')
+        except sp.CalledProcessError as e:
+            print(f'error running git command in {dpath}: {e}')
 
 
-# def print_comparisons(orig_paths, decrypted_paths):
-    # msg_color, success_color, error_color = fg(173), fg(154), fg(230)
-    # print(msg_color + f'\n comparing {len(orig_paths)} decrypted dotfiles with the original, pre-encrypted ones..\n')
-    # for opath, depath in zip(orig_paths, decrypted_paths):
-        # if not compare(opath, depath):
-            # file = depath.split('/')[-1]
-            # print('  ' + fg(142) + file + fg(254) + ' -> ' + success_color +'ok ')
-        # else:
-            # print(error_color + f' {opath} and \n {depath} differ')
-    # print('\n', fg(252))
-
-
-# def update_repos():
-    # repo_color, msg_color, msg2_color = fg(208), fg(186), fg(123)
-    # run_cmd = lambda cmd: sp.run(cmd, capture_output=True, text=True) 
-    # for dpath in repos:
-        # try:
-            # run_cmd(['git', '-C', dpath, 'add', '.'])
-            # if run_cmd(['git', '-C', dpath, 'status', '--porcelain']).stdout.strip():
-                # run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
-                # run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
-                # print(f'{msg2_color} Repository{repo_color} {dpath} {msg2_color}updated and pushed successfully.')
-            # else:
-                # print(f'{msg_color} No changes in repository{repo_color} {dpath}{msg_color}. Skipping commit and push.')
-        # except sp.CalledProcessError as e:
-            # print(f'error running git command in {dpath}: {e}')
-
-
-# chdir(scripts)
-# printcwd()
-# ageify()
-# deageify()
-# print_comparisons(orig_paths, decrypted_paths)
-# update_repos()
-# print()
+chdir(scripts)
+printcwd()
+update_repos()
+print()
