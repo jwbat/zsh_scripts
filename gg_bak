@@ -1,0 +1,81 @@
+#! python
+'''
+ encryption by Rustlang system tool, age
+'''
+import json
+import subprocess as sp
+from os import environ, listdir, makedirs, chdir, getcwd
+from os.path import join, expanduser, dirname
+from colored import fg
+from utils import encrypt, decrypt, compare
+
+
+home        = expanduser('~')
+scripts     = f'{home}/code/shell/scripts'
+dotfiles    = f'{home}/.dotfiles'
+sensitives  = f'{home}/sensitives'
+certdirs    = [f'{home}/macbook_certs', f'{home}/vsd_macbook_certs', f'{home}/ubx_api_certs']
+repos       = [dotfiles, scripts]
+printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
+
+# paths for encryption
+orig_paths = [
+    f'{home}/.zprofile', f'{home}/.zsh_a', f'{home}/.sbg-env', f'{home}/.ui-env',
+    f'{home}/.snowsql/config', f'{home}/.aws/config', f'{home}/.aws/credentials'
+] + [join(certdir, fname) for certdir in certdirs for fname in listdir(certdir)
+] + [join(sensitives, fname) for fname in listdir(sensitives)]
+
+make_encrypted_path = lambda s: s.replace(f'{home}', f'{dotfiles}') + '.age'
+make_decrypted_path = lambda s: s.replace(f'{dotfiles}', f'{home}/deageified_dots').removesuffix('.age')
+# put decrypted files together in one dir for easy reference ^^
+encrypted_paths = [make_encrypted_path(p) for p in orig_paths]
+decrypted_paths = [make_decrypted_path(p) for p in encrypted_paths]
+
+
+def ageify():
+    for epath, opath in zip(encrypted_paths, orig_paths):
+        encrypt(epath, opath)
+
+
+def deageify():
+    for depath, enpath in zip(decrypted_paths, encrypted_paths):
+        dname = dirname(depath)
+        makedirs(dname, exist_ok=True)
+        decrypt(depath, enpath)
+
+
+def print_comparisons(orig_paths, decrypted_paths):
+    msg_color, success_color, error_color = fg(173), fg(154), fg(230)
+    print(msg_color + f'\n comparing {len(orig_paths)} decrypted dotfiles with the original, pre-encrypted ones..\n')
+    for opath, depath in zip(orig_paths, decrypted_paths):
+        if not compare(opath, depath):
+            file = depath.split('/')[-1]
+            print('  ' + fg(142) + file + fg(254) + ' -> ' + success_color +'ok ')
+        else:
+            print(error_color + f' {opath} and \n {depath} differ')
+    print('\n', fg(252))
+
+
+def update_repos():
+    repo_color, msg_color, msg2_color = fg(208), fg(186), fg(123)
+    run_cmd = lambda cmd: sp.run(cmd, capture_output=True, text=True) 
+    for dpath in repos:
+        try:
+            run_cmd(['git', '-C', dpath, 'add', '.'])
+            if run_cmd(['git', '-C', dpath, 'status', '--porcelain']).stdout.strip():
+                run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
+                run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
+                print(f'{msg2_color} Repository{repo_color} {dpath} {msg2_color}updated and pushed successfully.')
+            else:
+                print(f'{msg_color} No changes in repository{repo_color} {dpath}{msg_color}. Skipping commit and push.')
+        except sp.CalledProcessError as e:
+            print(f'error running git command in {dpath}: {e}')
+
+
+chdir(scripts)
+printcwd()
+ageify()
+deageify()
+print_comparisons(orig_paths, decrypted_paths)
+update_repos()
+print()

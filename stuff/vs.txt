@@ -1,46 +1,123 @@
-09/03  SW team meeting
-09/02  Labor Day
-08/29  ubx_api_mqtt subscriber and lambda handler; troubleshoot, test, release.  thurs / fri.
-08/21  discussion on external publishing of MQTT msgs, data handling. check up on SF backups to S3.
-
 current point of progress => jump to => ===
 
+09/11  + Invoicing
+
+
+Invoice 61          Aug 26 - Sep 06
+    Wed 09/04   
+        SmartButton SMS alerts.
+    Tue 09/03   
+        SW team meeting. SmartButton SMS alerts.
+    Mon 09/02   
+        Labor Day
+    Thu 08/29    
+        ubx_api_mqtt subscriber and lambda handler: troubleshoot, test, package.
+    Wed 08/28    
+        Troubleshoot the subscription end of MQTT API:  IAM user policies, certs, TLS.
+    Tue 08/27   
+        Give Lambda for publish MQTT messages an IAM User with permissions policy that only
+        allows subscription to a subtopic with their account_uuid.
+    Mon 08/26   
+        SW team meeting. MQTT republishing for external API.
+
+
+Invoice 60          Aug 12 - Aug 23
+    Wed 08/21   
+        MQTT Rule and Lambda for republishing messages to API. Check up on SF backups to S3.
+    Tue 08/20   
+        Pivot to Wellstat MQTT API discussion: republishing MQTT messages with decoded data
+        for external accounts with restricted access permissions.
+    Mon 08/19   
+        SmartButton SMS Lambda
+    Wed 08/14   
+        SmartButton
+    Tue 08/13   
+        Update smart button's Lambda IAM role for SNS permissions. Test SMS in lambda with hard-coded smartbutton deveui.
+    Mon 08/12   
+        SW team meeting.  Switch priority to push button & lorawan-notify becoming an SMS msg with user info.
+
+Invoice 59          July 29 - Aug 09
+    Wed 08/07   
+        Gateway diagnostics
+    Tue 08/06   
+        Begin to strategize surfacing gateway diagnostics like latency and LTE connectivity in UBX;
+        Assist Arthur with Python environment; provide device check script updates.
+    Mon 08/05   
+        SW team meeting.  Start nightly Snowflake backups task with constraints to run for a few.
+        Gateway connectivity diagnostics - discussion w/ Arthur.
+    Wed 07/31   
+        Snowflake to S3 backups testing & documentation.
+    Tue 07/30   
+        Snowflake backups to S3: SQL statements for selection in Task and dynamic file naming.
+        Test.  Document workflow.
+    Mon 07/29   
+        SW team meeting.  Nightly Snowflake backups:  test deletion and restoration of a single row of data.
+
+Invoice 58          July 15 - July 26
+    Wed 07/24   
+        Test setup for SF backups to S3 with COPY INTO statements.  Set up the Snowflake task with a CRON without starting it.
+        Look into DB reconstitution steps for Snowflake from S3 bucket.
+    Tue 07/23   
+        Permissions, storage integration, Snowflake task with CRON expression, S3 bucket: gather pieces for nightly SF backups.
+    Mon 07/22   
+        SW team meeting. Look into daily backups for Snowflake.
+    Wed 07/17   
+        EM300 doc & device recommissioning; data model discussion.  CRDB schema.
+    Tue 07/16   
+        Test EM300 alarm reporting in its counter interface mode.
+    Mon 07/15   
+        SW team meeting.  Continue to document EM300.
+
+Invoice 57          July 1 - July 12
+    Wed 07/10   
+        Document the EM300.   Become more familiar with GH kanban boards, issues & projects.
+        More pulse counter options & testing.
+    Tue 07/09   
+        Pulse counter in digital mode & alarm reporting
+    Mon 07/08   
+        SW team meeting.  Merge EM300 updates to Lambda.
+        Test the pulse counter's builtin 250ms filter for debouncing pulse counts.
+        Other EM300 features & uses investigation & discussion.
+    Wed 07/03   
+        Lambda EM300 updates and testing; discuss field names. PR lambdas
+    Tue 07/02   
+        EM300 pulse counter decoding and testing
+    Mon 07/01   
+        SW team meeting.  EM300 pulse counter user manual.
 
 Invoice 56          06/17/24 - 06/28/24
     Wed 06/26
-        pick up a MS EM300 Pulse Counter from Jonah.
+        Pick up MS EM300 Pulse Counter from Jonah.
         Begin to get familiar with the LangChain framework for connecting LLMs with data sources.
     Tue 06/25
-        prompts & parameterized query experiments in streamlit / openai app on crdb local
+        Prompts & parameterized query experiments in streamlit and openai app on crdb local
     Mon 06/24
-        SW team meeting.  PR reviews.  Streamlit / openai app & security considerations.
+        SW team meeting.  PR reviews.  Streamlit / OpenAi app: security considerations.
     Wed 06/19
-        OpenAI API, Streamlit studies
+        OpenAI API / Streamlit study
     Tue 06/18
-        email MS about how to interpret the CT10x's current data.
-        investigation of Highcharts PDF export issue.
+        Communicate with MS about how to interpret the CT10x's current data.
+        Investigate Highcharts PDF export issue.
     Mon 06/17
-        SW team meeting.  chart export as PDF issue.  CT10x investigations
+        SW team meeting.  Chart export as PDF issue.  CT10x investigations
 
 Invoice 55          06/03/24 - 06/14/24
     Fri  06/14 
-        state management meeting (4.5)
+        State management SW team meeting
     Tue 06/11
-        some Tstat testing.  start getting familiar with Jackson's LLM work and documentation.
-        annotations discussion, maybe
+        Tstat testing. Begin to review Jackson's LLM work and documentation. Annotations discussion
     Mon 06/10
-        SW team meeting.  update wt201 UBX documentation for v1.3, update my device names.
-        refresh my memory on annotations.  discussion on NRG200 needs for production.
+        SW team meeting.  Update WT201 UBX documentation for v1.3; update device names.
+        Review annotations.  Discussion on NRG200 needs for production.
     Fri 06/07
-        thinking about timestamps in schedules as UX.
-        test reliability of setting target temp at the DL layer to compare with other parts of infra.
-        various ubx TS testing.
+        Think about timestamps in schedules as UX.
+        Test reliability of setting target temp at the DL layer to compare with other parts of infrastructure.
+        Various UBX TS testing.
     Tue 06/04
-        re-checked changing of target temp for current mode.  resume tstat schedule testing.
+        Re-checked changing of target temp for current mode.  Resume thermostat schedule testing.
     Mon 06/03
-        SW team meeting.  tstat testing via ubx, lcd, ULs, & DLs.  check C/F conversions.
+        SW team meeting.  thermosta testing via UBX, onboard LCD, uplinks & downlinks.  check temperature conversions.
 
-===
 
 Invoice 54          05/20/24 - 05/31/24
     Thu 05/30
@@ -86,7 +163,7 @@ Invoice 52          04/22/24 - 05/03/24
         Do a WT201 FW update.   More checking of Toolbox settings as compared to data in 
         uplink and downlink messages.  Test schedules; push updates for thermostat.
     Tue 04/30
-        Register a new tstat.  Complete diagnosis of how Toolbox is handling schedule time indices.
+        Register a new thermosta.  Complete diagnosis of how Toolbox is handling schedule time indices.
     Mon 04/29
         SW team meeting.  Pick up a thermostat in Hood River. 
         Study how schedule time indexing changes by examining uplink data
