@@ -1,8 +1,8 @@
 #! python3
-import os
-import sys
-import subprocess as sp
 import csv
+from pathlib import Path
+from os import getenv, chdir, getcwd
+import subprocess as sp
 from colored import fg
 
 blue = fg(87)
@@ -12,7 +12,7 @@ indianred = fg(202)
 khaki = fg(185)
 colors = [ indianred, khaki ]
 
-file = os.path.expanduser('~/code/shell/scripts/stuff/invoices.csv')
+file = Path(getenv('SENS')) / 'invoices.csv'
 fields = []
 rows = []
 
