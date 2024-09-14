@@ -5,7 +5,7 @@
 import subprocess as sp
 from os import getenv, chdir, getcwd
 from pathlib import Path
-from ageifier import (encrypt, decrypt, encrypt_dir, decrypt_dir,
+from ageifier import (encrypt, decrypt, encrypt_dir, decrypt_dir, clear_directory,
                      compare, compare_dirs, copy_dir, copy_into, abspath)
 from colored import fg
 
