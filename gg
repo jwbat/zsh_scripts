@@ -14,20 +14,20 @@ getpath     = lambda s: Path(getenv(s))
 
 home        = getpath('HOME')
 dots        = getpath('DOTS')
-sensitives  = getpath('SENS')
+predots     = getpath('PREDOTS')
 scripts     = getpath('Z')
 repos       = [dots, scripts]
 printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
 
 configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws')
 config_paths = [home / name for name in configs]
-[copy_into(p, sensitives / 'configs') for p in config_paths]
+[copy_into(p, predots / 'configs') for p in config_paths]
 
-copy_into(sensitives, dots)
-encrypt_dir(dots / 'sensitives')
-copy_into(dots / 'sensitives', home / 'postdots')
+copy_into(predots, dots)
+encrypt_dir(dots / 'predots')
+copy_dir(dots / 'predots', home / 'postdots')
 decrypt_dir(home / 'postdots')
-compare_dirs(sensitives, home / 'postdots')
+compare_dirs(predots, home / 'postdots')
 
 
 def update_repos():

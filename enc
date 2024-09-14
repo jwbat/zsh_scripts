@@ -1,0 +1,6 @@
+#! python
+from sys import argv
+from ageifier import encrypt
+
+
+encrypt(*argv[1 : ])
