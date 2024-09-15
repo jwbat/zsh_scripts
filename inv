@@ -12,7 +12,7 @@ indianred = fg(202)
 khaki = fg(185)
 colors = [ indianred, khaki ]
 
-file = Path(getenv('SENS')) / 'invoices.csv'
+file = Path(getenv('PREDOTS')) / 'invoices.csv'
 fields = []
 rows = []
 
