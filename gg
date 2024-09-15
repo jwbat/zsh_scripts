@@ -23,7 +23,11 @@ configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws')
 config_paths = [home / name for name in configs]
 [copy_into(p, predots / 'configs') for p in config_paths]
 
-# copy_into(predots, dots)
+snowconfig = predots / 'configs' / '.snowsql'
+snowconfig.mkdir()
+copy_into(home / '.snowsql'/ 'config', snowconfig)
+
+
 copy_dir(predots, dots / 'dotted')
 encrypt_dir(dots / 'dotted')
 copy_dir(dots / 'dotted', home / 'postdots')
