@@ -24,7 +24,8 @@ config_paths = [home / name for name in configs]
 [copy_into(p, predots / 'configs') for p in config_paths]
 
 snowconfig = predots / 'configs' / '.snowsql'
-snowconfig.mkdir()
+clear_directory(snowconfig)
+# snowconfig.mkdir()
 copy_into(home / '.snowsql'/ 'config', snowconfig)
 
 
