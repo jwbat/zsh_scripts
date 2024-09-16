@@ -19,7 +19,7 @@ scripts     = getpath('Z')
 repos       = [dots, scripts]
 printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
 
-configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws')
+configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws', '.ssh')
 config_paths = [home / name for name in configs]
 [copy_into(p, predots / 'configs') for p in config_paths]
 
