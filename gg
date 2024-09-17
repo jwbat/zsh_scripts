@@ -3,12 +3,15 @@
  encryption by Rustlang system tool, age ("a good encryption")
 '''
 import subprocess as sp
+from sys import argv
 from os import getenv, chdir, getcwd
 from pathlib import Path
 from ageifier import (encrypt, decrypt, encrypt_dir, decrypt_dir, clear_directory,
                      compare, compare_dirs, copy_dir, copy_into, abspath)
 from colored import fg
 
+
+commit_message = '.' if len(argv) < 2 else argv[1]
 
 getpath     = lambda s: Path(getenv(s))
 
@@ -43,7 +46,7 @@ def update_repos():
         try:
             run_cmd(['git', '-C', dpath, 'add', '.'])
             if run_cmd(['git', '-C', dpath, 'status', '--porcelain']).stdout.strip():
-                run_cmd(['git', '-C', dpath, 'commit', '-m', '.'])
+                run_cmd(['git', '-C', dpath, 'commit', '-m', commit_message])
                 run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
                 print(f'{msg2_color} Repository{repo_color} {dpath} {msg2_color}updated and pushed successfully.')
             else:
