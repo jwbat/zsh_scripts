@@ -1,0 +1,14 @@
+#!/bin/zsh
+# alias 'trc' == transfer certs to gateway
+
+GATEWAY_USER="admin"
+GATEWAY_IP="192.168.1.227"
+CERTS_DIR="/opt/lora/certs"
+LOCAL_CERTS_DIR="certs"
+
+# run remote commands: ensure a terminal is allocated with "-t"
+ssh -t ${GATEWAY_USER}@${GATEWAY_IP} "sudo mkdir -p ${CERTS_DIR} && sudo chown ${GATEWAY_USER} ${CERTS_DIR}"
+
+
+# Copy the certs directory from your Mac to the gateway
+scp -r ${LOCAL_CERTS_DIR} ${GATEWAY_USER}@${GATEWAY_IP}:/opt/lora
