@@ -1,0 +1,20 @@
+#! python
+
+# Description
+# remove long list of numbers in prefix of cert file names 
+# for every file in present dir
+from os import listdir, getcwd, rename
+
+
+list_files = lambda : listdir(getcwd())
+
+files = list_files()
+print(files, '\n')
+
+for fname in files:
+    if '-' in fname:
+        new_name = ''.join(fname.split('-')[1 :])
+        rename(fname, new_name)
+
+
+[print(fname) for fname in list_files()]
