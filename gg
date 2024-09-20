@@ -56,7 +56,7 @@ def update_repos():
                 run_cmd(['git', '-C', dpath, 'push', '-u', 'origin', 'main'])
                 print(f'{msg2_color} Repository{repo_color} {dpath} {msg2_color}updated and pushed successfully.')
             else:
-                print(f'{msg_color} No changes in repository{repo_color} {dpath}{msg_color}. Skipping commit and push.')
+                print(f'{msg_color} No changes in repository{repo_color} {dpath}{msg_color}. Skipping commit.')
         except sp.CalledProcessError as e:
             print(f'error running git command in {dpath}: {e}')
 
@@ -66,5 +66,5 @@ conditionally_backup_predots()
 chdir(scripts)
 printcwd()
 update_repos()
-print(fg(213), 'predots & postdots match: ', fg(227), dirs_match(predots, postdots))
+print(fg(86), 'predots & postdots match: ', fg(227), dirs_match(predots, postdots))
 print()
