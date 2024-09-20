@@ -16,10 +16,11 @@ getpath     = lambda s: Path(getenv(s))
 home        = getpath('HOME')
 dots        = getpath('DOTS')
 predots     = getpath('PREDOTS')
+postdots    = home / 'postdots'
 scripts     = getpath('Z')
 repos       = [dots, scripts]
 printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
-dirs_differ = lambda d1, d2: not compare_dirs(d1, d2) # compare_dirs returns 0 if same
+dirs_match  = lambda d1, d2: not compare_dirs(d1, d2)
 
 
 def update_configs():
@@ -33,12 +34,12 @@ def update_configs():
 
 
 def conditionally_backup_predots():
-    if dirs_differ(predots, home / 'postdots'):
+    if not dirs_match(predots, postdots):
         # if predots & postdots differ, copy predots to dots, etc.
         copy_dir(predots, dots / 'dotted')
         encrypt_dir(dots / 'dotted')
-        copy_dir(dots / 'dotted', home / 'postdots')
-        decrypt_dir(home / 'postdots')
+        copy_dir(dots / 'dotted', postdots)
+        decrypt_dir(postdots)
 
 
 def update_repos():
@@ -65,4 +66,5 @@ conditionally_backup_predots()
 chdir(scripts)
 printcwd()
 update_repos()
+print(fg(213), 'predots & postdots match: ', fg(227), dirs_match(predots, postdots))
 print()
