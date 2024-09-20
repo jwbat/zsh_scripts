@@ -1,0 +1,27 @@
+#! python
+import types
+import builtins
+from colored import fg
+
+
+builtin_items = vars(builtins).items()
+pprint        = lambda s: print(fg(222) + '\t\t' + s)
+
+def list_builtin_types(lowercase_only=True):
+    builtin_types = [obj for name, obj in builtin_items if isinstance(obj, type)]
+    builtin_types_sorted = sorted([t.__name__ for t in builtin_types])
+    if lowercase_only:
+        builtin_types_sorted = [t for t in builtin_types_sorted if t.islower()]
+    [pprint(t) for t in builtin_types_sorted]
+
+
+def list_builtin_functions():
+    builtin_functions = [name for name, obj in builtin_items if isinstance(obj, types.BuiltinFunctionType)]
+    builtin_functions.sort()
+    [pprint(f) for f in builtin_functions]
+
+
+print(fg(198) + '\n\t\tbuiltin types:')
+list_builtin_types()
+print(fg(198) + '\n\t\tbuiltin functions:')
+list_builtin_functions()
