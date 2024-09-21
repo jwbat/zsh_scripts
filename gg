@@ -23,23 +23,29 @@ printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
 dirs_match  = lambda d1, d2: not compare_dirs(d1, d2)
 
 
-def update_configs():
-    configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws', '.ssh')
-    config_paths = [home / name for name in configs]
-    [copy_into(p, predots / 'configs') for p in config_paths]
+def update_predots():
 
-    snowconfig = predots / 'configs' / '.snowsql'
-    clear_directory(snowconfig)
-    copy_into(home / '.snowsql'/ 'config', snowconfig)
+    def update_configs():
+        configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws', '.ssh')
+        config_paths = [home / name for name in configs]
+        [copy_into(p, predots / 'configs') for p in config_paths]
+
+        snowconfig = predots / 'configs' / '.snowsql'
+        clear_directory(snowconfig)
+        copy_into(home / '.snowsql'/ 'config', snowconfig)
 
 
-def conditionally_backup_predots():
-    if not dirs_match(predots, postdots):
-        # if predots & postdots differ, copy predots to dots, etc.
-        copy_dir(predots, dots / 'dotted')
-        encrypt_dir(dots / 'dotted')
-        copy_dir(dots / 'dotted', postdots)
-        decrypt_dir(postdots)
+    def conditionally_backup_predots():
+        if not dirs_match(predots, postdots):
+            print(fg(188) + 'predots & postdots differ: ' + fg(153) +'performing backup')
+            # if predots & postdots differ, copy predots to dots, etc.
+            copy_dir(predots, dots / 'dotted')
+            encrypt_dir(dots / 'dotted')
+            copy_dir(dots / 'dotted', postdots)
+            decrypt_dir(postdots)
+
+    update_configs()
+    conditionally_backup_predots()
 
 
 def update_repos():
@@ -61,10 +67,18 @@ def update_repos():
             print(f'error running git command in {dpath}: {e}')
 
 
-update_configs()
-conditionally_backup_predots()
-chdir(scripts)
-printcwd()
-update_repos()
-print(fg(86), 'predots & postdots match: ', fg(227), dirs_match(predots, postdots))
-print()
+def print_dots_comparison():
+    print(fg(86), 'predots & postdots match: ', fg(227), dirs_match(predots, postdots))
+    print()
+
+
+
+def do_everything():
+    update_predots()
+    chdir(scripts)
+    printcwd()
+    update_repos()
+    print_dots_comparison()
+
+
+do_everything()
