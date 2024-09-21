@@ -7,7 +7,7 @@ from sys import argv
 from os import getenv, chdir, getcwd
 from pathlib import Path
 from ageifier import (encrypt, decrypt, encrypt_dir, decrypt_dir, clear_directory, copy_dir, copy_into, abspath)
-from dir_utils import compare_dirs
+from dir_util import Dir
 from colored import fg
 
 
@@ -15,12 +15,11 @@ getpath     = lambda s: Path(getenv(s))
 
 home        = getpath('HOME')
 dots        = getpath('DOTS')
-predots     = getpath('PREDOTS')
-postdots    = home / 'postdots'
+predots     = Dir(getenv('PREDOTS'))
+postdots    = Dir(getenv('POSTDOTS'))
 scripts     = getpath('Z')
 repos       = [dots, scripts]
 printcwd    = lambda : print(fg(250), 'cwd ', fg(137), getcwd())
-dirs_match  = lambda d1, d2: not compare_dirs(d1, d2)
 clear       = lambda : sp.run(['clear'])
 
 
@@ -29,21 +28,20 @@ def update_predots():
     def update_configs():
         configs      = ('.zprofile', '.zsh_a', '.sbg-env', '.ui-env', '.aws', '.ssh')
         config_paths = [home / name for name in configs]
-        [copy_into(p, predots / 'configs') for p in config_paths]
+        [copy_into(p, predots.path / 'configs') for p in config_paths]
 
-        snowconfig = predots / 'configs' / '.snowsql'
+        snowconfig = predots.path / 'configs' / '.snowsql'
         clear_directory(snowconfig)
         copy_into(home / '.snowsql'/ 'config', snowconfig)
 
 
     def conditionally_backup_predots():
-        if not dirs_match(predots, postdots):
+        if predots != postdots:
             print(fg(188) + ' predots & postdots differ: ' + fg(153) +'performing backup')
-            # if predots & postdots differ, copy predots to dots, etc.
-            copy_dir(predots, dots / 'dotted')
+            copy_dir(predots.path, dots / 'dotted')
             encrypt_dir(dots / 'dotted')
-            copy_dir(dots / 'dotted', postdots)
-            decrypt_dir(postdots)
+            copy_dir(dots / 'dotted', postdots.path)
+            decrypt_dir(postdots.path)
 
     update_configs()
     conditionally_backup_predots()
@@ -68,9 +66,7 @@ def update_repos():
 
 
 def print_dots_comparison():
-    print(fg(86) + ' predots & postdots match: ' + fg(227), dirs_match(predots, postdots))
-    print()
-
+    print(fg(86) + ' predots & postdots match: ' + fg(227), predots == postdots, '\n')
 
 
 def do_everything():
