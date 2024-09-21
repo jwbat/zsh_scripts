@@ -19,7 +19,7 @@ predots     = getpath('PREDOTS')
 postdots    = home / 'postdots'
 scripts     = getpath('Z')
 repos       = [dots, scripts]
-printcwd    = lambda : print(fg(250), '\n cwd ', fg(137), getcwd())
+printcwd    = lambda : print(fg(250), 'cwd ', fg(137), getcwd())
 dirs_match  = lambda d1, d2: not compare_dirs(d1, d2)
 
 
@@ -74,6 +74,7 @@ def print_dots_comparison():
 
 
 def do_everything():
+    print()
     update_predots()
     chdir(scripts)
     printcwd()
