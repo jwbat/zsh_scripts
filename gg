@@ -68,7 +68,7 @@ def update_repos():
 
 
 def print_dots_comparison():
-    print(fg(86) + ' predots & postdots match: ' + fg(227) + dirs_match(predots, postdots))
+    print(fg(86) + ' predots & postdots match: ' + fg(227), dirs_match(predots, postdots))
     print()
 
 
