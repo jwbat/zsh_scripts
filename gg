@@ -21,6 +21,7 @@ scripts     = getpath('Z')
 repos       = [dots, scripts]
 printcwd    = lambda : print(fg(250), 'cwd ', fg(137), getcwd())
 dirs_match  = lambda d1, d2: not compare_dirs(d1, d2)
+clear       = lambda : sp.run(['clear'])
 
 
 def update_predots():
@@ -37,7 +38,7 @@ def update_predots():
 
     def conditionally_backup_predots():
         if not dirs_match(predots, postdots):
-            print(fg(188) + 'predots & postdots differ: ' + fg(153) +'performing backup')
+            print(fg(188) + ' predots & postdots differ: ' + fg(153) +'performing backup')
             # if predots & postdots differ, copy predots to dots, etc.
             copy_dir(predots, dots / 'dotted')
             encrypt_dir(dots / 'dotted')
@@ -50,7 +51,6 @@ def update_predots():
 
 def update_repos():
     commit_message = '.' if len(argv) < 2 else argv[1]
-
     repo_color, msg_color, msg2_color = fg(208), fg(186), fg(123)
     run_cmd = lambda cmd: sp.run(cmd, capture_output=True, text=True) 
     for dirpath in repos:
@@ -68,12 +68,13 @@ def update_repos():
 
 
 def print_dots_comparison():
-    print(fg(86), 'predots & postdots match: ', fg(227), dirs_match(predots, postdots))
+    print(fg(86), ' predots & postdots match: ', fg(227), dirs_match(predots, postdots))
     print()
 
 
 
 def do_everything():
+    clear()
     print()
     update_predots()
     chdir(scripts)
