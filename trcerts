@@ -10,5 +10,5 @@ LOCAL_CERTS_DIR="certs"
 ssh -t ${GATEWAY_USER}@${GATEWAY_IP} "sudo mkdir -p ${CERTS_DIR} && sudo chown ${GATEWAY_USER} ${CERTS_DIR}"
 
 
-# Copy the certs directory from your Mac to the gateway
+# Copy the certs directory from local machine to the gateway
 scp -r ${LOCAL_CERTS_DIR} ${GATEWAY_USER}@${GATEWAY_IP}:/opt/lora
