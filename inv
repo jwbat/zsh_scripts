@@ -3,53 +3,52 @@ import csv
 from pathlib import Path
 from os import getenv, chdir, getcwd
 import subprocess as sp
+from datetime import datetime
 from colored import fg
 
-blue = fg(87)
-red = fg(196)
-yellow = fg(192)
-indianred = fg(202)
-khaki = fg(185)
-colors = [ indianred, khaki ]
+
+blue, orange, yellow, purple, red, grey = fg(122), fg(220), fg(190), fg(200), fg(196), fg(252)
+indianred, khaki = fg(202), fg(185)
+colors = [ indianred, khaki, orange, blue, red, yellow, purple ]
 
 file = Path(getenv('PREDOTS')) / 'invoices.csv'
-fields = []
-rows = []
-
-
-p1 = sp.run('date', capture_output=True, text=True)
 sp.run(['clear'])
-date = p1.stdout;
-words = date.split(' ')[0 : 4]
-print(yellow + '\n\t\t\t Today is ' + ' '.join(words))
+
+def print_date():
+    s  = datetime.now().strftime(red + '%A  ' + blue + '%B %d, %Y' + khaki + '   %I:%M %p')
+    s  = s.replace('PM', 'pm').replace('AM', 'am')
+    print('\n\t' + s + '\n')
 
 
-with open(file, 'r') as csvfile:
-    reader = csv.reader(csvfile)
-    fields = next(reader)
+def company():
+    print(yellow + '\t' + 'Ubx Systems Inc' + '\n')
 
+
+def print_row(t):
+    idx = 0
+    for item in t:
+        print(colors[idx] + item.rjust(15), end='')
+        idx = (idx + 1) % len(colors)
     print()
-    for field in fields:
-        print(red + field.rjust(15), end='')
-    print()
- 
-    colors_idx = 0
-    color = colors[0]
-    rcvd = ''
+
+
+def count_lines():
+    with open(file, 'r') as f:
+        return sum(1 for _ in f)
+
+
+print_date()
+company()
+# N = count_lines()
+
+
+with open(file, 'r') as f:
+    reader = csv.reader(f)
+    header = next(reader)
+    print_row(header)
 
     for row in reader:
-        if row[4] != rcvd:
-            colors_idx += 1
-            color = colors[(colors_idx) % 2]
-        rcvd = row[4]
-        idx = 0
-        for item in row:
-            if item in (row[4], row[5]) and idx in (4, 5):
-                print(khaki + item.rjust(15), end='')
-            else:
-                print(blue + item.rjust(15), end='')
-            idx += 1
-        print()
+        print_row(row)
 
     print() 
 

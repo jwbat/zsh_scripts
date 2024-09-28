@@ -4,7 +4,6 @@ from colored import fg
 
 
 blue, orange, yellow, purple, red, grey = fg(122), fg(220), fg(190), fg(200), fg(196), fg(252)
-
 s  = datetime.now().strftime(orange + '%A  ' + blue + '%B %d, %Y' + yellow + '   %I:%M:%S %p')
 s  = s.replace('PM', 'p.m.').replace('AM', 'a.m.')
 print('\n\t' + s + '\n')
