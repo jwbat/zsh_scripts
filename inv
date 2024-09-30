@@ -17,11 +17,15 @@ sp.run(['clear'])
 def print_date():
     s  = datetime.now().strftime(red + '%A  ' + blue + '%B %d, %Y' + khaki + '   %I:%M %p')
     s  = s.replace('PM', 'pm').replace('AM', 'am')
-    print('\n\t' + s + '\n')
+    print('\n\t' + s)
 
 
 def company():
-    print(yellow + '\t' + 'Ubx Systems Inc' + '\n')
+    print(indianred)
+    print('\t' + 'Ubx Systems, Inc')
+    print('\t' + '7270 2nd Street')
+    print('\t' + 'Mt Hood Parkdale, OR  97041')
+    print()
 
 
 def print_row(t):
@@ -37,7 +41,6 @@ def count_lines():
         return sum(1 for _ in f)
 
 
-print_date()
 company()
 # N = count_lines()
 
@@ -46,9 +49,9 @@ with open(file, 'r') as f:
     reader = csv.reader(f)
     header = next(reader)
     print_row(header)
-
     for row in reader:
         print_row(row)
-
     print() 
 
+print_date()
+company()
