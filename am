@@ -1,15 +1,17 @@
 #!/bin/zsh
 
 query="SELECT 
-        MAX((property_value->>'watchdog_last_seen')::TIMESTAMPTZ AT TIME ZONE 'America/Los_Angeles') AS time,
-        ROUND(MAX(CAST(property_value->>'temp_c' AS FLOAT) * 9/5 + 32), 1) AS temp,
-        MAX(property_value->>'rh_pct') AS rh,
-        MAX(property_value->>'co2_ppm') AS CO2
+
+      TO_CHAR(MAX((property_value->>'watchdog_last_seen')::TIMESTAMPTZ AT TIME ZONE 'America/Los_Angeles'), 
+        'MM-DD-YYYY HH12:MI:SS AM') AS time,
+      CONCAT(ROUND(MAX(CAST(property_value->>'temp_c' AS FLOAT) * 9/5 + 32), 1)::STRING, ' °F') AS temp,
+      CONCAT(MAX(property_value->>'rh_pct')::STRING, ' %') AS rh,
+      CONCAT(MAX(property_value->>'co2_ppm')::STRING, ' ppm') AS co2
     FROM ubx_device_property_state 
     WHERE registry_uuid = '0a3114b1-37f6-4a0b-9566-e736b8643224'"
 
 cockroach sql --url $UBX_GLOBAL --execute $query --format=csv > temp.csv;
-tab temp.csv;
+tbl temp.csv;
 echo '\n';
 rm temp.csv;
 

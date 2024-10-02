@@ -13,7 +13,7 @@ SELECT
 "
 
 cockroach sql --url $UBX_GLOBAL --execute $query --format=csv > temp_el.csv;
-tab temp_el.csv;
+tbl temp_el.csv;
 rm temp_el.csv;
 echo ""
 
