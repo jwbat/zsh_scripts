@@ -4,7 +4,7 @@
 '''
 import subprocess as sp
 from sys import argv
-from os import getenv, chdir, getcwd
+from os import getenv, chdir
 from pathlib import Path
 from ageifier import (encrypt, decrypt, encrypt_dir, decrypt_dir, clear_directory, copy_dir, copy_into, abspath)
 from dir_util import Dir
@@ -19,7 +19,7 @@ scripts     = getpath('Z')
 predots     = Dir(getenv('PREDOTS'))
 postdots    = Dir(getenv('POSTDOTS'))
 repos       = [dots, scripts]
-printcwd    = lambda : print(fg(250), 'cwd ', fg(137), getcwd())
+printcwd    = lambda : print(fg(250), 'in ', fg(137), Path.cwd())
 clear       = lambda : sp.run(['clear'])
 
 

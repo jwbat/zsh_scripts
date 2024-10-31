@@ -4,31 +4,15 @@
 
 [Slack msg](https://ventacity.slack.com/archives/D038GQZGW3F/p1721844881157629)    
 
-We’ve been seeing some periodic gaps in cellular connectivity in field systems,
-but since we don’t have any routine monitoring we don’t know how prevalent this issue
-is or what the baseline reliability is for Sierra Wireless (our cell provider).
-You developed two apps a while back to look at gaps in data streams (at Snowflake?)
-We’re wondering how close these tools are to something which could monitor all our field
-deployments to give us a daily report or alert of any downtime of more than (30 minutes?)
-I figured I’d start by asking you instead of diving into Github to dig up you documentation.
-So… the request is for you to remind us what you have already developed, and tell us if either
-tool could be readily adapted for this broader mission.  Thanks!
 
+I’m trying to clean up and get back in the swing of using both the Roadmap board on Github (which everyone now has visibility to, but should not pay much attention to things beyond Q4 since they aren’t yet well prioritized beyond Q4).
+On Monday’s synch (and this will probably become a standard part of every sync for those who can stay for the full mtg), I’d like to go over SW Board live to clean up any missing items or confusions. Some review of the workflow I’m trying to use:
+Roadmap column are high level initiatives that should stay in this column (they generally also live on the Board also named Roadmap)
+If you are doing work on one of these, you should make a child issue so that the parent can stay in Roadmap, but you can move the child issue(s) across the Board to represent the state of the work. Easiest way to make and link a child issue is to edit the parent and insert - [ ] <subject> which will create a Task llist. After saving this, there will be a “…” option on each Task to convert it to a child Issue.
+I’m assigning a lead person to each Roadmap issue which is more symbolic than anything, but a nice reminder of who is primarily working on what. It’s also a good reminder to the Assignee to create a child issue for any work being done on that Roadmap item.
+Everyone should have at least one issue on SW Board that is in one of: In development, Ready for review, In review
+It doesn’t have to be a child of a Roadmap issue, but if there is a corresponding parent in Roadmap then it should be linked
+Please make any updates and we’ll go over on Monday, thanks!
 
----
-
-##### priority of LLM testing and integration planning
-
-1. User Querying About Assets (not time series data)
-This seems like the easiest thing to productize that has high likelihood of being reliable. Let users ask question about assets like “How many RTU’s do I have in New England, and give me a breakdown of total counts by Make and Model”
----
-2. Ask LLM to compose Linegraphs
-“Graph my CO2s on all the IAQ100 sensors at this Building”
--> returns a JSON description of a HighChart that fits a structure we can turn into a graph
----
-3. Ask LLM to Analyze Data Patterns
-“What days of the week is my building the most occupied”
-“What time of day is typically peak CO2"
----
-4. Ask LLM About Docs in the Vault
-When we tried this with ChatGPT standard service it didn’t do a great job of combing our own VS1K manuals and correctly answering things, so it didn’t feel quite ready.
+[Roadmap Board](https://github.com/orgs/ventacity/projects/9)
+[SW Board](https://github.com/orgs/ventacity/projects/4)
