@@ -19,7 +19,7 @@ scripts     = getpath('Z')
 predots     = Dir(getenv('PREDOTS'))
 postdots    = Dir(getenv('POSTDOTS'))
 repos       = [dots, scripts]
-printcwd    = lambda : print(fg(250), 'in ', fg(137), Path.cwd())
+printcwd    = lambda : print(fg(137), Path.cwd())
 clear       = lambda : sp.run(['clear'])
 
 
