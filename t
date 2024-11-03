@@ -66,9 +66,7 @@ def show_next_markdown(files):
 
 
 
-args = parse_arguments()
-auto = args.auto
-if auto:
+if parse_arguments().auto:
     rifle_through(files)
 else:
     show_next_markdown(files)
