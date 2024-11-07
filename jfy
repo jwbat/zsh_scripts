@@ -1,0 +1,17 @@
+#! python
+''' cleans up json files in a jiffy '''
+# Description:  reformat a json file (because it may have been copied from somewhere and not look so good)
+# Usage:        jfy <fname> 
+from sys import argv
+from json import load, dump
+
+
+fname = argv[1]
+
+
+with open(fname, 'r') as f:
+    d = load(f)
+
+
+with open(fname, 'w') as f:
+    dump(d, f, indent=4)
