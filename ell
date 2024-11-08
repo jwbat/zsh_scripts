@@ -1,0 +1,17 @@
+#!/bin/zsh
+# Description:  get the last (30) temp F readings
+
+sfx "
+SELECT
+    TO_CHAR(CONVERT_TIMEZONE('America/Los_Angeles', stamp), 'MM-DD-YYYY HH12:MI AM') AS time,
+    ROUND(CAST(data:temp_c AS FLOAT) * 9/5 + 32, 1) AS \"°F\"
+FROM ubx_device_data
+WHERE registry_uuid = 'b3ab5550-c8ec-4190-8a54-99e604f13fba'
+    AND data:temp_c IS NOT NULL
+ORDER BY stamp DESC
+LIMIT 30"
+
+tbl output.csv
+rm output.csv
+
+exit 0

@@ -40,7 +40,7 @@ def count_lines(filename):
 
 def trim_file(outfile, N=2):
     ''' trim N lines from beginning and end of outfile '''
-    dq = deque(maxlen=N)
+    q = deque(maxlen=N)
     temp = 'temp.csv'
     sp.run(['mv', outfile, temp])
     with open(temp, 'r') as f, open(outfile, 'w') as out:
@@ -48,10 +48,9 @@ def trim_file(outfile, N=2):
             next(f)
         for line in f:
             cleaned_line = line.replace('\\n', '')
-            dq.append(cleaned_line)
-            if len(dq) >= N:
-                out.write(dq[0])
-
+            q.append(cleaned_line)
+            if len(q) >= N:
+                out.write(q[0])
     sp.run(['rm', temp])
 
 
