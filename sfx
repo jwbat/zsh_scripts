@@ -17,7 +17,7 @@ outfile = 'output.csv'
 
 def cmd():
     query = parse_arguments()
-    return ['snowsql', '-c', 'ubx', '-q', query, '-o', 'output_format=csv']
+    return ['snowsql', '-c', 'ubx', '-q', query, '-o', 'output_format=csv', '-o', 'friendly=false']
 
 
 def parse_arguments():
@@ -83,8 +83,8 @@ def main():
             print(e.stderr.decode(), file=sys.stderr)
 
     ''' snowflake writes extra stuff at start & end of output '''
-    if count_lines(outfile) > 4:
-        trim_file(outfile)
+    # if count_lines(outfile) > 4:
+        # trim_file(outfile)
 
     correct_number_formatting(outfile)
 

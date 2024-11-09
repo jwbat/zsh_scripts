@@ -2,14 +2,19 @@
 # Description:  get the last (30) temp F readings
 
 sfx "
-SELECT
-    TO_CHAR(CONVERT_TIMEZONE('America/Los_Angeles', stamp), 'MM-DD-YYYY HH12:MI AM') AS time,
-    ROUND(CAST(data:temp_c AS FLOAT) * 9/5 + 32, 1) AS \"°F\"
+SELECT 
+    TO_CHAR(DATE_TRUNC('day', CONVERT_TIMEZONE('America/Los_Angeles', stamp)), 'MM-DD-YYYY') AS date,
+    TO_CHAR(MAX(CONVERT_TIMEZONE('America/Los_Angeles', stamp)), 'HH12:MI AM') AS max_time,
+    ROUND(MAX(CAST(data:temp_c AS FLOAT) * 9/5 + 32), 1) AS \"Max °F\",
+    TO_CHAR(MIN(CONVERT_TIMEZONE('America/Los_Angeles', stamp)), 'HH12:MI AM') AS min_time,
+    ROUND(MIN(CAST(data:temp_c AS FLOAT) * 9/5 + 32), 1) AS \"Min °F\"
 FROM ubx_device_data
 WHERE registry_uuid = 'b3ab5550-c8ec-4190-8a54-99e604f13fba'
     AND data:temp_c IS NOT NULL
-ORDER BY stamp DESC
-LIMIT 30"
+    AND CONVERT_TIMEZONE('America/Los_Angeles', stamp) >= DATE_TRUNC('day', DATEADD(day, -10, CONVERT_TIMEZONE('America/Los_Angeles', CURRENT_TIMESTAMP)))
+GROUP BY DATE_TRUNC('day', CONVERT_TIMEZONE('America/Los_Angeles', stamp))
+ORDER BY date DESC
+LIMIT 10"
 
 tbl output.csv
 rm output.csv
