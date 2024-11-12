@@ -67,10 +67,11 @@ def update_repos():
 
 
 def print_dots_comparison():
-    if predots == postdots:
-        print(fg(86) + ' predots & postdots match.')
+    # if predots == postdots:
+    if False:
+        print(fg(86) + ' => predots & postdots match.')
     else:
-        print(fg(1) + 'error: predots & postdots do not match.')
+        print(fg(148) + ' => ' + fg(124) + ' error: predots & postdots do not match.')
 
 
 def do_everything():
