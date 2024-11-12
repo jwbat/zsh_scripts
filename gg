@@ -37,7 +37,7 @@ def update_predots():
 
     def conditionally_backup_predots():
         if predots != postdots:
-            print(fg(188) + ' predots & postdots differ: ' + fg(153) +'performing backup')
+            print(fg(188) + ' predots & postdots differ. ' + fg(153) +'performing backup')
             copy_dir(predots.path, dots / 'dotted')
             encrypt_dir(dots / 'dotted')
             copy_dir(dots / 'dotted', postdots.path)
@@ -67,7 +67,10 @@ def update_repos():
 
 
 def print_dots_comparison():
-    print(fg(86) + ' predots & postdots match: ' + fg(227), predots == postdots, '\n')
+    if predots == postdots:
+        print(fg(86) + ' predots & postdots match.')
+    else:
+        print(fg(1) + 'error: predots & postdots do not match.')
 
 
 def do_everything():
