@@ -71,7 +71,7 @@ def print_dots_comparison():
     if False:
         print(fg(86) + ' => predots & postdots match.')
     else:
-        print(fg(148) + ' => ' + fg(124) + ' error: predots & postdots do not match.')
+        print(fg(189) + ' => ' + fg(124) + ' error: predots & postdots do not match.')
 
 
 def do_everything():
