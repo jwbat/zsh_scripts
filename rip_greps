@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+# Description
+# rip grep for an arbitrary number of key words
+
+# Usage
+# rip_greps foo bar baz
+
+if [ $# -eq 0 ]; then
+    echo "Usage: rip_grep_and_pipe <term1> [<term2> ... <termN>]"
+    return 1
+fi
+
+# -l: return only names of files that match.
+local results
+results=$(rg -l "$1")
+shift
+
+for term in "$@"; do
+    # if 'results' is empty, break
+    if [ -z "$results" ]; then
+        break
+    fi
+    results=$(echo "$results" | xargs rg -l "$term" 2>/dev/null)
+done
+
+echo "$results"
+
+exit 0
