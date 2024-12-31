@@ -13,8 +13,12 @@ if len(sys.argv) == 1:
 else:
     path = sys.argv[1]
 
+# pd.set_option('future.no_silent_downcasting', True)
 frame = pd.read_csv(path)
-frame.astype(object).fillna('')
+frame = frame.fillna('')
+
+# frame.astype(object).fillna('')
+# frame = frame.astype(object).fillna('').infer_objects(copy=False)
 
 for idx, col in enumerate(frame.columns):
     color = colors[idx % len(colors)]

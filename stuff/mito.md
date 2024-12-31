@@ -1,4 +1,4 @@
-### Bioactive compounds that improve mitochondrial function  
+### Bioactive compounds which improve mitochondrial function  
 
 | Compound         | Sources                   |
 |------------------|---------------------------|
