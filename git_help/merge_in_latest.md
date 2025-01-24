@@ -1,6 +1,6 @@
 ## merge latest from A into B 
 
-Say we have branch B which branched from branch A.  
+B branched from A.  
 A has since made commits, and we want to merge those changes on A back into B.  
 
 ```sh
