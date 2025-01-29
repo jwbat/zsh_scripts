@@ -16,9 +16,10 @@ getpath     = lambda s: Path(getenv(s))
 home        = getpath('HOME')
 dots        = getpath('DOTS')
 scripts     = getpath('Z')
+nvim        = getpath('NVIM')
 predots     = Dir(getenv('PREDOTS'))
 postdots    = Dir(getenv('POSTDOTS'))
-repos       = [dots, scripts]
+repos       = [dots, scripts, nvim]
 printcwd    = lambda : print(fg(137), Path.cwd())
 clear       = lambda : sp.run(['clear'])
 
