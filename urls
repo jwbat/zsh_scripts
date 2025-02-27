@@ -1,0 +1,37 @@
+#! python
+import webbrowser
+from colored import fg
+
+
+wbo = lambda url: webbrowser.open(url)
+
+u1 = 'https://example.com'
+u2 = 'https://github.com/jwbat'
+
+
+def main():
+    urls = {
+        '1': u1,
+        '2': u2
+    }
+
+    while True:
+        print(fg(196) + '\n Select an option: \n')
+        print(fg(192) + '\t  1  ' +  fg(159)  + u1)
+        print(fg(192) + '\t  2  ' +  fg(159)  + u2)
+        print(fg(192) + '\t  Q  ' +  fg(159)  + 'to quit')
+
+        choice = input(fg(196) + '\n Enter choice: \n').strip()
+
+        if choice.lower() == 'q':
+            print(' Exiting...')
+            break
+
+        url = urls.get(choice)
+        if url:
+            wbo(url)
+        else:
+            print(fg(137) + 'Invalid option. Please try again.')
+
+if __name__ == '__main__':
+    main()
