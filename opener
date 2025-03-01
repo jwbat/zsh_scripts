@@ -1,0 +1,29 @@
+#! python
+import os
+from sys import argv
+import subprocess as sp
+from webbrowser import open as wbo
+
+
+paths = ['https://chatgpt.com/?model=gpt-4o',] if len(argv) < 2 else argv[1:]
+urls  = [s for s in paths if s.startswith('htt')]
+pdfs  = [s for s in paths if s.endswith('pdf')]
+
+
+def open_new_browser_window():
+    sp.run(['osascript', '-e', 'tell application "Safari" to make new document'])
+
+
+def open_tabs():
+    for url in urls:
+        wbo(url)
+
+
+def open_pdfs():
+    for path in pdfs:
+        sp.run(['open', path])
+
+
+open_new_browser_window()
+open_tabs()
+open_pdfs()
