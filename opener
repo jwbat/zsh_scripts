@@ -34,15 +34,15 @@ else:
 
 
 def open_new_browser_window():
-    sp.run(['osascript', '-e', 'tell application "Safari" to make new document'])
+    sp.run(['osascript', '-e', 'tell application "Safari" to make new document'], stdout=sp.DEVNULL)
 
 
-def open_tabs():
+def open_browser_tabs():
     for url in urls:
         try:
             wbo(url)
         except Exception as e:
-            print(f'exception opening {url}: {e}')
+            print(f'exception while opening {url}: {e}')
 
 
 def open_pdfs():
@@ -50,9 +50,9 @@ def open_pdfs():
         try:
             sp.run(['open', path])
         except Exception as e:
-            print(f'exception opening {path}: {e}')
+            print(f'exception while opening {path}: {e}')
 
 
 open_new_browser_window()
-open_tabs()
+open_browser_tabs()
 open_pdfs()
