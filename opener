@@ -39,12 +39,18 @@ def open_new_browser_window():
 
 def open_tabs():
     for url in urls:
-        wbo(url)
+        try:
+            wbo(url)
+        except Exception as e:
+            print(f'exception opening {url}: {e}')
 
 
 def open_pdfs():
     for path in pdfs:
-        sp.run(['open', path])
+        try:
+            sp.run(['open', path])
+        except Exception as e:
+            print(f'exception opening {path}: {e}')
 
 
 open_new_browser_window()
