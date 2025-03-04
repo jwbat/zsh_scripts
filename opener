@@ -10,6 +10,7 @@ from os import getenv
 getpath = lambda s: Path(getenv(s))
 pdf_dir = getpath('PDFS')
 srcs    = Path('sources.txt')     # optional
+args    = argv[1:] if len(argv) > 1 else None
 urls    = []
 pdfs    = []
 
@@ -27,10 +28,12 @@ def sort_paths(paths):
             pdfs.append(str(pdf_dir / path))
 
 
-if srcs.exists():
+if args:
+    sort_paths(args)
+elif srcs.exists():
     sort_paths(read_sources())
 else:
-    sort_paths(argv[1:])
+    print('no args or sources.txt were provided')
 
 
 def open_new_browser_window():
