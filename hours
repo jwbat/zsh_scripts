@@ -1,0 +1,29 @@
+#! python
+from sys import argv
+from pathlib import Path
+from date_utils import get_week
+from os import getenv
+import subprocess as sp
+
+
+def get_arg():
+    if len(argv) < 2:
+        print('arg required, nr of hours for the week')
+        exit()
+    return argv[1]
+
+
+def bat(fname):
+    sp.run(['bat', fname], capture_output=False, text=True).stdout 
+
+
+fname       = Path(getenv('PREDOTS')) / 'hours.txt'
+nr_of_hrs   = get_arg()
+w           = get_week()
+
+
+with open(fname, 'a') as f:
+    f.write(w + '\t' + nr_of_hrs + '\n')
+
+
+bat(fname)
