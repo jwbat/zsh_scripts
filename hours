@@ -6,24 +6,26 @@ from os import getenv
 import subprocess as sp
 
 
-def get_arg():
+fname = Path(getenv('PREDOTS')) / 'hours.txt'
+
+
+def bat():
+    sp.run(['bat', fname], capture_output=False, text=True).stdout 
+
+
+def get_hrs():
     if len(argv) < 2:
-        print('arg required, nr of hours for the week')
+        bat()
         exit()
     return argv[1]
 
 
-def bat(fname):
-    sp.run(['bat', fname], capture_output=False, text=True).stdout 
+def add_hours():
+    hrs = get_hrs()
+    w   = get_week()
+    with open(fname, 'a') as f:
+        f.write(w + '\t' + hrs + '\n')
 
 
-fname       = Path(getenv('PREDOTS')) / 'hours.txt'
-nr_of_hrs   = get_arg()
-w           = get_week()
-
-
-with open(fname, 'a') as f:
-    f.write(w + '\t' + nr_of_hrs + '\n')
-
-
-bat(fname)
+add_hours()
+bat()
