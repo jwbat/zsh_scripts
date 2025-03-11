@@ -1,0 +1,9 @@
+#! python
+#  get strftime documentation
+
+import time
+from colored import fg
+
+
+print(fg(215))
+print(time.strftime.__doc__)
