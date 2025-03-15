@@ -7,9 +7,10 @@ from pathlib import Path
 from os import getenv
 
 
+sources = 'sources.txt'
 getpath = lambda s: Path(getenv(s))
 pdf_dir = getpath('PDFS')
-srcs    = Path('sources.txt')     # optional
+srcs    = Path(sources)     # optional
 args    = argv[1:] if len(argv) > 1 else None
 urls    = []
 pdfs    = []
