@@ -2,6 +2,7 @@
 Monitor Audio Silver 100 7G*                        1495 (Crutchfield)
 Buchardt P300                                       1500 (buchardtaudio.com)
 Buchardt S400 MKII                                  2567
+Buchardt E50                                        4324
 Dali Menuet                                         2000 (audiolab.com)
 Amphion Argon1                                      1920 (almaaudio.com)
 Q Acoustics 5020                                     899 
@@ -16,13 +17,24 @@ Galion TS Voyager TL Transmission Line speakers     1200
 Micca 14 Gauge Pure Copper Speaker Wire               39 
  
 ### AMPs & DACs
+Hegel H120 integrated amplifier                     3000    (audioadvice.com)
+Hegel H95 integrated amplifier                      1925    (audioadvice.com)
+Exposure 3510 integrated amplifier                  3499    (audionation.ca)
+Exposure 3510 power amplifier                       2299    (audionation.ca)
+Exposure 3510 mono power amp (pair)                 3999    (audionation.ca)
 Exposure 2510 integrated amplifier                  2499    (audionation.ca)
+HiFi Rose RA280 integrated amplifier                2995    (audioadvice.com)
+Hegel H190v integrated amplifier                    4200
+Galion TS34
 Audiolab 6000A integrated amplifier & DAC           1199    (Crutchfield)
 Cambridge AXA35 integrated amplifier                 399    (Crutchfield)
 Musical Fidelity M3si                               1679    (focalnaimamerica, musicalfidelity.com)
 
+### DACs
+Denafrips Enyo 15th                                  699    (denafrips.com)
+
 Bluesound POWERNODE amp & DAC                       1099    (Crutchfield)
-Sonos amp & DAC                                      699    (Crutchfield)
+
 
 
 WiiM Ultra Experience Streamer, DAC and Preamp       329 
