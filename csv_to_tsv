@@ -3,22 +3,23 @@
     copy csv to tsv
 '''
 import csv
+from csv import reader, writer
 from sys import argv
 from pathlib import Path
 
 
-ipath = Path(argv[1])
-opath = ipath.with_suffix('.tsv')
+inpath = Path(argv[1])
+outpath = inpath.with_suffix('.tsv')
 
 
 def convert_csv_to_tsv():
-    with open(ipath, newline='', encoding='utf-8') as csv_file:
-        csv_reader = csv.reader(csv_file)
-        with open(opath, mode='w', newline='', encoding='utf-8') as tsv_file:
-            tsv_writer = csv.writer(tsv_file, delimiter='\t')
+    with open(inpath, encoding='utf-8') as csv_file:
+        csv_reader = reader(csv_file)
+        with open(outpath, mode='w', encoding='utf-8') as tsv_file:
+            tsv_writer = writer(tsv_file, delimiter='\t')
             for row in csv_reader:
                 tsv_writer.writerow(row)
 
 
 convert_csv_to_tsv()
-print(f'converted {ipath} → {opath}')
+print(f'converted {inpath} → {outpath}')

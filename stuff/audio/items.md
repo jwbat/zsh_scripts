@@ -15,10 +15,13 @@ Ascend Acoustics Sierra-1 V2                         998
 Galion TS Voyager MK2 SE speakers                        
 Galion TS Voyager TL Transmission Line speakers     1200 
 Micca 14 Gauge Pure Copper Speaker Wire               39 
+
  
 ### AMPs & DACs
+Axxess Forte 1 integrated amp + DAC                 5500    (unveiledaudio.com) Vancouver, WA !
 Hegel H120 integrated amplifier                     3000    (audioadvice.com)
 Hegel H95 integrated amplifier                      1925    (audioadvice.com)
+Galion TS A75 power amplifier                       1495    (galion-audio.com)
 Exposure 3510 integrated amplifier                  3499    (audionation.ca)
 Exposure 3510 power amplifier                       2299    (audionation.ca)
 Exposure 3510 mono power amp (pair)                 3999    (audionation.ca)
@@ -29,6 +32,8 @@ Galion TS34
 Audiolab 6000A integrated amplifier & DAC           1199    (Crutchfield)
 Cambridge AXA35 integrated amplifier                 399    (Crutchfield)
 Musical Fidelity M3si                               1679    (focalnaimamerica, musicalfidelity.com)
+
+<br>  
 
 ### DACs
 Denafrips Enyo 15th                                  699    (denafrips.com)
@@ -136,4 +141,3 @@ If connecting multiple speakers to a single amp channel:
 ✅ **Use an amp with headroom**—if your speakers are rated at 4Ω, use an amp designed for 4Ω operation.  
 ✅ **If unsure, go with higher impedance speakers (e.g., 8Ω)** to avoid stressing the amp.  
 
-Would you like help calculating impedance for a specific setup?
