@@ -18,16 +18,16 @@ Micca 14 Gauge Pure Copper Speaker Wire               39
 
  
 ### AMPs & DACs
-Axxess Forte 1 integrated amp + DAC                 5500    (unveiledaudio.com) Vancouver, WA !
+Galion TS A75 power amplifier                       1495    (galion-audio.com)
 Hegel H120 integrated amplifier                     3000    (audioadvice.com)
 Hegel H95 integrated amplifier                      1925    (audioadvice.com)
-Galion TS A75 power amplifier                       1495    (galion-audio.com)
+Hegel H190v integrated amplifier                    4200
+Axxess Forte 1 integrated amp + DAC                 5500    (unveiledaudio.com) Vancouver, WA !
 Exposure 3510 integrated amplifier                  3499    (audionation.ca)
 Exposure 3510 power amplifier                       2299    (audionation.ca)
 Exposure 3510 mono power amp (pair)                 3999    (audionation.ca)
 Exposure 2510 integrated amplifier                  2499    (audionation.ca)
 HiFi Rose RA280 integrated amplifier                2995    (audioadvice.com)
-Hegel H190v integrated amplifier                    4200
 Galion TS34
 Audiolab 6000A integrated amplifier & DAC           1199    (Crutchfield)
 Cambridge AXA35 integrated amplifier                 399    (Crutchfield)

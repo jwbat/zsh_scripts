@@ -10,13 +10,13 @@ r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
 c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew;
 
 echo "$g
-  Are you sure you want to empty the contents of the file,$c $1$g? [y/N] $p"
+  Are you sure you want to empty the contents of $c$1$g ? [y/N] $p"
 read answer
 
 if [[ $answer = [yY] || $answer = [yY][eE][sS] ]]
 then
     truncate -s 0 "$1"
-    echo "$g  The file, $c$1$g, has been emptied."
+    echo " $c$1$g has been emptied."
 else
     echo "$g  No changes were made to the file,$c $1$g."
 fi
