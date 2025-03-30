@@ -34,9 +34,20 @@ Cambridge AXA35 integrated amplifier                 399    (Crutchfield)
 Musical Fidelity M3si                               1679    (focalnaimamerica, musicalfidelity.com)
 
 <br>  
+### preamps
+PS Audio StellarGold preamp                         3999    (psaudio.com)
+Schiit Freya+                                        999
+Vincent SA-32                                       1200
+HoloAudio Serene (KTE Edition) preamp               3098    (kitsunehifi.com)
+HoloAudio Serene                                    2698
+Benchmark LA4                                       2600
+PS Audio BHK Signature Preamp                       6000
 
 ### DACs
 Denafrips Enyo 15th                                  699    (denafrips.com)
+Denafrips Ares 15th R-2R DAC                        1200
+Denafrips Pontus 15th R-2R DAC                      1200
+HiFi Rose RD160 DAC                                 5300
 
 Bluesound POWERNODE amp & DAC                       1099    (Crutchfield)
 
@@ -140,4 +151,12 @@ If connecting multiple speakers to a single amp channel:
 ✅ **Avoid mixing different impedance speakers** unless you calculate the total load correctly.  
 ✅ **Use an amp with headroom**—if your speakers are rated at 4Ω, use an amp designed for 4Ω operation.  
 ✅ **If unsure, go with higher impedance speakers (e.g., 8Ω)** to avoid stressing the amp.  
+
+
+
+💰 System Balance Guideline (very loosely)
+Source (DAC/Streamer): 20–30%
+Preamp: 20–30%
+Amp: 20–30%
+Speakers: 30–50%
 
