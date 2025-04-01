@@ -1,0 +1,30 @@
+#! python3
+import sys
+from colored import fg
+from sys import argv
+
+'''
+convert mm to inches 
+1 mm = 0.0393701 inches
+'''
+
+color = fg(214)
+
+def mm_to_in(mm):
+    return round(mm * 0.0393701, 2)
+ 
+def print_usage():
+    print(' usage: mm-in <number> <number>..')
+
+def print_numbers(ns):
+    print()
+    [print(color + str(n).rjust(10), end='') for n in ns]
+    print('\n')
+
+
+try:
+    xs = [int(s) for s in argv[1 : ]]
+    ys = [mm_to_in(x) for x in xs] 
+    print_numbers(ys)
+except:
+    print_usage()
