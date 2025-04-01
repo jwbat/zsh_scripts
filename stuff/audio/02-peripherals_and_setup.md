@@ -1,13 +1,21 @@
 ### peripherals
-WBC Pro Quad XLR cables                                         45    (amazon.com)
-Furman ground loop protection
-AudioQuest PowerQuest G8                
-    Surge protector with 8 AC outlets and USB charging ports    99    (crutchfield)
+WBC Pro Quad XLR cables                                         45      (amazon.com)
+Pangea Audio AC-14 High-performance AC power cable              80      (crutchfield)
+Furman Elite 15i Power line conditioner and surge protector    270      (crutchfield)
+
+--- 
+
+(or LappKabel or Belden power cables)
+iFi AC iPurifier Module power line conditioner                 109      (crutchfield)
+Furman Elite-15 PFi (13-outlets)
+Tacima CS947 mains conditioner (power strip)                    75      (amazon.com)
+AudioQuest PowerQuest G8 Surge protector                        99      (crutchfield)
 
 
 ### Setup
 Streaming Service → 
-    Wiim Pro (Streamer) → 
-        Optical Cable → 
-            External DAC → RCA or XLR → 
-                Amplifier
+    Streamer (optical out) → 
+        DAC (XLR) → 
+            Preamp (XLR)  → 
+                Amplifier → 
+                    Speakers
