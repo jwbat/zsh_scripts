@@ -1,0 +1,6 @@
+#! python
+from colored import fg
+from sys import argv
+
+
+print(fg(220), len(argv[1]))
