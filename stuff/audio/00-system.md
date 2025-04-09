@@ -1,7 +1,7 @@
 Spendor Classic 3/1                                 4475    (stereotypes)
 Galion TS A75 power amplifier                       1495    (galion-audio.com)
 PS Audio StellarGold preamp                         4000    (psaudio.com)
-Denafrips Pontus 15th R-2R DAC                      2019
+Denafrips Pontus 15th R-2R DAC                      2019    (denafrips.com)
 Wiim Pro streamer                                    149
 
 WBC Pro Quad XLR cables                               45      (amazon.com)

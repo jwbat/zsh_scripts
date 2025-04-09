@@ -51,4 +51,57 @@ If hiring an electrician, expect ~$200–$400 for the job.
 
 ---
 
-Want help choosing specific parts or determining if your panel supports it?
+**DC on AC lines (aka "DC offset")** can definitely pollute power and affect the performance of sensitive gear,  
+especially **audio transformers and amplifiers**. 
+
+---
+
+### ⚠️ Most "Dirty Power Filters" Do **Not** Remove DC Offset
+- **Standard EMI/RFI filters** (like surge protectors, line conditioners,  
+or products like the Greenwave plug-ins) are designed to clean **high-frequency noise**,
+not low-frequency issues like **DC offset**.
+- DC offset rides on the 50/60Hz AC sine wave and subtly shifts it off-center — most filters just ignore that.
+
+---
+
+### 🎯 To Remove DC Offset, You Need a **DC Blocker**
+These are specialized filters designed **specifically to remove unwanted DC** from your AC line.
+
+---
+
+### ✅ Devices That Remove DC on the Line
+
+#### 1. **Emotiva CMX-2**
+- **Price:** ~$130
+- **Purpose:** Blocks DC on the AC line.
+- **Bonus:** Has common-mode filtering as well.
+- **Popular with audiophiles.**
+
+#### 2. **iFi Audio DC Blocker+**
+- **Price:** ~$100
+- **Plug-and-play device** that sits inline with your power cable.
+- **Targeted at audio systems**, especially amps and DACs.
+
+#### 3. **Toroidy DC Blocker Kit (DIY)**
+- **Price:** ~$50 (kit form)
+- **More affordable**, requires some assembly.
+- **Designed for toroidal transformer hum prevention** caused by DC offset.
+
+---
+
+### 🔬 Symptoms That Might Mean You Have DC on Your AC Line
+- Transformer **hum or buzz** (especially toroidal types).
+- Amplifiers **running warm** even with no input.
+- Audible noise from gear even after EMI filters are in use.
+
+---
+
+### ✅ Best Practice for Clean Power (Audio Gear)
+| Issue                | Solution Type                 |
+|---------------------|-------------------------------|
+| High-frequency EMI   | EMI/RFI filters (Isobar, etc) |
+| DC offset on AC      | DC blockers (Emotiva, iFi)    |
+| Ground loops         | Ground isolators / lift       |
+| Voltage dips/surges  | Power conditioners / UPS      |
+
+---
