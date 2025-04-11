@@ -1,0 +1,12 @@
+#! python
+from colored import fg
+from datetime import datetime, timezone
+
+
+def current_utc_iso8601():
+    now = datetime.now(timezone.utc)
+    fmt = "%Y-%m-%dT%H:%M:%SZ"
+    return now.strftime(fmt)
+
+
+print(fg(220), current_utc_iso8601())

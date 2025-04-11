@@ -1,0 +1,22 @@
+#! python
+from sys import argv
+from colored import fg
+from datetime import datetime
+
+
+t1, t2 = argv[1], argv[2]
+
+
+def delta_minutes_seconds(start, end):
+    fmt = "%Y-%m-%dT%H:%M:%SZ"
+    t1 = datetime.strptime(start, fmt)
+    t2 = datetime.strptime(end, fmt)
+    if t1 > t2:
+        t1, t2 = t2, t1
+    delta = t2 - t1
+    total_seconds = int(delta.total_seconds())
+    minutes, seconds = divmod(total_seconds, 60)
+    print(f"{minutes} minutes, {seconds} seconds")
+
+
+delta_minutes_seconds(t1, t2)
