@@ -1,52 +1,57 @@
 ### speakers
-Monitor Audio Silver 100 7G*                        1495 (Crutchfield)
-Buchardt P300                                       1500 (buchardtaudio.com)
+Zu Audio DWX                                        2730  zuaudio.com 
+Monitor Audio Silver 100 7G*                        1495  crutchfield 
+Buchardt P300                                       1500  buchardtaudio.com 
 Buchardt S400 MKII                                  2567
 Buchardt E50                                        4324
-Dali Menuet                                         2000 (audiolab.com)
-Amphion Argon1                                      1920 (almaaudio.com)
+Dali Menuet                                         2000  audiolab.com 
+Amphion Argon1                                      1920  almaaudio.com 
 Q Acoustics 5020                                     899 
-Dali Opticon 2 MK2                                  1500 (Crutchfield)
+Dali Opticon 2 MK2                                  1500  crutchfield 
 Dali Oberon 3                                        900 
 Acoustic Energy AE500
 ELAC Debut 3.0 DB63 speakers                         450 
 ELAC DBR62 speakers                                  699 
 Ascend Acoustics Sierra-1 V2                         998 
-Galion TS Voyager MK2 SE speakers                        
-Galion TS Voyager TL Transmission Line speakers     1200 
 Micca 14 Gauge Pure Copper Speaker Wire               39 
+
+### DACs
+Denafrips Ares 15th R-2R DAC                        1200
+Denafrips Enyo 15th                                  699     denafrips.com 
+Denafrips Pontus 15th R-2R DAC                      2019
+HiFi Rose RD160 DAC                                 5300
 
  
 ### AMPs & DACs
-Galion TS A75 power amplifier                       1495    (galion-audio.com)
-Hegel H120 integrated amplifier                     3000    (audioadvice.com)
-Hegel H95 integrated amplifier                      1925    (audioadvice.com)
+Galion TS A75 power amplifier                       1495     galion-audio.com 
+Hegel H120 integrated amplifier                     3000     audioadvice.com 
+Hegel H95 integrated amplifier                      1925     audioadvice.com 
 Hegel H190v integrated amplifier                    4200
-Axxess Forte 1 integrated amp + DAC                 5500    (unveiledaudio.com)
-Exposure 2510 integrated amplifier                  2499    (audionation.ca)
-HiFi Rose RA280 integrated amplifier                2995    (audioadvice.com)
+Audiolab 6000A integrated amplifier & DAC           1199     crutchfield 
+Axxess Forte 1 integrated amp + DAC                 5500     unveiledaudio.com 
+Exposure 2510 integrated amplifier                  2499     audionation.ca 
+HiFi Rose RA280 integrated amplifier                2995     audioadvice.com 
 Galion TS34
-Audiolab 6000A integrated amplifier & DAC           1199    (Crutchfield)
-Cambridge AXA35 integrated amplifier                 399    (Crutchfield)
-Musical Fidelity M3si                               1679    (focalnaimamerica, musicalfidelity.com)
+Cambridge AXA35 integrated amplifier                 399     crutchfield 
+Musical Fidelity M3si                               1679     focalnaimamerica, musicalfidelity.com 
+
+### integrated amps
+Rogue Audio Cronus Dark                             4495
+Rogue Audio Sphinx
 
 <br>  
 ### preamps
-PS Audio StellarGold preamp                         3999    (psaudio.com)
+Rogue Audio RP-7 preamp                             5000     
+HoloAudio Serene (KTE Edition) preamp               3098     kitsunehifi.com 
+Denafrips Athena preamp                             2119
 Schiit Freya+                                        999
 Vincent SA-32                                       1200
-HoloAudio Serene (KTE Edition) preamp               3098    (kitsunehifi.com)
 HoloAudio Serene                                    2698
 Benchmark LA4                                       2600
 PS Audio BHK Signature Preamp                       6000
 
-### DACs
-Denafrips Enyo 15th                                  699    (denafrips.com)
-Denafrips Ares 15th R-2R DAC                        1200
-Denafrips Pontus 15th R-2R DAC                      1200
-HiFi Rose RD160 DAC                                 5300
 
-Bluesound POWERNODE amp & DAC                       1099    (Crutchfield)
+Bluesound POWERNODE amp & DAC                       1099     crutchfield 
 
 
 

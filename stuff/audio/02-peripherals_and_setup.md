@@ -2,6 +2,7 @@
 WBC Pro Quad XLR cables                                         45      (amazon.com)
 Pangea Audio AC-14 High-performance AC power cable              80      (crutchfield)
 Furman Elite 15i Power line conditioner and surge protector    270      (crutchfield)
+Blu-Tack
 
 --- 
 

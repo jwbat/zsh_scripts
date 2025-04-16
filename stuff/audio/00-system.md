@@ -1,15 +1,8 @@
-ProAc Response D2R                                  5300        (stereotypes)
-Galion TS A75 power amplifier                       1495        (galion-audio.com)
-Denafrips Athena preamp                             2119        (denafrips.com)
-Denafrips Pontus 15th R-2R DAC                      2019        (denafrips.com)
-Bluesound Node Nano streamer                         349        (crutchfield.com)
-
-WBC Pro Quad XLR cables                               45        (amazon.com)
-Pangea Audio AC-14 AC power cable                     80        (crutchfield)
-Furman Elite 15i Power                               270        (crutchfield)
+Zu Audio DWX                                        2730        zuaudio.com 
+Rogue Audio Cronus Dark                             4495        audioadvisor.com
+Denafrips Pontus 15th R-2R DAC                      2019        denafrips.com 
+Bluesound Node Nano streamer                         349        crutchfield.com 
 ----------------------------------               -------------------------------
-total                                             11,677
+total                                               9593
+(2730 + 4495 + 2019 + 349)
 
-
-------------------------------------------------------
-  (5300 + 1495 + 2119 + 2019 + 349 + 45 + 80 + 270)
