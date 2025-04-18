@@ -1,0 +1,12 @@
+ $          Where           What
+----        -----           ----
+3400        Brunoco Ltd.    integrated tube amp
+3076        Zu Audio        Speakers
+2019        Denafrips       DAC
+349         Crutchfield     streamer - Bluesound Node Nano
+269         Crutchfield     Furman power station
+69          Crutchfield     AudioQuest Forest USB-C to USB-B
+-----       ------------------------------------------------
+9182        (3400 + 3076 + 2019 + 349 + 269 + 69)
+
+
