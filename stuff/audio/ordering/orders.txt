@@ -1,12 +1,11 @@
- $          Where           What
-----        -----           ----
-3400        Brunoco Ltd.    integrated tube amp
-3076        Zu Audio        Speakers
-2019        Denafrips       DAC
-349         Crutchfield     streamer - Bluesound Node Nano
-269         Crutchfield     Furman power station
-69          Crutchfield     AudioQuest Forest USB-C to USB-B
------       ------------------------------------------------
-9182        (3400 + 3076 + 2019 + 349 + 269 + 69)
-
-
+ $          Where                   What
+----        -----                   ----
+3400        Brunoco Ltd.            Brunoco Terra integrated tube amp
+3076        zuaudio.com             Zu DWX speakers + Mission-LC Mk.III speaker cables
+2019        denafrips.com           Denafrips Pontus 15th DAC
+ 349        crutchfield             Bluesound Node Nano streamer
+ 269        crutchfield             Furman Elite 15i Power line conditioner and surge protector
+  69        crutchfield             AudioQuest Forest USB-C to USB-B
+ 170        thecableco.com          Chord ClearwayX ARAY RCA interconnects (DAC <-> amp)
+-----       ----------------------------------------------------------------------------------------
+9352        (3400 + 3076 + 2019 + 349 + 269 + 69 + 170)

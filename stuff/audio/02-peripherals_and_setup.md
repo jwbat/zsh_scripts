@@ -1,3 +1,9 @@
+### speaker
+Isolation pads  
+    https://www.amazon.com/Isolation-High-Density-Acoustic-Bookshelf-Vibrations/dp/B09H5DKM1P?utm_source=chatgpt.com
+    https://www.fluance.com/high-density-foam-speaker-isolation-pads-sp05?utm_source=chatgpt.com
+
+
 ### peripherals
 WBC Pro Quad XLR cables                                         45      (amazon.com)
 Pangea Audio AC-14 High-performance AC power cable              80      (crutchfield)
