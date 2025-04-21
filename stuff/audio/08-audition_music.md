@@ -5,3 +5,6 @@ Melody Gardot       Mira
 Stephen Moccio      Lionheart
 Touch Yellow        Till Tomorrow
 Sohn                Veto                            soundstage
+Sean Shibe          Lost & Found                    guitars, atmospheric, textures
+Philip Miller       Kaboom                          voice, percussion, strings -large ensemble
+Aphex Twin          Syro
