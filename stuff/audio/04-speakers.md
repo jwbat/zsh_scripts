@@ -1,5 +1,6 @@
                                 H"         W"        D"        Wt. lbs.          $      where
                                -----------------------------   ---------        ----    ----------------------------
+Omega Super Alnico              38         14         9.5        50             4695    omegaloudspeakers.com
 Zu Audio DWX                    23         12        12          42             2730    (supreme) zuaudio.com 
 ProAc Response D2R              17          8        10          24             5300    Stereotypes  
 Dali Rubikore 2                 14          8        13          21             4000

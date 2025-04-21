@@ -1,11 +1,11 @@
- $          Where                   What
-----        -----                   ----
-3400        Brunoco Ltd.            Brunoco Terra integrated tube amp
-3076        zuaudio.com             Zu DWX speakers + Mission-LC Mk.III speaker cables
-2019        denafrips.com           Denafrips Pontus 15th DAC
- 349        crutchfield             Bluesound Node Nano streamer
- 269        crutchfield             Furman Elite 15i Power line conditioner and surge protector
-  69        crutchfield             AudioQuest Forest USB-C to USB-B
- 170        thecableco.com          Chord ClearwayX ARAY RCA interconnects (DAC <-> amp)
------       ----------------------------------------------------------------------------------------
-9352        (3400 + 3076 + 2019 + 349 + 269 + 69 + 170)
+   $          Where                   What
+  ----        -----                   ----
+  4695        omegaloudspeakers.com   Omega Super Alnico High Output XRS
+  3400        Brunoco Ltd.            Brunoco Terra integrated tube amp
+  2019        denafrips.com           Denafrips Pontus 15th DAC
+   349        crutchfield             Bluesound Node Nano streamer
+   269        crutchfield             Furman Elite 15i Power line conditioner and surge protector
+    69        crutchfield             AudioQuest Forest USB-C to USB-B
+   170        thecableco.com          Chord ClearwayX ARAY RCA interconnects (DAC <-> amp)
+------       ----------------------------------------------------------------------------------------
+10,971      (4695 + 3400 + 2019 + 349 + 269 + 69 + 170)

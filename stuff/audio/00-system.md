@@ -1,12 +1,12 @@
 components
 ----------
-Zu Audio DWX                                        2730        zuaudio.com            23" x 12" x 12", 42 lbs
+Omega Super Alnico High Output XRS                  4695        omegaloudspeakers.com  38"H x 14"W x 9.5"D, 50 lbs.
 Brunoco Terra integrated tube amp                   3400        brunocoaudio.com       15" x 13" x 7",  44 lbs
 Denafrips Pontus 15th R-2R DAC                      2019        denafrips.com          13" x 13" x 3",  19 lbs
 Bluesound Node Nano streamer                         349        crutchfield.com 
 ----------------------------------               -------------------------------
-total                                               8498
-(2730 + 3400 + 2019 + 349)
+total                                             10,463 
+(4695 + 3400 + 2019 + 349)
 
 
 peripherals
