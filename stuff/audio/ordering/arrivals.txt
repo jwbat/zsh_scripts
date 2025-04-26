@@ -1,11 +1,15 @@
-From                    What                                        When                                Arrived   (***)
+From  arrived= ***      What                                        When                                Arrived   
 ---------------------   -------------------------------------       --------------------------------    -----------------
 omegaloudspeakers.com   Omega Super Alnico High Output XRS          May 12 - 16
 Brunoco Ltd.            Brunoco Terra integrated tube amp                     Apr 28
-denafrips.com           Denafrips Pontus 15th DAC                    ?
-crutchfield             Bluesound Node Nano streamer                                Apr 25
-crutchfield             Furman Elite 15i Power                                      Apr 25
-crutchfield             AudioQuest Forest USB-C to USB-B                            Apr 25  
-thecableco.com ***      Chord ClearwayX ARAY RCA interconnects                                          Apr. 23     ***
-amazon.com              Micca 14 Gauge Pure Copper Speaker Wire,                  Apr. 27
+denafrips.com           Denafrips Pontus 15th DAC                           Apr 30
+crutchfield    ***      Bluesound Node Nano streamer                                                              Apr 25
+crutchfield    ***      Furman Elite 15i Power                                                                    Apr 25
+crutchfield    ***      AudioQuest Forest USB-C to USB-B                                                          Apr 25  
+thecableco.com ***      Chord ClearwayX ARAY RCA interconnects                                                      Apr 23        
+amazon                  Micca 14 Gauge Pure Copper Speaker Wire,                  Apr. 27
                         12 Feet, Gold Plated Banana Plugs
+crutchfield             iFi iPower X (5V)                                    Apr 29
+                          streamer > iFi > Furman > wall
+amazon                  Furutech GTX-D NCF(R)                             May 2
+                        Furutech 104-D Carbon Fiber AC                    May 2
