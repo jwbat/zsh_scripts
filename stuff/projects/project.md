@@ -1,12 +1,22 @@
+ ✅ 
+
      ----------
      priorities
      ----------
- ✅ 
 
-✅1. Complete device documentation for hand off to API (Parker)
-✅2. Reproduce Milesight “Refresh” test using the UG63 and report outcome to MS
-✅3. Reproduce UG63 in BasicSation mode issue: Tstat takes LONG time to join compared to other devices (maybe HW V2 fixes this?)
-✅4. Barry has observed that when he runs a Schedule on v1,
-   if he overrides the Set Point with Tstat buttons,
-   it doesn’t always resume on the next Schedule transition.
-   Need to try to reproduce this and report it (maybe V2 fixes?)
+Projects
+* Test FUOTA on AWS with WT201 V2
+* Python script to better automate batch registration of devices (for mfg/ops)
+* Study Humidity Control logic of WT201 V2
+
+---
+
+* let's have a request to MS with 2 parts:   
+    a) confirm the versioning interpretation above 
+    b) ask for patch to revert 1.2 -> 1.1
+
+* multi-cast will be straightforward b/c AWS more or less merely asks for more devices to be added.
+    The task is configured with a line or 2 for multi-task.
+* my present sense is - do multi-cast everywhere on every device with the right starting version, v1.1.
+  Schedule it for an off-hour like 2:00 a.m. or similar.  Time zone influence on scheduling - ?
+

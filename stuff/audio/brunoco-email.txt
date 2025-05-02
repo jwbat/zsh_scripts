@@ -1,275 +1,662 @@
 
-Hello James,
-Wow you went for full range drivers!
-You may want 300B tubes as well haha.
+    Hello James,
+    Wow you went for full range drivers!
+    You may want 300B tubes as well haha.
+
+    Your TERRA 6L6PP shipped today and it will arrive early next week.
+
+    I am thinking of some Q&A forum  on my website, but it will take time.
+    In the meantime, I am attaching some emails between my customers regarding
+    6L6PP vs. 300B(long~).
+
+    Let me know if you have any questions!
+    Cheers,
+    Kiho
+
+    300B VS. 6L6PP
+
+    300B has crystal clear highs but 6L6PP has tight, deep, and fuller bass.
+
+    Single ended (2A3, 300B) has their own characteristics
+    especially in the high frequency, so transparent and clear.
+
+    But mid freq, 6L6PP is much fuller and especially 6L6PP bass is astounding.
+
+    In bass, 300B cannot match the speed of 6L6PP.
+
+    If you use high efficiency(95dB+) horn or full range and mainly listen
+    to vocal or chamber, then 300B can be an answer.
+
+    However, if you want some symphony or rock music including lush Jazz,
+    6L6PP can be the answer.
+
+     
+    6L6PP: perfect control of bass, very fast and articulate.
+             fuller mid, clear high
+             better for orchestra, rock, lush jazz
+           speaker efficiency: 80-90dB recommended(but many happy customers with 100dB+ horn speakers)
+           https://brunocoaudio.com/pages/customer-reviews
+     
+    300B(2A3): luscious high 
+                 best for acoustic, vocal, chamber music
+              speaker efficiency: 90dB+ recommended
+     
+     
+    JEFF, TEXAS 
+    Email between my customer JEFF(who bought both TERRA 6L6PP and TERRA 300B) and other audiophile
+     
+    A. 240521
+    They are both great pieces and great values. Built like tanks (or
+    battleships really) super nice fit and finish and if you opt for remote volume, it works very well on both amps.
+
+    Not knowing what speakers you are driving and what efficiency, I’ll just
+    say this; the 6L6 PP punches above its weight class. I have
+    driven speakers all the way down to 87dB with it - not
+    stadium rock at full volume, but pretty loud. It doesn’t run out
+    of power easily. And what’s more it has the dynamic and full
+    sound that a big amp (100 or 200 wpc) can give you
+    but also has the intimacy, juiciness, and fine detail of a 20
+    watt tube amp. Mine came with JJ tubes, the amp is quite
+    neutral so you can dial in the sound with tube rolling. I’ve
+    enjoyed the Gold Lion KT66, but the Tung-Sol 7581A and especially 
+
+    the Tung-Sol 7027A really are nice with that amp and a few
+    different Omega speakers (really all speakers I’ve tried it on).
+
+    Kiho can tell you the whole extensive list of outputs you can
+    try but I only have sufficient hours on the aforementioned to comment.
+    Also more 12AU7 variants than most input types, so it will take
+    years of fun to try all the possibilities. With the stock tubes,
+    mine had get up and go right out of the box. Dynamic
+    with deep bass slam and a lively character, took the usual 200
+    to 300 hours to break-in. I know dynamic, deep bass slam and
+    zero feedback, low power tube amp sounds like a dichotomy or mutually
+    exclusive, but that’s what makes it so great!
+
+    The 300B sounds exactly like you think it should. Mine came with
+    perforated plate Chinese Psvane tubes. Deep, rich, succulent sound with a very
+    sweet top! Kiho burned mine in for a couple of weeks and
+    I could tell - It’s the best sounding 300B amp by far in
+    that price range I know of. Be aware it uses AC heating
+    and depending on tube choice the hum pots can only dial the
+    hum down so low. 94 or 95 dB speakers, you can get
+    the hum way down to where it doesn’t matter and with different
+    tubes possibly down to about zero. But if you are using 105dB
+    horns like any AC heated DHT amp - there WILL be some
+    hum. ->Now at production version, TERRA 300B is very quiet with no hum/no hum pots!
+
+    I am currently driving 88 dB efficient Ascend Acoustics Sierra 2EX Version 2
+    - very stiffly braced solid wood cabinets (proprietary SEAS 6 inch with RAAL
+    4ish inch ribbon) with port plugs inserted which makes it a sealed
+    enclosure that is even less efficient than rated and doesn’t go as
+        low as with port plugs out, but I’m using a pair of
+    REL S/510 running off the speaker taps and it’s surprisingly loud in
+    my 12x15 office and it REALLY sounds good on those inefficient speakers.
+    I did not turn it up super loud as with only 7 or
+    8 watts you have to be realistic. I should tell you the RAAL
+    (like most ribbons) are super revealing as in don’t even try a
+    transistor amp on them - with the 6L6 version the tweeters are
+    sweet enough and still quite revealing, with the 300B version they are
+    super airy, delicate and sweet and the mids everyone wants and compelling bass.
+
+     
+
+    The cool thing is all the speakers and the REL subs driven
+    from the speaker taps of either amp have the deep tight punch
+    and grrrr usually only associated with solid state at super low frequencies
+    - but with the depth of soundstage, delineation of timber, and sweet top
+    end even with ribbons and stats that transistors can never do in
+    their wildest dreams. Keep in mind the RELs have that deep grrrr
+    coming from the Terra amps so it blends perfectly - most tube amps cannot do that.
+
+     
+
+    I would say if you can live with the limitations of a 300B
+    amp - go for it - BUT UNDERSTAND you won’t have enough
+    power to play inefficient speakers loud or a black enough background on
+    super efficient speakers due to AC heating.  BTW AC heating is employed
+    in the vast majority of 300B amps because 1) it sounds better
+    and 2) DC heating is harder on DHTs (shortening the life of
+    the tube) according to the original Western Electric specs, and most 300B
+    tube makers and amp builders seem to agree. It’s just the nature
+        of the beast that you have a narrow efficiency range with 300Bs.
+    Also, I have tried a lot of different 300Bs in the Terra
+    and even the cheap ones sound good (they just get better better
+    as you pay more!!!), and it is also neutral enough to make
+    for lots of tube rolling fun.
+
+     
+
+    Also don’t get me wrong you can just plug in the tubes
+    that come with either amp and be done. It’s just that tube
+    rolling is not only fun, but it will keep an amp in
+    the family for years, even decades as when you change speakers and
+    find the sound too fat or too lean you can get leaner
+    or fatter sounding tubes or if the sound is too bright, darker
+    sounding tubes, or if the perspective is too laid-back, you can get
+    more forward tubes and so on - thus the price of a
+    set of tubes essentially gives you a whole new amplifier. And three
+    or four sets of tubes gives you three or four different sounding
+    amplifiers to suit your mood. Not only can transistor amplifiers not do
+    that, but most tube amplifiers are voiced for a particular tube rather
+    than being neutral and thus don’t have as many tube rolling options.
 
-Your TERRA 6L6PP shipped today and it will arrive early next week.
+     
 
-I am thinking of some Q&A forum  on my website, but it will take time.
-In the meantime, I am attaching some emails between my customers regarding 6L6PP vs. 300B(long~).
+    You really cannot go wrong with either choice, it’s simply a question
+    of speaker, efficiency and whether or not you are addicted to SET
+    sound. I used to be but the speaker limitations eventually got me
+    to go back to the wide range of octal choices. Remember the
+    6L6 PP has just about three times the power of the 300B
+    amp, that’s 6 dB more efficiency you have when choosing speaker pairings.
+        And that is a whole lot.
 
-Let me know if you have any questions!
-Cheers,
-Kiho
+     
+    I wish I knew you, your musical tastes, your sources, your room, your
+    preferred loudness level, what speakers you aspire to next-but that would take
+    longer than either of us have.
 
-300B VS. 6L6PP
+     
 
-300B has crystal clear highs but 6L6PP has tight, deep, and fuller bass.
+    So TLDR, the Terra 6L6 PP sounds as good as many DHT
+    SETs, and offers the versatility of 20 W per channel at a
+    SUPER affordable price and frankly sounds like more power than that. The
+    Terra 300B sounds as good as 300B amps costing WAAAAAY more. I
+    bought the 6L6 PP because of Jay‘s review, which is an accurate
+    review even as over the top as it is. I bought the
+    300B based on how much I liked the 6L6 PP. At this
+    point, I can’t part with either of them so they are both in systems in different rooms.
 
-Single ended (2A3, 300B) has their own characteristics especially in the high frequency, so transparent and clear.
+     
 
-But mid freq, 6L6PP is much fuller and especially 6L6PP bass is astounding.
+    Hope this helps, enjoy the music,
 
-In bass, 300B cannot match the speed of 6L6PP.
+     
 
-If you use high efficiency(95dB+) horn or full range and mainly listen to vocal or chamber, then 300B can be an answer.
+    B.241115
 
-However, if you want some symphony or rock music including lush Jazz, 6L6PP can be the answer.
+    Hi John,
 
- 
-6L6PP: perfect control of bass, very fast and articulate.
-         fuller mid, clear high
-         better for orchestra, rock, lush jazz
-       speaker efficiency: 80-90dB recommended(but many happy customers with 100dB+ horn speakers)
-       https://brunocoaudio.com/pages/customer-reviews
- 
-300B(2A3): luscious high 
-             best for acoustic, vocal, chamber music
-          speaker efficiency: 90dB+ recommended
- 
- 
-JEFF, TEXAS 
-Email between my customer JEFF(who bought both TERRA 6L6PP and TERRA 300B) and other audiophile
- 
-A. 240521
-They are both great pieces and great values. Built like tanks (or battleships really) super nice fit and finish and if you opt for remote volume, it works very well on both amps.
+    I’m using re-built crossover Reference RT-7s (8 inch transmission line loaded woofer,
+    7 inch ribbon tweeter) about 90 or 91 dB efficient. A pair of
+        Rel S/510s on the bottom. Very 3D!
 
-Not knowing what speakers you are driving and what efficiency, I’ll just say this; the 6L6 PP punches above its weight class. I have driven speakers all the way down to 87dB with it - not stadium rock at full volume, but pretty loud. It doesn’t run out of power easily. And what’s more it has the dynamic and full sound that a big amp (100 or 200 wpc) can give you but also has the intimacy, juiciness, and fine detail of a 20 watt tube amp. Mine came with JJ tubes, the amp is quite neutral so you can dial in the sound with tube rolling. I’ve enjoyed the Gold Lion KT66, but the Tung-Sol 7581A and especially 
+    Other 300B amps run out of gas on these, however the Brunoco doesn’t.
 
-the Tung-Sol 7027A really are nice with that amp and a few different Omega speakers (really all speakers I’ve tried it on).
+     
 
-Kiho can tell you the whole extensive list of outputs you can try but I only have sufficient hours on the aforementioned to comment. Also more 12AU7 variants than most input types, so it will take years of fun to try all the possibilities. With the stock tubes, mine had get up and go right out of the box. Dynamic with deep bass slam and a lively character, took the usual 200 to 300 hours to break-in. I know dynamic, deep bass slam and zero feedback, low power tube amp sounds like a dichotomy or mutually exclusive, but that’s what makes it so great!
+    I originally bought the 6L6PP as an office amp, however upon listening, I
+    realized Bruno (Kiho) really knew something about the old RCA (theater amp
+    circuits). I enjoy old movies beginning with "talkies” - if you listen
+    carefully the RCA Sound System had better bass, and lower distortion, while
+    the Western Electric System had more top end (and distortion) and more dynamic range.
 
-The 300B sounds exactly like you think it should. Mine came with perforated plate Chinese Psvane tubes. Deep, rich, succulent sound with a very sweet top! Kiho burned mine in for a couple of weeks and I could tell - It’s the best sounding 300B amp by far in that price range I know of. Be aware it uses AC heating and depending on tube choice the hum pots can only dial the hum down so low. 94 or 95 dB speakers, you can get the hum way down to where it doesn’t matter and with different tubes possibly down to about zero. But if you are using 105dB horns like any AC heated DHT amp - there WILL be some hum. ->Now at production version, TERRA 300B is very quiet with no hum/no hum pots!
+     
 
-I am currently driving 88 dB efficient Ascend Acoustics Sierra 2EX Version 2 - very stiffly braced solid wood cabinets (proprietary SEAS 6 inch with RAAL 4ish inch ribbon) with port plugs inserted which makes it a sealed enclosure that is even less efficient than rated and doesn’t go as low as with port plugs out, but I’m using a pair of REL S/510 running off the speaker taps and it’s surprisingly loud in my 12x15 office and it REALLY sounds good on those inefficient speakers. I did not turn it up super loud as with only 7 or 8 watts you have to be realistic. I should tell you the RAAL (like most ribbons) are super revealing as in don’t even try a transistor amp on them - with the 6L6 version the tweeters are sweet enough and still quite revealing, with the 300B version they are super airy, delicate and sweet and the mids everyone wants and compelling bass.
+    Bottom line: I was so impressed with the 6L6PP and Kiho’s knowledge
+    of power supplies, transformers, and what lets the music through encumbered, that
+    I bought the 300B without knowing anything about it. They both way outclass
+    anything I’m aware of in their price range. I am a bit
+    of an SET fan, and I listen to the 300B Brunoco as
+    much or more than anything I own. I think Kiho is doing
+    this out of love of hi-fi rather than a profit making business.
+    Once you see and hear one of his amps, you’ll realize how
+    much you are getting for your money AND made in a first
+    world democracy rather than a communist slave labor country.
 
- 
+     
 
-The cool thing is all the speakers and the REL subs driven from the speaker taps of either amp have the deep tight punch and grrrr usually only associated with solid state at super low frequencies - but with the depth of soundstage, delineation of timber, and sweet top end even with ribbons and stats that transistors can never do in their wildest dreams. Keep in mind the RELs have that deep grrrr coming from the Terra amps so it blends perfectly - most tube amps cannot do that.
+    Also, tube rolling the 6SN7s is as effective as rolling the 300Bs.
+    You will spend a great deal more on tubes with the 300B
+    (anyone’s 300B amp), but for me it’s worth it.
 
- 
+     
 
-I would say if you can live with the limitations of a 300B amp - go for it - BUT UNDERSTAND you won’t have enough power to play inefficient speakers loud or a black enough background on super efficient speakers due to AC heating.  BTW AC heating is employed in the vast majority of 300B amps because 1) it sounds better and 2) DC heating is harder on DHTs (shortening the life of the tube) according to the original Western Electric specs, and most 300B tube makers and amp builders seem to agree. It’s just the nature of the beast that you have a narrow efficiency range with 300Bs. Also, I have tried a lot of different 300Bs in the Terra and even the cheap ones sound good (they just get better better as you pay more!!!), and it is also neutral enough to make for lots of tube rolling fun.
+    Lastly, these are the first integrated amps I’ve owned since college (it
+    is my belief separates are superior). Once the lights are dimmed and
+    the music starts playing however, I no longer care with the Brunocos
+    (as long as I see some tubes glowing somewhere). If 8 watts
+    will do it for you and you don’t mind tube rolling (for
+    the depth and shimmer you require) the 300B is it.
 
- 
+     
 
-Also don’t get me wrong you can just plug in the tubes that come with either amp and be done. It’s just that tube rolling is not only fun, but it will keep an amp in the family for years, even decades as when you change speakers and find the sound too fat or too lean you can get leaner or fatter sounding tubes or if the sound is too bright, darker sounding tubes, or if the perspective is too laid-back, you can get more forward tubes and so on - thus the price of a set of tubes essentially gives you a whole new amplifier. And three or four sets of tubes gives you three or four different sounding amplifiers to suit your mood. Not only can transistor amplifiers not do that, but most tube amplifiers are voiced for a particular tube rather than being neutral and thus don’t have as many tube rolling options.
+    Wish I could say more. . .
 
- 
+     
 
-You really cannot go wrong with either choice, it’s simply a question of speaker, efficiency and whether or not you are addicted to SET sound. I used to be but the speaker limitations eventually got me to go back to the wide range of octal choices. Remember the 6L6 PP has just about three times the power of the 300B amp, that’s 6 dB more efficiency you have when choosing speaker pairings. And that is a whole lot.
+    j
 
- 
 
-I wish I knew you, your musical tastes, your sources, your room, your preferred loudness level, what speakers you aspire to next-but that would take longer than either of us have.
 
- 
 
-So TLDR, the Terra 6L6 PP sounds as good as many DHT SETs, and offers the versatility of 20 W per channel at a SUPER affordable price and frankly sounds like more power than that. The Terra 300B sounds as good as 300B amps costing WAAAAAY more. I bought the 6L6 PP because of Jay‘s review, which is an accurate review even as over the top as it is. I bought the 300B based on how much I liked the 6L6 PP. At this point, I can’t part with either of them so they are both in systems in different rooms.
+    On Nov 15, 2024, at 11:20 AM, John wrote:
 
- 
+    ﻿What type of speakers are you using with your Brunoco 300B?
 
-Hope this helps, enjoy the music,
+     
 
- 
+    Thanks.
 
-B.241115
+     
 
-Hi John,
+    John
 
-I’m using re-built crossover Reference RT-7s (8 inch transmission line loaded woofer, 7 inch ribbon tweeter) about 90 or 91 dB efficient. A pair of Rel S/510s on the bottom. Very 3D!
+     
 
-Other 300B amps run out of gas on these, however the Brunoco doesn’t.
+    On Nov 13, 2024, at 2:38 PM, JM wrote:
 
- 
+    ﻿
 
-I originally bought the 6L6PP as an office amp, however upon listening, I realized Bruno (Kiho) really knew something about the old RCA (theater amp circuits). I enjoy old movies beginning with "talkies” - if you listen carefully the RCA Sound System had better bass, and lower distortion, while the Western Electric System had more top end (and distortion) and more dynamic range.
+    Thanks, Jeff. I wasn’t expecting such a quick response. 
 
- 
+     
 
-Bottom line: I was so impressed with the 6L6PP and Kiho’s knowledge of power supplies, transformers, and what lets the music through encumbered, that I bought the 300B without knowing anything about it. They both way outclass anything I’m aware of in their price range. I am a bit of an SET fan, and I listen to the 300B Brunoco as much or more than anything I own. I think Kiho is doing this out of love of hi-fi rather than a profit making business. Once you see and hear one of his amps, you’ll realize how much you are getting for your money AND made in a first world democracy rather than a communist slave labor country.
+    My dilemma is choosing between the Terra 6L6PP or the Terra 300B.
+    I am listening to Acoustic Technologies Classic loudspeakers. They use a single 3-inch
+    driver in a back-loaded horn configuration. The efficiency is rated at 8
+    ohms with having a 93dB sensitivity - no crossover. I have a
+    REL T5 doing low end duty with Townshend super tweeters up top.
+    I mostly stream in jazz sitting in a medium size room, 14 x
+    17 feet. I don’t listen at loud volumes but, I do like
+    having image density and fullness served up well done.
 
- 
+     
 
-Also, tube rolling the 6SN7s is as effective as rolling the 300Bs. You will spend a great deal more on tubes with the 300B (anyone’s 300B amp), but for me it’s worth it.
+    I did trial an Allnic HP300 amp recently but had to pare back
+    my cash outlay due to a family situation. That 300B amp had
+    such nice tonal richness and “music power” it was hard to believe
+    the amount of dig the bass had to it. However, the top
+    end was missing shimmer and sheen. Plus, I had a hard time
+    hearing into the back of the sound field with the amount of
+        clarity I am used to hearing. I like clarity with my cream.
+    Allnic recommended to try a couple versions of 300B tubes by a
+    Korean company called, Stradi. But, that was not to come about.
 
- 
+     
 
-Lastly, these are the first integrated amps I’ve owned since college (it is my belief separates are superior). Once the lights are dimmed and the music starts playing however, I no longer care with the Brunocos (as long as I see some tubes glowing somewhere). If 8 watts will do it for you and you don’t mind tube rolling (for the depth and shimmer you require) the 300B is it.
+    At any rate, I am retired and after being in this hobby
+    for almost 50 years, and going through many amplifiers ( the exception
+        being a GAS Son of Ampzilla), I am looking forward getting the
+        definitive amp I can sail into the sunset with. 
 
- 
+     
 
-Wish I could say more. . .
+    Thanks much, Jeff.
 
- 
+     
 
-j
+    John
 
+    Omaha
 
+     
 
+    On Nov 13, 2024, at 1:50 PM, J wrote:
 
-On Nov 15, 2024, at 11:20 AM, John wrote:
+    ﻿﻿If you’re looking for a 300B amp the Brunoco is fantastic choice!
 
-﻿What type of speakers are you using with your Brunoco 300B?
+    As you must be aware 300B tubes vary in price from very
+    expensive to stratospheric. My Brunoco came with Chinese, sort of mesh, really
+    punched plate tubes - about the cheapest 300B out there - and I was immediately pleased.
 
- 
+    It had a sweet, rather ethereal treble, really good midrange, and surprisingly
+    good bottom end. It was then and still is the most dynamic
+    300B amp in my stable. Literally, I’ve never heard eight watts be so dynamic.
 
-Thanks.
+    Mine is righteously heavy, has great case work and build quality (I did get the remote option).
 
- 
+    Be aware, the amp has good enough internals to let you experience
+    the full plethora of 300 tubes. I probably have more than half
+    of what’s currently available and can tell you when you move up
+    the ladder of better tubes you will definitely be rewarded. In other words, the Brunoco
+    is a lifetime keeper. 
 
-John
+    I am currently running Elrog TM300B tubes in it. . .fantastic sound! I
+    can also recommend Western Electric 300B and Cryotone 300B. The money spent
+    on tubes will reward you. You won’t believe that at first because
+    it sounds sooooo nice with stock tubes. Seriously, as the years go
+    by and the itch grabs you, a pair of higher end 300B
+    tubes is all you’ll need - it’s like a whole new amp!
+    In short this amp has all the magic, plus deep tight bass,
+    and a sweet smooth top end with an extra kick - a
+    bit of power instead of the usual sag of other 300B amps.
+    If you want a high end 300B amp and have ~$3,500 to spend. . .you can’t go wrong!
 
- 
-
-On Nov 13, 2024, at 2:38 PM, JM wrote:
-
-﻿
-
-Thanks, Jeff. I wasn’t expecting such a quick response. 
-
- 
-
-My dilemma is choosing between the Terra 6L6PP or the Terra 300B. I am listening to Acoustic Technologies Classic loudspeakers. They use a single 3-inch driver in a back-loaded horn configuration. The efficiency is rated at 8 ohms with having a 93dB sensitivity - no crossover. I have a REL T5 doing low end duty with Townshend super tweeters up top. I mostly stream in jazz sitting in a medium size room, 14 x 17 feet. I don’t listen at loud volumes but, I do like having image density and fullness served up well done.
-
- 
-
-I did trial an Allnic HP300 amp recently but had to pare back my cash outlay due to a family situation. That 300B amp had such nice tonal richness and “music power” it was hard to believe the amount of dig the bass had to it. However, the top end was missing shimmer and sheen. Plus, I had a hard time hearing into the back of the sound field with the amount of clarity I am used to hearing. I like clarity with my cream. Allnic recommended to try a couple versions of 300B tubes by a Korean company called, Stradi. But, that was not to come about.
-
- 
-
-At any rate, I am retired and after being in this hobby for almost 50 years, and going through many amplifiers ( the exception being a GAS Son of Ampzilla), I am looking forward getting the definitive amp I can sail into the sunset with. 
-
- 
-
-Thanks much, Jeff.
-
- 
-
-John
-
-Omaha
-
- 
-
-On Nov 13, 2024, at 1:50 PM, J wrote:
-
-﻿﻿If you’re looking for a 300B amp the Brunoco is fantastic choice!
-
-As you must be aware 300B tubes vary in price from very expensive to stratospheric. My Brunoco came with Chinese, sort of mesh, really punched plate tubes - about the cheapest 300B out there - and I was immediately pleased.
-
-It had a sweet, rather ethereal treble, really good midrange, and surprisingly good bottom end. It was then and still is the most dynamic 300B amp in my stable. Literally, I’ve never heard eight watts be so dynamic.
-
-Mine is righteously heavy, has great case work and build quality (I did get the remote option).
-
-Be aware, the amp has good enough internals to let you experience the full plethora of 300 tubes. I probably have more than half of what’s currently available and can tell you when you move up the ladder of better tubes you will definitely be rewarded. In other words, the Brunoco
-is a lifetime keeper. 
-
-I am currently running Elrog TM300B tubes in it. . .fantastic sound! I can also recommend Western Electric 300B and Cryotone 300B. The money spent on tubes will reward you. You won’t believe that at first because it sounds sooooo nice with stock tubes. Seriously, as the years go by and the itch grabs you, a pair of higher end 300B tubes is all you’ll need - it’s like a whole new amp! In short this amp has all the magic, plus deep tight bass, and a sweet smooth top end with an extra kick - a bit of power instead of the usual sag of other 300B amps. If you want a high end 300B amp and have ~$3,500 to spend. . .you can’t go wrong!
-
- 
-
-Hope this helps.
-
- 
-
-jOn Nov 13, 2024, at 12:20 PM, JM wrote:
-
-﻿Hello Jeff,
-
-I have been considering buying a Brunoco amp and have been struggling on making a decision. There is so little info out there on the 300B version. It’s been like searching in the dark with a dim flashlight. I sent a few questions to Brunoco asking for more information and asked permission if it was okay to contact you.
-
-If you have time, and with your permission, I would appreciate your input and opinions on which amp to buy. A phone call or email, either way is appreciated.
-
-Thank you for considering the request.
-
-Best,
-
-John
-
- 
- 
- 
-B.241222
-
- 
-﻿Good afternoon Vince,
-
-Just got back from last minute Christmas shopping and now changing clothes so we can be off to dinner, so let me see if can address some of what you mention while I’m in front of a computer.
-
-First, wow, quite an email! I can’t possibly address everything, however, I will mention a couple of things that may shed some light.
-
-1) A speaker over ~95/96 dB efficient can begin to reveal noise in any system and for better or worse all AC heated 300B tubes will hum to some degree or another, it’s a matter of whether you can hear it in your system. If the hum and noise rating of an amp is minus 100 dB you are good to go with speakers in the mid 90dB efficiency range. . .unless your set of tubes starts to hum a bit more loudly than before - As in they still sound great, they are not worn out, but they make a bit of noise. 300Bs were designed for alternating current heating and supposedly DC heated units (headphone amplifiers) don’t sound quite as nice all else being equal. Also direct current heating is reputedly harder on 300B tubes, burning through them about 30 to 35% faster. Kiho does provide hum pots right on the top plate of the amp, thus adjusting for the lowest hum level is a snap.
-
-Hum, buzzing, transistor hiss and tube rush really bug the cr@p out of me, consequently, just about my entire stable of speakers are ~95 dB efficient or lower. That fact keeps me well away from noise problems. Think of the shows or concerts you’ve been to where the PA speakers hummed, buzzed, hissed, etc., when the musicians were not playing - it’s inevitable, PA speakers have to be super efficient to fill an auditorium and consequently, you will hear noise from any amplifier being used.
-
-I have not encountered any noise or hum problems with the Terra 300B, in fact it is as quiet or quieter than other 300B amps I have, but again my speakers range from 84 to about 95 dB efficiency. Having said all that, if you go with a speaker even a touch more efficient (like even 97dB), you may or may not run into hum, tube rush or transistor hiss (transistor hiss is particularly problematic as there are no user changeable or serviceable parts in a soiled state amp) - it’s the nature of the efficient speaker beast. Terra 6L6 because of the tubes used is quieter at higher volumes, and of course it’s more than twice the power of the 300B amp, In fact, the Terra 6L6 is quieter than some transistor amps I’ve had.
-
-2) Coming from a different angle than Kiho a bit here, as you specifically mention big band, rock and large orchestra as well as playing at auditorium levels once in a while. The 6L6 is better suited for all of the above. Not that a 300B can’t rock, but to do so it requires a rather efficient speaker, and again the more efficient the speaker, the more noise you may encounter when really pushing up the volume. When one goes to auditorium SPL levels, there’s a fairly narrow band or sweet spot between efficient enough to play that loudly and being too efficient, thus revealing system noise. Kiho’s 300B amp is quiet relative to other 300B amps and it’s very dynamic (although the 6L6 is quieter and also quite dynamic), so you may be fine with either one.
-
-With most tube sets, I have tried in the Terra 300B, I have to turn the volume control up all the way to detect hum when adjusting the hum pots, way higher on the volume knob than the speakers could stand if playing. I do this more for peace of mind so that whatever 300B amp I’m listening to is even quieter (although I didn’t hear any hum to start with) than if I hadn’t adjusted before beginning my listening session. Because I roll tubes all the time, the quietest spot is always different - BUT I don’t mean to scare you. . .It is not a problem, but instead great fun, and once you get into tubes, you won’t look back. So many people avoid tube gear because they are afraid a tube will fail, or after some number of years the tubes will wear out. One should really think of it as tires on a car. Yes occasionally one goes flat and for a tiny fraction of the cost of a new car one replaces the tire. Also with a transistor amp one has to live with it’s particular sound signature, there is simply no changing it. With a tube amp, for small fraction of the price of a new amp one can change the sound signature - in fact, I recommend after letting the amp and original tubes break in for a few hundred hours, it’s good clean fun to experiment with tube rolling. It is usually true that one can find multiple sets of tubes that work better with different types of music or mood. It’s like having three or four or more different amplifiers to suit your taste while spending soooooo much less money than keeping lots of different amplifiers on hand would cost.
-
-3) These are not your dad’s old McIntosh or Marantz units that sound super pretty but just lay there and don’t really get up and go. Both the Terras will get up and go nicely within their respective power ratings! However, they still will give you the pretty, sweet, holographic, can listen all day without ear fatigue magic that only tubes can give you. I will also say the transformers are absolutely "killer", as both amps couple very well with every speaker I own (about a dozen pair), and I’ve NEVER had that happen with other amplifiers.
-
-4) While I have not heard the Pure Audio Project speakers specifically, I’ve owned and heard many open baffle/dipole speakers (electrostats, ribbons, planer magnetic as well as dynamic open baffle like the Pure Audio Project including several Decware units. I can tell you that regardless of the efficiency rating of open baffle speakers, they do tend to do better with more power and more dynamic swing to achieve a believable sound pressure level. If going that route, it’s just another reason to consider Terra 6L6.
-
-Tube rolling a 300B amp, even with the least costly tubes is EXPENSIVE! And if you want the really good tubes, you’re looking at maybe $1500 to well over $3000 for a single pair of power tubes. That same money can buy you perhaps 6 or even 8 quads of 6L6 power tubes, including some pretty nice NOS units - Lots of different flavors for different moods and different music types. And don’t forget rolling the 6SN7s regardless of which amp you choose as they will make as much difference as the power tubes.
-
-5) Since this is your first foray into tubes let me just mention a couple of things about 6L6s, 300Bs and Brunoco. . . If you read folks who have limited experience, you will read that the 6L6 is a guitar tube and while it’s popular with electric guitar players, it certainly was not invented for that purpose. It was invented to be the most powerful, lowest distortion, and most linear high fidelity power tube that RCA engineers could make. Many argue it has never been bested, continually refined, yes, but never bested. 6L6 is the oldest and longest continually produced tube in human history - because it simply sounds great in so many applications, it really kicks @ss! First produced by RCA, as a major refinement of a Marconi Osram (EMI/GEC England) design, it instantly became the most popular power tube on the planet. Used in radio sets, PA amps, recording studios, transmitters, music amplifiers, everywhere really. RCA kept refining it for decades and everyone else was playing catch up. It reproduces the human voice and piano (two of the hardest sounds to reproduce realistically), and it will do it so well (think original RCA theater sound systems) while also having the ability to rock out. Almost all power tubes invented since are simply more powerful, not better sounding necessarily. Sure, everyone has their favorite power tube but that there has been continuous demand and continuous production since 1936 until now speaks volumes. And again at more than twice the power output of the Terra 300B. Also Brunoco’s 6L6 Terra is a push pull design, think more grip, more jump, more pop, more power and whether you’re listening to Brian Jones, Mick Taylor, or Ronnie Wood playing with Keith Richards you may want that!
-
-The 300B was specifically invented to reproduce the human voice (think many of them in series each adding it’s own distortion to the next one, as in across the country phone calls 10, 20 or more tube amps stretched out across the country, each amplifying whatever distortion the previous produced (and yet at the end of the line, still being able to immediately recognize an individuals voice), or early undersea cables with 300B amps boosting the signal every so many miles with the same low additive distortion result. That low odd harmonic distortion is why they eventually became Western Electric’s mainstay for their famed theater systems. Their ability to reproduce deep bass and very sweet highs is why the audiophile community eventually discovered, and began to love them (50 years after their invention. 
-
- 
-
-Terra 300B is a single ended triode design with less of what the 6L6 has and a bit more sweetness on top and in the midrange but has no tube pulling while the other pushes your drivers, thus less grip and control, all else being equal. The 300B tube is perhaps more subtle, perhaps more refined, perhaps a bit more holographic. In fact the 300B tube just plain has a bit more magic, yet less control (run as an SET). However, because Kiho has carefully designed and expertly voiced these amps to NOT lack what the other can do. . .quite literally the 6L6 Terra will surprise you with it’s magic holographic sound and sweetness and the 300B Terra will surprise you with its ability to rock and grip deep down in the bass region. There is a Brunoco house sound - beautiful, but not gooey, powerful and dynamic, yet not at all transistor-like, not etched or gritty, smooth yet detailed at the same time - truly a high end "shhh, did you hear that, I never heard that in this cut before" kind of house sound. But physics being what physics is, there are limits and one must decide what attributes are more important. Put another way you may read that 300B amps can be a bit gooey, prone to compress, too sweet, a bit soft in the bass and a bit rolled off on top - more suited for strictly a late night situation. In fact, this is often the case with many 300B amplifiers, however, NOT so with the Brunoco. These attributes or lack thereof are traits of amp design, components chosen, and way, way importantly - THE TRANSFORMERS.
-
-You may also read that the 6L6 is a bit rough and ready, and while it has the slam necessary to do hard rock it may not have the finesse necessary, say for early Miles. This can all be true with lesser amps, but again NOT with the Brunoco. And there are so many different choices in the 6L6 family at a fraction of the cost of a similar quality 300B. You can literally dial in as many different flavors with 6L6 as with 300B. . .for so much less money.
-
-They are both great amps, providing real high end sound at what I think is a shockingly low price. Coming from solid state to either Terra will start you on a journey of discovery. You’ll notice a much better soundstage, you’ll want to play around with speaker positioning, and discover no matter what speakers you’re listening to, with a little playing around with positioning - instead of the musicians being in your room, if you close your eyes, you’ll be able to space and time travel back to the original venue. The soundstage of the Terra 300B is wide and way, way deep with even the stock tubes (seems to be not as tube dependent as most amps which is a bit counterintuitive). The Terra 6L6, while I can’t give you a percentage, I can tell you it’s close to as good in soundstage , although more tube dependent.
-
-In short 300B, a bit more magic while being more expensive to tube roll. 6L6, a bit more versatile, practical and powerful. As long as you’re willing to accept the characteristics of each , I really think you’ll be tickled pink with either amp.
-
-I wish I could choose for you, but I couldn’t even choose for myself. I hope I’ve answered a couple of your questions.
-
-Enjoy the music!
-
-Jeff
-
-
-﻿
-
-Good morning, Jeff,
-
-My name is Vince Proctor and I live in Ogden Utah. I have been in contact with Kiho regarding the purchase of one of his Terra integrated amps. He sent me several of your emails to other clients regarding your impressions of his 6L6 and 300B amps. I am impressed with your expertise and would appreciate your guidance as well.
-
-This is my first time in the tube world. My current rig consists of a Hafler DH-200 amp, Marantz SC500 pre-amp (just died), Technics SL1210MK3 turntable with a Gold Note 2200 MM, and Tekton Design Pendragon (original 8ohm) speakers. My listening space is now 14’ x 22’ in dimensions. I purchased the Pendragons 10 years ago when I lived in Oregon and my listening room was 20x40 and 16’ ceiling. They were incredible in that environment.
-
-I listen to a wide variety of music including male/female vocals, Jazz, both small combo (Coltrane, Davis, Parker etc) and big band- think Gordon Goodwin, Ellington, Basie. Lots of rock including Doobies, Toto, Stones and lots of acoustic guitar. Some classical of mostly large orchestra variety. Being an old fart and a retired music educator, my hearing isn’t what it once was. In my past life, the louder the better. Now I listen at normal listening volume with a venture back into auditorium level once in a while. Never stadium level anymore…LOL
-
-My plan includes the purchase of either the 6L6 or 300B Terra along with his Venus MC Phono and Kiho’s custom Denon 103 MC (boron cantilever/with line contact diamond tip. Kiho has reassured me his custom MC cartridge will blow away cartridges costing three times as much.
-
-As much as I love my Pendragons, due to the much smaller listening environment I have now, I am exploring other options including Klipsch La Scala’s. However, just this past week I started exploring open baffle design and am getting up to speed on Pure Audio Project Duet 15, Trio 15 along with Tekton Design Solitude (made in Utah) and the Clayton Shaw Caladan (made in SLC). All have 95db or better sensitivity dipole OB design.
-
-Having said that, I was originally brought to Brunoco by Jay Iyagi’s review of the 6L6. After several emails back and forth with Kiho, he is recommending I go with the 300B rather than the 6L6. My concern obviously lies with the power output of the 300B. Eric Alexander owner and designer of Tekton has been explicit in his recommendation that I go with as much power as possible and thus he recommends the Willsention 800R. That was my choice until I saw Jay’s review of the 6L6 Terra. After reading your impressions, I am certain the Terra is the integrated amp for me. The conundrum is; which one?
-
-Your emails regarding the 300B are interesting. Being new to the tube, please bear with my incompetence. Can you explain AC heating? You specifically discussed speakers of 105db horns and AC hum. With the La Scala’s on my radar, I need to know how the 300B would impact those speakers.
-
-Changing the subject again. I have been auditioning as many YouTube videos of the Pure Audio Project and Caladan OB designs. I realize that YouTube compresses the audio and I take that into account. However, I am blown away by the Pure Audio Project D15 and T15. With their 96db sensitivity, would you give me the pros and cons of the 300B paired with OB such as Pure Audio Project? Would the 6L6 be a better choice for OB’s?  Being on a fixed income, my ability to tube roll isn’t great. Hopefully, down the road and after saving more money, I would like to experiment with that as well. Would you be open to providing guidance along that line in the future?
-
-I can’t begin to tell you how much I appreciate your honest feedback regarding my concerns. Thanks for getting this far in my long winded diatribe.  The 6L6 was my first choice and then Kiho made his suggestion and now the conundrum.  Please understand, I realize you can only provide guidance. Ultimately it will be my decision to make. I trust Kiho implicitly; he is a master! I will be honest that I am leaning toward the 300B. However, I’ve only heard the 6L6 on his website, therefore, I’m not sure what the difference is regarding sound, sound stage etc. between the two choices. Your expertise will be invaluable. Bottom line: this adventure is really fun!!!!
-
-All the best,
-
-Vince 
+     
+
+    Hope this helps.
+
+     
+
+        jOn Nov 13, 2024, at 12:20 PM, JM wrote:
+
+    ﻿Hello Jeff,
+
+    I have been considering buying a Brunoco amp and have been struggling on
+    making a decision. There is so little info out there on the
+    300B version. It’s been like searching in the dark with a dim
+    flashlight. I sent a few questions to Brunoco asking for more information
+    and asked permission if it was okay to contact you.
+
+    If you have time, and with your permission, I would appreciate your
+    input and opinions on which amp to buy. A phone call or email, either way is appreciated.
+
+    Thank you for considering the request.
+
+    Best,
+
+    John
+
+     
+     
+     
+    B.241222
+
+     
+    ﻿Good afternoon Vince,
+
+    Just got back from last minute Christmas shopping and now changing clothes
+    so we can be off to dinner, so let me see if
+    can address some of what you mention while I’m in front of a computer.
+
+    First, wow, quite an email! I can’t possibly address everything, however, I
+    will mention a couple of things that may shed some light.
+
+    1) A speaker over ~95/96 dB efficient can begin to reveal noise
+    in any system and for better or worse all AC heated 300B
+    tubes will hum to some degree or another, it’s a matter of
+    whether you can hear it in your system. If the hum and
+    noise rating of an amp is minus 100 dB you are good
+    to go with speakers in the mid 90dB efficiency range. . .unless
+    your set of tubes starts to hum a bit more loudly than
+    before - As in they still sound great, they are not worn
+    out, but they make a bit of noise. 300Bs were designed for
+    alternating current heating and supposedly DC heated units (headphone amplifiers) don’t sound
+    quite as nice all else being equal. Also direct current heating is
+    reputedly harder on 300B tubes, burning through them about 30 to 35%
+    faster. Kiho does provide hum pots right on the top plate of
+    the amp, thus adjusting for the lowest hum level is a snap.
+
+    Hum, buzzing, transistor hiss and tube rush really bug the cr@p out
+    of me, consequently, just about my entire stable of speakers are ~95
+    dB efficient or lower. That fact keeps me well away from noise
+    problems. Think of the shows or concerts you’ve been to where the
+    PA speakers hummed, buzzed, hissed, etc., when the musicians were not playing
+    - it’s inevitable, PA speakers have to be super efficient to fill an
+    auditorium and consequently, you will hear noise from any amplifier being used.
+
+
+    I have not encountered any noise or hum problems with the Terra 300B,
+    in fact it is as quiet or quieter than other 300B amps
+        I have, but again my speakers range from 84 to about 95 dB
+    efficiency. Having said all that, if you go with a speaker even
+    a touch more efficient (like even 97dB), you may or may not run
+    into hum, tube rush or transistor hiss (transistor hiss is particularly problematic
+    as there are no user changeable or serviceable parts in a soiled
+    state amp) - it’s the nature of the efficient speaker beast. Terra
+    6L6 because of the tubes used is quieter at higher volumes, and
+    of course it’s more than twice the power of the 300B amp,
+    In fact, the Terra 6L6 is quieter than some transistor amps I’ve had.
+
+    2) Coming from a different angle than Kiho a bit here, as
+    you specifically mention big band, rock and large orchestra as well as
+    playing at auditorium levels once in a while. The 6L6 is better
+    suited for all of the above. Not that a 300B can’t rock,
+    but to do so it requires a rather efficient speaker, and again
+    the more efficient the speaker, the more noise you may encounter when
+    really pushing up the volume. When one goes to auditorium SPL levels,
+    there’s a fairly narrow band or sweet spot between efficient enough to
+    play that loudly and being too efficient, thus revealing system noise. Kiho’s
+    300B amp is quiet relative to other 300B amps and it’s very
+    dynamic (although the 6L6 is quieter and also quite dynamic), so you
+    may be fine with either one.
+
+    With most tube sets, I have tried in the Terra 300B, I
+    have to turn the volume control up all the way to detect
+    hum when adjusting the hum pots, way higher on the volume knob
+    than the speakers could stand if playing. I do this more for
+    peace of mind so that whatever 300B amp I’m listening to is
+    even quieter (although I didn’t hear any hum to start with) than
+    if I hadn’t adjusted before beginning my listening session. Because I roll
+            tubes all the time, the quietest spot is always different - BUT
+        I don’t mean to scare you. . .It is not a problem,
+        but instead great fun, and once you get into tubes, you won’t
+        look back. So many people avoid tube gear because they are afraid
+        a tube will fail, or after some number of years the tubes
+        will wear out. One should really think of it as tires on
+        a car. Yes occasionally one goes flat and for a tiny fraction
+        of the cost of a new car one replaces the tire. Also
+        with a transistor amp one has to live with it’s particular sound
+        signature, there is simply no changing it. With a tube amp, for
+        small fraction of the price of a new amp one can change
+        the sound signature - in fact, I recommend after letting the amp
+        and original tubes break in for a few hundred hours, it’s good
+        clean fun to experiment with tube rolling. It is usually true that
+        one can find multiple sets of tubes that work better with different
+        types of music or mood. It’s like having three or four or
+        more different amplifiers to suit your taste while spending soooooo much less
+        money than keeping lots of different amplifiers on hand would cost.
+
+    3) These are not your dad’s old McIntosh or Marantz units that
+    sound super pretty but just lay there and don’t really get up
+    and go. Both the Terras will get up and go nicely within
+    their respective power ratings! However, they still will give you the pretty,
+    sweet, holographic, can listen all day without ear fatigue magic that only
+    tubes can give you. I will also say the transformers are absolutely
+    "killer", as both amps couple very well with every speaker I own
+    (about a dozen pair), and I’ve NEVER had that happen with other
+    amplifiers.
+
+    4) While I have not heard the Pure Audio Project speakers
+        specifically, I’ve owned and heard many open baffle/dipole speakers (electrostats, ribbons, planer
+    magnetic as well as dynamic open baffle like the Pure Audio Project
+    including several Decware units. I can tell you that regardless of the
+    efficiency rating of open baffle speakers, they do tend to do better
+    with more power and more dynamic swing to achieve a believable sound
+    pressure level. If going that route, it’s just another reason to consider
+    Terra 6L6.
+
+    Tube rolling a 300B amp, even with the least costly tubes is
+    EXPENSIVE! And if you want the really good tubes, you’re looking at
+    maybe $1500 to well over $3000 for a single pair of power
+    tubes. That same money can buy you perhaps 6 or even 8
+    quads of 6L6 power tubes, including some pretty nice NOS units -
+    Lots of different flavors for different moods and different music types. And
+    don’t forget rolling the 6SN7s regardless of which amp you choose as
+    they will make as much difference as the power tubes.
+
+    5) Since
+    this is your first foray into tubes let me just mention a
+    couple of things about 6L6s, 300Bs and Brunoco. . . If you
+    read folks who have limited experience, you will read that the 6L6
+    is a guitar tube and while it’s popular with electric guitar players,
+    it certainly was not invented for that purpose. It was invented to
+    be the most powerful, lowest distortion, and most linear high fidelity power
+    tube that RCA engineers could make. Many argue it has never been
+    bested, continually refined, yes, but never bested. 6L6 is the oldest and
+    longest continually produced tube in human history - because it simply sounds
+    great in so many applications, it really kicks @ss! First produced by
+    RCA, as a major refinement of a Marconi Osram (EMI/GEC England) design, it
+    instantly became the most popular power tube on the planet. Used in
+        radio sets, PA amps, recording studios, transmitters, music amplifiers, everywhere really. RCA
+    kept refining it for decades and everyone else was playing catch up.
+    It reproduces the human voice and piano (two of the hardest sounds
+    to reproduce realistically), and it will do it so well (think original
+    RCA theater sound systems) while also having the ability to rock out.
+    Almost all power tubes invented since are simply more powerful, not better
+    sounding necessarily. Sure, everyone has their favorite power tube but that there
+    has been continuous demand and continuous production since 1936 until now speaks
+    volumes. And again at more than twice the power output of the
+    Terra 300B. Also Brunoco’s 6L6 Terra is a push pull design, think
+    more grip, more jump, more pop, more power and whether you’re listening
+    to Brian Jones, Mick Taylor, or Ronnie Wood playing with Keith Richards
+    you may want that!
+
+    The 300B was specifically invented to reproduce the
+    human voice (think many of them in series each adding it’s own
+    distortion to the next one, as in across the country phone calls
+    10, 20 or more tube amps stretched out across the country, each
+    amplifying whatever distortion the previous produced (and yet at the end of
+    the line, still being able to immediately recognize an individuals voice), or
+    early undersea cables with 300B amps boosting the signal every so many
+    miles with the same low additive distortion result. That low odd harmonic
+    distortion is why they eventually became Western Electric’s mainstay for their famed
+    theater systems. Their ability to reproduce deep bass and very sweet highs
+    is why the audiophile community eventually discovered, and began to love them
+    (50 years after their invention. 
+
+     
+
+    Terra 300B is a single ended triode
+        design with less of what the 6L6 has and a bit more
+    sweetness on top and in the midrange but has no tube pulling
+    while the other pushes your drivers, thus less grip and control, all
+        else being equal. The 300B tube is perhaps more subtle, perhaps more
+            refined, perhaps a bit more holographic. In fact the 300B tube just
+            plain has a bit more magic, yet less control (run as an
+            SET). However, because Kiho has carefully designed and expertly voiced these amps
+            to NOT lack what the other can do. . .quite literally the
+            6L6 Terra will surprise you with it’s magic holographic sound and sweetness
+            and the 300B Terra will surprise you with its ability to rock
+            and grip deep down in the bass region. There is a Brunoco
+            house sound - beautiful, but not gooey, powerful and dynamic, yet not
+            at all transistor-like, not etched or gritty, smooth yet detailed at the
+            same time - truly a high end "shhh, did you hear that,
+            I never heard that in this cut before" kind of house sound.
+            But physics being what physics is, there are limits and one must
+            decide what attributes are more important. Put another way you may read
+            that 300B amps can be a bit gooey, prone to compress, too
+            sweet, a bit soft in the bass and a bit rolled off
+            on top - more suited for strictly a late night situation. In
+            fact, this is often the case with many 300B amplifiers, however, NOT
+            so with the Brunoco. These attributes or lack thereof are traits of
+            amp design, components chosen, and way, way importantly - THE TRANSFORMERS.
+
+    You
+    may also read that the 6L6 is a bit rough and ready,
+    and while it has the slam necessary to do hard rock it
+    may not have the finesse necessary, say for early Miles. This can
+    all be true with lesser amps, but again NOT with the Brunoco.
+    And there are so many different choices in the 6L6 family at
+        a fraction of the cost of a similar quality 300B. You can literally
+    dial in as many different flavors with 6L6 as with 300B. .
+    .for so much less money.
+
+    They are both great amps, providing real
+    high end sound at what I think is a shockingly low price.
+    Coming from solid state to either Terra will start you on a
+    journey of discovery. You’ll notice a much better soundstage, you’ll want to
+    play around with speaker positioning, and discover no matter what speakers you’re
+    listening to, with a little playing around with positioning - instead of
+    the musicians being in your room, if you close your eyes, you’ll
+    be able to space and time travel back to the original venue.
+    The soundstage of the Terra 300B is wide and way, way deep
+    with even the stock tubes (seems to be not as tube dependent
+    as most amps which is a bit counterintuitive). The Terra 6L6, while
+    I can’t give you a percentage, I can tell you it’s close to
+    as good in soundstage , although more tube dependent.
+
+    In short 300B,
+    a bit more magic while being more expensive to tube roll. 6L6, a
+    bit more versatile, practical and powerful. As long as you’re willing to
+    accept the characteristics of each , I really think you’ll be tickled
+    pink with either amp.
+
+    I wish I could choose for you, but
+    I couldn’t even choose for myself. I hope I’ve answered a couple of
+    your questions.
+
+    Enjoy the music!
+
+        Jeff
+
+
+    ﻿
+
+    Good morning, Jeff,
+
+    My name
+    is Vince Proctor and I live in Ogden Utah. I have been
+    in contact with Kiho regarding the purchase of one of his Terra
+    integrated amps. He sent me several of your emails to other clients
+    regarding your impressions of his 6L6 and 300B amps. I am impressed
+    with your expertise and would appreciate your guidance as well.
+
+    This is
+    my first time in the tube world. My current rig consists of
+    a Hafler DH-200 amp, Marantz SC500 pre-amp (just died), Technics SL1210MK3 turntable with
+    a Gold Note 2200 MM, and Tekton Design Pendragon (original 8ohm) speakers. My
+    listening space is now 14’ x 22’ in dimensions. I purchased the
+    Pendragons 10 years ago when I lived in Oregon and my listening
+    room was 20x40 and 16’ ceiling. They were incredible in that environment.
+
+
+    I listen to a wide variety of music including male/female vocals, Jazz,
+    both small combo (Coltrane, Davis, Parker etc) and big band- think Gordon
+    Goodwin, Ellington, Basie. Lots of rock including Doobies, Toto, Stones and lots
+    of acoustic guitar. Some classical of mostly large orchestra variety. Being an
+    old fart and a retired music educator, my hearing isn’t what it
+    once was. In my past life, the louder the better. Now I
+    listen at normal listening volume with a venture back into auditorium level
+        once in a while. Never stadium level anymore…LOL
+
+    My plan includes the purchase of either the 6L6 or 300B Terra
+    along with his Venus MC Phono and Kiho’s custom Denon 103 MC
+    (boron cantilever/with line contact diamond tip. Kiho has reassured me his custom
+    MC cartridge will blow away cartridges costing three times as much.
+
+    As
+    much as I love my Pendragons, due to the much smaller listening
+    environment I have now, I am exploring other options including Klipsch La
+    Scala’s. However, just this past week I started exploring open baffle design
+    and am getting up to speed on Pure Audio Project Duet 15,
+    Trio 15 along with Tekton Design Solitude (made in Utah) and the
+    Clayton Shaw Caladan (made in SLC). All have 95db or better sensitivity
+    dipole OB design.
+
+    Having said that, I was originally brought to Brunoco
+    by Jay Iyagi’s review of the 6L6. After several emails back and
+    forth with Kiho, he is recommending I go with the 300B rather
+    than the 6L6. My concern obviously lies with the power output of
+    the 300B. Eric Alexander owner and designer of Tekton has been explicit
+    in his recommendation that I go with as much power as possible
+    and thus he recommends the Willsention 800R. That was my choice until
+    I saw Jay’s review of the 6L6 Terra. After reading your impressions, I
+    am certain the Terra is the integrated amp for me. The conundrum
+    is; which one?
+
+    Your emails regarding the 300B are interesting. Being new
+    to the tube, please bear with my incompetence. Can you explain AC
+    heating? You specifically discussed speakers of 105db horns and AC hum. With
+        the La Scala’s on my radar, I need to know how the
+    300B would impact those speakers.
+
+    Changing the subject again. I have been
+    auditioning as many YouTube videos
+    of the Pure Audio Project and Caladan OB designs. I realize that
+    YouTube compresses the audio and I take that into account. However, I
+    am blown away by the Pure Audio Project D15 and T15. With
+    their 96db sensitivity, would you give me the pros and cons of
+    the 300B paired with OB such as Pure Audio Project? Would the
+    6L6 be a better choice for OB’s?  Being on a fixed income,
+    my ability to tube roll isn’t great. Hopefully, down the road and
+    after saving more money, I would like to experiment with that as
+    well. Would you be open to providing guidance along that line in
+    the future?
+
+    I can’t begin to tell you how much I appreciate
+    your honest feedback regarding my concerns. Thanks for getting this far in
+    my long winded diatribe.  The 6L6 was my first choice and then
+    Kiho made his suggestion and now the conundrum.  Please understand, I realize
+    you can only provide guidance. Ultimately it will be my decision to
+    make. I trust Kiho implicitly; he is a master! I will be
+    honest that I am leaning toward the 300B. However, I’ve only heard
+    the 6L6 on his website, therefore, I’m not sure what the difference
+    is regarding sound, sound stage etc. between the two choices. Your expertise
+    will be invaluable. Bottom line: this adventure is really fun!!!!
+
+    All the best,
+
+    Vince 
 

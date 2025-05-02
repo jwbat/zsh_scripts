@@ -5,10 +5,7 @@
 
 # Usage
 # utc 
-
-from datetime import datetime
-
+from datetime import datetime, UTC
 
 
-
-exit 0
+print(datetime.now(UTC).strftime("%H:%M:%S"))
