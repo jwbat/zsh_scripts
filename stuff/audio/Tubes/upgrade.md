@@ -1,5 +1,3 @@
-[![Tung-Sol 7027A Vacuum Power Tubes - www.thetubestore.com](https://tse3.mm.bing.net/th?id=OIP.xHixzqs7xaoTkQAxY-JyOwHaHa&pid=Api)](https://www.thetubestore.com/tung-sol-7027a)
-Certainly! Here are some reliable sources for the [Tung-Sol 7027A](https://www.tubedepot.com/products/tung-sol-7027-new-production-power-vacuum-tube?srsltid=AfmBOoqyayH64CwT2AGArE22vQQJBdaSuS3gGlf3yYszFnQA93xeeF0L) power tubes, as well as the [Psvane 12AU7-T](https://www.amazon.com/Matched-PSVANE-12AU7-S-replace-12AU7-T/dp/B08GM6V74F) and [Genalex Gold Lion 12AU7](https://www.amazon.com/Genalex-Gold-Lion-12AU7-Tube/dp/B00D0E8EFQ) preamp tubes. These selections are well-regarded in the audiophile community and should complement your Terra 6L6 amplifier and Omega Super Alnico High Output XRS speakers.
 
 ---
 
@@ -7,7 +5,8 @@ Certainly! Here are some reliable sources for the [Tung-Sol 7027A](https://www.t
 
 The Tung-Sol 7027A is known for its articulate and dynamic sound, making it a great match for high-efficiency speakers like the Omegas.
 
-- **[TubeDepot](https://www.tubedepot.com/products/tung-sol-7027-new-production-power-vacuum-tube)**: Offers new production Tung-Sol 7027A tubes. ([Quad of Tung-Sol 7027 New Production Power Vacuum Tube](https://www.amazon.com/Quad-Tung-Sol-Production-Power-Vacuum/dp/B07BHT5LZ9?utm_source=chatgpt.com))
+- **[Tung-Sol 7027A quad -Vivatubes]**(https://www.tubedepot.com/products/tung-sol-7027-new-production-power-vacuum-tube?srsltid=AfmBOoqyayH64CwT2AGArE22vQQJBdaSuS3gGlf3yYszFnQA93xeeF0L)
+
 
 - **[Vacuum Tube Values](https://vacuumtubevalues.com/product/tung-sol-factory-platinum-matched-pair-two-7027a-power-tubes/)**: Provides factory platinum matched pairs, ensuring optimal performance. ([Tung-Sol Factory Platinum Matched PAIR (TWO) 7027A Power Tubes - Vacuum ...](https://vacuumtubevalues.com/product/tung-sol-factory-platinum-matched-pair-two-7027a-power-tubes/?utm_source=chatgpt.com))
 
