@@ -4,6 +4,11 @@
      priorities
      ----------
 
+Make a summary for each device:
+- Property names worth exposing for MVP
+- For each Property, do we already have an existing MVP-suitable widget for visualization (Status Card, Line Graph, etc)?
+- Is there a better longer term widget for the given Property?
+
 Projects
 
 ### New Product Support for Prime Group (estimate time to integrate only):
