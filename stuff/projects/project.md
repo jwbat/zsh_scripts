@@ -1,15 +1,27 @@
  ✅ 
 
+
      ----------
      priorities
      ----------
 
-Make a summary for each device:
-- Property names worth exposing for MVP
-- For each Property, do we already have an existing MVP-suitable widget for visualization (Status Card, Line Graph, etc)?
-- Is there a better longer term widget for the given Property?
+# These should arrive to me by Friday:
+### EM320 LoRaWAN TILT Sensor
+### EM300-MCS Magnetic Contact Switch 1
+### WS202 PIR & Light Sensor 1
+Here’s time install timeline:
+    5/30 (AM on site in NY)
+### Tilt Sensor (EM320-TILT
+    6/2 (AM on site in NY)
+### Occupancy / PIR (WS202)
+### Bathroom Occupancy (VS330)
+### Gate Sensor (EM300-MCS)
+8-in-1 without screen (AM308L is identical to AM308, so no work here except maybe a new model number and KA)
 
-Projects
+(Note: David presently thinks the WS202 is better than VS370 which is why
+he has not planned any… i think he may change his mind after testing)
+
+---
 
 ### New Product Support for Prime Group (estimate time to integrate only):
 
