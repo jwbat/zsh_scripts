@@ -4,47 +4,23 @@
      ----------
      priorities
      ----------
+1. Do JUST the occupancy sensor for all of these first (leave out Light & temp[?] ):
+> - UBX-OCC103 = WS202 (PIR & Light Sensor)
+> - UBX-OCC104 = WS203 (Presence Sensor)
+> - UBX-OCC105 = VS370 (Radar Presence Sensor)
+> - UBX-OCC106 = VS330 (Bathroom Occupancy Sensor)
+2. Then this (but only if it looks easy and identical to UBX-CONT100)
+> - UBX-CONT101 = EM300-MCS (Magnetic Contact Switch)
+3. Then this “hardest”
+> - UBX-TILT100 = EM320-TILT (Tilt Sensor)
+Note: This plan assumes steps 1 & 2 go extremely quickly since nothing is new, so that you can pivot soon to 3. If you encounter any holdups/blockers with 1 & 2, then contact me immediately for reconsideration.
+4. Finally, return to:
+> - UBX-OCC103: add Light
+> - UBX-OCC104: add Temperature
+Tell me about anythings else that looks worth adding (and is quick/easy) on all devices
 
-# These should arrive to me by Friday:
-### EM320 LoRaWAN TILT Sensor
-### EM300-MCS Magnetic Contact Switch 1
-### WS202 PIR & Light Sensor 1
-Here’s time install timeline:
-    5/30 (AM on site in NY)
-### Tilt Sensor (EM320-TILT
-    6/2 (AM on site in NY)
-### Occupancy / PIR (WS202)
-### Bathroom Occupancy (VS330)
-### Gate Sensor (EM300-MCS)
-8-in-1 without screen (AM308L is identical to AM308, so no work here except maybe a new model number and KA)
-
-(Note: David presently thinks the WS202 is better than VS370 which is why
-he has not planned any… i think he may change his mind after testing)
 
 ---
-
-### New Product Support for Prime Group (estimate time to integrate only):
-
-These will be required for outdoor usage, especially on access controlled lift gates for car entry/exit:
-
-    * EM300-MCS Magnetic switch 
-
-Prime Group is interested in VS350 & VS351 for traffic level assessment.  
-Their main goal for counting is to identify whether someone is living in facility overnight.  
-So they would like to pilot these sensors as a basis for detecting any presence:
-
-    * VS370 Presence Sensor
-    * VS330 Bathroom Occ Sensor
-
-David & Josh feel that this device may be better at detecting Bay Door open/close  
-than the switch closures that were used at the first Queens, NY test site:
-
-    * EM320-tilt 
-
-This is less critical for Prime now, but it keeps coming up as a strong candidate for threshold counting,  
-and I’d like to estimate the support effort:
-
-    * VS360 Breakbeam Counter
 
 Backlog
 
@@ -52,11 +28,6 @@ Backlog
 * Python script to better automate batch registration of devices (for mfg/ops)
 * Add Support for Water Leak sensor(s)
 * Test FUOTA on AWS with WT201 V2
-
----
-
-
-* Study Humidity Control logic of WT201 V2
 
 ---
 

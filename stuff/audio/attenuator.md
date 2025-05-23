@@ -51,17 +51,54 @@ If you’re planning to:
 * And your **source is a 2V RMS output DAC** (e.g., Pontus or Venus),
 * Then placing a **-10dB attenuator at the Terra’s RCA input** is ideal.
 
-This reduces incoming signal just enough to:
 
-* Spread the usable range of the volume knob,
-* Without touching tone, dynamics, or introducing complexity.
+[![Rothwell RCA In-Line Attenuators - Analogue Seduction](https://tse3.mm.bing.net/th?id=OIP.3ar-D2AMBFH4DeX0I-O0zwHaIh\&pid=Api)](https://www.analogueseduction.net/rca-din-hdmi-connectors-adaptors-couplers-and-attenuators/rothwell-rca-in-line-attenuators.html)
 
 ---
 
-### ✅ Final Verdict
+### 🎖️ 1. **Rothwell In-Line Attenuators**
 
-> **A high-quality inline RCA attenuator is among the least intrusive, most transparent tools you can use** to fine-tune gain in a minimalist system like yours.
+* **Transparency & Neutrality**: Highly regarded for their transparent and neutral sound. Users report no noticeable coloration or loss of detail.
+* **Build Quality**: Premium construction with gold-plated connectors and tight-tolerance resistors.
+* **User Feedback**: Many audiophiles note improved volume control without compromising sound quality.
+* **Considerations**: Slightly higher price point, but justified by performance and build quality.([What Hi-Fi? Forum][1])
 
-It won’t “monkey-wrench” the sonics — as long as it’s from a trusted maker with good resistor matching and attention to impedance.
+---
 
-Let me know if you’d like help choosing between Rothwell, Harrison Labs, or a custom solution — or whether to wait until you hear the system before taking any action.
+### 🥈 2. **GoldenJacks Attenuators**
+
+* **Transparency & Neutrality**: Praised for maintaining a full and weighty sound without loss of resolution or detail.
+* **Build Quality**: Solid construction with customizable attenuation levels upon request.
+* **User Feedback**: Users appreciate the improved volume control and dynamic range.
+* **Considerations**: Availability may be limited, and customization may require direct communication with the manufacturer.([Head-Fi][2], [What Hi-Fi? Forum][1])
+
+---
+
+### 🥉 3. **Harrison Labs FMOD Attenuators**
+
+* **Transparency & Neutrality**: Mixed reviews. Some users report a slight degradation in sound quality, such as midrange congestion.
+* **Build Quality**: Affordable and functional, but may not match the premium feel of higher-end options.
+* **User Feedback**: Effective for reducing signal levels, but some audiophiles notice a difference in sound quality.
+* **Considerations**: Best suited for budget-conscious setups where absolute transparency is less critical.
+
+---
+
+### 📊 Summary Comparison
+
+| Brand             | Transparency | Build Quality | User Satisfaction | Price Point |
+| ----------------- | ------------ | ------------- | ----------------- | ----------- |
+| **Rothwell**      | ★★★★★        | ★★★★★         | ★★★★★             | $$$         |
+| **GoldenJacks**   | ★★★★☆        | ★★★★☆         | ★★★★☆             | $$          |
+| **Harrison Labs** | ★★★☆☆        | ★★★☆☆         | ★★★☆☆             | $           |
+
+---
+
+### ✅ Recommendation
+
+For audiophile-grade transparency and build quality, **Rothwell In-Line Attenuators** are the top choice. If you're seeking a balance between performance and cost, **GoldenJacks** offer excellent value with customizable options. **Harrison Labs** attenuators are suitable for budget setups but may introduce slight sonic compromises.([rothwellaudioproducts.co.uk][3])
+
+If you need assistance selecting the appropriate attenuation level (e.g., -10 dB vs. -12 dB) based on your system's gain structure, feel free to ask!
+
+[1]: https://forums.whathifi.com/threads/rothwell-in-line-attenuators.44268/?utm_source=chatgpt.com "Rothwell in-line attenuators - What Hi-Fi? Forum"
+[2]: https://www.head-fi.org/showcase/goldenjacks-attenuators-20db.16800/reviews?utm_source=chatgpt.com "GoldenJacks Attenuators -20dB - Reviews - Head-Fi"
+[3]: https://www.rothwellaudioproducts.co.uk/html/attenuators.html?utm_source=chatgpt.com "Attenuators - Rothwell Audio"
