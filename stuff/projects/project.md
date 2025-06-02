@@ -1,24 +1,12 @@
- ✅ 
-
-
      ----------
      priorities
      ----------
-1. Do JUST the occupancy sensor for all of these first (leave out Light & temp[?] ):
-> - UBX-OCC103 = WS202 (PIR & Light Sensor)
-> - UBX-OCC104 = WS203 (Presence Sensor)
-> - UBX-OCC105 = VS370 (Radar Presence Sensor)
-> - UBX-OCC106 = VS330 (Bathroom Occupancy Sensor)
-2. Then this (but only if it looks easy and identical to UBX-CONT100)
-> - UBX-CONT101 = EM300-MCS (Magnetic Contact Switch)
-3. Then this “hardest”
-> - UBX-TILT100 = EM320-TILT (Tilt Sensor)
-Note: This plan assumes steps 1 & 2 go extremely quickly since nothing is new, so that you can pivot soon to 3. If you encounter any holdups/blockers with 1 & 2, then contact me immediately for reconsideration.
-4. Finally, return to:
-> - UBX-OCC103: add Light
-> - UBX-OCC104: add Temperature
-Tell me about anythings else that looks worth adding (and is quick/easy) on all devices
+ ✅ 
 
+some accuracy/reliability testing done on all of these.
+### UBX-CONT101
+### UBX-TILT100
+Then compare all the OCC sensors (specifically for Occupancy status/counts)
 
 ---
 
