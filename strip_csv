@@ -1,13 +1,13 @@
 #! python3
-import sys
+from sys import argv
 import json
 import csv
 import uuid
 
 
 try:
-    f1 = open(sys.argv[1], 'r')
-    f2 = open(sys.argv[2], 'w')
+    f1 = open(argv[1], 'r')
+    f2 = open(argv[2], 'w')
 except:
     print('\t provide 2 arguments: <csv_to_read> <csv_to_write>')
     exit()

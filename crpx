@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+# usage: crpx "<SQL statement>"
+
+query=$1
+
+cockroach sql --url $UBX_PROD --execute $query --format=csv > output.csv;
+
+exit 0

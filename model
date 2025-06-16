@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+# Description
+# 
+
+deveui=$1
+
+crx SELECT k.model_name AS model, r.serial_number AS deveui, r.known_asset_uuid as ka_uuid \
+FROM ubx_known_asset k \
+JOIN ubx_device_registry r \
+ON k.known_asset_uuid = r.known_asset_uuid \
+WHERE r.serial_number = \'$deveui\'
+
+exit 0
