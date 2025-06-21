@@ -1,0 +1,44 @@
+#!python3
+'''
+    Provide dev_euis to get a CSV with headers [dev_eui, registry_uuid]
+'''
+import os
+import csv
+import pandas as pd
+import argparse
+from colored import fg
+import subprocess as sp
+from db import cursor_iterator
+
+
+outfile = 'output.csv'
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='provide a deveui(s)')
+    parser.add_argument('-d', '--deveuis', type=str, nargs='+', help='provide 1 or more space-separated deveuis.')
+    return parser.parse_args()
+
+
+deveuis = parse_arguments().deveuis
+params  = (tuple(deveuis),)
+
+query = '''
+    SELECT serial_number as dev_eui, registry_uuid
+    FROM ubx_device_registry
+    WHERE serial_number in %s;
+'''
+
+
+with open(outfile, 'w', newline='') as f:
+    writer = csv.writer(f)
+
+    with cursor_iterator(query, params) as cur:
+        headers = [desc[0] for desc in cur.description]
+        writer.writerow(headers)
+        for row in cur:
+            writer.writerow(row)
+
+
+sp.run(['clear'])
+sp.run(['bat', outfile])
