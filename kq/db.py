@@ -3,25 +3,24 @@ import psycopg2
 from contextlib import contextmanager
 
 
-cr_user     = os.getenv('CR_USER')
-cr_pw       = os.getenv('CR_PW')
-cr_host     = os.getenv('CR_HOST')
-cr_port     = os.getenv('CR_PORT')
-cr_database = os.getenv('CR_DATABASE')
+def get_cnx_strings(cluster):
+    prefix = { 'global': 'CR', 'prod': 'CRP' }.get(cluster)
+    return {
+        'user'     : os.getenv(f'{prefix}_USER'),
+        'password' : os.getenv(f'{prefix}_PW'),
+        'host'     : os.getenv(f'{prefix}_HOST'),
+        'port'     : os.getenv(f'{prefix}_PORT'),
+        'database' : os.getenv(f'{prefix}_DATABASE')
+    }
 
 
 @contextmanager
-def cursor_iterator(query, params=None):
-    conn = None
-    cur = None
+def cursor_iterator(query, params=None, cluster='global'):
+    cnx_strings = get_cnx_strings(cluster)
+    conn        = None
+    cur         = None
     try:
-        conn = psycopg2.connect(
-            user=cr_user,
-            password=cr_pw,
-            host=cr_host,
-            port=cr_port,
-            database=cr_database
-        )
+        conn = psycopg2.connect(**cnx_strings)
         cur = conn.cursor()
         cur.execute(query, params)
         yield cur

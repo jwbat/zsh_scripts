@@ -16,8 +16,8 @@ outfile = 'output.csv'
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='provide a deveui(s)')
-    parser.add_argument('-d', '--deveuis', type=str, nargs='+', help='provide 1 or more space-separated deveuis.')
+    parser = argparse.ArgumentParser(description='produces output.csv with headers [dev_eui, registry_uuid]')
+    parser.add_argument('deveuis', type=str, nargs='+', help='provide 1 or more space-separated deveuis.')
     return parser.parse_args()
 
 
