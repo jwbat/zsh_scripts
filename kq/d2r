@@ -1,5 +1,6 @@
 #!python3
 '''
+    dev_eui -> registry_uuid  ==  "d2r"
     Provide dev_euis to get a CSV with headers [dev_eui, registry_uuid]
 '''
 import os
