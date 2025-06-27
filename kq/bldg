@@ -1,0 +1,48 @@
+#!python3
+'''
+    account name -> building 
+    Provide part of account name to get a CSV with headers [Account Name, Building Name, building_uuid]
+'''
+import os
+import csv
+import pandas as pd
+import argparse
+from colored import fg
+import subprocess as sp
+from db import cursor_iterator
+
+
+outfile = 'output.csv'
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='produces output.csv with headers \
+            [account_name, building_name, building_uuid]')
+    parser.add_argument('account_name', type=str, help='provide some part of an account name')
+    return parser.parse_args()
+
+
+account_name = parse_arguments().account_name
+params        = (f'%{account_name}%',)
+
+query = '''
+    SELECT a.name AS account_name, b.name AS building_name, b.building_uuid
+    FROM ubx_account a
+    JOIN ubx_building b
+    ON a.account_uuid = b.account_uuid
+    WHERE a.name LIKE %s;
+'''
+
+
+with open(outfile, 'w', newline='') as f:
+    writer = csv.writer(f)
+
+    with cursor_iterator(query, params, 'prod') as cur:
+        headers = [desc[0] for desc in cur.description]
+        writer.writerow(headers)
+        for row in cur:
+            writer.writerow(row)
+
+
+sp.run(['clear'])
+sp.run(['bat', outfile])

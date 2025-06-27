@@ -3,18 +3,12 @@
      ----------
  ✅ 
 
- this workflow:
-1. Milesight toggle on all units (no probes)
-2. Run your script
-3. Wait 2mins. If any of them don’t have the screen on, repeat 2
 
 ---
 
 Backlog
 
 * Study Humidity Control logic of WT201 V2
- ✅Python script to better automate batch registration of devices (for mfg/ops)
- ✅ Add Support for Water Leak sensor(s)
  ✅Test FUOTA on AWS with WT201 V2
 
 ---

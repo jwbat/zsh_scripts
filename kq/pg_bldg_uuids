@@ -1,0 +1,43 @@
+#!python3
+'''
+    building_uuids -> dev_eui, building_uuid
+    Provide building_uuids.
+'''
+import os
+import csv
+from colored import fg
+import subprocess as sp
+from db import cursor_iterator
+
+
+outfile = 'buildings.csv'
+
+building_uuids = [
+    'd9772a92-5ac4-4ec6-b5be-ab13f6a2f2dc', # NY29
+    '12dffa2f-9137-4c80-be2a-ee57b3ab2160', # NY38
+    'eaa1cd12-de6a-423f-b9bd-97e8e2f1be02'  # FL24
+]
+
+params        = (tuple(building_uuids), '%HUB%')
+
+query = '''
+    SELECT d.dev_eui, a.building_uuid
+    FROM ubx_asset a
+    JOIN ubx_device d
+    ON a.asset_uuid = d.asset_uuid
+    JOIN ubx_known_asset k
+    ON a.known_asset_uuid = k.known_asset_uuid 
+    WHERE a.building_uuid IN %s
+        AND k.model_name NOT LIKE %s
+    ORDER BY a.building_uuid;
+'''
+
+with open(outfile, 'w', newline='') as f:
+    writer = csv.writer(f)
+
+    with cursor_iterator(query, params, 'prod') as cur:
+        headers = [desc[0] for desc in cur.description]
+        writer.writerow(headers)
+        for row in cur:
+            writer.writerow(row)
+
