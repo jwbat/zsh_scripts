@@ -1,0 +1,25 @@
+BRUNOCO AUDIO
+Tue, May 27, 7:35 AM
+to me
+
+Hello James,
+
+TERRA 6L6PP is not as quiet as other solid state amplifiers regarding AC hum(AC heating of tubes).
+However, the hum level is very low so should not bother you-barely audible within 2 feet from the speaker.
+I have many customers happy with 100+dB horn speakers with TERRA 6L6PP.
+I think what you are experiencing is something to do with AC line of your location(noise coming to your AC outlet from other noise sources).
+Isolation transformer(not noise filter) may isolate the AC from these external noise sources.
+I think you need to test in other location(not other room in your house).
+The crackle is RF interference with the volume pot-it's intermittent and will go away.
+Because TERRA is high-gain amplifier, you may feel some white noise according to the matching(with source components). 
+
+Old quality 12AU7 tubes like RCA, MULLARD(UK), AMPEREX(NETHERLAND), TELEFUNKEN(GERMANY) can produce more quiet sound.
+
+If I apply some NFB(negative feedback), then it gets quieter(and low gain)/smoother but that's not my intention of design.
+
+Please try with your new Omega speaker and let me know how it sounds.
+Let's start from there.
+Let me know if you have any questions.
+
+Best regards,
+Kiho  
