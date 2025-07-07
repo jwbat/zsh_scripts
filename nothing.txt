@@ -1,3 +1,10 @@
+item                            current state of affairs
+----                            ------------------------
+Doggify Lambdas                 meet with Barry tomorrow a.m.; implement & test doggified lambdas
+CT10x                           maybe nothing else to do here (?)
+Alert offline devices           ideas, discussion stage
+WS303 Mini Leak Sensor          decoding done.  get your deveui, register. dunk your device.
+                                get ubx name,   known_asset_uuid; 
 
 Lars Danielsson, Leszek Możdżer – Pasodoble  
 Dominique Fils-Aimé – Nameless  
@@ -27,5 +34,3 @@ Imogen Heap – Hide and Seek
 | **Imogen Heap**                     | *Hide and Seek*                   | A cappella vocoder piece — layers of voice seem to orbit you in 3D.                          |
 
 ---
-
-Let me know if you want these filtered for **Qobuz Studio or Hi-Res availability**, or grouped by instrument/vocal emphasis. These are the kinds of tracks that make the speakers "disappear."
