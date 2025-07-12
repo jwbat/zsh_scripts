@@ -3,51 +3,57 @@
      ----------
  ✅ 
 
-1. Doggify Lambdas #sw-api
-2. WS303 
+>  ✅  Option to choose a UTC offset for local time zone or building local time
+>  ✅  Add summary at end of gaps detail output that just reports the total count of gaps for that EUI
+> Summary output mode: specify a list of EUIs, do not show the details of every gap:  
+  just see one line per EUI and total count of gaps
+
+
+  ✅   1. Doggify Lambdas #sw-api
+  ✅   2. WS303 
 3. Alert offline devices > gap
 
 ---
 
-> I’m starting to brainstorm how we can stay more on top of device and gateway outages with  
-> a very fast path that leverages your device/hub_check scripts being run on a regular basis (nightly? daily at  
-> noon? on-demand?).  Here’s the essence of what I think I want to know (but would like your  
-> feedback and ideas):
-> We want to identify as quickly as possible when a Device or Hub has  
-> gone offline for more than X minutes. I don’t recall whether hub_check is using agent data as  
-> its basis, or just device data that has passed through it? For now I’ll assume agent data  
-> as I think that’s probably what we’ll want to use (I’d wager that device_check might work to  
-> look for gaps in hub agent data).
-> I think a good strategy might be to run every  
-> day (at midnight and noon?) a report of EVERY Device or Hub that has had any >  
-> Xmin gap in the last 12hrs. The output should be grouped by Account>Building. It would be posted  
-> to a dedicated slack channel.
-> That will surface a list of things we might want to look  
-> into every time any outage, anywhere happens.  This list might be a bit noisy, especially when it  
-> comes to devices/hubs that have become permanently offline. To solve that propblem, I propose that we establish  
-> an “ignore” list that has a list of EUIs that we decide we can safely ignore. That  
-> would probably include a comment at the end of the EUI to describe that device and maybe  
-> have a URL to it on UBX, and perhaps notes about why it’s offline.
-> It’s possible we’ll  
-> find instances of locations that have very frequent outages (LTE problems?). Those might end up being put  
-> on a special list of “problem child” EUIs that might either get a different set of requirements  
-> (Gap must be larger. Or only run once a week). We can brainstorm how to best handle  
-> these.
-> Finally, I might expect that sales people would like to focus on just specific accounts that  
-> are really critical--like new/important customers. But they don’t want to have to stay on top of. Maybe  
-> that works exactly like the method above but gets its own slack channel so that they can  
-> focus on just their key customers. And they’d specify perhaps a “watchlist” as a list of buildingUuid’s  
-> (with comment for name and link to UBX URL).
-> For your consideration.
+- I’m starting to brainstorm how we can stay more on top of device and gateway outages with  
+- a very fast path that leverages your device/hub_check scripts being run on a regular basis (nightly? daily at  
+- noon? on-demand?).  Here’s the essence of what I think I want to know (but would like your  
+- feedback and ideas):
+- We want to identify as quickly as possible when a Device or Hub has  
+- gone offline for more than X minutes. I don’t recall whether hub_check is using agent data as  
+- its basis, or just device data that has passed through it? For now I’ll assume agent data  
+- as I think that’s probably what we’ll want to use (I’d wager that device_check might work to  
+- look for gaps in hub agent data).
+- I think a good strategy might be to run every  
+- day (at midnight and noon?) a report of EVERY Device or Hub that has had any >  
+- Xmin gap in the last 12hrs. The output should be grouped by Account>Building. It would be posted  
+- to a dedicated slack channel.
+- That will surface a list of things we might want to look  
+- into every time any outage, anywhere happens.  This list might be a bit noisy, especially when it  
+- comes to devices/hubs that have become permanently offline. To solve that propblem, I propose that we establish  
+- an “ignore” list that has a list of EUIs that we decide we can safely ignore. That  
+- would probably include a comment at the end of the EUI to describe that device and maybe  
+- have a URL to it on UBX, and perhaps notes about why it’s offline.
+- It’s possible we’ll  
+- find instances of locations that have very frequent outages (LTE problems?). Those might end up being put  
+- on a special list of “problem child” EUIs that might either get a different set of requirements  
+- (Gap must be larger. Or only run once a week). We can brainstorm how to best handle  
+- these.
+- Finally, I might expect that sales people would like to focus on just specific accounts that  
+- are really critical--like new/important customers. But they don’t want to have to stay on top of. Maybe  
+- that works exactly like the method above but gets its own slack channel so that they can  
+- focus on just their key customers. And they’d specify perhaps a “watchlist” as a list of buildingUuid’s  
+- (with comment for name and link to UBX URL).
+- For your consideration.
 
-> I am thinking more about different “configurations” that make it possible for different use cases of investigations.  
-> Like different gap sizes when certain devices are set to unique non-standard intervals.  
-> Or simply when we want to study shorter outages and not just longer ones.  
-> It seems increasingly like some design that makes it easy to create a config file for different users could be worthy.  
-> And the idea of two types of lists is appealing: one is when you have a specific set of things you want to monitor   
-> (for Arthur or Sales).  
-> The other is when you want to monitor everything but be able to specify an ignore list (for Ops or Arthur).  
-> Having the flexibility to specify either type by buildingUuid or EUI might be really handy too.  
+- I am thinking more about different “configurations” that make it possible for different use cases of investigations.  
+- Like different gap sizes when certain devices are set to unique non-standard intervals.  
+- Or simply when we want to study shorter outages and not just longer ones.  
+- It seems increasingly like some design that makes it easy to create a config file for different users could be worthy.  
+- And the idea of two types of lists is appealing: one is when you have a specific set of things you want to monitor   
+- (for Arthur or Sales).  
+- The other is when you want to monitor everything but be able to specify an ignore list (for Ops or Arthur).  
+- Having the flexibility to specify either type by buildingUuid or EUI might be really handy too.  
 
 ---
 Backlog
