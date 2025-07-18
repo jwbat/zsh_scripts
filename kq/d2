@@ -25,7 +25,7 @@ deveuis = parse_arguments().deveuis
 params  = (tuple(deveuis),)
 
 query = '''
-    SELECT serial_number as dev_eui, registry_uuid
+    SELECT serial_number as dev_eui, registry_uuid, known_asset_uuid
     FROM ubx_device_registry
     WHERE serial_number in %s;
 '''

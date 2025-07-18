@@ -3,15 +3,37 @@
      ----------
  ✅ 
 
->  ✅  Option to choose a UTC offset for local time zone or building local time
->  ✅  Add summary at end of gaps detail output that just reports the total count of gaps for that EUI
-> Summary output mode: specify a list of EUIs, do not show the details of every gap:  
-  just see one line per EUI and total count of gaps
+OCC100
+    WellStat Fed Res Board Gov 1801 K St
+    First order of business is to make sure our queries that graph occupancy are correctly tallying the raw data
 
 
-  ✅   1. Doggify Lambdas #sw-api
-  ✅   2. WS303 
-3. Alert offline devices > gap
+1. Make sure that generally our bar charts represent a correct summation of the raw SF data.
+    Doesn’t matter which data you look at but you might as well study the periods David was looking at 1801K to start?
+2. if our bar chart algos look correct, then see if you can draw any conclusions about why the data 
+    doesn’t match David’s on site observations. (Theories about sensor limitations or sources of error)
+
+
+ Per yesterdays product sync, the performance of the occupancy sensors at 1801K is not great. 
+ Similar to what we are seeing at Prime Group, but worse due to complexity of environment.
+ Based on my observations there should be very distinict in/out patterns and we should be seeing 1,000+ ins / outs per day.
+ Here is what the pattern should look like:
+    7-9 > 90% In Traffic (high traffic)
+    9-11:30 > 50% In / 50% Out (low / moderate traffic)
+    11:30-12:30 > 25% In / 75% Out (moderate / high traffic) - Go to Lunch
+    12:30 - 1:30 > 75% In / 25% Out  (moderate / high traffic) - Come back from Lunch
+ I assume the afternoon would be similar to morning, but reversed for end of day.
+ A couple of items:
+    We need to eliminate UBX collection / calculation / display errors from the data I am looking at. 
+    It would be helpful to have the occupancy changes we already discussed for Prime Group - 
+        1.) daily display at 10 min resolution on ins / outs 
+        2.) reorientation of bar chart around activity and 
+        3.) total report for building.
+
+---
+
+> move device check to Ready for Review on KB.
+> Alert offline devices > gap
 
 ---
 
