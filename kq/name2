@@ -1,0 +1,47 @@
+#!python3
+'''
+    name -> registry_uuid  ==  "d2r"
+    Provide dev_euis to get a CSV with headers [dev_eui, registry_uuid]
+'''
+import os
+import csv
+import pandas as pd
+import argparse
+from colored import fg
+import subprocess as sp
+from db import cursor_iterator
+
+
+outfile = 'output.csv'
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='')
+    parser.add_argument('name', type=str, help='provide 1 name fragment, e.g. NRG.')
+    return parser.parse_args()
+
+
+name    = parse_arguments().name
+params  = f'%{name}%'
+
+query = '''
+    SELECT DISTINCT 
+        model_name,
+        known_asset_uuid,
+        properties -> 'valid_properties' AS valid_properties 
+    FROM ubx_known_asset 
+    WHERE model_name LIKE %s;
+'''
+
+with open(outfile, 'w', newline='') as f:
+    writer = csv.writer(f)
+
+    with cursor_iterator(query, (params,)) as cur:
+        headers = [desc[0] for desc in cur.description]
+        writer.writerow(headers)
+        for row in cur:
+            writer.writerow(row)
+
+
+sp.run(['clear'])
+sp.run(['bat', outfile])
