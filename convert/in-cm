@@ -1,0 +1,26 @@
+#! python3
+import sys
+from colored import fg
+from sys import argv
+
+'''
+convert inches to cm
+1 cm = 0.393701 inches
+'''
+
+color = fg(214)
+
+def in_to_cm(inches):
+    return round(inches / 0.393701, 2)
+ 
+
+def print_numbers(ns):
+    print()
+    [print(color + str(n).rjust(10), end='') for n in ns]
+    print('\n')
+
+
+
+xs = [float(s) for s in argv[1 : ]]
+ys = [in_to_cm(x) for x in xs] 
+print_numbers(ys)
