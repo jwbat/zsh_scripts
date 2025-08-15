@@ -3,6 +3,8 @@
      ----------
  ✅ 
 
+device_check.py:  use a colorizer lib & get rid of dumb coloring
+
 One of my ideas is that there is one cron job / lambda per Slack channel.
 This way you can configure a channel with special config options (unique gaps, allow lists, ignore lists).
 We might setup special channels for sales people who want to stay on top of a particular project,
