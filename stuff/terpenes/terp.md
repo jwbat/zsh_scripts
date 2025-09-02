@@ -7,3 +7,8 @@
 | **Myrcene**     | Earthy, musky, cloves        | Relaxation, body ease, sedation at higher levels          | Drowsiness, couchlock if too sedating         |
 | **Linalool**    | Lavender, floral, spicy      | Calming, stress relief, mild sedation, mood stabilization | Drowsiness, reduced mental sharpness          |
 | **Caryophyllene** | Pepper, spice, woody       | Grounded calm, body relaxation, anti-inflammatory feel    | Can feel heavy if paired with sedating terpenes|
+| **Ocimene** | Sweet, herbal, woody, citrus       | Uplifting, sociable, energizing with subtle body relaxation | May feel overstimulating in high amounts
+
+
+
+
