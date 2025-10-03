@@ -38,4 +38,6 @@
     | ⌘ + Shift + L (in chat)  | Add selected code to chat context.                   |
     | ⌘ + V (in chat)          | Paste clipboard content as context.                  |
     | ⌘ + Shift + V (in chat)  | Paste clipboard content into the input box.          |
+    | ⌘ + ⌥ + →                | Switch to next file tab                              |
+    | ⌘ + ⌥ + ←                | Switch to prev file tab                              |
     |--------------------------|------------------------------------------------------|
