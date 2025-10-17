@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+r=$red; g=$gold; y=$yellow; a=$aqua; pg=$palegreen; k=$khaki;
+c=$cyan; x=$grey; s=$sea; gr=$green; p=$pink; h=$honeydew; rs=$rose;
+z="$(tput setaf 63)"
+clear;
+
+echo "$h # Check whether branch B can be merged into A while on A:
+    git fetch origin
+    git merge --no-commit --no-ff B
+"
+
+exit 0
