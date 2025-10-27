@@ -1,0 +1,47 @@
+#!python3
+'''
+    ka_uuid -> 
+    Provide ka_uuid to get a CSV with headers []
+'''
+import os
+import csv
+import pandas as pd
+import argparse
+from colored import fg
+import subprocess as sp
+from db import cursor_iterator
+
+
+outfile = 'output.csv'
+
+
+def parse_arguments(): #TODO
+    parser = argparse.ArgumentParser(description='produces output.csv with headers \
+            []')
+    parser.add_argument('ka_uuid', type=str, help='provide a ka_uuid')
+    return parser.parse_args()
+
+
+ka_uuid = parse_arguments().ka_uuid
+params  = (ka_uuid,)
+
+query = '''
+    SELECT
+        model_name,
+        properties -> 'valid_properties' AS valid_properties 
+    FROM ubx_known_asset 
+    WHERE known_asset_uuid = %s
+'''
+
+with open(outfile, 'w', newline='') as f:
+    writer = csv.writer(f)
+
+    with cursor_iterator(query, params, 'prod') as cur:
+        headers = [desc[0] for desc in cur.description]
+        writer.writerow(headers)
+        for row in cur:
+            writer.writerow(row)
+
+
+sp.run(['clear'])
+sp.run(['bat', outfile])
