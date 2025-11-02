@@ -1,0 +1,19 @@
+{"name": "Alice"}
+
+{"name": "Alice", "age": 30, "city": "Portland"}
+
+{ "user": { "id": 101, "name": "Alice", "location": { "city": "Portland", "state": "OR", "country": "USA" } } }
+
+[
+{ "user": { "id": 101, "name": "Alice", "location": { "city": "Portland", "state": "OR", "country": "USA" } } },
+{ "user": { "id": 102, "name": "Bob", "location": { "city": "Portland", "state": "OR", "country": "USA" } } }
+]
+
+
+{ "users": [ {"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}, {"id": 3, "name": "Charlie"} ] }
+
+
+{ "order_id": "A1234", "customer": { "name": "Alice", "email": "alice@example.com", "addresses": [ {"type": "home", "city": "Portland", "zip": "97201"}, {"type": "work", "city": "Beaverton", "zip": "97005"} ] }, "items": [ {"product_id": "P01", "name": "Widget", "quantity": 2, "price": 9.99}, {"product_id": "P02", "name": "Gadget", "quantity": 1, "price": 19.99} ], "total": 39.97, "status": "shipped" }
+
+
+curl "https://query1.finance.yahoo.com/v8/finance/chart/{FZDXX}?period1=unix_timestamp&period2=unix_timestamp&interval=1d"
