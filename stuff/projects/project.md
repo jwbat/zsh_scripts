@@ -3,6 +3,14 @@
      ----------
  ✅ 
 
+upcoming projects:
+- Familiarize with how “D2D” works and contrast with how we operate today.
+- Figure out if we can/should leverage it for things like Remote Sensor<>Tstat 
+(or whether we lose control/visibility in that mode)
+- Explore Beaver IoT from Milesight to see how competitive it might be with our offerings
+
+---
+
 order of QA importance is:
 1. Verifying that every op in UBX is consistent with Toolbox
 2. Verifying that validation in the UI seems to be working and consistent with Toolbox/device validation policy
@@ -22,5 +30,3 @@ do this exclusively with UBX so that UBX representation of wiring config matches
 (the only way UBX knows is when it gets a confirmed downlink to set the wriing)
 
 ---
-
-ssh into the ec2 instance as backend and do a journalctl --user -f to watch the log while you try it
