@@ -1,0 +1,102 @@
+#!/bin/zsh
+
+# Usage:    run-ios <ProjectName> [--sim "iPhone 16 Pro"]
+# Example:  run-ios HelloUIKit
+
+#  Builds and launches the specified Xcode iOS project either:
+#   - on a connected iPhone (if present), or
+#   - in the first available iPhone Simulator.
+
+set -euo pipefail
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: run-ios <ProjectName> [--sim \"iPhone 16 Pro\"]"
+  exit 1
+fi
+
+project="$1"; shift || true
+SIM_NAME=""
+
+# Optional argument: --sim "iPhone 16 Pro"
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --sim)
+      shift; SIM_NAME="${1:-}";;
+  esac
+  shift || true
+done
+
+# Assume we're already in the project directory
+if [[ ! -d "$project.xcodeproj" ]]; then
+  echo "❌ $project.xcodeproj not found in $(pwd)"
+  exit 1
+fi
+
+# Temporary DerivedData folder
+DD="$(mktemp -d)"
+BUILD_CFG=Debug
+
+# Try to find a physical iOS device (plugged in & trusted)
+DEVICE_UDID=$(xcrun xctrace list devices 2>/dev/null \
+  | grep -E ' \([0-9A-F-]{8}-[0-9A-F-]{4}-[0-9A-F-]{4}-[0-9A-F-]{4}-[0-9A-F-]{12}\) \(iOS [0-9]' \
+  | head -n1 | awk -F'[()]' '{print $2}')
+
+if [[ -n "$DEVICE_UDID" ]]; then
+  echo "🔌 Found device: $DEVICE_UDID — building for device…"
+  xcodebuild -scheme "$project" -configuration "$BUILD_CFG" \
+    -destination "id=${DEVICE_UDID}" \
+    -derivedDataPath "$DD" \
+    -allowProvisioningUpdates \
+    build
+
+  APP_PATH="$DD/Build/Products/${BUILD_CFG}-iphoneos/${project}.app"
+  if [[ ! -d "$APP_PATH" ]]; then
+    echo "❌ Built app not found at $APP_PATH"
+    exit 1
+  fi
+
+  BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Info.plist")
+  echo "📲 Installing on device…"
+  xcrun devicectl device install app --device "$DEVICE_UDID" "$APP_PATH"
+  echo "▶️  Launching on device: $BUNDLE_ID"
+  xcrun devicectl device process launch --device "$DEVICE_UDID" "$BUNDLE_ID"
+  exit 0
+fi
+
+# Otherwise, use a simulator
+if [[ -n "$SIM_NAME" ]]; then
+  SIM_UDID=$(xcrun simctl list devices | grep -F "$SIM_NAME" \
+    | grep -E '\([0-9A-F-]{36}\)' | head -n1 | sed -E 's/.*\(([0-9A-F-]{36})\).*/\1/')
+else
+  SIM_UDID=$(xcrun simctl list devices \
+    | grep -E '^    iPhone .* \([0-9A-F-]{36}\) ' \
+    | head -n1 | sed -E 's/.*\(([0-9A-F-]{36})\).*/\1/')
+fi
+
+if [[ -z "$SIM_UDID" ]]; then
+  echo "❌ No iPhone simulator found.  Open Xcode ▸ Settings ▸ Platforms to install one."
+  exit 1
+fi
+
+echo "🖥  Using simulator UDID: $SIM_UDID"
+xcrun simctl boot "$SIM_UDID" >/dev/null 2>&1 || true
+open -a Simulator
+
+echo "🔨 Building for simulator…"
+xcodebuild -scheme "$project" -configuration "$BUILD_CFG" \
+  -destination "platform=iOS Simulator,id=$SIM_UDID" \
+  -derivedDataPath "$DD" \
+  build
+
+APP_PATH="$DD/Build/Products/${BUILD_CFG}-iphonesimulator/${project}.app"
+if [[ ! -d "$APP_PATH" ]]; then
+  echo "❌ Built app not found at $APP_PATH"
+  exit 1
+fi
+
+BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Info.plist")
+
+echo "📱 Installing to simulator…"
+xcrun simctl install "$SIM_UDID" "$APP_PATH" || true
+echo "▶️  Launching: $BUNDLE_ID"
+xcrun simctl launch "$SIM_UDID" "$BUNDLE_ID" || true
