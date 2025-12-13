@@ -3,30 +3,34 @@
      ----------
  ✅ 
 
-upcoming projects:
-- Familiarize with how “D2D” works and contrast with how we operate today.
-- Figure out if we can/should leverage it for things like Remote Sensor<>Tstat 
-(or whether we lose control/visibility in that mode)
-- Explore Beaver IoT from Milesight to see how competitive it might be with our offerings
+ testing the Tstat 1.3 binary over FUOTA would be great   
+ (ideally upgrading both a 1.1 and 1.2, if possible?)
 
----
+## Document the origins of FUOTA process (how did we learn that certain FPorts are required in device profiles, for example).
 
-order of QA importance is:
-1. Verifying that every op in UBX is consistent with Toolbox
-2. Verifying that validation in the UI seems to be working and consistent with Toolbox/device validation policy
-3. Verifying that the things that were broken before (downlink tolerance changes when RH enabled)
-works with beta FW (I know you tested this with raw downllinks, so this is source of a sanity check)
-4. Verifying that actual RH control logic appears to be working (this is hard to test without real world systems, but there are ways you can fake it by using set points (temp & RH) right near ambient, and watching Stage 1 demand calls. Or perhaps moving the Tstat between indoors outdoors (or ambient indoor and fridge?)
+    - Put in a GDoc with a folder if there are any referenced files (Milesight or AWS docs)
 
----
+### Examine the profile of an AIR, which has our own FUOTA support to compare Pat’s FUOTA profile choices vs yours(Milesights?)
 
-only turn on:
-> G (GH) = Fan
-> Y1 = Stage 1 Cooling
-> W1 = Stage 1 Heating  
-(all others off)
+    - See exampe AIR DevEUI; ac1f09fffe104983
 
-do this exclusively with UBX so that UBX representation of wiring config matches the Tstat   
-(the only way UBX knows is when it gets a confirmed downlink to set the wriing)
+## How will we know when a FUOTA has succeeded?
+
+    - Understand our present FW version identification capabilities
+    - What do we capture and where (CRDB, SF) about Milesight device FW versions?
+    - Is this uplinked only on Join or also periodically while powered?
+
+## Identify Operationalizing plans for how we handle the scenario of a Tstat that was offline when we do a   
+FUOTA to 1.3 for all online Tstats
+
+    - Short Term:
+    - User cannot update their own FW, but we don’t let them shoot themselves in the foot by using an old version.
+    - Should we surface these events automatically? Or just wait for a user to ask for it,
+        based on a UI warning message? (since this should be rare,
+        I’m tempted to take the user-driven approach to save the effort of automation.
+        Also maybe we will empower them to do themselves soon anyway)
+
+    - Long Term: 
+        - What is the UI and how will the back end work to let users update FW themselves?
 
 ---

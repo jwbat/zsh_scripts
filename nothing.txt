@@ -1,3 +1,15 @@
-review RH PR
-
-what is an Agentic Framework?
+Profile configuration
+Parameter name Value
+Arn arn:aws:iotwireless:us-west-2:508328745727:DeviceProfile/9d405d91-8675-4f9e-912b-11a6d38d93ca
+SupportsClassC true
+ClassCTimeout 30
+MacVersion 1.0.3
+RegParamsRevision RP002-1.0.1
+RxDelay1 1
+RxDataRate2 8
+RxFreq2 9233000
+FactoryPresetFreqsList 9039000,9041000,9043000,9045000,9047000,9049000,9051000,9053000,9046000
+MaxEirp 13
+MaxDutyCycle 10
+RfRegion US915
+SupportsJoin true

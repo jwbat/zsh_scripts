@@ -1,0 +1,35 @@
+#! python
+
+# Description:  get AWS deviceId from DevEui
+# Usage:        getid <deveui1> <deveui2> ...
+from sys import argv
+import boto3
+
+
+deveuis = argv[1 : ]
+client  = boto3.client('iotwireless')
+
+
+def get_device_id(deveui):
+    try:
+        device = client.get_wireless_device(Identifier=deveui, IdentifierType='DevEui')
+        return device['Id']
+    except:
+        return None
+
+
+def get_all():
+    msgs = []
+    print()
+    for deveui in deveuis:
+        device_id = get_device_id(deveui)
+        if device_id:
+            print(deveui.rjust(16), device_id.rjust(38))
+        else:
+            msgs.append(f'A wireless device with DevEui {deveui} could not be found')
+    print()
+    for msg in msgs:
+        print(msg)
+
+
+get_all()
