@@ -3,6 +3,19 @@
      ----------
  ✅ 
 
+ I’m also curious to know what uses these:
+{0}.{1}.{2} e.g. “6.3.6”
+“1.20" and “1.21” (I haven’t seen Milesight use 2 digits yet for its versioning?)
+{0}  e.g. “0100" or #### (confirm those formats are all AIR)
+
+
+this order of priority:
+- Update mine first (I should have MANY avail for testing, so we can see how reliable this is in general)
+- Then update any other lab units we can find (Jason, Barry, etc)
+- Turn to break-beam
+
+--- 
+
  testing the Tstat 1.3 binary over FUOTA would be great   
  (ideally upgrading both a 1.1 and 1.2, if possible?)
 
@@ -34,59 +47,3 @@
         - What is the UI and how will the back end work to let users update FW themselves?
 
 ---
-
-@James  I found this diagnostic agent payload exmple.
-@Arthur Babitz and I are thinking it would be great to add “uptime” to this,
-which will help us differentiate between cellular outages caused by power loss versus something else 
-(since when it comes back, if the uptime is really short that means it rebooted).
-I don’t see any equivalent in the payload so could you put that in your backlog after the Tstat FW1.3 stuff is done?
-```json
-{
-    "gateway_timestamp": "2024-12-02T19:09:38Z",
-    "gateway_eui": "0080000000022ab5",
-    "model_number": "MTCAP-LNA3-915-041A",
-    "firmware": "6.0.1",
-    "mac_address": "0008004c316a",
-    "os": "mLinux 6.0.2",
-    "python_version": "3.8.11",
-    "connection_type": "Mobile",
-    "home_network": "Sierra Wireless",
-    "current_network": "T-Mobile",
-    "cellular_mode": "4g",
-    "service": "LTE",
-    "lte_rssi": -84.0,
-    "lte_rsrq": -13.5,
-    "lte_rsrp": -116.0,
-    "ping_latency_min_ms": 136.204,
-    "ping_latency_avg_ms": 172.414,
-    "ping_latency_max_ms": 242.688,
-    "ping_latency_stddev_ms": 49.698,
-    "ram": {
-        "mem_total_kb": 251348,
-        "mem_free_kb": 163464,
-        "mem_available_kb": 196932
-    },
-    "cpu": {
-        "model_name": "ARM926EJ-S rev 5 (v5l)",
-        "bogo_mips": 33.38,
-        "features": "swp half thumb fastmult edsp java",
-        "hardware": "Atmel AT91SAM9"
-    },
-    "disk_usage": [
-        {
-            "filesystem": "/orig",
-            "total_space_mb": 128.0,
-            "used_space_mb": 91.1,
-            "available_space_mb": 36.9,
-            "usage_percentage": 71
-        },
-        {
-            "filesystem": "/var/persistent",
-            "total_space_mb": 104.0,
-            "used_space_mb": 2.6,
-            "available_space_mb": 101.4,
-            "usage_percentage": 3
-        }
-    ]
-}
-```
