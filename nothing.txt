@@ -1,20 +1,10 @@
-
-### WS523 Portable Socket
-|----------------------------------|---------------------------------------|
-| Channel                          | Description                           |
-|----------------------------------|---------------------------------------|
-| overcurrent alarm        (join)  | Byte 1: 00=disabled, 01=enabled       |
-|                                  | Byte 2: current threshold, Unit: A    |
-| button lock              (join)  | 0000=disabled, 0080=enabled           |
-| power consumption        (join)  | 00=disabled, 01=enabled               |
-| overcurrent protection   (join)  | Byte 1: 00=disabled, 01=enabled       |
-|                                  | Byte 2: current threshold, A          |
-| voltage                          | UINT16/10, Unit: V                    |
-| active power                     | UINT32, Unit: W                       |
-| power factor                     | UINT8, Unit: %                        |
-| power consumption                | UINT32, Unit: Wh                      |
-| total current                    | UINT16, Unit: mA                      |
-| socket status                    | 00=closed, 01=open                    |
-|----------------------------------|---------------------------------------|
-default reporting interval = 20 minutes
-
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
+abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde
