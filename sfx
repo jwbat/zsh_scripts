@@ -1,7 +1,7 @@
-#!python3
+#!/usr/bin/env python3
 
 '''
-    Usage: ~ sfx "<Snowflake query to execute>"
+    Usage: ~ sfx "<Snowflake query to execute>" <outfile.csv> 
     see ~.snowsql/config for ubx configuration
 '''
 import os
@@ -12,19 +12,18 @@ import subprocess as sp
 from collections import deque
 
 
-outfile = 'output.csv'
-
-
-def cmd():
-    query = parse_arguments()
+def cmd(query):
     return ['snowsql', '-c', 'ubx', '-q', query, '-o', 'output_format=csv', '-o', 'friendly=false']
 
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('query', type=str, nargs='+')
-    args = parser.parse_args()
-    return ' '.join(args.query)
+    parser.add_argument('outfile', type=str)
+    args    = parser.parse_args()
+    outfile = args.outfile
+    query   = ' '.join(args.query)
+    return query, outfile
 
 
 def bat_file(file):
@@ -33,17 +32,17 @@ def bat_file(file):
     print()
 
 
-def count_lines(filename):
-    result = sp.run(['wc', '-l', filename], stdout=sp.PIPE)
+def count_lines(fname):
+    result = sp.run(['wc', '-l', fname], stdout=sp.PIPE)
     return int(result.stdout.decode().split()[0])
 
 
-def trim_file(outfile, N=2):
-    ''' trim N lines from beginning and end of outfile '''
+def trim_file(fname, N=2):
+    ''' trim N lines from beginning and end of file '''
     q = deque(maxlen=N)
     temp = 'temp.csv'
-    sp.run(['mv', outfile, temp])
-    with open(temp, 'r') as f, open(outfile, 'w') as out:
+    sp.run(['mv', fname, temp])
+    with open(temp, 'r') as f, open(fname, 'w') as out:
         for _ in range(N):
             next(f)
         for line in f:
@@ -55,19 +54,22 @@ def trim_file(outfile, N=2):
 
 
 def convert_value(val):
-    try: return int(val)
+    try: 
+        return int(val)
     except ValueError:
-        try: return float(val)
-        except ValueError: return val
+        try: 
+            return float(val)
+        except ValueError: 
+            return val
 
 
-def correct_number_formatting(filename):
+def correct_number_formatting(fname):
     '''Re-reads the CSV file and writes numbers without quotes.'''
-    with open(filename, 'r') as infile:
+    with open(fname, 'r') as infile:
         reader = csv.reader(infile)
         rows = list(reader)
 
-    with open(filename, 'w', newline='') as outfile:
+    with open(fname, 'w', newline='') as outfile:
         writer = csv.writer(outfile, quoting=csv.QUOTE_MINIMAL)
         for row in rows:
             new_row = [convert_value(val) for val in row]
@@ -75,17 +77,16 @@ def correct_number_formatting(filename):
 
 
 def main():
+    query, outfile = parse_arguments()
     with open(outfile, 'w') as f:
         try:
-            sp.run(cmd(), stdout=f, stderr=sp.PIPE, check=True)
+            sp.run(cmd(query), stdout=f, stderr=sp.PIPE, check=True)
         except sp.CalledProcessError as e:
-            print(f'command \n\n { parse_arguments() } \n\n returned non-zero exit status {e.returncode}.', file=sys.stderr)
+            print(f'command \n\n { query } \n\n returned non-zero exit status {e.returncode}.', file=sys.stderr)
             print(e.stderr.decode(), file=sys.stderr)
-
     ''' snowflake writes extra stuff at start & end of output '''
     # if count_lines(outfile) > 4:
         # trim_file(outfile)
-
     correct_number_formatting(outfile)
 
 

@@ -1,13 +1,12 @@
-     ----------
-     priorities
-     ----------
  ✅ 
 
-Specifically the 3W-W12-US variant   
-    (which I think the important thing is it’s one switch and not 2 like some models support):
+- SQL query to pull all our Landau Elementary data as a bulk download
+    all the raw CT sensor data starting 1/5 -- (24 CT's)
+    individual CSV files with their timestamps and col headers would be fine
 
-###  WS50x  Smart Wall Switch
-    designed for the local and remote control of lights and electrical appliances.
+`NRG100` building_uuid: `ed8a0e35-8fb2-4460-8f12-0cec4611a0f2`
 
-### WS523 15A-US  Smart Portable Socket WS523
---- 
+Can you let him know which buildings and devices you would like to export (you can use the Asset Name or the 4 digit ID).
+    Also any pref on Timezone? 
+    Local vs UTC? 
+        (Local would be auto-adjusted for daylight savings changes, for example)
