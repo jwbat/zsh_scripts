@@ -1,1 +1,3 @@
 method textDocument/definition is not supported by any of the servers registered for the current buffer
+
+:lua local files = vim.fn.glob(vim.fn.stdpath("config") .. "/**/*.lua", true, true) vim.cmd("vimgrep /gopls_started/ " .. table.concat(files, " ") .. " | copen")
