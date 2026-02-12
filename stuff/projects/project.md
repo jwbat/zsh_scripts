@@ -1,12 +1,27 @@
  ✅ 
 
-- SQL query to pull all our Landau Elementary data as a bulk download
-    all the raw CT sensor data starting 1/5 -- (24 CT's)
-    individual CSV files with their timestamps and col headers would be fine
+Questions:
 
-`NRG100` building_uuid: `ed8a0e35-8fb2-4460-8f12-0cec4611a0f2`
+- What time period does counter_a and counter_b represent (fixed time? or based on configured uplink interval?)
+    these reset to 0 after each transmission (report), so represent counts per uplink interval.
 
-Can you let him know which buildings and devices you would like to export (you can use the Asset Name or the 4 digit ID).
-    Also any pref on Timezone? 
-    Local vs UTC? 
-        (Local would be auto-adjusted for daylight savings changes, for example)
+- What is the default uplink interval?  Can we configure it and if so what are all the options to do so?
+    default uplink interval: 15 minutes.  to configure, the "stable" option is via NFC.  (see note below **)
+
+- What do device_status and payload_type mean?
+    device_status: reports one of the following status messages once on the next uplink:
+
+        No status information
+        Startup
+        Reconnect
+        Settings changed
+        Placed battery not full during startup
+
+    payload_type:  signifies which device type, in this case, People Counter.
+        So we only have the 1 type as of now.  We can switch on the type from IMB if we use other devices from them.
+
+- How can we translate battery_voltage to a % ?
+    not resolved yet ..
+
+** settings changed via downlink are "volatile": 
+    "when the device resets or powers off and on again the settings are back to the configured settings within NFC memory"
