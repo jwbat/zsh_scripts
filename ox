@@ -21,6 +21,9 @@ echo "\n $r"
 go doc mathx
 echo "\n $g"
 
+go doc randx
+echo "\n $k"
+
 go doc mapx
 echo "\n $a"
 

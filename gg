@@ -28,7 +28,6 @@ configs     = ('.zshrc', '.zprofile', '.zsh_go', '.zsh_ubx', '.zsh_a', '.sbg-env
 def update_predots():
 
     def update_configs():
-        #configs      = ('.zshrc', '.zprofile', '.zsh_go', '.zsh_ubx', '.zsh_a', '.sbg-env', '.ui-env', '.aws', '.ssh')
         config_paths = [home / name for name in configs]
         [copy_into(p, predots.path / 'configs') for p in config_paths]
 
