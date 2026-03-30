@@ -5,6 +5,7 @@ Denafrips Pontus 15th R-2R DAC                      2019        denafrips.com   
 PS Audio PowerPlant3                                3000        PS Audio               17" x 14" x 3.25", 32 lbs. WxDxH
 Bluesound Node Nano streamer                         349        crutchfield             6" x  2" x 7"
 Omega Super Alnico High Output XRS                  4695        omegaloudspeakers      38" x 14" x 9.5", 50 lbs.
+Audiolab 9000 CDT CD transport
 ----------------------------------               -------------------------------
 total                                             13,463 
 (4695 + 3400 + 2019 + 349 + 3000)
