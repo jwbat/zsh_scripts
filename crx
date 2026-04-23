@@ -4,7 +4,9 @@
 # or $UBX_GLOBAL
 
 query=$1
+URL=$UBX_PROD
+#URL=$UBX_GLOBAL
 
-cockroach sql --url $UBX_GLOBAL --execute $query --format=csv > output.csv;
+cockroach sql --url $URL --execute $query --format=csv > output.csv;
 
 exit 0
