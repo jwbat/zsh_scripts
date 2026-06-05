@@ -6,11 +6,8 @@ z="$(tput setaf 252)"
 
 clear;
 
-echo "$k
-    It shouldn’t take drastic change to make a huge impact.
-    I wasn’t always productive, and I’d often go weeks sulking and watching crap on tv.
-    These tips turned my creative life around.
-    Now I can’t stop...
+echo "
+
 $g
         1.$c Meditate for a minute before starting any work. $z
 
@@ -21,7 +18,7 @@ $g
         Now you’re a freaking zen monk, and it’s not even 8 am. 
         This is where creativity and energy flourish.
 $g
-        2.$c Stop being a little bitch. $z
+        2.$c Stop complaining. $z
 
         Most of us are unproductive because we’re complaining to ourselves 
         in the dim theatre of our minds about how ‘hard everything is.’ 
@@ -41,7 +38,6 @@ $g
 $g
         4.$c Walk an hour a day. $z
 
-        What?
         Yes, spending time outdoors being ‘unproductive’ seems counterintuitive.
         But most of us are low energy because we’re on our fat butts all day, and we allow our minds to grow thick with worry.
         Walking clears all of this out, gets us into our bodies and multiplies our creativity.

@@ -101,4 +101,3 @@ Advanced practitioners and some ceremonial settings include more formal elements
 ✅ **In short:**
 *Invoking dralas isn’t about summoning external beings, but tuning your mind and environment to a field of awake, fearless energy already present. Flags, smoke, verses, and ritual are skillful means — the real “invocation” is your perception and openness.*
 
-Would you like me to share one **traditional drala invocation verse** (in English translation) that practitioners often use when raising windhorse or making offerings?

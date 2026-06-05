@@ -1,3 +1,0 @@
-brew install --cask macdown
-brew install nvm
-nvm install node
