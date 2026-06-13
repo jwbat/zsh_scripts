@@ -1,0 +1,37 @@
+
+---
+
+**IoT Device Integration & Onboarding**
+- Onboarded and integrated a wide variety of LoRaWAN sensors (thermostats, current transformers, occupancy/people counters, leak detection, CO₂, smart buttons, contact switches, and third-party systems like IMBuildings) including packet decoding, Lambda development, AWS IoT provisioning, and documentation
+- Developed and maintained a unified decoder architecture supporting the full device inventory; translated vendor JavaScript decoders to Python with LLM-assisted tooling
+- Designed and scripted device configuration-by-downlink workflows, reducing manual configuration overhead and enabling remote device management at scale
+
+**AWS Lambda & Cloud Pipeline Development**
+- Built and maintained a fleet of AWS Lambda functions for IoT data ingestion, decoding, routing, and enrichment; refactored the primary ingest Lambda for improved maintainability and deployed with a rollback strategy
+- Implemented cross-account MQTT data routing via IAM roles and SQS pipelines to deliver processed sensor data to external client accounts
+- Built a Lambda-based MQTT republishing API for external accounts with restricted IAM permissions, enabling third-party consumption of decoded sensor data
+- Developed token-rotation Lambda using VPC + NAT gateway to maintain authenticated access to a third-party webhook, with secrets stored in AWS Secrets Manager
+
+**Firmware Over-the-Air (FUOTA)**
+- Designed and scripted automated FUOTA workflows for LoRaWAN thermostats, including multicast group setup, IAM role/policy configuration, S3 firmware artifact management, and AWS IoT multicast task orchestration
+- Coordinated with support on delta/patch firmware delivery and validated upgrades across lab and production hardware
+
+**Operational Tooling & Monitoring**
+- Built a configurable daily device-health monitoring Lambda that queries time-series data for reporting gaps and low battery levels, reads device lists from spreadsheets, and posts alerts to Slack channels via EventBridge cron
+- Developed a suite of CLI diagnostic tools that surface device connectivity issues, gateway outages, and signal-strength data
+- Built a gateway diagnostics system that surfaces LTE signal strength, OS metrics (CPU/RAM/disk), and uptime via the gateway APIs, publishes to IoT MQTT topics, and includes scripted provisioning/installation using ephemeral SSH keys and SigV4 authentication
+
+**Snowflake & Data Engineering**
+- Wrote complex Snowflake SQL queries for energy consumption, aggregate building current, and device time-series data; created Snowpipes for automated S3-to-Snowflake ingestion
+- Delivered on-demand raw sensor data exports (CSV) for devices across multiple building sites via DB queries.
+- Identified and corrected a scaling bug in accumulated energy data via targeted Snowflake SQL updates, with pre-correction backups
+
+**Frontend Development (Vue.js)**
+- Built and iterated on energy reporting UI components including daily energy bar charts, building-to-building comparison views, aggregate energy trends, and IAQ current-values reports using Vue.js and Highcharts
+- Contributed GraphQL query development and optimization for energy, occupancy, and IAQ data endpoints
+
+**Image Processing & Thumbnail Pipeline**
+- Built an EventBridge + Lambda pipeline for on-upload thumbnail generation from S3, supporting JPEG, PNG, HEIC/HEIF, and MPO formats; compiled custom Lambda layers (Pillow + libheif) from source in EC2/CloudShell for ARM64 compatibility
+
+---
+

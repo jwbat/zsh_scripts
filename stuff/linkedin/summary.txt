@@ -1,0 +1,3 @@
+Software engineer with a background in commodity trading and a self-directed transition into cloud and IoT systems.  
+I specialize in AWS Lambda pipelines, LoRaWAN device integration, and data engineering, with a preference for Python and Go.  
+I care about clean architecture, operational reliability, and understanding systems at a fundamental level.

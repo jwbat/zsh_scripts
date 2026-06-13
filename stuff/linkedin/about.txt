@@ -1,0 +1,9 @@
+After 17 years as a commodity trader managing risk and operational complexity under market pressure,
+I made a deliberate move into software engineering.
+
+My focus is cloud infrastructure and data pipelines on AWS — IoT device integration, Lambda-based architectures,
+and infrastructure as code — now working primarily in Python and Go,
+with an increasing investment in AI-assisted development tooling.
+
+Self-directed by nature, I care about understanding systems deeply, not just making them work,
+and have built enough range across domains to be regularly trusted with projects well outside any single specialty.

@@ -1,0 +1,26 @@
+IoT Device Integration & Onboarding
+• Onboarded and integrated diverse LoRaWAN sensors (thermostats, current transformers, occupancy counters, leak detection, CO₂, smart buttons) including packet decoding, Lambda development, and AWS IoT provisioning
+• Developed a unified decoder architecture; translated vendor JavaScript decoders to Python with LLM-assisted tooling
+• Scripted device configuration-by-downlink workflows for remote device management at scale
+
+AWS Lambda & Cloud Pipeline Development
+• Built and maintained Lambda functions for IoT data ingestion, decoding, routing, and enrichment; refactored the primary ingest Lambda with a rollback deployment strategy
+• Implemented cross-account MQTT routing via IAM roles and SQS for external client data delivery
+• Built a token-rotation Lambda using VPC + NAT gateway with secrets in AWS Secrets Manager
+
+Firmware Over-the-Air (FUOTA)
+• Scripted automated FUOTA workflows including IAM configuration, S3 artifact management, and AWS IoT task orchestration
+
+Operational Tooling & Monitoring
+• Built a daily device-health Lambda querying time-series data for reporting gaps and low battery, with EventBridge cron and Slack alerts
+• CLI diagnostic tools surfacing device connectivity issues, gateway outages, and LTE signal strength
+
+Data Engineering
+• Wrote complex SQL queries for energy and time-series data; built automated S3-to-database ingestion pipelines
+• Delivered on-demand multi-site sensor data exports; identified and corrected a scaling bug in accumulated energy data
+
+Frontend Development (Vue.js)
+• Built energy reporting UI components (bar charts, building comparisons, IAQ reports) using Vue.js and charting libraries; contributed GraphQL query development for energy, occupancy, and IAQ endpoints
+
+Image Processing
+• EventBridge + Lambda pipeline for S3 thumbnail generation supporting JPEG, PNG, HEIC/HEIF, and MPO; compiled custom ARM64 Lambda layers (Pillow + libheif)
