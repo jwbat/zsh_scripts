@@ -15,7 +15,7 @@ getpath     = lambda s: Path(getenv(s))
 
 home        = getpath('HOME')
 dots        = getpath('DOTS')
-scripts     = getpath('Z')
+scripts     = getpath('SCRIPTS')
 nvim        = getpath('NVIM')
 predots     = Dir(getenv('PREDOTS'))
 postdots    = Dir(getenv('POSTDOTS'))

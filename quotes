@@ -43,8 +43,9 @@ q9="$c3    The \"How\" is the killer of all great dreams.
     Do hard things.  Do your thing.  Do it for decades.  Write your story. "
 q10="$c2    Don't write a story about what happened. 
     Write your story, then make that happen."
-q11="$c0    Technology can advance better & faster if we unhinge it from useless
-    and forced biological constraints."
+q11="$c0    What is the most important idea in all of computer science?
+    Decomposition.  It\'s the key thing the threads through everything we do:  how
+    to take large complicated problems and break them up."
 
 
 qs=($q1 $q2 $q3 $q4 $q5 $q6 $q7 $q8 $q9 $q10 $q11)
