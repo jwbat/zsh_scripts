@@ -1,9 +1,4 @@
-#!/usr/bin/env -S uv run --script
-# /// script
-# dependencies = [
-#     "colored",
-# ]
-# ///
+#! python
 '''
  encryption by Rustlang system tool, age ("a good encryption")
 '''
