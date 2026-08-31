@@ -1,8 +1,8 @@
 /* Universal native dark mode support */
 html {
     color-scheme: dark;
-    background-color: #121214;
-    color: #e2e8f0;
+    background-color: #26231f;
+    color: #e8e4dc;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
 }
@@ -16,7 +16,7 @@ body {
 
 /* Typography styles */
 h1, h2, h3, h4 {
-    color: #f8fafc;
+    color: #fbf9f5;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
@@ -31,16 +31,16 @@ a:hover {
 
 /* Clean, readable blockquotes */
 blockquote {
-    border-left: 4px solid #475569;
+    border-left: 4px solid #5c5349;
     padding-left: 15px;
-    color: #94a3b8;
+    color: #aaa294;
     margin: 1.5em 0;
 }
 
 /* Monospaced code blocks */
 code, pre {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    background-color: #1e1e22;
+    background-color: #302c27;
     border-radius: 6px;
 }
 code {
@@ -50,7 +50,7 @@ code {
 pre {
     padding: 16px;
     overflow: auto;
-    border: 1px solid #2d3139;
+    border: 1px solid #40392f;
 }
 pre code {
     padding: 0;
@@ -65,10 +65,10 @@ table {
     margin: 20px 0;
 }
 th, td {
-    border: 1px solid #2d3139;
+    border: 1px solid #40392f;
     padding: 8px 12px;
     text-align: left;
 }
 th {
-    background-color: #1a1a1e;
+    background-color: #2e2a25;
 }

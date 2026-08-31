@@ -1,23 +1,54 @@
 #!/bin/zsh
 
 if [ -z "$1" ]; then
-    echo "Usage: m filename.md"
+    echo "Usage: m filename.md [filename2.md ...]"
     return 1
 fi
 
 local_css="$SCRIPTS/dark.css"
-tmp_dir=$(mktemp -d "${TMPDIR:-/tmp}/md_preview_XXXXXX")
-tmp_html="$tmp_dir/preview.html"
-title=$(print -D "$1")
 
-# compiles Markdown to HTML, embedding custom dark theme instantly
-# --embed-resources leaves zero external file dependencies
-pandoc "$1" --standalone --embed-resources \
-    --metadata title=$title \
-    --css="$local_css" \
-    -o "$tmp_html"
+# convert each markdown file to its own standalone HTML, collecting file:// URLs
+typeset -a html_urls
+for md in "$@"; do
+    if [ ! -f "$md" ]; then
+        echo "md_viewer: no such file: $md" >&2
+        continue
+    fi
 
+    tmp_dir=$(mktemp -d "${TMPDIR:-/tmp}/md_preview_XXXXXX")
+    tmp_html="$tmp_dir/preview.html"
+    title=$(print -D "$md")
+
+    # compiles Markdown to HTML, embedding custom dark theme instantly
+    # --embed-resources leaves zero external file dependencies
+    pandoc "$md" --standalone --embed-resources \
+        --metadata title=$title \
+        --css="$local_css" \
+        -o "$tmp_html"
+
+    html_urls+=("file://$tmp_html")
+done
+
+if [ ${#html_urls} -eq 0 ]; then
+    echo "md_viewer: nothing to display" >&2
+    return 1
+fi
+
+# first file -> new Safari window; the rest -> new tabs in that window
 # change to 'xdg-open' on Linux
-open -a Safari "$tmp_html"
+typeset -a osa
+osa=(-e 'tell application "Safari"' -e 'activate')
+i=1
+for url in "$html_urls[@]"; do
+    if (( i == 1 )); then
+        osa+=(-e "make new document with properties {URL:\"$url\"}")
+    else
+        osa+=(-e "tell front window to set current tab to (make new tab with properties {URL:\"$url\"})")
+    fi
+    (( i++ ))
+done
+osa+=(-e 'end tell')
+
+osascript $osa
 
 exit 0
