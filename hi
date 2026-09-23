@@ -1,5 +1,0 @@
-#!/bin/zsh
-
-echo "Hi"
-
-exit 0
