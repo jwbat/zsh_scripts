@@ -14,6 +14,9 @@ color_codes  = [221, 157, 160, 6, 9, 209]
 randcolor    = lambda : fg(color_codes[randint(0, len(color_codes) - 1)])
 pprint       = lambda s: print(randcolor() + s.rjust(25))
 
+letter_set   = set(argv[1].lower())
+num_letters  = len(letter_set)
+
 
 def decor(f):
     def g(*args):
@@ -26,12 +29,12 @@ def decor(f):
 
 
 @decor
-def solve(ltrs):
+def solve(letter_set):
     with open(fpath, 'r') as f:
         for line in f:
             word = line.strip()
-            if set(ltrs) == set(word):
+            if len(word) >= num_letters and set(word) == letter_set:
                 pprint(word)
 
 
-solve(argv[1])
+solve(letter_set)
